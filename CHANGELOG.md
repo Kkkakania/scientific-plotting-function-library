@@ -2,6 +2,46 @@
 
 本库版本演化记录。
 
+## v1.7 — 全绿验证 + Plotly 交互端 + 暗色画廊 + COMTRADE
+
+- **里程碑：verify_all 首次 5/5 全绿，252/252 模板渲染零失败**
+  - 依赖环境补齐后，29 个需要 scipy 的旧模板恢复全量渲染
+- **Plotly 交互端**（templates/plotly/，12 个高频模板）
+  - make_figure() → go.Figure，写出独立 .html（CDN 模式）
+  - 配色直连库内 sci_palettes，数据与 Python 端同种子复刻
+- **暗色画廊**：`python render_all.py --dark` → gallery/dark/ 252 张全量
+  - 画廊新增 "🌙 暗色预览" 切换（页面与缩略图整体明暗互换）
+  - 画廊语言徽章新增 Plotly（紫），现有 Py/MATLAB/Origin/Go/Plotly 五语
+- **v1.8 电气纵深首发 4 对模板（248 → 252）**
+  - phasor_diagram 三相相量图 / pq_injection_heatmap 节点 PQ 注入热力
+  - dq_current_locus dq 电流轨迹（MTPA）/ protection_coordination 保护配合
+- **data_loader 扩展**：纯 numpy COMTRADE 读取器（ASCII+BINARY，
+  IEEE C37.111）+ load_tdms（可选 npTDMS）；新增 6 项 pytest 全过
+- **release 状态检查**：新增 `scripts/check_release_state.py`，防止版本号、模板数量、
+  gallery、README/API 和 palette 文档再次漂移
+
+## v1.6 — 流程图模块 + 检索画廊 + 配色选择器
+
+- **新增 9 个模板（25 → 26 类，239 → 248 个）**
+  - 新增 diagram 大类：7 个流程图/框图/网络图模板
+  - 流程图：算法流程图（判断+循环回边）/ 研究方法流程图
+  - 框图：闭环控制框图 / 信号流图（Mason）/ 电气主接线单线图（110/10 kV）
+  - 网络：带权有向图 / 无向图社团（纯 matplotlib，零额外依赖）
+  - 吸收自资料库比对缺口：散点图矩阵 / 人口金字塔
+  - 新增 `_utils/python/diagram.py`：box/diamond/oval/arrow/vflow 流程图积木
+- **画廊 v2**：搜索框 + 分类下拉 + **Python/MATLAB/Origin/Go 语言筛选与徽章**
+  - 新增 `templates/origin/origin_map.json`（Origin 脚本 ↔ 模板映射）
+- **交互式配色选择器** `palettes/palette_picker.html`
+  - 68 套全部可搜索/筛选，点色块复制 hex，一键复制四语调用代码
+  - 由 `scripts/build_palette_picker.py` 从 Python 源生成，永不漂移
+- **配色 60 → 68 套（风格化系列）**：guofeng5（国风）/ shuimo4（水墨+朱砂，
+  deut ΔE=19.9 全库最优）/ morandi6 / econ5 + 顺序 ink_wash / cinnabar /
+  bamboo + 发散 guofeng_div，全部 HCL 生成 + validator 实测
+- **Origin 工作流补全**：`render_all_origin.py` 一键批量出图（Windows）+
+  README 写清 "Origin 无 CLI、仅 Windows" 的结论与可行路径
+- 资料库学习结论：商业工具（TheColor/GEOColor 等）为加密 .p 文件不可、
+  也不应复刻；已对照其 139 个模板清单补齐缺口图型
+
 ## v1.5 — 配色革新 + 双新类 + Go 语言端
 
 - **配色大升级**：40 → 60 套

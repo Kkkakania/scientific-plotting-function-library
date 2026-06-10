@@ -11,32 +11,34 @@
 |---|---|---|
 | v1.0–v1.3 | 模板从 80 → 216，23 大类 | ✅ 完成 |
 | v1.4 | 色彩科学工具链（color_lab / generator / validator / 40 套色板） | ✅ 完成 |
-| **v1.5** | **配色革新（60 套+暗色模式）· power/energy 两大新类 · Go 语言端 · MATLAB 色板自动同步** | ✅ 本次完成 |
+| **v1.5** | **配色革新（60 套+暗色模式）· power/energy 两大新类 · Go 语言端 · MATLAB 色板自动同步** | ✅ 完成 |
+| **v1.6** | **diagram 流程图/框图大类 · 画廊语言检索 · palette_picker 选择器 · 配色 68 套 · Origin 批量出图** | ✅ 完成 |
+| **v1.7** | **verify_all 全绿（252/252）· Plotly 交互端 · 暗色画廊 · COMTRADE 读取器 · v1.8 电气首发 4 模板** | ✅ 本次完成 |
 
 ## v1.6 — 巩固与验证（短期，1~2 周强度）
 
 - [ ] 在本机（有 Go 工具链）编译验证 `templates/go/`，结果记入 verification_report
 - [ ] 在本机 MATLAB 实跑 23 个新 .m 模板（沙箱只做了静态语法检查）
 - [ ] 在本机 Origin 实跑 14~18 号新脚本
-- [ ] 把 `render_all.py --dark` 加入：一键渲染全库暗色版画廊
-- [ ] gallery/index.html 加"暗色预览"切换按钮
-- [ ] 把 hosting_capacity 等含 scipy 依赖的模板列出 fallback（numpy-only 路径）
+- [x] 把 `render_all.py --dark` 加入：一键渲染全库暗色版画廊
+- [x] gallery/index.html 加"暗色预览"切换按钮
+- [x] ~~scipy fallback~~ 直接装好 scipy 1.14.1，29 个模板复活，验证全绿
 
 ## v1.7 — 交互化（中期）
 
-- [ ] Plotly 端：挑 30 个高频模板做交互版（templates/plotly/）
-- [ ] 画廊升级：搜索框 + 按语言筛选（py/m/go/origin）+ 复制代码按钮
-- [ ] `palette_picker.html`：60 套色板的交互选择器（点色板→复制 Python/MATLAB/Go 调用代码）
-- [ ] data_loader 支持 .tdms（NI 采集卡）与 COMTRADE（电力故障录波标准格式）
+- [x] Plotly 端：首批 12 个高频模板（templates/plotly/，可继续扩到 30）
+- [x] 画廊升级：搜索框 + 按语言筛选（py/m/go/origin）~~+ 复制代码按钮~~（复制按钮移到 picker）
+- [x] `palette_picker.html`：68 套色板的交互选择器（已含 Origin 代码复制）
+- [x] data_loader 支持 .tdms（可选 npTDMS）与 COMTRADE（纯 numpy，ASCII+BINARY）
 
 ## v1.8 — 电气专业纵深（中期，结合课程进度）
 
 结合大三专业课（电机学、电力电子、电力系统分析、继电保护）逐步补齐：
 
-- [ ] 潮流计算结果可视化套件（节点电压相量图、PQ 注入热力图、网损分布）
-- [ ] 电机：圆图法、效率云图实测版、dq 轴电流轨迹
+- [x] 潮流可视化首发：相量图 + PQ 注入热力图（网损分布待补）
+- [~] 电机：dq 轴电流轨迹 ✓（圆图法、效率云图实测版待补）
 - [ ] 电力电子：开关损耗分解瀑布图、热仿真温升曲线、EMI 频谱模板
-- [ ] 继电保护：阶段式保护配合图、差动保护动作特性
+- [~] 继电保护：阶段式保护配合图 ✓（差动保护动作特性待补）
 - [ ] 新能源：风电场尾流热力图、光伏阵列失配 I-V、储能寿命衰减曲线
 
 ## v2.0 — 生态化（长期，毕业设计前）

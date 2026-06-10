@@ -1,6 +1,6 @@
 # 科研配色库
 
-不只是一堆 hex 码——这是一套**完整的色彩科学工具链**：60 套精选调色板 + 程序化生成器 + 色觉缺陷模拟 + 自动体检 + 双变量编码。
+不只是一堆 hex 码——这是一套**完整的色彩科学工具链**：68 套精选调色板 + 程序化生成器 + 色觉缺陷模拟 + 自动体检 + 双变量编码。
 
 ## 核心理念
 
@@ -17,26 +17,26 @@
 
 | 文件 | 做什么 |
 |---|---|
-| `python/sci_palettes.py` | 60 套调色板 + 取色 API |
+| `python/sci_palettes.py` | 68 套调色板 + 取色 API |
 | `python/color_lab.py` | sRGB↔Lab↔LCh 转换 / CIEDE2000 / WCAG / CVD 模拟 |
 | `python/palette_generator.py` | HCL 程序化生成 + 色相和声学 |
 | `python/palette_extractor.py` | 从任意图片用 Lab 空间 k-means 榨色 |
 | `python/palette_validator.py` | 调色板自动体检（色差/CVD/灰度/WCAG）|
 | `python/bivariate.py` | 双变量调色板（X×Y 2D 颜色编码） |
 | `python/palette_showcase.py` | 真实图表预览（折线+热力）|
-| `python/stress_test.py` | **60 套 × 4 视角（正常/红盲/绿盲/灰度）压力测试图** |
-| `matlab/sci_palettes.m` + `_list.m` | 60 套 MATLAB 镜像（`scripts/sync_matlab_palettes.py` 自动生成） |
+| `python/stress_test.py` | **68 套 × 4 视角（正常/红盲/绿盲/灰度）压力测试图** |
+| `matlab/sci_palettes.m` + `_list.m` | 68 套 MATLAB 镜像（`scripts/sync_matlab_palettes.py` 自动生成） |
 | `matlab/color_lab.m` | MATLAB 色彩科学工具 |
 | `matlab/palette_generator.m` | MATLAB 程序化生成 |
 | `matlab/palette_validator.m` | MATLAB 体检报告 |
 
-## 60 套预设调色板
+## 68 套预设调色板
 
-**分类（23 套）** wong · okabe_ito · duo_warm_cool · duo_blue_red · muted5 · bright6 · earth7 · deep6 · gray5 · paper4 · nature_soft · science_bold · ieee_tech · bio_dna · high_contrast8 · pastel6 · ggplot_like · **dark_bright7 · dark_muted6 · vivid6 · safe10 · mono_blue4 · mono_warm4**（v1.5）
+**分类（27 套）** wong · okabe_ito · duo_warm_cool · duo_blue_red · muted5 · bright6 · earth7 · deep6 · gray5 · paper4 · nature_soft · science_bold · ieee_tech · bio_dna · high_contrast8 · pastel6 · ggplot_like · **dark_bright7 · dark_muted6 · vivid6 · safe10 · mono_blue4 · mono_warm4**（v1.5）· **guofeng5 · shuimo4 · morandi6 · econ5**（v1.6）
 
-**顺序（22 套）** blues · oranges · greens · purples · reds · gray_to_blue · warm_lava · inferno_like · turbo_like · glacier · thermal · ocean_depth · plasma_like · material_blue · **forest · wine · amber · teal_deep · violet_night · steel · cool_warm_seq · dark_lumen**（v1.5）
+**顺序（25 套）** blues · oranges · greens · purples · reds · gray_to_blue · warm_lava · inferno_like · turbo_like · glacier · thermal · ocean_depth · plasma_like · material_blue · **forest · wine · amber · teal_deep · violet_night · steel · cool_warm_seq · dark_lumen**（v1.5）· **ink_wash · cinnabar · bamboo**（v1.6）
 
-**发散（12 套）** blue_white_red · blue_white_orange · purple_white_green · brown_white_teal · cool_dark_warm · aurora · cream_to_teal · **teal_white_rose · olive_white_indigo · earth_div · berry_lime · dark_div**（v1.5）
+**发散（13 套）** blue_white_red · blue_white_orange · purple_white_green · brown_white_teal · cool_dark_warm · aurora · cream_to_teal · **teal_white_rose · olive_white_indigo · earth_div · berry_lime · dark_div**（v1.5）· **guofeng_div**（v1.6）
 
 **周期（3 套）** twilight_like · phase_classic · **cyclic_isoL**（v1.5，等亮度——相位图首选）
 
@@ -65,7 +65,7 @@ MATLAB 端：`apply_theme(9, 'dark')` + `sci_palettes('dark_bright7')`。
 
 ```python
 from sci_palettes import get_palette, list_palettes
-print(list_palettes())                      # 按类别列出全部 60 套
+print(list_palettes())                      # 按类别列出全部 68 套
 
 colors = get_palette('wong')                # 分类：list of hex
 cmap   = get_palette('blue_white_red')      # 连续：LinearSegmentedColormap

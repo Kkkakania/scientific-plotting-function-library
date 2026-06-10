@@ -1,6 +1,6 @@
-# 模板目录（239 个）
+# 模板目录（252 个）
 
-共 239 个模板，覆盖 25 大类。
+共 252 个模板，覆盖 26 大类。
 
 每个在 `templates/python/<name>.py` 和 `templates/matlab/<name>.m` 各有一份对照实现。
 
@@ -38,6 +38,7 @@
 | `bar_percent_stack` | bar / percent | 100% 堆叠柱状 |
 | `bar_pareto` | pareto / cumulative | 帕累托图 |
 | `bar_combo` | bar / line / combo | 柱+折线组合 |
+| `population_pyramid` | pyramid / bidirectional | 人口金字塔 |
 
 ## 分布 (distribution)
 
@@ -243,6 +244,7 @@
 | `motor_torque_speed` | motor / torque | 电机转矩-转速特性族 |
 | `transformer_efficiency` | transformer / efficiency | 变压器效率曲线 |
 | `converter_efficiency_map` | converter / efficiency | 变流器效率 MAP |
+| `dq_current_locus` | dq / locus / motor | dq 轴电流轨迹 |
 
 ## 控制理论 (control)
 
@@ -297,6 +299,7 @@
 | `pairs_plot` | pairs / scatter | 散点矩阵 |
 | `biplot_pca` | PCA / biplot | PCA 双标图 |
 | `scree_plot` | PCA / scree | 碎石图 |
+| `scatter_matrix` | scatter / matrix / pairs | 散点图矩阵 |
 
 ## 特殊可视化 (specialty)
 
@@ -353,6 +356,9 @@
 | `grid_frequency_response` | frequency / inertia | 电网频率响应 |
 | `generator_capability` | generator / PQ | 发电机运行极限圆图 |
 | `line_loading_heatmap` | loading / heatmap | 线路负载率热力图 |
+| `phasor_diagram` | phasor / three_phase | 三相电压电流相量图 |
+| `pq_injection_heatmap` | injection / heatmap | 节点 PQ 注入热力图 |
+| `protection_coordination` | protection / coordination | 阶段式保护配合图 |
 
 ## 新能源/储能 (energy)
 
@@ -368,3 +374,15 @@
 | `ragone_plot` | storage / ragone | Ragone 储能对比图 |
 | `hosting_capacity` | PV / hosting | 光伏承载力箱线 |
 | `pv_iv_temperature` | PV / IV / temperature | 光伏 I-V 温度特性 |
+
+## 流程图/框图 (diagram)
+
+| 名称 | 标签 | 说明 |
+|---|---|---|
+| `flowchart_algorithm` | flowchart / algorithm | 算法流程图 |
+| `flowchart_methodology` | flowchart / methodology | 研究方法流程图 |
+| `block_diagram_control` | block / control | 闭环控制框图 |
+| `single_line_diagram` | electrical / substation | 电气主接线单线图 |
+| `signal_flow_graph` | signal_flow / mason | 信号流图 |
+| `graph_directed` | network / directed | 带权重有向图 |
+| `graph_undirected` | network / community | 无向图社团 |

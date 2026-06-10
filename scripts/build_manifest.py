@@ -24,6 +24,7 @@ CAT_CN = {
     'multivar': '多变量', 'specialty': '特殊可视化',
     'cfd': 'CFD/流体', 'optimization': '优化算法', 'nn': '神经网络',
     'power': '电力系统', 'energy': '新能源/储能',
+    'diagram': '流程图/框图',
 }
 
 ORDER = list(CAT_CN)
@@ -47,7 +48,7 @@ def main():
 
     # manifest.json
     JSON.write_text(json.dumps({
-        'version': '1.5', 'count': len(entries), 'templates': entries
+        'version': '1.7', 'count': len(entries), 'templates': entries
     }, ensure_ascii=False, indent=2), encoding='utf-8')
 
     # catalog.md

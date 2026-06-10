@@ -237,3 +237,16 @@ motor_torque_speed|electrical|motor,torque|电机转矩-转速特性族
 transformer_efficiency|electrical|transformer,efficiency|变压器效率曲线
 pv_iv_temperature|energy|PV,IV,temperature|光伏 I-V 温度特性
 converter_efficiency_map|electrical|converter,efficiency|变流器效率 MAP
+flowchart_algorithm|diagram|flowchart,algorithm|算法流程图
+flowchart_methodology|diagram|flowchart,methodology|研究方法流程图
+block_diagram_control|diagram|block,control|闭环控制框图
+single_line_diagram|diagram|electrical,substation|电气主接线单线图
+signal_flow_graph|diagram|signal_flow,mason|信号流图
+graph_directed|diagram|network,directed|带权重有向图
+graph_undirected|diagram|network,community|无向图社团
+scatter_matrix|multivar|scatter,matrix,pairs|散点图矩阵
+population_pyramid|categorical|pyramid,bidirectional|人口金字塔
+phasor_diagram|power|phasor,three_phase|三相电压电流相量图
+pq_injection_heatmap|power|injection,heatmap|节点 PQ 注入热力图
+dq_current_locus|electrical|dq,locus,motor|dq 轴电流轨迹
+protection_coordination|power|protection,coordination|阶段式保护配合图

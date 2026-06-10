@@ -1,0 +1,17 @@
+{
+  "_comment": "Origin 脚本 ↔ 模板名映射；画廊用它给模板挂 origin 徽章",
+  "01_line_plot": "line_basic",
+  "02_scatter": "scatter_basic",
+  "03_bar_grouped": "bar_grouped",
+  "04_errorbar": "bar_error",
+  "05_box_plot": "box_basic",
+  "06_dual_yaxis": "dual_yaxis",
+  "07_heatmap": "heatmap_basic",
+  "08_contour": "contour_filled",
+  "09_3d_surface": "surface_3d",
+  "10_polar": "polar_basic",
+  "11_multi_panel": "small_multiples",
+  "15_double_y_column": "bar_combo",
+  "16_wind_power_curve": "wind_power_curve",
+  "17_harmonic_spectrum": "harmonic_spectrum"
+}

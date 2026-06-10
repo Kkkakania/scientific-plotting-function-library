@@ -20,9 +20,20 @@ jobs:
           python -m pip install -r requirements.txt pytest
       - name: Publication readiness
         run: python scripts/check_publication_ready.py
-      - name: Manifest and catalog are current
+      - name: Release state consistency
+        run: python scripts/check_release_state.py
+      - name: Generated files are current
         run: |
           python scripts/build_manifest.py
-          git diff --exit-code manifest.json catalog.md
+          python scripts/build_gallery_index.py
+          python scripts/build_palette_picker.py
+          python scripts/sync_matlab_palettes.py
+          git diff --exit-code \
+            manifest.json \
+            catalog.md \
+            gallery/index.html \
+            palettes/palette_picker.html \
+            palettes/matlab/sci_palettes.m \
+            palettes/matlab/sci_palettes_list.m
       - name: Tests
         run: python -m pytest tests/

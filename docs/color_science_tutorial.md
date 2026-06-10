@@ -171,17 +171,17 @@ out = adapt_rgb_for_print(np.array(hex_to_rgb('#0072B2')))
 
 | 想做 | 命令 |
 |---|---|
-| 列出所有 60 套 | `python palette_cli.py list` |
+| 列出所有 68 套 | `python palette_cli.py list` |
 | 取预设转 LaTeX | `python palette_cli.py get wong --format latex -o c.tex` |
 | 生成自定义 8 色 | `python palette_cli.py gen qualitative --n 8 --model oklab` |
 | 体检 | `python palette_cli.py audit "#0072B2,#D55E00,#009E73"` |
 | 屏幕→印刷 | `python palette_cli.py adapt "#0072B2" --to D50` |
 | 图片榨色 | `python palette_cli.py extract logo.png --n 6` |
-| 看 60 套 CVD/灰度对照大图 | 打开 `gallery/_palette_stress_test.png` |
+| 看 68 套 CVD/灰度对照大图 | 打开 `gallery/_palette_stress_test.png` |
 
 ## 11. 再深入
 
-- `docs/palette_audit_report.md`：60 套预设的详细体检数据
+- `docs/palette_audit_report.md`：68 套预设的详细体检数据
 - `docs/palette_theory.md`：不可能三角的数学分析
 - `palettes/README.md`：所有工具的 API 速查
 

@@ -1,6 +1,6 @@
 {
-  "version": "1.5",
-  "count": 239,
+  "version": "1.7",
+  "count": 252,
   "templates": [
     {
       "name": "line_basic",
@@ -2128,6 +2128,125 @@
         "efficiency"
       ],
       "description": "变流器效率 MAP"
+    },
+    {
+      "name": "flowchart_algorithm",
+      "category": "diagram",
+      "tags": [
+        "flowchart",
+        "algorithm"
+      ],
+      "description": "算法流程图"
+    },
+    {
+      "name": "flowchart_methodology",
+      "category": "diagram",
+      "tags": [
+        "flowchart",
+        "methodology"
+      ],
+      "description": "研究方法流程图"
+    },
+    {
+      "name": "block_diagram_control",
+      "category": "diagram",
+      "tags": [
+        "block",
+        "control"
+      ],
+      "description": "闭环控制框图"
+    },
+    {
+      "name": "single_line_diagram",
+      "category": "diagram",
+      "tags": [
+        "electrical",
+        "substation"
+      ],
+      "description": "电气主接线单线图"
+    },
+    {
+      "name": "signal_flow_graph",
+      "category": "diagram",
+      "tags": [
+        "signal_flow",
+        "mason"
+      ],
+      "description": "信号流图"
+    },
+    {
+      "name": "graph_directed",
+      "category": "diagram",
+      "tags": [
+        "network",
+        "directed"
+      ],
+      "description": "带权重有向图"
+    },
+    {
+      "name": "graph_undirected",
+      "category": "diagram",
+      "tags": [
+        "network",
+        "community"
+      ],
+      "description": "无向图社团"
+    },
+    {
+      "name": "scatter_matrix",
+      "category": "multivar",
+      "tags": [
+        "scatter",
+        "matrix",
+        "pairs"
+      ],
+      "description": "散点图矩阵"
+    },
+    {
+      "name": "population_pyramid",
+      "category": "categorical",
+      "tags": [
+        "pyramid",
+        "bidirectional"
+      ],
+      "description": "人口金字塔"
+    },
+    {
+      "name": "phasor_diagram",
+      "category": "power",
+      "tags": [
+        "phasor",
+        "three_phase"
+      ],
+      "description": "三相电压电流相量图"
+    },
+    {
+      "name": "pq_injection_heatmap",
+      "category": "power",
+      "tags": [
+        "injection",
+        "heatmap"
+      ],
+      "description": "节点 PQ 注入热力图"
+    },
+    {
+      "name": "dq_current_locus",
+      "category": "electrical",
+      "tags": [
+        "dq",
+        "locus",
+        "motor"
+      ],
+      "description": "dq 轴电流轨迹"
+    },
+    {
+      "name": "protection_coordination",
+      "category": "power",
+      "tags": [
+        "protection",
+        "coordination"
+      ],
+      "description": "阶段式保护配合图"
     }
   ]
 }

@@ -175,6 +175,69 @@ def load_timeseries(path, time_col=0, value_cols=None, **opts):
     return t, Y
 
 
+# ============ 专业仪器格式 ============
+
+def load_comtrade(cfg_path):
+    """读取 COMTRADE 故障录波（IEEE C37.111-1999, .cfg + .dat）.
+
+    薄包装，实际实现见同目录 comtrade_loader.py。
+
+    返回 dict::
+
+        {
+            'analog':  {通道名: ndarray (物理值)},
+            'digital': {通道名: ndarray (0/1)},
+            't':       ndarray (s),
+            'freq':    float (Hz),
+            'station': str,
+        }
+    """
+    from comtrade_loader import read_comtrade
+    return read_comtrade(cfg_path)
+
+
+def load_tdms(path, group=None, channel=None):
+    """读取 NI TDMS 文件（LabVIEW / DAQmx 采集数据）.
+
+    需要第三方库 npTDMS。group / channel 为 None 时分别取文件中第一个
+    组 / 该组第一个通道。
+
+    返回 (t, y)：t 为时间轴（无时间信息时为样本序号），y 为通道数据。
+    """
+    try:
+        from nptdms import TdmsFile
+    except ImportError as e:
+        raise ImportError(
+            'load_tdms 需要 npTDMS 库，请先安装: pip install npTDMS'
+        ) from e
+
+    tdms = TdmsFile.read(path)
+    groups = tdms.groups()
+    if not groups:
+        raise ValueError(f'TDMS 文件中没有任何组: {path}')
+
+    if group is None:
+        grp = groups[0]
+    else:
+        grp = tdms[group]
+
+    channels = grp.channels()
+    if not channels:
+        raise ValueError(f'TDMS 组 {grp.name!r} 中没有任何通道: {path}')
+
+    if channel is None:
+        ch = channels[0]
+    else:
+        ch = grp[channel]
+
+    y = np.asarray(ch[:])
+    try:
+        t = ch.time_track()
+    except (KeyError, ValueError):
+        t = np.arange(len(y))
+    return t, y
+
+
 # ============ helpers ============
 
 def _all_numeric(row):

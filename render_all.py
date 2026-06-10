@@ -5,6 +5,7 @@
     python render_all.py                       # 渲染全部
     python render_all.py line_basic bar_basic  # 只渲染指定模板
     python render_all.py --tag heatmap         # 按 tag 过滤
+    python render_all.py --dark                # 深色主题, 输出到 gallery/dark/
 """
 import sys
 import json
@@ -33,6 +34,18 @@ def load_module(name):
 
 def main():
     args = sys.argv[1:]
+    dark = '--dark' in args
+    if dark:
+        args = [a for a in args if a != '--dark']
+        # monkeypatch: 强制所有模板的 apply_theme() 走深色模式
+        sys.path.insert(0, str(ROOT / '_utils' / 'python'))
+        import theme
+        _orig = theme.apply_theme
+        theme.apply_theme = lambda *a, **k: _orig(*a, **{**k, 'dark': True})
+
+    out_dir = (OUT_DIR / 'dark') if dark else OUT_DIR
+    out_dir.mkdir(parents=True, exist_ok=True)
+
     manifest = load_manifest()
     names = [t['name'] for t in manifest['templates']]
 
@@ -42,13 +55,14 @@ def main():
     elif args:
         names = args
 
-    print(f'Rendering {len(names)} template(s) to {OUT_DIR} ...')
+    print(f'Rendering {len(names)} template(s) to {out_dir} ...')
     ok, fail = 0, []
     for name in names:
         try:
             mod = load_module(name)
             fig = mod.make_figure()
-            fig.savefig(OUT_DIR / f'{name}.png', dpi=150)
+            save_kw = {'facecolor': fig.get_facecolor()} if dark else {}
+            fig.savefig(out_dir / f'{name}.png', dpi=150, **save_kw)
             plt.close(fig)
             ok += 1
             print(f'  OK    {name}')

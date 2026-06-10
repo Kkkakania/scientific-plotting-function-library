@@ -55,3 +55,25 @@ Origin 不是必须的。如果你只用 Python/MATLAB，可以完全忽略 `tem
 - 把 Python 处理好的数据无缝送到 Origin 出图
 - 用我们的 `sci_palettes` 配色（脚本 12 演示）
 - 一键导出符合期刊规范的矢量图（脚本 13）
+
+## 一键批量出图（v1.6 新增）
+
+```bash
+# Windows + Origin + pip install originpro
+python render_all_origin.py          # 全部脚本 → out/*.png
+python render_all_origin.py 16 17    # 只跑指定编号
+```
+
+跑完把 `out/*.png` 拷进库的 `gallery/origin/`，画廊即可展示 Origin 版效果图。
+
+## 关于 "Origin CLI" 的结论（一次说清）
+
+- Origin **只有 Windows 版**，没有 macOS / Linux 版本，也没有独立命令行渲染器
+- `originpro` 包只是个桥：它必须连到本机正在运行/已安装的 Origin 实例
+- 因此在 macOS（你的电脑）和 Linux（Claude 的沙箱）上都**无法**配置出 Origin CLI
+- 可行路径：① 在任何 Windows 机器/虚拟机上跑上面的批量脚本；
+  ② 用 `origin_map.json` 里映射的同名 Python/MATLAB 模板预览效果（视觉等价）
+
+## 脚本 ↔ 模板映射
+
+见 `origin_map.json` —— 画廊语言徽章（Origin 14 个）就来自这份映射。

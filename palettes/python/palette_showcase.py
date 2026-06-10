@@ -38,11 +38,12 @@ def build_showcase(savepath='palette_showcase.png'):
     div_names = list(PALETTES_DIV)
     cyc_names = list(PALETTES_CYC)
 
-    fig = plt.figure(figsize=(13, 11))
-    gs = fig.add_gridspec(4, 5, hspace=0.35, wspace=0.15,
+    rows = (len(cat_names) + 4) // 5            # 动态行数
+    fig = plt.figure(figsize=(13, rows*2.6 + 1))
+    gs = fig.add_gridspec(rows, 5, hspace=0.35, wspace=0.15,
                           left=0.04, right=0.98, top=0.94, bottom=0.04)
 
-    # 分类（10 个，2 行 × 5 列）—— 折线
+    # 分类 —— 折线
     fig.text(0.5, 0.97, 'Categorical palettes applied to line plots',
              ha='center', fontsize=11, fontweight='bold')
     for i, name in enumerate(cat_names):
@@ -53,7 +54,7 @@ def build_showcase(savepath='palette_showcase.png'):
     plt.savefig(savepath.replace('.png', '_cat.png'), dpi=200, bbox_inches='tight')
     plt.close(fig)
 
-    # 顺序 + 发散 + 周期（17 个，4 行 × 5 列）—— 横条
+    # 顺序 + 发散 + 周期 —— 横条
     n = len(seq_names) + len(div_names) + len(cyc_names)
     fig = plt.figure(figsize=(13, n*0.5 + 1))
     gs = fig.add_gridspec(n, 1, hspace=0.6, left=0.18, right=0.96, top=0.97, bottom=0.02)

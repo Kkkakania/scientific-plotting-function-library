@@ -83,6 +83,8 @@ end
 | `load_matrix(path)` | CSV/Excel/MAT → 2D array |
 | `load_groups(path, label_col, value_col)` | → `(labels, values)` |
 | `load_timeseries(path, time_col, value_cols=None)` | → `(t, Y)` |
+| `load_comtrade(cfg_path)` | COMTRADE `.cfg/.dat` → 录波字典 |
+| `load_tdms(path, group=None, channel=None)` | TDMS → `(t, y)`，需要可选依赖 `npTDMS` |
 
 ### `palettes/python/sci_palettes.py`
 
@@ -126,8 +128,8 @@ render_all('--tag', 'heatmap')   % 按 tag
 
 ```json
 {
-  "version": "1.5",
-  "count": 239,
+  "version": "1.7",
+  "count": 252,
   "templates": [
     {"name": "line_basic", "category": "basic",
      "tags": ["line", "trend"], "description": "单条折线"},

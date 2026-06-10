@@ -41,7 +41,7 @@ import "sciplot.example/templates/sciplot"
 p := plot.New()
 sciplot.ApplyTheme(p)              // 论文风格（字号/线宽对齐 Python 端）
 line.Color = sciplot.Cycle(0)      // 循环色与 _utils/python/palette.py 一致
-pal, _ := sciplot.Get("dark_bright7")  // 60 套色板中的分类板（部分镜像）
+pal, _ := sciplot.Get("dark_bright7")  // 68 套色板中的分类板（部分镜像）
 cmap := sciplot.Sequential(pal, 256)   // 锚点插值成连续色
 ```
 
