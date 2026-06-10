@@ -1,0 +1,1997 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<title>科研绘图函数库 · 画廊 (239)</title>
+<style>
+  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+         margin: 0; background: #f6f7f9; color: #222; }
+  header { position: sticky; top: 0; background: white; padding: 16px 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08); z-index: 10; }
+  h1 { margin: 0 0 8px; font-size: 18px; }
+  .controls { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+  input, select { padding: 6px 10px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px; }
+  input { width: 280px; }
+  .stats { color: #666; font-size: 13px; }
+  main { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+          gap: 16px; padding: 24px; }
+  .card { background: white; border-radius: 10px; overflow: hidden;
+           box-shadow: 0 1px 4px rgba(0,0,0,0.08); transition: transform .15s; }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.10); }
+  .card.hide { display: none; }
+  .card img { width: 100%; height: 180px; object-fit: contain; background: #fafafa; display: block; }
+  .meta { padding: 10px 12px 12px; }
+  .name { font-family: ui-monospace, Menlo, monospace; font-size: 13px; font-weight: 600; }
+  .desc { font-size: 12px; color: #555; margin: 4px 0 8px; }
+  .tag, .cat { display: inline-block; font-size: 10px; padding: 1px 6px; border-radius: 4px;
+                background: #eef1f5; color: #444; margin: 1px 2px 1px 0; }
+  .cat { background: #2E5077; color: white; font-weight: 600; }
+</style>
+</head>
+<body>
+<header>
+  <h1>科研绘图函数库 · 画廊 <span class="stats" id="count">(239 个)</span></h1>
+  <div class="controls">
+    <input id="search" placeholder="搜索名称、描述、标签…" oninput="filter()">
+    <select id="catSel" onchange="filter()">
+      <option value="">全部分类</option>
+      <option value="3d">三维</option>
+<option value="basic">基础</option>
+<option value="categorical">柱状</option>
+<option value="cfd">CFD</option>
+<option value="composite">复合</option>
+<option value="control">控制</option>
+<option value="distribution">分布</option>
+<option value="electrical">电气</option>
+<option value="energy">energy</option>
+<option value="field">场</option>
+<option value="flow">流图</option>
+<option value="matrix">矩阵</option>
+<option value="ml">机器学习</option>
+<option value="multivar">多变量</option>
+<option value="nn">神经网络</option>
+<option value="optimization">优化</option>
+<option value="polar">极坐标</option>
+<option value="power">power</option>
+<option value="ranking">排名</option>
+<option value="relation">关系</option>
+<option value="rf">RF/通信</option>
+<option value="signal">信号</option>
+<option value="specialty">专题</option>
+<option value="statistical">统计</option>
+<option value="time">时间序列</option>
+    </select>
+  </div>
+</header>
+<main id="grid">
+<div class="card" data-name="line_basic" data-cat="basic" data-tags="line trend" data-desc="单条折线">
+  <a href="line_basic.png" target="_blank"><img src="line_basic.png" loading="lazy" alt="line_basic"></a>
+  <div class="meta">
+    <div class="name">line_basic</div>
+    <div class="desc">单条折线</div>
+    <div class="tags"><span class="cat">基础</span> <span class="tag">line</span> <span class="tag">trend</span></div>
+  </div>
+</div>
+<div class="card" data-name="line_multi" data-cat="basic" data-tags="line trend compare" data-desc="多条折线对比">
+  <a href="line_multi.png" target="_blank"><img src="line_multi.png" loading="lazy" alt="line_multi"></a>
+  <div class="meta">
+    <div class="name">line_multi</div>
+    <div class="desc">多条折线对比</div>
+    <div class="tags"><span class="cat">基础</span> <span class="tag">line</span> <span class="tag">trend</span> <span class="tag">compare</span></div>
+  </div>
+</div>
+<div class="card" data-name="line_step" data-cat="basic" data-tags="line step discrete" data-desc="阶梯折线">
+  <a href="line_step.png" target="_blank"><img src="line_step.png" loading="lazy" alt="line_step"></a>
+  <div class="meta">
+    <div class="name">line_step</div>
+    <div class="desc">阶梯折线</div>
+    <div class="tags"><span class="cat">基础</span> <span class="tag">line</span> <span class="tag">step</span> <span class="tag">discrete</span></div>
+  </div>
+</div>
+<div class="card" data-name="line_filled" data-cat="basic" data-tags="line area" data-desc="曲线+下方填充">
+  <a href="line_filled.png" target="_blank"><img src="line_filled.png" loading="lazy" alt="line_filled"></a>
+  <div class="meta">
+    <div class="name">line_filled</div>
+    <div class="desc">曲线+下方填充</div>
+    <div class="tags"><span class="cat">基础</span> <span class="tag">line</span> <span class="tag">area</span></div>
+  </div>
+</div>
+<div class="card" data-name="line_smoothed" data-cat="basic" data-tags="line smoothing" data-desc="原始+滑动平均">
+  <a href="line_smoothed.png" target="_blank"><img src="line_smoothed.png" loading="lazy" alt="line_smoothed"></a>
+  <div class="meta">
+    <div class="name">line_smoothed</div>
+    <div class="desc">原始+滑动平均</div>
+    <div class="tags"><span class="cat">基础</span> <span class="tag">line</span> <span class="tag">smoothing</span></div>
+  </div>
+</div>
+<div class="card" data-name="line_log" data-cat="basic" data-tags="line log" data-desc="半对数/双对数图">
+  <a href="line_log.png" target="_blank"><img src="line_log.png" loading="lazy" alt="line_log"></a>
+  <div class="meta">
+    <div class="name">line_log</div>
+    <div class="desc">半对数/双对数图</div>
+    <div class="tags"><span class="cat">基础</span> <span class="tag">line</span> <span class="tag">log</span></div>
+  </div>
+</div>
+<div class="card" data-name="scatter_basic" data-cat="basic" data-tags="scatter" data-desc="单组散点">
+  <a href="scatter_basic.png" target="_blank"><img src="scatter_basic.png" loading="lazy" alt="scatter_basic"></a>
+  <div class="meta">
+    <div class="name">scatter_basic</div>
+    <div class="desc">单组散点</div>
+    <div class="tags"><span class="cat">基础</span> <span class="tag">scatter</span></div>
+  </div>
+</div>
+<div class="card" data-name="scatter_grouped" data-cat="basic" data-tags="scatter category" data-desc="按类别着色散点">
+  <a href="scatter_grouped.png" target="_blank"><img src="scatter_grouped.png" loading="lazy" alt="scatter_grouped"></a>
+  <div class="meta">
+    <div class="name">scatter_grouped</div>
+    <div class="desc">按类别着色散点</div>
+    <div class="tags"><span class="cat">基础</span> <span class="tag">scatter</span> <span class="tag">category</span></div>
+  </div>
+</div>
+<div class="card" data-name="scatter_sized" data-cat="basic" data-tags="scatter bubble" data-desc="气泡图">
+  <a href="scatter_sized.png" target="_blank"><img src="scatter_sized.png" loading="lazy" alt="scatter_sized"></a>
+  <div class="meta">
+    <div class="name">scatter_sized</div>
+    <div class="desc">气泡图</div>
+    <div class="tags"><span class="cat">基础</span> <span class="tag">scatter</span> <span class="tag">bubble</span></div>
+  </div>
+</div>
+<div class="card" data-name="scatter_colored" data-cat="basic" data-tags="scatter colormap" data-desc="连续色映射散点">
+  <a href="scatter_colored.png" target="_blank"><img src="scatter_colored.png" loading="lazy" alt="scatter_colored"></a>
+  <div class="meta">
+    <div class="name">scatter_colored</div>
+    <div class="desc">连续色映射散点</div>
+    <div class="tags"><span class="cat">基础</span> <span class="tag">scatter</span> <span class="tag">colormap</span></div>
+  </div>
+</div>
+<div class="card" data-name="scatter_density" data-cat="relation" data-tags="scatter density kde" data-desc="KDE 着色密度散点">
+  <a href="scatter_density.png" target="_blank"><img src="scatter_density.png" loading="lazy" alt="scatter_density"></a>
+  <div class="meta">
+    <div class="name">scatter_density</div>
+    <div class="desc">KDE 着色密度散点</div>
+    <div class="tags"><span class="cat">关系</span> <span class="tag">scatter</span> <span class="tag">density</span> <span class="tag">kde</span></div>
+  </div>
+</div>
+<div class="card" data-name="scatter_regression" data-cat="relation" data-tags="scatter fit ci" data-desc="散点+回归+95% CI">
+  <a href="scatter_regression.png" target="_blank"><img src="scatter_regression.png" loading="lazy" alt="scatter_regression"></a>
+  <div class="meta">
+    <div class="name">scatter_regression</div>
+    <div class="desc">散点+回归+95% CI</div>
+    <div class="tags"><span class="cat">关系</span> <span class="tag">scatter</span> <span class="tag">fit</span> <span class="tag">ci</span></div>
+  </div>
+</div>
+<div class="card" data-name="bar_basic" data-cat="categorical" data-tags="bar" data-desc="单系列柱状">
+  <a href="bar_basic.png" target="_blank"><img src="bar_basic.png" loading="lazy" alt="bar_basic"></a>
+  <div class="meta">
+    <div class="name">bar_basic</div>
+    <div class="desc">单系列柱状</div>
+    <div class="tags"><span class="cat">柱状</span> <span class="tag">bar</span></div>
+  </div>
+</div>
+<div class="card" data-name="bar_grouped" data-cat="categorical" data-tags="bar group" data-desc="分组柱状">
+  <a href="bar_grouped.png" target="_blank"><img src="bar_grouped.png" loading="lazy" alt="bar_grouped"></a>
+  <div class="meta">
+    <div class="name">bar_grouped</div>
+    <div class="desc">分组柱状</div>
+    <div class="tags"><span class="cat">柱状</span> <span class="tag">bar</span> <span class="tag">group</span></div>
+  </div>
+</div>
+<div class="card" data-name="bar_stacked" data-cat="categorical" data-tags="bar stack" data-desc="堆叠柱状">
+  <a href="bar_stacked.png" target="_blank"><img src="bar_stacked.png" loading="lazy" alt="bar_stacked"></a>
+  <div class="meta">
+    <div class="name">bar_stacked</div>
+    <div class="desc">堆叠柱状</div>
+    <div class="tags"><span class="cat">柱状</span> <span class="tag">bar</span> <span class="tag">stack</span></div>
+  </div>
+</div>
+<div class="card" data-name="bar_horizontal" data-cat="categorical" data-tags="bar horizontal" data-desc="横向条形">
+  <a href="bar_horizontal.png" target="_blank"><img src="bar_horizontal.png" loading="lazy" alt="bar_horizontal"></a>
+  <div class="meta">
+    <div class="name">bar_horizontal</div>
+    <div class="desc">横向条形</div>
+    <div class="tags"><span class="cat">柱状</span> <span class="tag">bar</span> <span class="tag">horizontal</span></div>
+  </div>
+</div>
+<div class="card" data-name="bar_diverging" data-cat="categorical" data-tags="bar diverge tornado" data-desc="发散柱状/龙卷风">
+  <a href="bar_diverging.png" target="_blank"><img src="bar_diverging.png" loading="lazy" alt="bar_diverging"></a>
+  <div class="meta">
+    <div class="name">bar_diverging</div>
+    <div class="desc">发散柱状/龙卷风</div>
+    <div class="tags"><span class="cat">柱状</span> <span class="tag">bar</span> <span class="tag">diverge</span> <span class="tag">tornado</span></div>
+  </div>
+</div>
+<div class="card" data-name="bar_lollipop" data-cat="categorical" data-tags="lollipop" data-desc="棒棒糖图">
+  <a href="bar_lollipop.png" target="_blank"><img src="bar_lollipop.png" loading="lazy" alt="bar_lollipop"></a>
+  <div class="meta">
+    <div class="name">bar_lollipop</div>
+    <div class="desc">棒棒糖图</div>
+    <div class="tags"><span class="cat">柱状</span> <span class="tag">lollipop</span></div>
+  </div>
+</div>
+<div class="card" data-name="bar_dumbbell" data-cat="categorical" data-tags="dumbbell pair" data-desc="哑铃图">
+  <a href="bar_dumbbell.png" target="_blank"><img src="bar_dumbbell.png" loading="lazy" alt="bar_dumbbell"></a>
+  <div class="meta">
+    <div class="name">bar_dumbbell</div>
+    <div class="desc">哑铃图</div>
+    <div class="tags"><span class="cat">柱状</span> <span class="tag">dumbbell</span> <span class="tag">pair</span></div>
+  </div>
+</div>
+<div class="card" data-name="bar_waterfall" data-cat="categorical" data-tags="waterfall" data-desc="瀑布图">
+  <a href="bar_waterfall.png" target="_blank"><img src="bar_waterfall.png" loading="lazy" alt="bar_waterfall"></a>
+  <div class="meta">
+    <div class="name">bar_waterfall</div>
+    <div class="desc">瀑布图</div>
+    <div class="tags"><span class="cat">柱状</span> <span class="tag">waterfall</span></div>
+  </div>
+</div>
+<div class="card" data-name="histogram_basic" data-cat="distribution" data-tags="histogram" data-desc="基础直方图">
+  <a href="histogram_basic.png" target="_blank"><img src="histogram_basic.png" loading="lazy" alt="histogram_basic"></a>
+  <div class="meta">
+    <div class="name">histogram_basic</div>
+    <div class="desc">基础直方图</div>
+    <div class="tags"><span class="cat">分布</span> <span class="tag">histogram</span></div>
+  </div>
+</div>
+<div class="card" data-name="histogram_overlay" data-cat="distribution" data-tags="histogram compare" data-desc="多组叠加直方">
+  <a href="histogram_overlay.png" target="_blank"><img src="histogram_overlay.png" loading="lazy" alt="histogram_overlay"></a>
+  <div class="meta">
+    <div class="name">histogram_overlay</div>
+    <div class="desc">多组叠加直方</div>
+    <div class="tags"><span class="cat">分布</span> <span class="tag">histogram</span> <span class="tag">compare</span></div>
+  </div>
+</div>
+<div class="card" data-name="histogram_2d" data-cat="distribution" data-tags="hist2d density" data-desc="二维直方图">
+  <a href="histogram_2d.png" target="_blank"><img src="histogram_2d.png" loading="lazy" alt="histogram_2d"></a>
+  <div class="meta">
+    <div class="name">histogram_2d</div>
+    <div class="desc">二维直方图</div>
+    <div class="tags"><span class="cat">分布</span> <span class="tag">hist2d</span> <span class="tag">density</span></div>
+  </div>
+</div>
+<div class="card" data-name="histogram_step" data-cat="distribution" data-tags="histogram step" data-desc="阶梯直方图">
+  <a href="histogram_step.png" target="_blank"><img src="histogram_step.png" loading="lazy" alt="histogram_step"></a>
+  <div class="meta">
+    <div class="name">histogram_step</div>
+    <div class="desc">阶梯直方图</div>
+    <div class="tags"><span class="cat">分布</span> <span class="tag">histogram</span> <span class="tag">step</span></div>
+  </div>
+</div>
+<div class="card" data-name="box_basic" data-cat="distribution" data-tags="box" data-desc="基础箱线图">
+  <a href="box_basic.png" target="_blank"><img src="box_basic.png" loading="lazy" alt="box_basic"></a>
+  <div class="meta">
+    <div class="name">box_basic</div>
+    <div class="desc">基础箱线图</div>
+    <div class="tags"><span class="cat">分布</span> <span class="tag">box</span></div>
+  </div>
+</div>
+<div class="card" data-name="box_jittered" data-cat="distribution" data-tags="box jitter" data-desc="箱线+jitter散点">
+  <a href="box_jittered.png" target="_blank"><img src="box_jittered.png" loading="lazy" alt="box_jittered"></a>
+  <div class="meta">
+    <div class="name">box_jittered</div>
+    <div class="desc">箱线+jitter散点</div>
+    <div class="tags"><span class="cat">分布</span> <span class="tag">box</span> <span class="tag">jitter</span></div>
+  </div>
+</div>
+<div class="card" data-name="box_notched" data-cat="distribution" data-tags="box notch" data-desc="带凹槽箱线">
+  <a href="box_notched.png" target="_blank"><img src="box_notched.png" loading="lazy" alt="box_notched"></a>
+  <div class="meta">
+    <div class="name">box_notched</div>
+    <div class="desc">带凹槽箱线</div>
+    <div class="tags"><span class="cat">分布</span> <span class="tag">box</span> <span class="tag">notch</span></div>
+  </div>
+</div>
+<div class="card" data-name="violin_basic" data-cat="distribution" data-tags="violin" data-desc="小提琴图">
+  <a href="violin_basic.png" target="_blank"><img src="violin_basic.png" loading="lazy" alt="violin_basic"></a>
+  <div class="meta">
+    <div class="name">violin_basic</div>
+    <div class="desc">小提琴图</div>
+    <div class="tags"><span class="cat">分布</span> <span class="tag">violin</span></div>
+  </div>
+</div>
+<div class="card" data-name="violin_split" data-cat="distribution" data-tags="violin split" data-desc="左右拆分小提琴">
+  <a href="violin_split.png" target="_blank"><img src="violin_split.png" loading="lazy" alt="violin_split"></a>
+  <div class="meta">
+    <div class="name">violin_split</div>
+    <div class="desc">左右拆分小提琴</div>
+    <div class="tags"><span class="cat">分布</span> <span class="tag">violin</span> <span class="tag">split</span></div>
+  </div>
+</div>
+<div class="card" data-name="ridgeline" data-cat="distribution" data-tags="ridgeline density" data-desc="山脊图">
+  <a href="ridgeline.png" target="_blank"><img src="ridgeline.png" loading="lazy" alt="ridgeline"></a>
+  <div class="meta">
+    <div class="name">ridgeline</div>
+    <div class="desc">山脊图</div>
+    <div class="tags"><span class="cat">分布</span> <span class="tag">ridgeline</span> <span class="tag">density</span></div>
+  </div>
+</div>
+<div class="card" data-name="errorbar_basic" data-cat="statistical" data-tags="errorbar" data-desc="标准误差棒">
+  <a href="errorbar_basic.png" target="_blank"><img src="errorbar_basic.png" loading="lazy" alt="errorbar_basic"></a>
+  <div class="meta">
+    <div class="name">errorbar_basic</div>
+    <div class="desc">标准误差棒</div>
+    <div class="tags"><span class="cat">统计</span> <span class="tag">errorbar</span></div>
+  </div>
+</div>
+<div class="card" data-name="errorbar_filled" data-cat="statistical" data-tags="band error" data-desc="阴影误差带">
+  <a href="errorbar_filled.png" target="_blank"><img src="errorbar_filled.png" loading="lazy" alt="errorbar_filled"></a>
+  <div class="meta">
+    <div class="name">errorbar_filled</div>
+    <div class="desc">阴影误差带</div>
+    <div class="tags"><span class="cat">统计</span> <span class="tag">band</span> <span class="tag">error</span></div>
+  </div>
+</div>
+<div class="card" data-name="confidence_band" data-cat="statistical" data-tags="band group" data-desc="多组均值±std">
+  <a href="confidence_band.png" target="_blank"><img src="confidence_band.png" loading="lazy" alt="confidence_band"></a>
+  <div class="meta">
+    <div class="name">confidence_band</div>
+    <div class="desc">多组均值±std</div>
+    <div class="tags"><span class="cat">统计</span> <span class="tag">band</span> <span class="tag">group</span></div>
+  </div>
+</div>
+<div class="card" data-name="uncertainty_fan" data-cat="statistical" data-tags="fan quantile" data-desc="扇形不确定性">
+  <a href="uncertainty_fan.png" target="_blank"><img src="uncertainty_fan.png" loading="lazy" alt="uncertainty_fan"></a>
+  <div class="meta">
+    <div class="name">uncertainty_fan</div>
+    <div class="desc">扇形不确定性</div>
+    <div class="tags"><span class="cat">统计</span> <span class="tag">fan</span> <span class="tag">quantile</span></div>
+  </div>
+</div>
+<div class="card" data-name="bland_altman" data-cat="statistical" data-tags="agreement" data-desc="Bland-Altman 一致性">
+  <a href="bland_altman.png" target="_blank"><img src="bland_altman.png" loading="lazy" alt="bland_altman"></a>
+  <div class="meta">
+    <div class="name">bland_altman</div>
+    <div class="desc">Bland-Altman 一致性</div>
+    <div class="tags"><span class="cat">统计</span> <span class="tag">agreement</span></div>
+  </div>
+</div>
+<div class="card" data-name="qq_plot" data-cat="statistical" data-tags="qq normality" data-desc="Q-Q 正态性">
+  <a href="qq_plot.png" target="_blank"><img src="qq_plot.png" loading="lazy" alt="qq_plot"></a>
+  <div class="meta">
+    <div class="name">qq_plot</div>
+    <div class="desc">Q-Q 正态性</div>
+    <div class="tags"><span class="cat">统计</span> <span class="tag">qq</span> <span class="tag">normality</span></div>
+  </div>
+</div>
+<div class="card" data-name="forest_plot" data-cat="statistical" data-tags="forest meta" data-desc="森林图">
+  <a href="forest_plot.png" target="_blank"><img src="forest_plot.png" loading="lazy" alt="forest_plot"></a>
+  <div class="meta">
+    <div class="name">forest_plot</div>
+    <div class="desc">森林图</div>
+    <div class="tags"><span class="cat">统计</span> <span class="tag">forest</span> <span class="tag">meta</span></div>
+  </div>
+</div>
+<div class="card" data-name="paired_slope" data-cat="statistical" data-tags="slope paired" data-desc="配对斜率">
+  <a href="paired_slope.png" target="_blank"><img src="paired_slope.png" loading="lazy" alt="paired_slope"></a>
+  <div class="meta">
+    <div class="name">paired_slope</div>
+    <div class="desc">配对斜率</div>
+    <div class="tags"><span class="cat">统计</span> <span class="tag">slope</span> <span class="tag">paired</span></div>
+  </div>
+</div>
+<div class="card" data-name="heatmap_basic" data-cat="matrix" data-tags="heatmap" data-desc="基础热力图">
+  <a href="heatmap_basic.png" target="_blank"><img src="heatmap_basic.png" loading="lazy" alt="heatmap_basic"></a>
+  <div class="meta">
+    <div class="name">heatmap_basic</div>
+    <div class="desc">基础热力图</div>
+    <div class="tags"><span class="cat">矩阵</span> <span class="tag">heatmap</span></div>
+  </div>
+</div>
+<div class="card" data-name="heatmap_annotated" data-cat="matrix" data-tags="heatmap annot" data-desc="带数值标注热力">
+  <a href="heatmap_annotated.png" target="_blank"><img src="heatmap_annotated.png" loading="lazy" alt="heatmap_annotated"></a>
+  <div class="meta">
+    <div class="name">heatmap_annotated</div>
+    <div class="desc">带数值标注热力</div>
+    <div class="tags"><span class="cat">矩阵</span> <span class="tag">heatmap</span> <span class="tag">annot</span></div>
+  </div>
+</div>
+<div class="card" data-name="heatmap_clustered" data-cat="matrix" data-tags="heatmap cluster" data-desc="聚类后热力图">
+  <a href="heatmap_clustered.png" target="_blank"><img src="heatmap_clustered.png" loading="lazy" alt="heatmap_clustered"></a>
+  <div class="meta">
+    <div class="name">heatmap_clustered</div>
+    <div class="desc">聚类后热力图</div>
+    <div class="tags"><span class="cat">矩阵</span> <span class="tag">heatmap</span> <span class="tag">cluster</span></div>
+  </div>
+</div>
+<div class="card" data-name="correlation_matrix" data-cat="matrix" data-tags="corr heatmap" data-desc="相关系数矩阵">
+  <a href="correlation_matrix.png" target="_blank"><img src="correlation_matrix.png" loading="lazy" alt="correlation_matrix"></a>
+  <div class="meta">
+    <div class="name">correlation_matrix</div>
+    <div class="desc">相关系数矩阵</div>
+    <div class="tags"><span class="cat">矩阵</span> <span class="tag">corr</span> <span class="tag">heatmap</span></div>
+  </div>
+</div>
+<div class="card" data-name="double_triangle_heatmap" data-cat="matrix" data-tags="heatmap triangle" data-desc="双三角热力图">
+  <a href="double_triangle_heatmap.png" target="_blank"><img src="double_triangle_heatmap.png" loading="lazy" alt="double_triangle_heatmap"></a>
+  <div class="meta">
+    <div class="name">double_triangle_heatmap</div>
+    <div class="desc">双三角热力图</div>
+    <div class="tags"><span class="cat">矩阵</span> <span class="tag">heatmap</span> <span class="tag">triangle</span></div>
+  </div>
+</div>
+<div class="card" data-name="calendar_heatmap" data-cat="matrix" data-tags="calendar heatmap" data-desc="日历热力图">
+  <a href="calendar_heatmap.png" target="_blank"><img src="calendar_heatmap.png" loading="lazy" alt="calendar_heatmap"></a>
+  <div class="meta">
+    <div class="name">calendar_heatmap</div>
+    <div class="desc">日历热力图</div>
+    <div class="tags"><span class="cat">矩阵</span> <span class="tag">calendar</span> <span class="tag">heatmap</span></div>
+  </div>
+</div>
+<div class="card" data-name="bubble_matrix" data-cat="matrix" data-tags="bubble matrix" data-desc="矩阵气泡图">
+  <a href="bubble_matrix.png" target="_blank"><img src="bubble_matrix.png" loading="lazy" alt="bubble_matrix"></a>
+  <div class="meta">
+    <div class="name">bubble_matrix</div>
+    <div class="desc">矩阵气泡图</div>
+    <div class="tags"><span class="cat">矩阵</span> <span class="tag">bubble</span> <span class="tag">matrix</span></div>
+  </div>
+</div>
+<div class="card" data-name="confusion_matrix" data-cat="matrix" data-tags="confusion classify" data-desc="混淆矩阵">
+  <a href="confusion_matrix.png" target="_blank"><img src="confusion_matrix.png" loading="lazy" alt="confusion_matrix"></a>
+  <div class="meta">
+    <div class="name">confusion_matrix</div>
+    <div class="desc">混淆矩阵</div>
+    <div class="tags"><span class="cat">矩阵</span> <span class="tag">confusion</span> <span class="tag">classify</span></div>
+  </div>
+</div>
+<div class="card" data-name="contour_filled" data-cat="field" data-tags="contour filled" data-desc="填充等高线">
+  <a href="contour_filled.png" target="_blank"><img src="contour_filled.png" loading="lazy" alt="contour_filled"></a>
+  <div class="meta">
+    <div class="name">contour_filled</div>
+    <div class="desc">填充等高线</div>
+    <div class="tags"><span class="cat">场</span> <span class="tag">contour</span> <span class="tag">filled</span></div>
+  </div>
+</div>
+<div class="card" data-name="contour_lines" data-cat="field" data-tags="contour iso" data-desc="等值线">
+  <a href="contour_lines.png" target="_blank"><img src="contour_lines.png" loading="lazy" alt="contour_lines"></a>
+  <div class="meta">
+    <div class="name">contour_lines</div>
+    <div class="desc">等值线</div>
+    <div class="tags"><span class="cat">场</span> <span class="tag">contour</span> <span class="tag">iso</span></div>
+  </div>
+</div>
+<div class="card" data-name="density_kde2d" data-cat="field" data-tags="kde contour" data-desc="2D KDE 等高线">
+  <a href="density_kde2d.png" target="_blank"><img src="density_kde2d.png" loading="lazy" alt="density_kde2d"></a>
+  <div class="meta">
+    <div class="name">density_kde2d</div>
+    <div class="desc">2D KDE 等高线</div>
+    <div class="tags"><span class="cat">场</span> <span class="tag">kde</span> <span class="tag">contour</span></div>
+  </div>
+</div>
+<div class="card" data-name="density_hexbin" data-cat="field" data-tags="hexbin density" data-desc="六边形分箱">
+  <a href="density_hexbin.png" target="_blank"><img src="density_hexbin.png" loading="lazy" alt="density_hexbin"></a>
+  <div class="meta">
+    <div class="name">density_hexbin</div>
+    <div class="desc">六边形分箱</div>
+    <div class="tags"><span class="cat">场</span> <span class="tag">hexbin</span> <span class="tag">density</span></div>
+  </div>
+</div>
+<div class="card" data-name="quiver" data-cat="field" data-tags="quiver vector" data-desc="矢量场箭头">
+  <a href="quiver.png" target="_blank"><img src="quiver.png" loading="lazy" alt="quiver"></a>
+  <div class="meta">
+    <div class="name">quiver</div>
+    <div class="desc">矢量场箭头</div>
+    <div class="tags"><span class="cat">场</span> <span class="tag">quiver</span> <span class="tag">vector</span></div>
+  </div>
+</div>
+<div class="card" data-name="streamplot" data-cat="field" data-tags="stream vector" data-desc="流线图">
+  <a href="streamplot.png" target="_blank"><img src="streamplot.png" loading="lazy" alt="streamplot"></a>
+  <div class="meta">
+    <div class="name">streamplot</div>
+    <div class="desc">流线图</div>
+    <div class="tags"><span class="cat">场</span> <span class="tag">stream</span> <span class="tag">vector</span></div>
+  </div>
+</div>
+<div class="card" data-name="radar_chart" data-cat="ranking" data-tags="radar" data-desc="雷达图">
+  <a href="radar_chart.png" target="_blank"><img src="radar_chart.png" loading="lazy" alt="radar_chart"></a>
+  <div class="meta">
+    <div class="name">radar_chart</div>
+    <div class="desc">雷达图</div>
+    <div class="tags"><span class="cat">排名</span> <span class="tag">radar</span></div>
+  </div>
+</div>
+<div class="card" data-name="parallel_coordinates" data-cat="ranking" data-tags="parallel multivar" data-desc="平行坐标">
+  <a href="parallel_coordinates.png" target="_blank"><img src="parallel_coordinates.png" loading="lazy" alt="parallel_coordinates"></a>
+  <div class="meta">
+    <div class="name">parallel_coordinates</div>
+    <div class="desc">平行坐标</div>
+    <div class="tags"><span class="cat">排名</span> <span class="tag">parallel</span> <span class="tag">multivar</span></div>
+  </div>
+</div>
+<div class="card" data-name="waffle_chart" data-cat="ranking" data-tags="waffle proportion" data-desc="华夫饼图">
+  <a href="waffle_chart.png" target="_blank"><img src="waffle_chart.png" loading="lazy" alt="waffle_chart"></a>
+  <div class="meta">
+    <div class="name">waffle_chart</div>
+    <div class="desc">华夫饼图</div>
+    <div class="tags"><span class="cat">排名</span> <span class="tag">waffle</span> <span class="tag">proportion</span></div>
+  </div>
+</div>
+<div class="card" data-name="dot_plot_grouped" data-cat="ranking" data-tags="dot group" data-desc="分组点图">
+  <a href="dot_plot_grouped.png" target="_blank"><img src="dot_plot_grouped.png" loading="lazy" alt="dot_plot_grouped"></a>
+  <div class="meta">
+    <div class="name">dot_plot_grouped</div>
+    <div class="desc">分组点图</div>
+    <div class="tags"><span class="cat">排名</span> <span class="tag">dot</span> <span class="tag">group</span></div>
+  </div>
+</div>
+<div class="card" data-name="timeseries_basic" data-cat="time" data-tags="time series" data-desc="单序列时间">
+  <a href="timeseries_basic.png" target="_blank"><img src="timeseries_basic.png" loading="lazy" alt="timeseries_basic"></a>
+  <div class="meta">
+    <div class="name">timeseries_basic</div>
+    <div class="desc">单序列时间</div>
+    <div class="tags"><span class="cat">时间序列</span> <span class="tag">time</span> <span class="tag">series</span></div>
+  </div>
+</div>
+<div class="card" data-name="timeseries_multi" data-cat="time" data-tags="time series compare" data-desc="多序列时间">
+  <a href="timeseries_multi.png" target="_blank"><img src="timeseries_multi.png" loading="lazy" alt="timeseries_multi"></a>
+  <div class="meta">
+    <div class="name">timeseries_multi</div>
+    <div class="desc">多序列时间</div>
+    <div class="tags"><span class="cat">时间序列</span> <span class="tag">time</span> <span class="tag">series</span> <span class="tag">compare</span></div>
+  </div>
+</div>
+<div class="card" data-name="area_signed" data-cat="time" data-tags="area signed" data-desc="正负填充区">
+  <a href="area_signed.png" target="_blank"><img src="area_signed.png" loading="lazy" alt="area_signed"></a>
+  <div class="meta">
+    <div class="name">area_signed</div>
+    <div class="desc">正负填充区</div>
+    <div class="tags"><span class="cat">时间序列</span> <span class="tag">area</span> <span class="tag">signed</span></div>
+  </div>
+</div>
+<div class="card" data-name="area_stacked" data-cat="time" data-tags="area stack" data-desc="堆叠面积">
+  <a href="area_stacked.png" target="_blank"><img src="area_stacked.png" loading="lazy" alt="area_stacked"></a>
+  <div class="meta">
+    <div class="name">area_stacked</div>
+    <div class="desc">堆叠面积</div>
+    <div class="tags"><span class="cat">时间序列</span> <span class="tag">area</span> <span class="tag">stack</span></div>
+  </div>
+</div>
+<div class="card" data-name="autocorrelation" data-cat="time" data-tags="acf lag" data-desc="自相关函数">
+  <a href="autocorrelation.png" target="_blank"><img src="autocorrelation.png" loading="lazy" alt="autocorrelation"></a>
+  <div class="meta">
+    <div class="name">autocorrelation</div>
+    <div class="desc">自相关函数</div>
+    <div class="tags"><span class="cat">时间序列</span> <span class="tag">acf</span> <span class="tag">lag</span></div>
+  </div>
+</div>
+<div class="card" data-name="moving_average" data-cat="time" data-tags="smoothing window" data-desc="移动平均">
+  <a href="moving_average.png" target="_blank"><img src="moving_average.png" loading="lazy" alt="moving_average"></a>
+  <div class="meta">
+    <div class="name">moving_average</div>
+    <div class="desc">移动平均</div>
+    <div class="tags"><span class="cat">时间序列</span> <span class="tag">smoothing</span> <span class="tag">window</span></div>
+  </div>
+</div>
+<div class="card" data-name="zoomed_inset" data-cat="composite" data-tags="inset zoom" data-desc="局部放大插图">
+  <a href="zoomed_inset.png" target="_blank"><img src="zoomed_inset.png" loading="lazy" alt="zoomed_inset"></a>
+  <div class="meta">
+    <div class="name">zoomed_inset</div>
+    <div class="desc">局部放大插图</div>
+    <div class="tags"><span class="cat">复合</span> <span class="tag">inset</span> <span class="tag">zoom</span></div>
+  </div>
+</div>
+<div class="card" data-name="broken_axis" data-cat="composite" data-tags="broken axis" data-desc="折断坐标轴">
+  <a href="broken_axis.png" target="_blank"><img src="broken_axis.png" loading="lazy" alt="broken_axis"></a>
+  <div class="meta">
+    <div class="name">broken_axis</div>
+    <div class="desc">折断坐标轴</div>
+    <div class="tags"><span class="cat">复合</span> <span class="tag">broken</span> <span class="tag">axis</span></div>
+  </div>
+</div>
+<div class="card" data-name="dual_yaxis" data-cat="composite" data-tags="dual axis" data-desc="双 Y 轴">
+  <a href="dual_yaxis.png" target="_blank"><img src="dual_yaxis.png" loading="lazy" alt="dual_yaxis"></a>
+  <div class="meta">
+    <div class="name">dual_yaxis</div>
+    <div class="desc">双 Y 轴</div>
+    <div class="tags"><span class="cat">复合</span> <span class="tag">dual</span> <span class="tag">axis</span></div>
+  </div>
+</div>
+<div class="card" data-name="joint_marginal" data-cat="composite" data-tags="joint marginal" data-desc="主散点+边缘直方">
+  <a href="joint_marginal.png" target="_blank"><img src="joint_marginal.png" loading="lazy" alt="joint_marginal"></a>
+  <div class="meta">
+    <div class="name">joint_marginal</div>
+    <div class="desc">主散点+边缘直方</div>
+    <div class="tags"><span class="cat">复合</span> <span class="tag">joint</span> <span class="tag">marginal</span></div>
+  </div>
+</div>
+<div class="card" data-name="sankey_basic" data-cat="flow" data-tags="sankey" data-desc="桑基流图">
+  <a href="sankey_basic.png" target="_blank"><img src="sankey_basic.png" loading="lazy" alt="sankey_basic"></a>
+  <div class="meta">
+    <div class="name">sankey_basic</div>
+    <div class="desc">桑基流图</div>
+    <div class="tags"><span class="cat">流图</span> <span class="tag">sankey</span></div>
+  </div>
+</div>
+<div class="card" data-name="polar_basic" data-cat="polar" data-tags="polar curve" data-desc="极坐标曲线">
+  <a href="polar_basic.png" target="_blank"><img src="polar_basic.png" loading="lazy" alt="polar_basic"></a>
+  <div class="meta">
+    <div class="name">polar_basic</div>
+    <div class="desc">极坐标曲线</div>
+    <div class="tags"><span class="cat">极坐标</span> <span class="tag">polar</span> <span class="tag">curve</span></div>
+  </div>
+</div>
+<div class="card" data-name="polar_rose" data-cat="polar" data-tags="rose direction" data-desc="极坐标玫瑰图">
+  <a href="polar_rose.png" target="_blank"><img src="polar_rose.png" loading="lazy" alt="polar_rose"></a>
+  <div class="meta">
+    <div class="name">polar_rose</div>
+    <div class="desc">极坐标玫瑰图</div>
+    <div class="tags"><span class="cat">极坐标</span> <span class="tag">rose</span> <span class="tag">direction</span></div>
+  </div>
+</div>
+<div class="card" data-name="surface_3d" data-cat="3d" data-tags="surface" data-desc="三维曲面">
+  <a href="surface_3d.png" target="_blank"><img src="surface_3d.png" loading="lazy" alt="surface_3d"></a>
+  <div class="meta">
+    <div class="name">surface_3d</div>
+    <div class="desc">三维曲面</div>
+    <div class="tags"><span class="cat">三维</span> <span class="tag">surface</span></div>
+  </div>
+</div>
+<div class="card" data-name="wireframe_3d" data-cat="3d" data-tags="wireframe proj" data-desc="线框+投影等高">
+  <a href="wireframe_3d.png" target="_blank"><img src="wireframe_3d.png" loading="lazy" alt="wireframe_3d"></a>
+  <div class="meta">
+    <div class="name">wireframe_3d</div>
+    <div class="desc">线框+投影等高</div>
+    <div class="tags"><span class="cat">三维</span> <span class="tag">wireframe</span> <span class="tag">proj</span></div>
+  </div>
+</div>
+<div class="card" data-name="scatter_3d" data-cat="3d" data-tags="scatter" data-desc="三维散点">
+  <a href="scatter_3d.png" target="_blank"><img src="scatter_3d.png" loading="lazy" alt="scatter_3d"></a>
+  <div class="meta">
+    <div class="name">scatter_3d</div>
+    <div class="desc">三维散点</div>
+    <div class="tags"><span class="cat">三维</span> <span class="tag">scatter</span></div>
+  </div>
+</div>
+<div class="card" data-name="bar_3d" data-cat="3d" data-tags="bar" data-desc="三维柱状">
+  <a href="bar_3d.png" target="_blank"><img src="bar_3d.png" loading="lazy" alt="bar_3d"></a>
+  <div class="meta">
+    <div class="name">bar_3d</div>
+    <div class="desc">三维柱状</div>
+    <div class="tags"><span class="cat">三维</span> <span class="tag">bar</span></div>
+  </div>
+</div>
+<div class="card" data-name="fft_spectrum" data-cat="signal" data-tags="fft spectrum" data-desc="FFT 单边幅值谱">
+  <a href="fft_spectrum.png" target="_blank"><img src="fft_spectrum.png" loading="lazy" alt="fft_spectrum"></a>
+  <div class="meta">
+    <div class="name">fft_spectrum</div>
+    <div class="desc">FFT 单边幅值谱</div>
+    <div class="tags"><span class="cat">信号</span> <span class="tag">fft</span> <span class="tag">spectrum</span></div>
+  </div>
+</div>
+<div class="card" data-name="welch_psd" data-cat="signal" data-tags="welch psd" data-desc="Welch PSD">
+  <a href="welch_psd.png" target="_blank"><img src="welch_psd.png" loading="lazy" alt="welch_psd"></a>
+  <div class="meta">
+    <div class="name">welch_psd</div>
+    <div class="desc">Welch PSD</div>
+    <div class="tags"><span class="cat">信号</span> <span class="tag">welch</span> <span class="tag">psd</span></div>
+  </div>
+</div>
+<div class="card" data-name="spectrogram" data-cat="signal" data-tags="stft tf" data-desc="时频图">
+  <a href="spectrogram.png" target="_blank"><img src="spectrogram.png" loading="lazy" alt="spectrogram"></a>
+  <div class="meta">
+    <div class="name">spectrogram</div>
+    <div class="desc">时频图</div>
+    <div class="tags"><span class="cat">信号</span> <span class="tag">stft</span> <span class="tag">tf</span></div>
+  </div>
+</div>
+<div class="card" data-name="step_response" data-cat="signal" data-tags="step system" data-desc="阶跃响应">
+  <a href="step_response.png" target="_blank"><img src="step_response.png" loading="lazy" alt="step_response"></a>
+  <div class="meta">
+    <div class="name">step_response</div>
+    <div class="desc">阶跃响应</div>
+    <div class="tags"><span class="cat">信号</span> <span class="tag">step</span> <span class="tag">system</span></div>
+  </div>
+</div>
+<div class="card" data-name="bode_diagram" data-cat="electrical" data-tags="bode frequency" data-desc="Bode 幅频+相频">
+  <a href="bode_diagram.png" target="_blank"><img src="bode_diagram.png" loading="lazy" alt="bode_diagram"></a>
+  <div class="meta">
+    <div class="name">bode_diagram</div>
+    <div class="desc">Bode 幅频+相频</div>
+    <div class="tags"><span class="cat">电气</span> <span class="tag">bode</span> <span class="tag">frequency</span></div>
+  </div>
+</div>
+<div class="card" data-name="nyquist_diagram" data-cat="electrical" data-tags="nyquist frequency" data-desc="Nyquist 频率特性">
+  <a href="nyquist_diagram.png" target="_blank"><img src="nyquist_diagram.png" loading="lazy" alt="nyquist_diagram"></a>
+  <div class="meta">
+    <div class="name">nyquist_diagram</div>
+    <div class="desc">Nyquist 频率特性</div>
+    <div class="tags"><span class="cat">电气</span> <span class="tag">nyquist</span> <span class="tag">frequency</span></div>
+  </div>
+</div>
+<div class="card" data-name="smith_chart" data-cat="electrical" data-tags="smith impedance" data-desc="Smith 圆图">
+  <a href="smith_chart.png" target="_blank"><img src="smith_chart.png" loading="lazy" alt="smith_chart"></a>
+  <div class="meta">
+    <div class="name">smith_chart</div>
+    <div class="desc">Smith 圆图</div>
+    <div class="tags"><span class="cat">电气</span> <span class="tag">smith</span> <span class="tag">impedance</span></div>
+  </div>
+</div>
+<div class="card" data-name="line_with_markers" data-cat="basic" data-tags="line marker" data-desc="带显著标记折线">
+  <a href="line_with_markers.png" target="_blank"><img src="line_with_markers.png" loading="lazy" alt="line_with_markers"></a>
+  <div class="meta">
+    <div class="name">line_with_markers</div>
+    <div class="desc">带显著标记折线</div>
+    <div class="tags"><span class="cat">基础</span> <span class="tag">line</span> <span class="tag">marker</span></div>
+  </div>
+</div>
+<div class="card" data-name="line_dashed_styles" data-cat="basic" data-tags="line style" data-desc="不同线型对照">
+  <a href="line_dashed_styles.png" target="_blank"><img src="line_dashed_styles.png" loading="lazy" alt="line_dashed_styles"></a>
+  <div class="meta">
+    <div class="name">line_dashed_styles</div>
+    <div class="desc">不同线型对照</div>
+    <div class="tags"><span class="cat">基础</span> <span class="tag">line</span> <span class="tag">style</span></div>
+  </div>
+</div>
+<div class="card" data-name="scatter_marginal_rug" data-cat="relation" data-tags="scatter rug" data-desc="散点+轴边 rug">
+  <a href="scatter_marginal_rug.png" target="_blank"><img src="scatter_marginal_rug.png" loading="lazy" alt="scatter_marginal_rug"></a>
+  <div class="meta">
+    <div class="name">scatter_marginal_rug</div>
+    <div class="desc">散点+轴边 rug</div>
+    <div class="tags"><span class="cat">关系</span> <span class="tag">scatter</span> <span class="tag">rug</span></div>
+  </div>
+</div>
+<div class="card" data-name="scatter_3way" data-cat="relation" data-tags="scatter encoding" data-desc="颜色+大小+形状三编码散点">
+  <a href="scatter_3way.png" target="_blank"><img src="scatter_3way.png" loading="lazy" alt="scatter_3way"></a>
+  <div class="meta">
+    <div class="name">scatter_3way</div>
+    <div class="desc">颜色+大小+形状三编码散点</div>
+    <div class="tags"><span class="cat">关系</span> <span class="tag">scatter</span> <span class="tag">encoding</span></div>
+  </div>
+</div>
+<div class="card" data-name="bar_error" data-cat="categorical" data-tags="bar error" data-desc="柱状+误差棒">
+  <a href="bar_error.png" target="_blank"><img src="bar_error.png" loading="lazy" alt="bar_error"></a>
+  <div class="meta">
+    <div class="name">bar_error</div>
+    <div class="desc">柱状+误差棒</div>
+    <div class="tags"><span class="cat">柱状</span> <span class="tag">bar</span> <span class="tag">error</span></div>
+  </div>
+</div>
+<div class="card" data-name="bar_percent_stack" data-cat="categorical" data-tags="bar percent" data-desc="100% 堆叠柱状">
+  <a href="bar_percent_stack.png" target="_blank"><img src="bar_percent_stack.png" loading="lazy" alt="bar_percent_stack"></a>
+  <div class="meta">
+    <div class="name">bar_percent_stack</div>
+    <div class="desc">100% 堆叠柱状</div>
+    <div class="tags"><span class="cat">柱状</span> <span class="tag">bar</span> <span class="tag">percent</span></div>
+  </div>
+</div>
+<div class="card" data-name="bar_pareto" data-cat="categorical" data-tags="pareto cumulative" data-desc="帕累托图">
+  <a href="bar_pareto.png" target="_blank"><img src="bar_pareto.png" loading="lazy" alt="bar_pareto"></a>
+  <div class="meta">
+    <div class="name">bar_pareto</div>
+    <div class="desc">帕累托图</div>
+    <div class="tags"><span class="cat">柱状</span> <span class="tag">pareto</span> <span class="tag">cumulative</span></div>
+  </div>
+</div>
+<div class="card" data-name="bar_combo" data-cat="categorical" data-tags="bar line combo" data-desc="柱+折线组合">
+  <a href="bar_combo.png" target="_blank"><img src="bar_combo.png" loading="lazy" alt="bar_combo"></a>
+  <div class="meta">
+    <div class="name">bar_combo</div>
+    <div class="desc">柱+折线组合</div>
+    <div class="tags"><span class="cat">柱状</span> <span class="tag">bar</span> <span class="tag">line</span> <span class="tag">combo</span></div>
+  </div>
+</div>
+<div class="card" data-name="violin_with_box" data-cat="distribution" data-tags="violin box" data-desc="小提琴+内嵌箱线">
+  <a href="violin_with_box.png" target="_blank"><img src="violin_with_box.png" loading="lazy" alt="violin_with_box"></a>
+  <div class="meta">
+    <div class="name">violin_with_box</div>
+    <div class="desc">小提琴+内嵌箱线</div>
+    <div class="tags"><span class="cat">分布</span> <span class="tag">violin</span> <span class="tag">box</span></div>
+  </div>
+</div>
+<div class="card" data-name="ecdf" data-cat="distribution" data-tags="ecdf cumulative" data-desc="经验累积分布">
+  <a href="ecdf.png" target="_blank"><img src="ecdf.png" loading="lazy" alt="ecdf"></a>
+  <div class="meta">
+    <div class="name">ecdf</div>
+    <div class="desc">经验累积分布</div>
+    <div class="tags"><span class="cat">分布</span> <span class="tag">ecdf</span> <span class="tag">cumulative</span></div>
+  </div>
+</div>
+<div class="card" data-name="histogram_cumulative" data-cat="distribution" data-tags="histogram cumulative" data-desc="累积直方图">
+  <a href="histogram_cumulative.png" target="_blank"><img src="histogram_cumulative.png" loading="lazy" alt="histogram_cumulative"></a>
+  <div class="meta">
+    <div class="name">histogram_cumulative</div>
+    <div class="desc">累积直方图</div>
+    <div class="tags"><span class="cat">分布</span> <span class="tag">histogram</span> <span class="tag">cumulative</span></div>
+  </div>
+</div>
+<div class="card" data-name="histogram_log" data-cat="distribution" data-tags="histogram log" data-desc="对数分箱直方图">
+  <a href="histogram_log.png" target="_blank"><img src="histogram_log.png" loading="lazy" alt="histogram_log"></a>
+  <div class="meta">
+    <div class="name">histogram_log</div>
+    <div class="desc">对数分箱直方图</div>
+    <div class="tags"><span class="cat">分布</span> <span class="tag">histogram</span> <span class="tag">log</span></div>
+  </div>
+</div>
+<div class="card" data-name="residual_plot" data-cat="statistical" data-tags="residual regression" data-desc="回归残差图">
+  <a href="residual_plot.png" target="_blank"><img src="residual_plot.png" loading="lazy" alt="residual_plot"></a>
+  <div class="meta">
+    <div class="name">residual_plot</div>
+    <div class="desc">回归残差图</div>
+    <div class="tags"><span class="cat">统计</span> <span class="tag">residual</span> <span class="tag">regression</span></div>
+  </div>
+</div>
+<div class="card" data-name="roc_curve" data-cat="statistical" data-tags="roc auc classify" data-desc="ROC + AUC">
+  <a href="roc_curve.png" target="_blank"><img src="roc_curve.png" loading="lazy" alt="roc_curve"></a>
+  <div class="meta">
+    <div class="name">roc_curve</div>
+    <div class="desc">ROC + AUC</div>
+    <div class="tags"><span class="cat">统计</span> <span class="tag">roc</span> <span class="tag">auc</span> <span class="tag">classify</span></div>
+  </div>
+</div>
+<div class="card" data-name="calibration_curve" data-cat="statistical" data-tags="calibration classify" data-desc="校准曲线">
+  <a href="calibration_curve.png" target="_blank"><img src="calibration_curve.png" loading="lazy" alt="calibration_curve"></a>
+  <div class="meta">
+    <div class="name">calibration_curve</div>
+    <div class="desc">校准曲线</div>
+    <div class="tags"><span class="cat">统计</span> <span class="tag">calibration</span> <span class="tag">classify</span></div>
+  </div>
+</div>
+<div class="card" data-name="lift_curve" data-cat="statistical" data-tags="lift gain" data-desc="增益/提升曲线">
+  <a href="lift_curve.png" target="_blank"><img src="lift_curve.png" loading="lazy" alt="lift_curve"></a>
+  <div class="meta">
+    <div class="name">lift_curve</div>
+    <div class="desc">增益/提升曲线</div>
+    <div class="tags"><span class="cat">统计</span> <span class="tag">lift</span> <span class="tag">gain</span></div>
+  </div>
+</div>
+<div class="card" data-name="dendrogram" data-cat="matrix" data-tags="dendrogram cluster" data-desc="层次聚类树">
+  <a href="dendrogram.png" target="_blank"><img src="dendrogram.png" loading="lazy" alt="dendrogram"></a>
+  <div class="meta">
+    <div class="name">dendrogram</div>
+    <div class="desc">层次聚类树</div>
+    <div class="tags"><span class="cat">矩阵</span> <span class="tag">dendrogram</span> <span class="tag">cluster</span></div>
+  </div>
+</div>
+<div class="card" data-name="heatmap_dendro" data-cat="matrix" data-tags="heatmap dendro" data-desc="热力图+侧边树">
+  <a href="heatmap_dendro.png" target="_blank"><img src="heatmap_dendro.png" loading="lazy" alt="heatmap_dendro"></a>
+  <div class="meta">
+    <div class="name">heatmap_dendro</div>
+    <div class="desc">热力图+侧边树</div>
+    <div class="tags"><span class="cat">矩阵</span> <span class="tag">heatmap</span> <span class="tag">dendro</span></div>
+  </div>
+</div>
+<div class="card" data-name="matrix_correlogram" data-cat="matrix" data-tags="corr bubble" data-desc="气泡+颜色相关阵">
+  <a href="matrix_correlogram.png" target="_blank"><img src="matrix_correlogram.png" loading="lazy" alt="matrix_correlogram"></a>
+  <div class="meta">
+    <div class="name">matrix_correlogram</div>
+    <div class="desc">气泡+颜色相关阵</div>
+    <div class="tags"><span class="cat">矩阵</span> <span class="tag">corr</span> <span class="tag">bubble</span></div>
+  </div>
+</div>
+<div class="card" data-name="circular_heatmap" data-cat="matrix" data-tags="polar heatmap" data-desc="环形热力图">
+  <a href="circular_heatmap.png" target="_blank"><img src="circular_heatmap.png" loading="lazy" alt="circular_heatmap"></a>
+  <div class="meta">
+    <div class="name">circular_heatmap</div>
+    <div class="desc">环形热力图</div>
+    <div class="tags"><span class="cat">矩阵</span> <span class="tag">polar</span> <span class="tag">heatmap</span></div>
+  </div>
+</div>
+<div class="card" data-name="contour_3d" data-cat="field" data-tags="contour 3d" data-desc="三维等高线">
+  <a href="contour_3d.png" target="_blank"><img src="contour_3d.png" loading="lazy" alt="contour_3d"></a>
+  <div class="meta">
+    <div class="name">contour_3d</div>
+    <div class="desc">三维等高线</div>
+    <div class="tags"><span class="cat">场</span> <span class="tag">contour</span> <span class="tag">3d</span></div>
+  </div>
+</div>
+<div class="card" data-name="divergence_overlay" data-cat="field" data-tags="divergence stream" data-desc="散度场+流线">
+  <a href="divergence_overlay.png" target="_blank"><img src="divergence_overlay.png" loading="lazy" alt="divergence_overlay"></a>
+  <div class="meta">
+    <div class="name">divergence_overlay</div>
+    <div class="desc">散度场+流线</div>
+    <div class="tags"><span class="cat">场</span> <span class="tag">divergence</span> <span class="tag">stream</span></div>
+  </div>
+</div>
+<div class="card" data-name="potential_field" data-cat="field" data-tags="potential equipot" data-desc="等势线+梯度">
+  <a href="potential_field.png" target="_blank"><img src="potential_field.png" loading="lazy" alt="potential_field"></a>
+  <div class="meta">
+    <div class="name">potential_field</div>
+    <div class="desc">等势线+梯度</div>
+    <div class="tags"><span class="cat">场</span> <span class="tag">potential</span> <span class="tag">equipot</span></div>
+  </div>
+</div>
+<div class="card" data-name="seasonal_subseries" data-cat="time" data-tags="seasonal" data-desc="季节子序列图">
+  <a href="seasonal_subseries.png" target="_blank"><img src="seasonal_subseries.png" loading="lazy" alt="seasonal_subseries"></a>
+  <div class="meta">
+    <div class="name">seasonal_subseries</div>
+    <div class="desc">季节子序列图</div>
+    <div class="tags"><span class="cat">时间序列</span> <span class="tag">seasonal</span></div>
+  </div>
+</div>
+<div class="card" data-name="lag_plot" data-cat="time" data-tags="lag scatter" data-desc="滞后散点">
+  <a href="lag_plot.png" target="_blank"><img src="lag_plot.png" loading="lazy" alt="lag_plot"></a>
+  <div class="meta">
+    <div class="name">lag_plot</div>
+    <div class="desc">滞后散点</div>
+    <div class="tags"><span class="cat">时间序列</span> <span class="tag">lag</span> <span class="tag">scatter</span></div>
+  </div>
+</div>
+<div class="card" data-name="event_timeline" data-cat="time" data-tags="event timeline" data-desc="多类别事件时间轴">
+  <a href="event_timeline.png" target="_blank"><img src="event_timeline.png" loading="lazy" alt="event_timeline"></a>
+  <div class="meta">
+    <div class="name">event_timeline</div>
+    <div class="desc">多类别事件时间轴</div>
+    <div class="tags"><span class="cat">时间序列</span> <span class="tag">event</span> <span class="tag">timeline</span></div>
+  </div>
+</div>
+<div class="card" data-name="candlestick" data-cat="time" data-tags="ohlc candle" data-desc="蜡烛图">
+  <a href="candlestick.png" target="_blank"><img src="candlestick.png" loading="lazy" alt="candlestick"></a>
+  <div class="meta">
+    <div class="name">candlestick</div>
+    <div class="desc">蜡烛图</div>
+    <div class="tags"><span class="cat">时间序列</span> <span class="tag">ohlc</span> <span class="tag">candle</span></div>
+  </div>
+</div>
+<div class="card" data-name="polar_scatter" data-cat="polar" data-tags="polar scatter" data-desc="极坐标散点">
+  <a href="polar_scatter.png" target="_blank"><img src="polar_scatter.png" loading="lazy" alt="polar_scatter"></a>
+  <div class="meta">
+    <div class="name">polar_scatter</div>
+    <div class="desc">极坐标散点</div>
+    <div class="tags"><span class="cat">极坐标</span> <span class="tag">polar</span> <span class="tag">scatter</span></div>
+  </div>
+</div>
+<div class="card" data-name="polar_heatmap" data-cat="polar" data-tags="polar heatmap" data-desc="极坐标连续热力">
+  <a href="polar_heatmap.png" target="_blank"><img src="polar_heatmap.png" loading="lazy" alt="polar_heatmap"></a>
+  <div class="meta">
+    <div class="name">polar_heatmap</div>
+    <div class="desc">极坐标连续热力</div>
+    <div class="tags"><span class="cat">极坐标</span> <span class="tag">polar</span> <span class="tag">heatmap</span></div>
+  </div>
+</div>
+<div class="card" data-name="compass_plot" data-cat="polar" data-tags="compass vector" data-desc="罗盘图">
+  <a href="compass_plot.png" target="_blank"><img src="compass_plot.png" loading="lazy" alt="compass_plot"></a>
+  <div class="meta">
+    <div class="name">compass_plot</div>
+    <div class="desc">罗盘图</div>
+    <div class="tags"><span class="cat">极坐标</span> <span class="tag">compass</span> <span class="tag">vector</span></div>
+  </div>
+</div>
+<div class="card" data-name="trisurf_3d" data-cat="3d" data-tags="trisurf irregular" data-desc="三角化曲面">
+  <a href="trisurf_3d.png" target="_blank"><img src="trisurf_3d.png" loading="lazy" alt="trisurf_3d"></a>
+  <div class="meta">
+    <div class="name">trisurf_3d</div>
+    <div class="desc">三角化曲面</div>
+    <div class="tags"><span class="cat">三维</span> <span class="tag">trisurf</span> <span class="tag">irregular</span></div>
+  </div>
+</div>
+<div class="card" data-name="ribbon_3d" data-cat="3d" data-tags="ribbon" data-desc="3D 条带">
+  <a href="ribbon_3d.png" target="_blank"><img src="ribbon_3d.png" loading="lazy" alt="ribbon_3d"></a>
+  <div class="meta">
+    <div class="name">ribbon_3d</div>
+    <div class="desc">3D 条带</div>
+    <div class="tags"><span class="cat">三维</span> <span class="tag">ribbon</span></div>
+  </div>
+</div>
+<div class="card" data-name="contour_filled_3d" data-cat="3d" data-tags="contour filled" data-desc="3D 填充等高线">
+  <a href="contour_filled_3d.png" target="_blank"><img src="contour_filled_3d.png" loading="lazy" alt="contour_filled_3d"></a>
+  <div class="meta">
+    <div class="name">contour_filled_3d</div>
+    <div class="desc">3D 填充等高线</div>
+    <div class="tags"><span class="cat">三维</span> <span class="tag">contour</span> <span class="tag">filled</span></div>
+  </div>
+</div>
+<div class="card" data-name="impulse_response" data-cat="signal" data-tags="impulse" data-desc="二阶冲激响应">
+  <a href="impulse_response.png" target="_blank"><img src="impulse_response.png" loading="lazy" alt="impulse_response"></a>
+  <div class="meta">
+    <div class="name">impulse_response</div>
+    <div class="desc">二阶冲激响应</div>
+    <div class="tags"><span class="cat">信号</span> <span class="tag">impulse</span></div>
+  </div>
+</div>
+<div class="card" data-name="pole_zero" data-cat="signal" data-tags="pole zero" data-desc="极点零点图">
+  <a href="pole_zero.png" target="_blank"><img src="pole_zero.png" loading="lazy" alt="pole_zero"></a>
+  <div class="meta">
+    <div class="name">pole_zero</div>
+    <div class="desc">极点零点图</div>
+    <div class="tags"><span class="cat">信号</span> <span class="tag">pole</span> <span class="tag">zero</span></div>
+  </div>
+</div>
+<div class="card" data-name="cross_correlation" data-cat="signal" data-tags="xcorr lag" data-desc="互相关函数">
+  <a href="cross_correlation.png" target="_blank"><img src="cross_correlation.png" loading="lazy" alt="cross_correlation"></a>
+  <div class="meta">
+    <div class="name">cross_correlation</div>
+    <div class="desc">互相关函数</div>
+    <div class="tags"><span class="cat">信号</span> <span class="tag">xcorr</span> <span class="tag">lag</span></div>
+  </div>
+</div>
+<div class="card" data-name="three_phase_waveform" data-cat="electrical" data-tags="three-phase phasor" data-desc="三相波形+相量">
+  <a href="three_phase_waveform.png" target="_blank"><img src="three_phase_waveform.png" loading="lazy" alt="three_phase_waveform"></a>
+  <div class="meta">
+    <div class="name">three_phase_waveform</div>
+    <div class="desc">三相波形+相量</div>
+    <div class="tags"><span class="cat">电气</span> <span class="tag">three-phase</span> <span class="tag">phasor</span></div>
+  </div>
+</div>
+<div class="card" data-name="power_triangle" data-cat="electrical" data-tags="P Q S" data-desc="有功-无功-视在三角形">
+  <a href="power_triangle.png" target="_blank"><img src="power_triangle.png" loading="lazy" alt="power_triangle"></a>
+  <div class="meta">
+    <div class="name">power_triangle</div>
+    <div class="desc">有功-无功-视在三角形</div>
+    <div class="tags"><span class="cat">电气</span> <span class="tag">P</span> <span class="tag">Q</span> <span class="tag">S</span></div>
+  </div>
+</div>
+<div class="card" data-name="impedance_locus" data-cat="electrical" data-tags="impedance RLC" data-desc="RLC 阻抗轨迹">
+  <a href="impedance_locus.png" target="_blank"><img src="impedance_locus.png" loading="lazy" alt="impedance_locus"></a>
+  <div class="meta">
+    <div class="name">impedance_locus</div>
+    <div class="desc">RLC 阻抗轨迹</div>
+    <div class="tags"><span class="cat">电气</span> <span class="tag">impedance</span> <span class="tag">RLC</span></div>
+  </div>
+</div>
+<div class="card" data-name="wavelet_scalogram" data-cat="electrical" data-tags="wavelet tf" data-desc="小波时频图">
+  <a href="wavelet_scalogram.png" target="_blank"><img src="wavelet_scalogram.png" loading="lazy" alt="wavelet_scalogram"></a>
+  <div class="meta">
+    <div class="name">wavelet_scalogram</div>
+    <div class="desc">小波时频图</div>
+    <div class="tags"><span class="cat">电气</span> <span class="tag">wavelet</span> <span class="tag">tf</span></div>
+  </div>
+</div>
+<div class="card" data-name="harmonic_spectrum" data-cat="electrical" data-tags="harmonic FFT" data-desc="谐波频谱条形">
+  <a href="harmonic_spectrum.png" target="_blank"><img src="harmonic_spectrum.png" loading="lazy" alt="harmonic_spectrum"></a>
+  <div class="meta">
+    <div class="name">harmonic_spectrum</div>
+    <div class="desc">谐波频谱条形</div>
+    <div class="tags"><span class="cat">电气</span> <span class="tag">harmonic</span> <span class="tag">FFT</span></div>
+  </div>
+</div>
+<div class="card" data-name="thd_bars" data-cat="electrical" data-tags="THD compare" data-desc="多负载 THD 对比">
+  <a href="thd_bars.png" target="_blank"><img src="thd_bars.png" loading="lazy" alt="thd_bars"></a>
+  <div class="meta">
+    <div class="name">thd_bars</div>
+    <div class="desc">多负载 THD 对比</div>
+    <div class="tags"><span class="cat">电气</span> <span class="tag">THD</span> <span class="tag">compare</span></div>
+  </div>
+</div>
+<div class="card" data-name="voltage_sag" data-cat="electrical" data-tags="sag event" data-desc="电压暂降事件">
+  <a href="voltage_sag.png" target="_blank"><img src="voltage_sag.png" loading="lazy" alt="voltage_sag"></a>
+  <div class="meta">
+    <div class="name">voltage_sag</div>
+    <div class="desc">电压暂降事件</div>
+    <div class="tags"><span class="cat">电气</span> <span class="tag">sag</span> <span class="tag">event</span></div>
+  </div>
+</div>
+<div class="card" data-name="inrush_current" data-cat="electrical" data-tags="inrush transient" data-desc="励磁涌流衰减">
+  <a href="inrush_current.png" target="_blank"><img src="inrush_current.png" loading="lazy" alt="inrush_current"></a>
+  <div class="meta">
+    <div class="name">inrush_current</div>
+    <div class="desc">励磁涌流衰减</div>
+    <div class="tags"><span class="cat">电气</span> <span class="tag">inrush</span> <span class="tag">transient</span></div>
+  </div>
+</div>
+<div class="card" data-name="dq_transform" data-cat="electrical" data-tags="dq park" data-desc="abc→dq0 旋转坐标">
+  <a href="dq_transform.png" target="_blank"><img src="dq_transform.png" loading="lazy" alt="dq_transform"></a>
+  <div class="meta">
+    <div class="name">dq_transform</div>
+    <div class="desc">abc→dq0 旋转坐标</div>
+    <div class="tags"><span class="cat">电气</span> <span class="tag">dq</span> <span class="tag">park</span></div>
+  </div>
+</div>
+<div class="card" data-name="clarke_transform" data-cat="electrical" data-tags="clarke alphabeta" data-desc="αβ 静止坐标轨迹">
+  <a href="clarke_transform.png" target="_blank"><img src="clarke_transform.png" loading="lazy" alt="clarke_transform"></a>
+  <div class="meta">
+    <div class="name">clarke_transform</div>
+    <div class="desc">αβ 静止坐标轨迹</div>
+    <div class="tags"><span class="cat">电气</span> <span class="tag">clarke</span> <span class="tag">alphabeta</span></div>
+  </div>
+</div>
+<div class="card" data-name="pwm_modulation" data-cat="electrical" data-tags="PWM modulation" data-desc="正弦 PWM 波形">
+  <a href="pwm_modulation.png" target="_blank"><img src="pwm_modulation.png" loading="lazy" alt="pwm_modulation"></a>
+  <div class="meta">
+    <div class="name">pwm_modulation</div>
+    <div class="desc">正弦 PWM 波形</div>
+    <div class="tags"><span class="cat">电气</span> <span class="tag">PWM</span> <span class="tag">modulation</span></div>
+  </div>
+</div>
+<div class="card" data-name="svpwm_hexagon" data-cat="electrical" data-tags="SVPWM hexagon" data-desc="空间矢量六边形">
+  <a href="svpwm_hexagon.png" target="_blank"><img src="svpwm_hexagon.png" loading="lazy" alt="svpwm_hexagon"></a>
+  <div class="meta">
+    <div class="name">svpwm_hexagon</div>
+    <div class="desc">空间矢量六边形</div>
+    <div class="tags"><span class="cat">电气</span> <span class="tag">SVPWM</span> <span class="tag">hexagon</span></div>
+  </div>
+</div>
+<div class="card" data-name="load_curve_daily" data-cat="electrical" data-tags="load peak" data-desc="24h 负荷曲线">
+  <a href="load_curve_daily.png" target="_blank"><img src="load_curve_daily.png" loading="lazy" alt="load_curve_daily"></a>
+  <div class="meta">
+    <div class="name">load_curve_daily</div>
+    <div class="desc">24h 负荷曲线</div>
+    <div class="tags"><span class="cat">电气</span> <span class="tag">load</span> <span class="tag">peak</span></div>
+  </div>
+</div>
+<div class="card" data-name="iv_curve" data-cat="electrical" data-tags="PV IV" data-desc="光伏 I-V P-V 特性">
+  <a href="iv_curve.png" target="_blank"><img src="iv_curve.png" loading="lazy" alt="iv_curve"></a>
+  <div class="meta">
+    <div class="name">iv_curve</div>
+    <div class="desc">光伏 I-V P-V 特性</div>
+    <div class="tags"><span class="cat">电气</span> <span class="tag">PV</span> <span class="tag">IV</span></div>
+  </div>
+</div>
+<div class="card" data-name="pv_mppt" data-cat="electrical" data-tags="PV MPPT" data-desc="MPPT 追踪过程">
+  <a href="pv_mppt.png" target="_blank"><img src="pv_mppt.png" loading="lazy" alt="pv_mppt"></a>
+  <div class="meta">
+    <div class="name">pv_mppt</div>
+    <div class="desc">MPPT 追踪过程</div>
+    <div class="tags"><span class="cat">电气</span> <span class="tag">PV</span> <span class="tag">MPPT</span></div>
+  </div>
+</div>
+<div class="card" data-name="power_factor_locus" data-cat="electrical" data-tags="PF locus" data-desc="功率因数日变化">
+  <a href="power_factor_locus.png" target="_blank"><img src="power_factor_locus.png" loading="lazy" alt="power_factor_locus"></a>
+  <div class="meta">
+    <div class="name">power_factor_locus</div>
+    <div class="desc">功率因数日变化</div>
+    <div class="tags"><span class="cat">电气</span> <span class="tag">PF</span> <span class="tag">locus</span></div>
+  </div>
+</div>
+<div class="card" data-name="frequency_drift" data-cat="electrical" data-tags="frequency drift" data-desc="电网频率漂移">
+  <a href="frequency_drift.png" target="_blank"><img src="frequency_drift.png" loading="lazy" alt="frequency_drift"></a>
+  <div class="meta">
+    <div class="name">frequency_drift</div>
+    <div class="desc">电网频率漂移</div>
+    <div class="tags"><span class="cat">电气</span> <span class="tag">frequency</span> <span class="tag">drift</span></div>
+  </div>
+</div>
+<div class="card" data-name="dc_ripple" data-cat="electrical" data-tags="ripple filter" data-desc="整流纹波滤波">
+  <a href="dc_ripple.png" target="_blank"><img src="dc_ripple.png" loading="lazy" alt="dc_ripple"></a>
+  <div class="meta">
+    <div class="name">dc_ripple</div>
+    <div class="desc">整流纹波滤波</div>
+    <div class="tags"><span class="cat">电气</span> <span class="tag">ripple</span> <span class="tag">filter</span></div>
+  </div>
+</div>
+<div class="card" data-name="battery_discharge" data-cat="electrical" data-tags="battery SOC" data-desc="电池放电曲线族">
+  <a href="battery_discharge.png" target="_blank"><img src="battery_discharge.png" loading="lazy" alt="battery_discharge"></a>
+  <div class="meta">
+    <div class="name">battery_discharge</div>
+    <div class="desc">电池放电曲线族</div>
+    <div class="tags"><span class="cat">电气</span> <span class="tag">battery</span> <span class="tag">SOC</span></div>
+  </div>
+</div>
+<div class="card" data-name="root_locus" data-cat="control" data-tags="root locus" data-desc="根轨迹">
+  <a href="root_locus.png" target="_blank"><img src="root_locus.png" loading="lazy" alt="root_locus"></a>
+  <div class="meta">
+    <div class="name">root_locus</div>
+    <div class="desc">根轨迹</div>
+    <div class="tags"><span class="cat">控制</span> <span class="tag">root</span> <span class="tag">locus</span></div>
+  </div>
+</div>
+<div class="card" data-name="phase_margin" data-cat="control" data-tags="margin bode" data-desc="增益相位裕度">
+  <a href="phase_margin.png" target="_blank"><img src="phase_margin.png" loading="lazy" alt="phase_margin"></a>
+  <div class="meta">
+    <div class="name">phase_margin</div>
+    <div class="desc">增益相位裕度</div>
+    <div class="tags"><span class="cat">控制</span> <span class="tag">margin</span> <span class="tag">bode</span></div>
+  </div>
+</div>
+<div class="card" data-name="sensitivity_function" data-cat="control" data-tags="S T" data-desc="灵敏度函数族">
+  <a href="sensitivity_function.png" target="_blank"><img src="sensitivity_function.png" loading="lazy" alt="sensitivity_function"></a>
+  <div class="meta">
+    <div class="name">sensitivity_function</div>
+    <div class="desc">灵敏度函数族</div>
+    <div class="tags"><span class="cat">控制</span> <span class="tag">S</span> <span class="tag">T</span></div>
+  </div>
+</div>
+<div class="card" data-name="ramp_response" data-cat="control" data-tags="ramp response" data-desc="斜坡响应">
+  <a href="ramp_response.png" target="_blank"><img src="ramp_response.png" loading="lazy" alt="ramp_response"></a>
+  <div class="meta">
+    <div class="name">ramp_response</div>
+    <div class="desc">斜坡响应</div>
+    <div class="tags"><span class="cat">控制</span> <span class="tag">ramp</span> <span class="tag">response</span></div>
+  </div>
+</div>
+<div class="card" data-name="pid_tuning" data-cat="control" data-tags="PID step" data-desc="PID 参数对比">
+  <a href="pid_tuning.png" target="_blank"><img src="pid_tuning.png" loading="lazy" alt="pid_tuning"></a>
+  <div class="meta">
+    <div class="name">pid_tuning</div>
+    <div class="desc">PID 参数对比</div>
+    <div class="tags"><span class="cat">控制</span> <span class="tag">PID</span> <span class="tag">step</span></div>
+  </div>
+</div>
+<div class="card" data-name="observer_estimate" data-cat="control" data-tags="observer state" data-desc="状态观测器估计">
+  <a href="observer_estimate.png" target="_blank"><img src="observer_estimate.png" loading="lazy" alt="observer_estimate"></a>
+  <div class="meta">
+    <div class="name">observer_estimate</div>
+    <div class="desc">状态观测器估计</div>
+    <div class="tags"><span class="cat">控制</span> <span class="tag">observer</span> <span class="tag">state</span></div>
+  </div>
+</div>
+<div class="card" data-name="phase_portrait" data-cat="control" data-tags="phase portrait" data-desc="非线性相图">
+  <a href="phase_portrait.png" target="_blank"><img src="phase_portrait.png" loading="lazy" alt="phase_portrait"></a>
+  <div class="meta">
+    <div class="name">phase_portrait</div>
+    <div class="desc">非线性相图</div>
+    <div class="tags"><span class="cat">控制</span> <span class="tag">phase</span> <span class="tag">portrait</span></div>
+  </div>
+</div>
+<div class="card" data-name="limit_cycle" data-cat="control" data-tags="limit_cycle vdp" data-desc="Van der Pol 极限环">
+  <a href="limit_cycle.png" target="_blank"><img src="limit_cycle.png" loading="lazy" alt="limit_cycle"></a>
+  <div class="meta">
+    <div class="name">limit_cycle</div>
+    <div class="desc">Van der Pol 极限环</div>
+    <div class="tags"><span class="cat">控制</span> <span class="tag">limit_cycle</span> <span class="tag">vdp</span></div>
+  </div>
+</div>
+<div class="card" data-name="lyapunov_surface" data-cat="control" data-tags="lyapunov 3d" data-desc="Lyapunov 函数曲面">
+  <a href="lyapunov_surface.png" target="_blank"><img src="lyapunov_surface.png" loading="lazy" alt="lyapunov_surface"></a>
+  <div class="meta">
+    <div class="name">lyapunov_surface</div>
+    <div class="desc">Lyapunov 函数曲面</div>
+    <div class="tags"><span class="cat">控制</span> <span class="tag">lyapunov</span> <span class="tag">3d</span></div>
+  </div>
+</div>
+<div class="card" data-name="nichols_chart" data-cat="control" data-tags="nichols" data-desc="Nichols 图">
+  <a href="nichols_chart.png" target="_blank"><img src="nichols_chart.png" loading="lazy" alt="nichols_chart"></a>
+  <div class="meta">
+    <div class="name">nichols_chart</div>
+    <div class="desc">Nichols 图</div>
+    <div class="tags"><span class="cat">控制</span> <span class="tag">nichols</span></div>
+  </div>
+</div>
+<div class="card" data-name="cepstrum" data-cat="signal" data-tags="cepstrum harmonic" data-desc="倒谱">
+  <a href="cepstrum.png" target="_blank"><img src="cepstrum.png" loading="lazy" alt="cepstrum"></a>
+  <div class="meta">
+    <div class="name">cepstrum</div>
+    <div class="desc">倒谱</div>
+    <div class="tags"><span class="cat">信号</span> <span class="tag">cepstrum</span> <span class="tag">harmonic</span></div>
+  </div>
+</div>
+<div class="card" data-name="envelope_detect" data-cat="signal" data-tags="hilbert envelope" data-desc="Hilbert 包络">
+  <a href="envelope_detect.png" target="_blank"><img src="envelope_detect.png" loading="lazy" alt="envelope_detect"></a>
+  <div class="meta">
+    <div class="name">envelope_detect</div>
+    <div class="desc">Hilbert 包络</div>
+    <div class="tags"><span class="cat">信号</span> <span class="tag">hilbert</span> <span class="tag">envelope</span></div>
+  </div>
+</div>
+<div class="card" data-name="group_delay" data-cat="signal" data-tags="group_delay" data-desc="滤波器群延迟">
+  <a href="group_delay.png" target="_blank"><img src="group_delay.png" loading="lazy" alt="group_delay"></a>
+  <div class="meta">
+    <div class="name">group_delay</div>
+    <div class="desc">滤波器群延迟</div>
+    <div class="tags"><span class="cat">信号</span> <span class="tag">group_delay</span></div>
+  </div>
+</div>
+<div class="card" data-name="fir_design" data-cat="signal" data-tags="FIR filter" data-desc="FIR 设计">
+  <a href="fir_design.png" target="_blank"><img src="fir_design.png" loading="lazy" alt="fir_design"></a>
+  <div class="meta">
+    <div class="name">fir_design</div>
+    <div class="desc">FIR 设计</div>
+    <div class="tags"><span class="cat">信号</span> <span class="tag">FIR</span> <span class="tag">filter</span></div>
+  </div>
+</div>
+<div class="card" data-name="iir_design" data-cat="signal" data-tags="IIR filter" data-desc="IIR 设计对比">
+  <a href="iir_design.png" target="_blank"><img src="iir_design.png" loading="lazy" alt="iir_design"></a>
+  <div class="meta">
+    <div class="name">iir_design</div>
+    <div class="desc">IIR 设计对比</div>
+    <div class="tags"><span class="cat">信号</span> <span class="tag">IIR</span> <span class="tag">filter</span></div>
+  </div>
+</div>
+<div class="card" data-name="window_compare" data-cat="signal" data-tags="window leakage" data-desc="窗函数对比">
+  <a href="window_compare.png" target="_blank"><img src="window_compare.png" loading="lazy" alt="window_compare"></a>
+  <div class="meta">
+    <div class="name">window_compare</div>
+    <div class="desc">窗函数对比</div>
+    <div class="tags"><span class="cat">信号</span> <span class="tag">window</span> <span class="tag">leakage</span></div>
+  </div>
+</div>
+<div class="card" data-name="multitaper_psd" data-cat="signal" data-tags="multitaper PSD" data-desc="多窗 PSD">
+  <a href="multitaper_psd.png" target="_blank"><img src="multitaper_psd.png" loading="lazy" alt="multitaper_psd"></a>
+  <div class="meta">
+    <div class="name">multitaper_psd</div>
+    <div class="desc">多窗 PSD</div>
+    <div class="tags"><span class="cat">信号</span> <span class="tag">multitaper</span> <span class="tag">PSD</span></div>
+  </div>
+</div>
+<div class="card" data-name="periodogram" data-cat="signal" data-tags="periodogram" data-desc="周期图对比">
+  <a href="periodogram.png" target="_blank"><img src="periodogram.png" loading="lazy" alt="periodogram"></a>
+  <div class="meta">
+    <div class="name">periodogram</div>
+    <div class="desc">周期图对比</div>
+    <div class="tags"><span class="cat">信号</span> <span class="tag">periodogram</span></div>
+  </div>
+</div>
+<div class="card" data-name="hilbert_envelope" data-cat="signal" data-tags="hilbert IF" data-desc="瞬时频率">
+  <a href="hilbert_envelope.png" target="_blank"><img src="hilbert_envelope.png" loading="lazy" alt="hilbert_envelope"></a>
+  <div class="meta">
+    <div class="name">hilbert_envelope</div>
+    <div class="desc">瞬时频率</div>
+    <div class="tags"><span class="cat">信号</span> <span class="tag">hilbert</span> <span class="tag">IF</span></div>
+  </div>
+</div>
+<div class="card" data-name="coherence_plot" data-cat="signal" data-tags="coherence" data-desc="相干函数">
+  <a href="coherence_plot.png" target="_blank"><img src="coherence_plot.png" loading="lazy" alt="coherence_plot"></a>
+  <div class="meta">
+    <div class="name">coherence_plot</div>
+    <div class="desc">相干函数</div>
+    <div class="tags"><span class="cat">信号</span> <span class="tag">coherence</span></div>
+  </div>
+</div>
+<div class="card" data-name="antenna_pattern_polar" data-cat="rf" data-tags="antenna polar" data-desc="方向图极坐标">
+  <a href="antenna_pattern_polar.png" target="_blank"><img src="antenna_pattern_polar.png" loading="lazy" alt="antenna_pattern_polar"></a>
+  <div class="meta">
+    <div class="name">antenna_pattern_polar</div>
+    <div class="desc">方向图极坐标</div>
+    <div class="tags"><span class="cat">RF/通信</span> <span class="tag">antenna</span> <span class="tag">polar</span></div>
+  </div>
+</div>
+<div class="card" data-name="antenna_pattern_3d" data-cat="rf" data-tags="antenna 3d" data-desc="3D 方向图">
+  <a href="antenna_pattern_3d.png" target="_blank"><img src="antenna_pattern_3d.png" loading="lazy" alt="antenna_pattern_3d"></a>
+  <div class="meta">
+    <div class="name">antenna_pattern_3d</div>
+    <div class="desc">3D 方向图</div>
+    <div class="tags"><span class="cat">RF/通信</span> <span class="tag">antenna</span> <span class="tag">3d</span></div>
+  </div>
+</div>
+<div class="card" data-name="vswr_curve" data-cat="rf" data-tags="VSWR return_loss" data-desc="VSWR 曲线">
+  <a href="vswr_curve.png" target="_blank"><img src="vswr_curve.png" loading="lazy" alt="vswr_curve"></a>
+  <div class="meta">
+    <div class="name">vswr_curve</div>
+    <div class="desc">VSWR 曲线</div>
+    <div class="tags"><span class="cat">RF/通信</span> <span class="tag">VSWR</span> <span class="tag">return_loss</span></div>
+  </div>
+</div>
+<div class="card" data-name="constellation" data-cat="rf" data-tags="QAM constellation" data-desc="星座图">
+  <a href="constellation.png" target="_blank"><img src="constellation.png" loading="lazy" alt="constellation"></a>
+  <div class="meta">
+    <div class="name">constellation</div>
+    <div class="desc">星座图</div>
+    <div class="tags"><span class="cat">RF/通信</span> <span class="tag">QAM</span> <span class="tag">constellation</span></div>
+  </div>
+</div>
+<div class="card" data-name="eye_diagram" data-cat="rf" data-tags="eye digital" data-desc="眼图">
+  <a href="eye_diagram.png" target="_blank"><img src="eye_diagram.png" loading="lazy" alt="eye_diagram"></a>
+  <div class="meta">
+    <div class="name">eye_diagram</div>
+    <div class="desc">眼图</div>
+    <div class="tags"><span class="cat">RF/通信</span> <span class="tag">eye</span> <span class="tag">digital</span></div>
+  </div>
+</div>
+<div class="card" data-name="ber_curve" data-cat="rf" data-tags="BER modulation" data-desc="误码率曲线">
+  <a href="ber_curve.png" target="_blank"><img src="ber_curve.png" loading="lazy" alt="ber_curve"></a>
+  <div class="meta">
+    <div class="name">ber_curve</div>
+    <div class="desc">误码率曲线</div>
+    <div class="tags"><span class="cat">RF/通信</span> <span class="tag">BER</span> <span class="tag">modulation</span></div>
+  </div>
+</div>
+<div class="card" data-name="capacity_curve" data-cat="rf" data-tags="shannon capacity" data-desc="信道容量">
+  <a href="capacity_curve.png" target="_blank"><img src="capacity_curve.png" loading="lazy" alt="capacity_curve"></a>
+  <div class="meta">
+    <div class="name">capacity_curve</div>
+    <div class="desc">信道容量</div>
+    <div class="tags"><span class="cat">RF/通信</span> <span class="tag">shannon</span> <span class="tag">capacity</span></div>
+  </div>
+</div>
+<div class="card" data-name="spectrum_mask" data-cat="rf" data-tags="spectrum mask" data-desc="频谱模板">
+  <a href="spectrum_mask.png" target="_blank"><img src="spectrum_mask.png" loading="lazy" alt="spectrum_mask"></a>
+  <div class="meta">
+    <div class="name">spectrum_mask</div>
+    <div class="desc">频谱模板</div>
+    <div class="tags"><span class="cat">RF/通信</span> <span class="tag">spectrum</span> <span class="tag">mask</span></div>
+  </div>
+</div>
+<div class="card" data-name="learning_curve" data-cat="ml" data-tags="learning size" data-desc="学习曲线">
+  <a href="learning_curve.png" target="_blank"><img src="learning_curve.png" loading="lazy" alt="learning_curve"></a>
+  <div class="meta">
+    <div class="name">learning_curve</div>
+    <div class="desc">学习曲线</div>
+    <div class="tags"><span class="cat">机器学习</span> <span class="tag">learning</span> <span class="tag">size</span></div>
+  </div>
+</div>
+<div class="card" data-name="precision_recall" data-cat="ml" data-tags="PR AP" data-desc="PR 曲线">
+  <a href="precision_recall.png" target="_blank"><img src="precision_recall.png" loading="lazy" alt="precision_recall"></a>
+  <div class="meta">
+    <div class="name">precision_recall</div>
+    <div class="desc">PR 曲线</div>
+    <div class="tags"><span class="cat">机器学习</span> <span class="tag">PR</span> <span class="tag">AP</span></div>
+  </div>
+</div>
+<div class="card" data-name="silhouette_plot" data-cat="ml" data-tags="silhouette cluster" data-desc="轮廓系数图">
+  <a href="silhouette_plot.png" target="_blank"><img src="silhouette_plot.png" loading="lazy" alt="silhouette_plot"></a>
+  <div class="meta">
+    <div class="name">silhouette_plot</div>
+    <div class="desc">轮廓系数图</div>
+    <div class="tags"><span class="cat">机器学习</span> <span class="tag">silhouette</span> <span class="tag">cluster</span></div>
+  </div>
+</div>
+<div class="card" data-name="tsne_scatter" data-cat="ml" data-tags="embedding scatter" data-desc="降维散点">
+  <a href="tsne_scatter.png" target="_blank"><img src="tsne_scatter.png" loading="lazy" alt="tsne_scatter"></a>
+  <div class="meta">
+    <div class="name">tsne_scatter</div>
+    <div class="desc">降维散点</div>
+    <div class="tags"><span class="cat">机器学习</span> <span class="tag">embedding</span> <span class="tag">scatter</span></div>
+  </div>
+</div>
+<div class="card" data-name="multiclass_roc" data-cat="ml" data-tags="ROC OvR" data-desc="多类 ROC">
+  <a href="multiclass_roc.png" target="_blank"><img src="multiclass_roc.png" loading="lazy" alt="multiclass_roc"></a>
+  <div class="meta">
+    <div class="name">multiclass_roc</div>
+    <div class="desc">多类 ROC</div>
+    <div class="tags"><span class="cat">机器学习</span> <span class="tag">ROC</span> <span class="tag">OvR</span></div>
+  </div>
+</div>
+<div class="card" data-name="feature_importance" data-cat="ml" data-tags="importance bar" data-desc="特征重要性">
+  <a href="feature_importance.png" target="_blank"><img src="feature_importance.png" loading="lazy" alt="feature_importance"></a>
+  <div class="meta">
+    <div class="name">feature_importance</div>
+    <div class="desc">特征重要性</div>
+    <div class="tags"><span class="cat">机器学习</span> <span class="tag">importance</span> <span class="tag">bar</span></div>
+  </div>
+</div>
+<div class="card" data-name="partial_dependence" data-cat="ml" data-tags="PDP" data-desc="偏依赖曲线">
+  <a href="partial_dependence.png" target="_blank"><img src="partial_dependence.png" loading="lazy" alt="partial_dependence"></a>
+  <div class="meta">
+    <div class="name">partial_dependence</div>
+    <div class="desc">偏依赖曲线</div>
+    <div class="tags"><span class="cat">机器学习</span> <span class="tag">PDP</span></div>
+  </div>
+</div>
+<div class="card" data-name="validation_curve" data-cat="ml" data-tags="validation hyperparam" data-desc="超参数验证曲线">
+  <a href="validation_curve.png" target="_blank"><img src="validation_curve.png" loading="lazy" alt="validation_curve"></a>
+  <div class="meta">
+    <div class="name">validation_curve</div>
+    <div class="desc">超参数验证曲线</div>
+    <div class="tags"><span class="cat">机器学习</span> <span class="tag">validation</span> <span class="tag">hyperparam</span></div>
+  </div>
+</div>
+<div class="card" data-name="cluster_compare" data-cat="ml" data-tags="cluster compare" data-desc="多算法聚类对比">
+  <a href="cluster_compare.png" target="_blank"><img src="cluster_compare.png" loading="lazy" alt="cluster_compare"></a>
+  <div class="meta">
+    <div class="name">cluster_compare</div>
+    <div class="desc">多算法聚类对比</div>
+    <div class="tags"><span class="cat">机器学习</span> <span class="tag">cluster</span> <span class="tag">compare</span></div>
+  </div>
+</div>
+<div class="card" data-name="shap_summary" data-cat="ml" data-tags="SHAP explain" data-desc="SHAP 摘要">
+  <a href="shap_summary.png" target="_blank"><img src="shap_summary.png" loading="lazy" alt="shap_summary"></a>
+  <div class="meta">
+    <div class="name">shap_summary</div>
+    <div class="desc">SHAP 摘要</div>
+    <div class="tags"><span class="cat">机器学习</span> <span class="tag">SHAP</span> <span class="tag">explain</span></div>
+  </div>
+</div>
+<div class="card" data-name="andrews_curves" data-cat="multivar" data-tags="andrews fourier" data-desc="Andrews 曲线">
+  <a href="andrews_curves.png" target="_blank"><img src="andrews_curves.png" loading="lazy" alt="andrews_curves"></a>
+  <div class="meta">
+    <div class="name">andrews_curves</div>
+    <div class="desc">Andrews 曲线</div>
+    <div class="tags"><span class="cat">多变量</span> <span class="tag">andrews</span> <span class="tag">fourier</span></div>
+  </div>
+</div>
+<div class="card" data-name="star_plot" data-cat="multivar" data-tags="star radar" data-desc="多个雷达星图">
+  <a href="star_plot.png" target="_blank"><img src="star_plot.png" loading="lazy" alt="star_plot"></a>
+  <div class="meta">
+    <div class="name">star_plot</div>
+    <div class="desc">多个雷达星图</div>
+    <div class="tags"><span class="cat">多变量</span> <span class="tag">star</span> <span class="tag">radar</span></div>
+  </div>
+</div>
+<div class="card" data-name="profile_plot" data-cat="multivar" data-tags="profile" data-desc="剖面图">
+  <a href="profile_plot.png" target="_blank"><img src="profile_plot.png" loading="lazy" alt="profile_plot"></a>
+  <div class="meta">
+    <div class="name">profile_plot</div>
+    <div class="desc">剖面图</div>
+    <div class="tags"><span class="cat">多变量</span> <span class="tag">profile</span></div>
+  </div>
+</div>
+<div class="card" data-name="pairs_plot" data-cat="multivar" data-tags="pairs scatter" data-desc="散点矩阵">
+  <a href="pairs_plot.png" target="_blank"><img src="pairs_plot.png" loading="lazy" alt="pairs_plot"></a>
+  <div class="meta">
+    <div class="name">pairs_plot</div>
+    <div class="desc">散点矩阵</div>
+    <div class="tags"><span class="cat">多变量</span> <span class="tag">pairs</span> <span class="tag">scatter</span></div>
+  </div>
+</div>
+<div class="card" data-name="biplot_pca" data-cat="multivar" data-tags="PCA biplot" data-desc="PCA 双标图">
+  <a href="biplot_pca.png" target="_blank"><img src="biplot_pca.png" loading="lazy" alt="biplot_pca"></a>
+  <div class="meta">
+    <div class="name">biplot_pca</div>
+    <div class="desc">PCA 双标图</div>
+    <div class="tags"><span class="cat">多变量</span> <span class="tag">PCA</span> <span class="tag">biplot</span></div>
+  </div>
+</div>
+<div class="card" data-name="scree_plot" data-cat="multivar" data-tags="PCA scree" data-desc="碎石图">
+  <a href="scree_plot.png" target="_blank"><img src="scree_plot.png" loading="lazy" alt="scree_plot"></a>
+  <div class="meta">
+    <div class="name">scree_plot</div>
+    <div class="desc">碎石图</div>
+    <div class="tags"><span class="cat">多变量</span> <span class="tag">PCA</span> <span class="tag">scree</span></div>
+  </div>
+</div>
+<div class="card" data-name="dist_normal_family" data-cat="distribution" data-tags="normal pdf" data-desc="正态分布族">
+  <a href="dist_normal_family.png" target="_blank"><img src="dist_normal_family.png" loading="lazy" alt="dist_normal_family"></a>
+  <div class="meta">
+    <div class="name">dist_normal_family</div>
+    <div class="desc">正态分布族</div>
+    <div class="tags"><span class="cat">分布</span> <span class="tag">normal</span> <span class="tag">pdf</span></div>
+  </div>
+</div>
+<div class="card" data-name="dist_t_family" data-cat="distribution" data-tags="t pdf" data-desc="t 分布族">
+  <a href="dist_t_family.png" target="_blank"><img src="dist_t_family.png" loading="lazy" alt="dist_t_family"></a>
+  <div class="meta">
+    <div class="name">dist_t_family</div>
+    <div class="desc">t 分布族</div>
+    <div class="tags"><span class="cat">分布</span> <span class="tag">t</span> <span class="tag">pdf</span></div>
+  </div>
+</div>
+<div class="card" data-name="dist_chi_family" data-cat="distribution" data-tags="chi2 pdf" data-desc="卡方分布族">
+  <a href="dist_chi_family.png" target="_blank"><img src="dist_chi_family.png" loading="lazy" alt="dist_chi_family"></a>
+  <div class="meta">
+    <div class="name">dist_chi_family</div>
+    <div class="desc">卡方分布族</div>
+    <div class="tags"><span class="cat">分布</span> <span class="tag">chi2</span> <span class="tag">pdf</span></div>
+  </div>
+</div>
+<div class="card" data-name="dist_beta_family" data-cat="distribution" data-tags="beta pdf" data-desc="Beta 分布族">
+  <a href="dist_beta_family.png" target="_blank"><img src="dist_beta_family.png" loading="lazy" alt="dist_beta_family"></a>
+  <div class="meta">
+    <div class="name">dist_beta_family</div>
+    <div class="desc">Beta 分布族</div>
+    <div class="tags"><span class="cat">分布</span> <span class="tag">beta</span> <span class="tag">pdf</span></div>
+  </div>
+</div>
+<div class="card" data-name="dist_mixture" data-cat="distribution" data-tags="GMM mixture" data-desc="高斯混合">
+  <a href="dist_mixture.png" target="_blank"><img src="dist_mixture.png" loading="lazy" alt="dist_mixture"></a>
+  <div class="meta">
+    <div class="name">dist_mixture</div>
+    <div class="desc">高斯混合</div>
+    <div class="tags"><span class="cat">分布</span> <span class="tag">GMM</span> <span class="tag">mixture</span></div>
+  </div>
+</div>
+<div class="card" data-name="swarm_plot" data-cat="distribution" data-tags="swarm" data-desc="蜂群图">
+  <a href="swarm_plot.png" target="_blank"><img src="swarm_plot.png" loading="lazy" alt="swarm_plot"></a>
+  <div class="meta">
+    <div class="name">swarm_plot</div>
+    <div class="desc">蜂群图</div>
+    <div class="tags"><span class="cat">分布</span> <span class="tag">swarm</span></div>
+  </div>
+</div>
+<div class="card" data-name="raincloud" data-cat="distribution" data-tags="raincloud" data-desc="雨云图">
+  <a href="raincloud.png" target="_blank"><img src="raincloud.png" loading="lazy" alt="raincloud"></a>
+  <div class="meta">
+    <div class="name">raincloud</div>
+    <div class="desc">雨云图</div>
+    <div class="tags"><span class="cat">分布</span> <span class="tag">raincloud</span></div>
+  </div>
+</div>
+<div class="card" data-name="funnel_chart" data-cat="specialty" data-tags="funnel conversion" data-desc="漏斗图">
+  <a href="funnel_chart.png" target="_blank"><img src="funnel_chart.png" loading="lazy" alt="funnel_chart"></a>
+  <div class="meta">
+    <div class="name">funnel_chart</div>
+    <div class="desc">漏斗图</div>
+    <div class="tags"><span class="cat">专题</span> <span class="tag">funnel</span> <span class="tag">conversion</span></div>
+  </div>
+</div>
+<div class="card" data-name="likert_diverging" data-cat="specialty" data-tags="likert survey" data-desc="Likert 量表">
+  <a href="likert_diverging.png" target="_blank"><img src="likert_diverging.png" loading="lazy" alt="likert_diverging"></a>
+  <div class="meta">
+    <div class="name">likert_diverging</div>
+    <div class="desc">Likert 量表</div>
+    <div class="tags"><span class="cat">专题</span> <span class="tag">likert</span> <span class="tag">survey</span></div>
+  </div>
+</div>
+<div class="card" data-name="tree_diagram" data-cat="specialty" data-tags="tree decision" data-desc="决策树图">
+  <a href="tree_diagram.png" target="_blank"><img src="tree_diagram.png" loading="lazy" alt="tree_diagram"></a>
+  <div class="meta">
+    <div class="name">tree_diagram</div>
+    <div class="desc">决策树图</div>
+    <div class="tags"><span class="cat">专题</span> <span class="tag">tree</span> <span class="tag">decision</span></div>
+  </div>
+</div>
+<div class="card" data-name="mosaic_plot" data-cat="specialty" data-tags="mosaic contingency" data-desc="马赛克图">
+  <a href="mosaic_plot.png" target="_blank"><img src="mosaic_plot.png" loading="lazy" alt="mosaic_plot"></a>
+  <div class="meta">
+    <div class="name">mosaic_plot</div>
+    <div class="desc">马赛克图</div>
+    <div class="tags"><span class="cat">专题</span> <span class="tag">mosaic</span> <span class="tag">contingency</span></div>
+  </div>
+</div>
+<div class="card" data-name="choropleth_grid" data-cat="specialty" data-tags="choropleth grid" data-desc="格点 choropleth">
+  <a href="choropleth_grid.png" target="_blank"><img src="choropleth_grid.png" loading="lazy" alt="choropleth_grid"></a>
+  <div class="meta">
+    <div class="name">choropleth_grid</div>
+    <div class="desc">格点 choropleth</div>
+    <div class="tags"><span class="cat">专题</span> <span class="tag">choropleth</span> <span class="tag">grid</span></div>
+  </div>
+</div>
+<div class="card" data-name="small_multiples" data-cat="composite" data-tags="trellis" data-desc="小型多图阵列">
+  <a href="small_multiples.png" target="_blank"><img src="small_multiples.png" loading="lazy" alt="small_multiples"></a>
+  <div class="meta">
+    <div class="name">small_multiples</div>
+    <div class="desc">小型多图阵列</div>
+    <div class="tags"><span class="cat">复合</span> <span class="tag">trellis</span></div>
+  </div>
+</div>
+<div class="card" data-name="heatmap_categorical" data-cat="matrix" data-tags="heatmap categorical" data-desc="分类热力图">
+  <a href="heatmap_categorical.png" target="_blank"><img src="heatmap_categorical.png" loading="lazy" alt="heatmap_categorical"></a>
+  <div class="meta">
+    <div class="name">heatmap_categorical</div>
+    <div class="desc">分类热力图</div>
+    <div class="tags"><span class="cat">矩阵</span> <span class="tag">heatmap</span> <span class="tag">categorical</span></div>
+  </div>
+</div>
+<div class="card" data-name="forest_subgroup" data-cat="statistical" data-tags="forest subgroup" data-desc="分组森林图">
+  <a href="forest_subgroup.png" target="_blank"><img src="forest_subgroup.png" loading="lazy" alt="forest_subgroup"></a>
+  <div class="meta">
+    <div class="name">forest_subgroup</div>
+    <div class="desc">分组森林图</div>
+    <div class="tags"><span class="cat">统计</span> <span class="tag">forest</span> <span class="tag">subgroup</span></div>
+  </div>
+</div>
+<div class="card" data-name="quiver_3d" data-cat="3d" data-tags="quiver" data-desc="3D 矢量场">
+  <a href="quiver_3d.png" target="_blank"><img src="quiver_3d.png" loading="lazy" alt="quiver_3d"></a>
+  <div class="meta">
+    <div class="name">quiver_3d</div>
+    <div class="desc">3D 矢量场</div>
+    <div class="tags"><span class="cat">三维</span> <span class="tag">quiver</span></div>
+  </div>
+</div>
+<div class="card" data-name="slice_3d" data-cat="3d" data-tags="slice" data-desc="体积切片">
+  <a href="slice_3d.png" target="_blank"><img src="slice_3d.png" loading="lazy" alt="slice_3d"></a>
+  <div class="meta">
+    <div class="name">slice_3d</div>
+    <div class="desc">体积切片</div>
+    <div class="tags"><span class="cat">三维</span> <span class="tag">slice</span></div>
+  </div>
+</div>
+<div class="card" data-name="isosurface" data-cat="3d" data-tags="isosurface" data-desc="等值面">
+  <a href="isosurface.png" target="_blank"><img src="isosurface.png" loading="lazy" alt="isosurface"></a>
+  <div class="meta">
+    <div class="name">isosurface</div>
+    <div class="desc">等值面</div>
+    <div class="tags"><span class="cat">三维</span> <span class="tag">isosurface</span></div>
+  </div>
+</div>
+<div class="card" data-name="orbital_3d" data-cat="3d" data-tags="spherical_harmonic" data-desc="球谐函数">
+  <a href="orbital_3d.png" target="_blank"><img src="orbital_3d.png" loading="lazy" alt="orbital_3d"></a>
+  <div class="meta">
+    <div class="name">orbital_3d</div>
+    <div class="desc">球谐函数</div>
+    <div class="tags"><span class="cat">三维</span> <span class="tag">spherical_harmonic</span></div>
+  </div>
+</div>
+<div class="card" data-name="tube_3d" data-cat="3d" data-tags="tube helix" data-desc="3D 螺旋管">
+  <a href="tube_3d.png" target="_blank"><img src="tube_3d.png" loading="lazy" alt="tube_3d"></a>
+  <div class="meta">
+    <div class="name">tube_3d</div>
+    <div class="desc">3D 螺旋管</div>
+    <div class="tags"><span class="cat">三维</span> <span class="tag">tube</span> <span class="tag">helix</span></div>
+  </div>
+</div>
+<div class="card" data-name="line_collection_3d" data-cat="3d" data-tags="stacked curves" data-desc="3D 曲线堆叠">
+  <a href="line_collection_3d.png" target="_blank"><img src="line_collection_3d.png" loading="lazy" alt="line_collection_3d"></a>
+  <div class="meta">
+    <div class="name">line_collection_3d</div>
+    <div class="desc">3D 曲线堆叠</div>
+    <div class="tags"><span class="cat">三维</span> <span class="tag">stacked</span> <span class="tag">curves</span></div>
+  </div>
+</div>
+<div class="card" data-name="velocity_field_cfd" data-cat="cfd" data-tags="velocity quiver" data-desc="CFD 速度场+矢量箭头">
+  <a href="velocity_field_cfd.png" target="_blank"><img src="velocity_field_cfd.png" loading="lazy" alt="velocity_field_cfd"></a>
+  <div class="meta">
+    <div class="name">velocity_field_cfd</div>
+    <div class="desc">CFD 速度场+矢量箭头</div>
+    <div class="tags"><span class="cat">CFD</span> <span class="tag">velocity</span> <span class="tag">quiver</span></div>
+  </div>
+</div>
+<div class="card" data-name="pressure_contour" data-cat="cfd" data-tags="pressure contour" data-desc="压力等高线（圆柱绕流）">
+  <a href="pressure_contour.png" target="_blank"><img src="pressure_contour.png" loading="lazy" alt="pressure_contour"></a>
+  <div class="meta">
+    <div class="name">pressure_contour</div>
+    <div class="desc">压力等高线（圆柱绕流）</div>
+    <div class="tags"><span class="cat">CFD</span> <span class="tag">pressure</span> <span class="tag">contour</span></div>
+  </div>
+</div>
+<div class="card" data-name="vorticity_map" data-cat="cfd" data-tags="vorticity" data-desc="涡量场">
+  <a href="vorticity_map.png" target="_blank"><img src="vorticity_map.png" loading="lazy" alt="vorticity_map"></a>
+  <div class="meta">
+    <div class="name">vorticity_map</div>
+    <div class="desc">涡量场</div>
+    <div class="tags"><span class="cat">CFD</span> <span class="tag">vorticity</span></div>
+  </div>
+</div>
+<div class="card" data-name="streamlines_colored" data-cat="cfd" data-tags="streamlines" data-desc="按速度模值着色流线">
+  <a href="streamlines_colored.png" target="_blank"><img src="streamlines_colored.png" loading="lazy" alt="streamlines_colored"></a>
+  <div class="meta">
+    <div class="name">streamlines_colored</div>
+    <div class="desc">按速度模值着色流线</div>
+    <div class="tags"><span class="cat">CFD</span> <span class="tag">streamlines</span></div>
+  </div>
+</div>
+<div class="card" data-name="residual_history" data-cat="cfd" data-tags="residual iteration" data-desc="CFD 迭代残差曲线">
+  <a href="residual_history.png" target="_blank"><img src="residual_history.png" loading="lazy" alt="residual_history"></a>
+  <div class="meta">
+    <div class="name">residual_history</div>
+    <div class="desc">CFD 迭代残差曲线</div>
+    <div class="tags"><span class="cat">CFD</span> <span class="tag">residual</span> <span class="tag">iteration</span></div>
+  </div>
+</div>
+<div class="card" data-name="convergence_curve" data-cat="optimization" data-tags="loss convergence" data-desc="多算法收敛对比">
+  <a href="convergence_curve.png" target="_blank"><img src="convergence_curve.png" loading="lazy" alt="convergence_curve"></a>
+  <div class="meta">
+    <div class="name">convergence_curve</div>
+    <div class="desc">多算法收敛对比</div>
+    <div class="tags"><span class="cat">优化</span> <span class="tag">loss</span> <span class="tag">convergence</span></div>
+  </div>
+</div>
+<div class="card" data-name="pareto_front" data-cat="optimization" data-tags="pareto multiobj" data-desc="Pareto 前沿">
+  <a href="pareto_front.png" target="_blank"><img src="pareto_front.png" loading="lazy" alt="pareto_front"></a>
+  <div class="meta">
+    <div class="name">pareto_front</div>
+    <div class="desc">Pareto 前沿</div>
+    <div class="tags"><span class="cat">优化</span> <span class="tag">pareto</span> <span class="tag">multiobj</span></div>
+  </div>
+</div>
+<div class="card" data-name="fitness_landscape" data-cat="optimization" data-tags="landscape population" data-desc="适应度地形">
+  <a href="fitness_landscape.png" target="_blank"><img src="fitness_landscape.png" loading="lazy" alt="fitness_landscape"></a>
+  <div class="meta">
+    <div class="name">fitness_landscape</div>
+    <div class="desc">适应度地形</div>
+    <div class="tags"><span class="cat">优化</span> <span class="tag">landscape</span> <span class="tag">population</span></div>
+  </div>
+</div>
+<div class="card" data-name="ga_evolution" data-cat="optimization" data-tags="GA fitness" data-desc="GA 适应度演化">
+  <a href="ga_evolution.png" target="_blank"><img src="ga_evolution.png" loading="lazy" alt="ga_evolution"></a>
+  <div class="meta">
+    <div class="name">ga_evolution</div>
+    <div class="desc">GA 适应度演化</div>
+    <div class="tags"><span class="cat">优化</span> <span class="tag">GA</span> <span class="tag">fitness</span></div>
+  </div>
+</div>
+<div class="card" data-name="gradient_descent_path" data-cat="optimization" data-tags="gradient path" data-desc="梯度下降路径">
+  <a href="gradient_descent_path.png" target="_blank"><img src="gradient_descent_path.png" loading="lazy" alt="gradient_descent_path"></a>
+  <div class="meta">
+    <div class="name">gradient_descent_path</div>
+    <div class="desc">梯度下降路径</div>
+    <div class="tags"><span class="cat">优化</span> <span class="tag">gradient</span> <span class="tag">path</span></div>
+  </div>
+</div>
+<div class="card" data-name="training_curves" data-cat="nn" data-tags="loss accuracy" data-desc="训练曲线（loss+acc）">
+  <a href="training_curves.png" target="_blank"><img src="training_curves.png" loading="lazy" alt="training_curves"></a>
+  <div class="meta">
+    <div class="name">training_curves</div>
+    <div class="desc">训练曲线（loss+acc）</div>
+    <div class="tags"><span class="cat">神经网络</span> <span class="tag">loss</span> <span class="tag">accuracy</span></div>
+  </div>
+</div>
+<div class="card" data-name="network_architecture" data-cat="nn" data-tags="architecture" data-desc="全连接网络结构图">
+  <a href="network_architecture.png" target="_blank"><img src="network_architecture.png" loading="lazy" alt="network_architecture"></a>
+  <div class="meta">
+    <div class="name">network_architecture</div>
+    <div class="desc">全连接网络结构图</div>
+    <div class="tags"><span class="cat">神经网络</span> <span class="tag">architecture</span></div>
+  </div>
+</div>
+<div class="card" data-name="decision_boundary" data-cat="nn" data-tags="boundary classify" data-desc="决策边界">
+  <a href="decision_boundary.png" target="_blank"><img src="decision_boundary.png" loading="lazy" alt="decision_boundary"></a>
+  <div class="meta">
+    <div class="name">decision_boundary</div>
+    <div class="desc">决策边界</div>
+    <div class="tags"><span class="cat">神经网络</span> <span class="tag">boundary</span> <span class="tag">classify</span></div>
+  </div>
+</div>
+<div class="card" data-name="activation_heatmap" data-cat="nn" data-tags="activation" data-desc="隐层激活热力图">
+  <a href="activation_heatmap.png" target="_blank"><img src="activation_heatmap.png" loading="lazy" alt="activation_heatmap"></a>
+  <div class="meta">
+    <div class="name">activation_heatmap</div>
+    <div class="desc">隐层激活热力图</div>
+    <div class="tags"><span class="cat">神经网络</span> <span class="tag">activation</span></div>
+  </div>
+</div>
+<div class="card" data-name="weight_distribution" data-cat="nn" data-tags="weight init" data-desc="权重分布对比">
+  <a href="weight_distribution.png" target="_blank"><img src="weight_distribution.png" loading="lazy" alt="weight_distribution"></a>
+  <div class="meta">
+    <div class="name">weight_distribution</div>
+    <div class="desc">权重分布对比</div>
+    <div class="tags"><span class="cat">神经网络</span> <span class="tag">weight</span> <span class="tag">init</span></div>
+  </div>
+</div>
+<div class="card" data-name="confusion_per_class" data-cat="nn" data-tags="metric classify" data-desc="每类精度/召回/F1">
+  <a href="confusion_per_class.png" target="_blank"><img src="confusion_per_class.png" loading="lazy" alt="confusion_per_class"></a>
+  <div class="meta">
+    <div class="name">confusion_per_class</div>
+    <div class="desc">每类精度/召回/F1</div>
+    <div class="tags"><span class="cat">神经网络</span> <span class="tag">metric</span> <span class="tag">classify</span></div>
+  </div>
+</div>
+<div class="card" data-name="swing_curve" data-cat="power" data-tags="stability transient" data-desc="多机功角摇摆曲线">
+  <a href="swing_curve.png" target="_blank"><img src="swing_curve.png" loading="lazy" alt="swing_curve"></a>
+  <div class="meta">
+    <div class="name">swing_curve</div>
+    <div class="desc">多机功角摇摆曲线</div>
+    <div class="tags"><span class="cat">power</span> <span class="tag">stability</span> <span class="tag">transient</span></div>
+  </div>
+</div>
+<div class="card" data-name="pv_nose_curve" data-cat="power" data-tags="voltage stability" data-desc="P-V 鼻形曲线">
+  <a href="pv_nose_curve.png" target="_blank"><img src="pv_nose_curve.png" loading="lazy" alt="pv_nose_curve"></a>
+  <div class="meta">
+    <div class="name">pv_nose_curve</div>
+    <div class="desc">P-V 鼻形曲线</div>
+    <div class="tags"><span class="cat">power</span> <span class="tag">voltage</span> <span class="tag">stability</span></div>
+  </div>
+</div>
+<div class="card" data-name="equal_area_criterion" data-cat="power" data-tags="stability criterion" data-desc="等面积法则">
+  <a href="equal_area_criterion.png" target="_blank"><img src="equal_area_criterion.png" loading="lazy" alt="equal_area_criterion"></a>
+  <div class="meta">
+    <div class="name">equal_area_criterion</div>
+    <div class="desc">等面积法则</div>
+    <div class="tags"><span class="cat">power</span> <span class="tag">stability</span> <span class="tag">criterion</span></div>
+  </div>
+</div>
+<div class="card" data-name="relay_tcc" data-cat="power" data-tags="protection relay" data-desc="反时限保护特性">
+  <a href="relay_tcc.png" target="_blank"><img src="relay_tcc.png" loading="lazy" alt="relay_tcc"></a>
+  <div class="meta">
+    <div class="name">relay_tcc</div>
+    <div class="desc">反时限保护特性</div>
+    <div class="tags"><span class="cat">power</span> <span class="tag">protection</span> <span class="tag">relay</span></div>
+  </div>
+</div>
+<div class="card" data-name="fault_oscillography" data-cat="power" data-tags="fault oscillography" data-desc="三相短路录波">
+  <a href="fault_oscillography.png" target="_blank"><img src="fault_oscillography.png" loading="lazy" alt="fault_oscillography"></a>
+  <div class="meta">
+    <div class="name">fault_oscillography</div>
+    <div class="desc">三相短路录波</div>
+    <div class="tags"><span class="cat">power</span> <span class="tag">fault</span> <span class="tag">oscillography</span></div>
+  </div>
+</div>
+<div class="card" data-name="economic_dispatch" data-cat="power" data-tags="dispatch economics" data-desc="经济调度等微增率">
+  <a href="economic_dispatch.png" target="_blank"><img src="economic_dispatch.png" loading="lazy" alt="economic_dispatch"></a>
+  <div class="meta">
+    <div class="name">economic_dispatch</div>
+    <div class="desc">经济调度等微增率</div>
+    <div class="tags"><span class="cat">power</span> <span class="tag">dispatch</span> <span class="tag">economics</span></div>
+  </div>
+</div>
+<div class="card" data-name="feeder_voltage_profile" data-cat="power" data-tags="distribution voltage" data-desc="馈线电压分布">
+  <a href="feeder_voltage_profile.png" target="_blank"><img src="feeder_voltage_profile.png" loading="lazy" alt="feeder_voltage_profile"></a>
+  <div class="meta">
+    <div class="name">feeder_voltage_profile</div>
+    <div class="desc">馈线电压分布</div>
+    <div class="tags"><span class="cat">power</span> <span class="tag">distribution</span> <span class="tag">voltage</span></div>
+  </div>
+</div>
+<div class="card" data-name="grid_frequency_response" data-cat="power" data-tags="frequency inertia" data-desc="电网频率响应">
+  <a href="grid_frequency_response.png" target="_blank"><img src="grid_frequency_response.png" loading="lazy" alt="grid_frequency_response"></a>
+  <div class="meta">
+    <div class="name">grid_frequency_response</div>
+    <div class="desc">电网频率响应</div>
+    <div class="tags"><span class="cat">power</span> <span class="tag">frequency</span> <span class="tag">inertia</span></div>
+  </div>
+</div>
+<div class="card" data-name="generator_capability" data-cat="power" data-tags="generator PQ" data-desc="发电机运行极限圆图">
+  <a href="generator_capability.png" target="_blank"><img src="generator_capability.png" loading="lazy" alt="generator_capability"></a>
+  <div class="meta">
+    <div class="name">generator_capability</div>
+    <div class="desc">发电机运行极限圆图</div>
+    <div class="tags"><span class="cat">power</span> <span class="tag">generator</span> <span class="tag">PQ</span></div>
+  </div>
+</div>
+<div class="card" data-name="line_loading_heatmap" data-cat="power" data-tags="loading heatmap" data-desc="线路负载率热力图">
+  <a href="line_loading_heatmap.png" target="_blank"><img src="line_loading_heatmap.png" loading="lazy" alt="line_loading_heatmap"></a>
+  <div class="meta">
+    <div class="name">line_loading_heatmap</div>
+    <div class="desc">线路负载率热力图</div>
+    <div class="tags"><span class="cat">power</span> <span class="tag">loading</span> <span class="tag">heatmap</span></div>
+  </div>
+</div>
+<div class="card" data-name="wind_power_curve" data-cat="energy" data-tags="wind power_curve" data-desc="风机功率曲线">
+  <a href="wind_power_curve.png" target="_blank"><img src="wind_power_curve.png" loading="lazy" alt="wind_power_curve"></a>
+  <div class="meta">
+    <div class="name">wind_power_curve</div>
+    <div class="desc">风机功率曲线</div>
+    <div class="tags"><span class="cat">energy</span> <span class="tag">wind</span> <span class="tag">power_curve</span></div>
+  </div>
+</div>
+<div class="card" data-name="wind_rose" data-cat="energy" data-tags="wind rose polar" data-desc="风玫瑰图">
+  <a href="wind_rose.png" target="_blank"><img src="wind_rose.png" loading="lazy" alt="wind_rose"></a>
+  <div class="meta">
+    <div class="name">wind_rose</div>
+    <div class="desc">风玫瑰图</div>
+    <div class="tags"><span class="cat">energy</span> <span class="tag">wind</span> <span class="tag">rose</span> <span class="tag">polar</span></div>
+  </div>
+</div>
+<div class="card" data-name="solar_irradiance_day" data-cat="energy" data-tags="solar irradiance" data-desc="典型日辐照度">
+  <a href="solar_irradiance_day.png" target="_blank"><img src="solar_irradiance_day.png" loading="lazy" alt="solar_irradiance_day"></a>
+  <div class="meta">
+    <div class="name">solar_irradiance_day</div>
+    <div class="desc">典型日辐照度</div>
+    <div class="tags"><span class="cat">energy</span> <span class="tag">solar</span> <span class="tag">irradiance</span></div>
+  </div>
+</div>
+<div class="card" data-name="battery_soc_schedule" data-cat="energy" data-tags="storage SOC" data-desc="储能充放电调度">
+  <a href="battery_soc_schedule.png" target="_blank"><img src="battery_soc_schedule.png" loading="lazy" alt="battery_soc_schedule"></a>
+  <div class="meta">
+    <div class="name">battery_soc_schedule</div>
+    <div class="desc">储能充放电调度</div>
+    <div class="tags"><span class="cat">energy</span> <span class="tag">storage</span> <span class="tag">SOC</span></div>
+  </div>
+</div>
+<div class="card" data-name="duck_curve" data-cat="energy" data-tags="netload solar" data-desc="鸭子曲线">
+  <a href="duck_curve.png" target="_blank"><img src="duck_curve.png" loading="lazy" alt="duck_curve"></a>
+  <div class="meta">
+    <div class="name">duck_curve</div>
+    <div class="desc">鸭子曲线</div>
+    <div class="tags"><span class="cat">energy</span> <span class="tag">netload</span> <span class="tag">solar</span></div>
+  </div>
+</div>
+<div class="card" data-name="energy_mix_area" data-cat="energy" data-tags="mix stacked" data-desc="能源结构演化">
+  <a href="energy_mix_area.png" target="_blank"><img src="energy_mix_area.png" loading="lazy" alt="energy_mix_area"></a>
+  <div class="meta">
+    <div class="name">energy_mix_area</div>
+    <div class="desc">能源结构演化</div>
+    <div class="tags"><span class="cat">energy</span> <span class="tag">mix</span> <span class="tag">stacked</span></div>
+  </div>
+</div>
+<div class="card" data-name="ev_charging_load" data-cat="energy" data-tags="EV load" data-desc="电动车充电负荷">
+  <a href="ev_charging_load.png" target="_blank"><img src="ev_charging_load.png" loading="lazy" alt="ev_charging_load"></a>
+  <div class="meta">
+    <div class="name">ev_charging_load</div>
+    <div class="desc">电动车充电负荷</div>
+    <div class="tags"><span class="cat">energy</span> <span class="tag">EV</span> <span class="tag">load</span></div>
+  </div>
+</div>
+<div class="card" data-name="ragone_plot" data-cat="energy" data-tags="storage ragone" data-desc="Ragone 储能对比图">
+  <a href="ragone_plot.png" target="_blank"><img src="ragone_plot.png" loading="lazy" alt="ragone_plot"></a>
+  <div class="meta">
+    <div class="name">ragone_plot</div>
+    <div class="desc">Ragone 储能对比图</div>
+    <div class="tags"><span class="cat">energy</span> <span class="tag">storage</span> <span class="tag">ragone</span></div>
+  </div>
+</div>
+<div class="card" data-name="hosting_capacity" data-cat="energy" data-tags="PV hosting" data-desc="光伏承载力箱线">
+  <a href="hosting_capacity.png" target="_blank"><img src="hosting_capacity.png" loading="lazy" alt="hosting_capacity"></a>
+  <div class="meta">
+    <div class="name">hosting_capacity</div>
+    <div class="desc">光伏承载力箱线</div>
+    <div class="tags"><span class="cat">energy</span> <span class="tag">PV</span> <span class="tag">hosting</span></div>
+  </div>
+</div>
+<div class="card" data-name="motor_torque_speed" data-cat="electrical" data-tags="motor torque" data-desc="电机转矩-转速特性族">
+  <a href="motor_torque_speed.png" target="_blank"><img src="motor_torque_speed.png" loading="lazy" alt="motor_torque_speed"></a>
+  <div class="meta">
+    <div class="name">motor_torque_speed</div>
+    <div class="desc">电机转矩-转速特性族</div>
+    <div class="tags"><span class="cat">电气</span> <span class="tag">motor</span> <span class="tag">torque</span></div>
+  </div>
+</div>
+<div class="card" data-name="transformer_efficiency" data-cat="electrical" data-tags="transformer efficiency" data-desc="变压器效率曲线">
+  <a href="transformer_efficiency.png" target="_blank"><img src="transformer_efficiency.png" loading="lazy" alt="transformer_efficiency"></a>
+  <div class="meta">
+    <div class="name">transformer_efficiency</div>
+    <div class="desc">变压器效率曲线</div>
+    <div class="tags"><span class="cat">电气</span> <span class="tag">transformer</span> <span class="tag">efficiency</span></div>
+  </div>
+</div>
+<div class="card" data-name="pv_iv_temperature" data-cat="energy" data-tags="PV IV temperature" data-desc="光伏 I-V 温度特性">
+  <a href="pv_iv_temperature.png" target="_blank"><img src="pv_iv_temperature.png" loading="lazy" alt="pv_iv_temperature"></a>
+  <div class="meta">
+    <div class="name">pv_iv_temperature</div>
+    <div class="desc">光伏 I-V 温度特性</div>
+    <div class="tags"><span class="cat">energy</span> <span class="tag">PV</span> <span class="tag">IV</span> <span class="tag">temperature</span></div>
+  </div>
+</div>
+<div class="card" data-name="converter_efficiency_map" data-cat="electrical" data-tags="converter efficiency" data-desc="变流器效率 MAP">
+  <a href="converter_efficiency_map.png" target="_blank"><img src="converter_efficiency_map.png" loading="lazy" alt="converter_efficiency_map"></a>
+  <div class="meta">
+    <div class="name">converter_efficiency_map</div>
+    <div class="desc">变流器效率 MAP</div>
+    <div class="tags"><span class="cat">电气</span> <span class="tag">converter</span> <span class="tag">efficiency</span></div>
+  </div>
+</div>
+</main>
+<script>
+function filter() {
+  const q = document.getElementById('search').value.toLowerCase().trim();
+  const c = document.getElementById('catSel').value;
+  const cards = document.querySelectorAll('.card');
+  let n = 0;
+  cards.forEach(card => {
+    const text = [card.dataset.name, card.dataset.desc, card.dataset.tags].join(' ').toLowerCase();
+    const okText = !q || text.includes(q);
+    const okCat = !c || card.dataset.cat === c;
+    if (okText && okCat) { card.classList.remove('hide'); n++; }
+    else { card.classList.add('hide'); }
+  });
+  document.getElementById('count').textContent = '(' + n + ' / 239)';
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+// import_csv.ogs : 批量把当前文件夹下所有 CSV 导入为独立 worksheet
+// 用法：Script Window → 粘贴 → 回车
+
+string folder$ = "C:\data\";              // ← 改成你的目录
+findFiles ext:=csv path:=folder$;         // 列出所有 csv，结果在 %A
+for ( int i = 1 ; i <= count(%A) ; i++ )
+{
+    string fn$ = item(%A, i, "|");
+    newbook;                              // 新建 workbook
+    impasc fname:=fn$ options.Sparklines:=0;
+    win -ren %(=basename(fn$));           // 改名为不带路径的文件名
+}

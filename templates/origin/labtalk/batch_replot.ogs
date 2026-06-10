@@ -1,0 +1,10 @@
+// batch_replot.ogs : 把 Project 里所有 workbook 的 (col1, col2) 各自画一张折线
+// 用法：Script Window → 粘贴 → 回车
+
+doc -e W                                    // 遍历所有 worksheet
+{
+    string wks$ = %H;
+    win -t plot line %(wks$)_plot;          // 用 line 模板新建图，命名 <sheet>_plot
+    layer.X.label = X;
+    layer.Y.label = Y;
+}

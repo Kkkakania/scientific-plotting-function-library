@@ -1,0 +1,239 @@
+line_basic|basic|line,trend|单条折线
+line_multi|basic|line,trend,compare|多条折线对比
+line_step|basic|line,step,discrete|阶梯折线
+line_filled|basic|line,area|曲线+下方填充
+line_smoothed|basic|line,smoothing|原始+滑动平均
+line_log|basic|line,log|半对数/双对数图
+scatter_basic|basic|scatter|单组散点
+scatter_grouped|basic|scatter,category|按类别着色散点
+scatter_sized|basic|scatter,bubble|气泡图
+scatter_colored|basic|scatter,colormap|连续色映射散点
+scatter_density|relation|scatter,density,kde|KDE 着色密度散点
+scatter_regression|relation|scatter,fit,ci|散点+回归+95% CI
+bar_basic|categorical|bar|单系列柱状
+bar_grouped|categorical|bar,group|分组柱状
+bar_stacked|categorical|bar,stack|堆叠柱状
+bar_horizontal|categorical|bar,horizontal|横向条形
+bar_diverging|categorical|bar,diverge,tornado|发散柱状/龙卷风
+bar_lollipop|categorical|lollipop|棒棒糖图
+bar_dumbbell|categorical|dumbbell,pair|哑铃图
+bar_waterfall|categorical|waterfall|瀑布图
+histogram_basic|distribution|histogram|基础直方图
+histogram_overlay|distribution|histogram,compare|多组叠加直方
+histogram_2d|distribution|hist2d,density|二维直方图
+histogram_step|distribution|histogram,step|阶梯直方图
+box_basic|distribution|box|基础箱线图
+box_jittered|distribution|box,jitter|箱线+jitter散点
+box_notched|distribution|box,notch|带凹槽箱线
+violin_basic|distribution|violin|小提琴图
+violin_split|distribution|violin,split|左右拆分小提琴
+ridgeline|distribution|ridgeline,density|山脊图
+errorbar_basic|statistical|errorbar|标准误差棒
+errorbar_filled|statistical|band,error|阴影误差带
+confidence_band|statistical|band,group|多组均值±std
+uncertainty_fan|statistical|fan,quantile|扇形不确定性
+bland_altman|statistical|agreement|Bland-Altman 一致性
+qq_plot|statistical|qq,normality|Q-Q 正态性
+forest_plot|statistical|forest,meta|森林图
+paired_slope|statistical|slope,paired|配对斜率
+heatmap_basic|matrix|heatmap|基础热力图
+heatmap_annotated|matrix|heatmap,annot|带数值标注热力
+heatmap_clustered|matrix|heatmap,cluster|聚类后热力图
+correlation_matrix|matrix|corr,heatmap|相关系数矩阵
+double_triangle_heatmap|matrix|heatmap,triangle|双三角热力图
+calendar_heatmap|matrix|calendar,heatmap|日历热力图
+bubble_matrix|matrix|bubble,matrix|矩阵气泡图
+confusion_matrix|matrix|confusion,classify|混淆矩阵
+contour_filled|field|contour,filled|填充等高线
+contour_lines|field|contour,iso|等值线
+density_kde2d|field|kde,contour|2D KDE 等高线
+density_hexbin|field|hexbin,density|六边形分箱
+quiver|field|quiver,vector|矢量场箭头
+streamplot|field|stream,vector|流线图
+radar_chart|ranking|radar|雷达图
+parallel_coordinates|ranking|parallel,multivar|平行坐标
+waffle_chart|ranking|waffle,proportion|华夫饼图
+dot_plot_grouped|ranking|dot,group|分组点图
+timeseries_basic|time|time,series|单序列时间
+timeseries_multi|time|time,series,compare|多序列时间
+area_signed|time|area,signed|正负填充区
+area_stacked|time|area,stack|堆叠面积
+autocorrelation|time|acf,lag|自相关函数
+moving_average|time|smoothing,window|移动平均
+zoomed_inset|composite|inset,zoom|局部放大插图
+broken_axis|composite|broken,axis|折断坐标轴
+dual_yaxis|composite|dual,axis|双 Y 轴
+joint_marginal|composite|joint,marginal|主散点+边缘直方
+sankey_basic|flow|sankey|桑基流图
+polar_basic|polar|polar,curve|极坐标曲线
+polar_rose|polar|rose,direction|极坐标玫瑰图
+surface_3d|3d|surface|三维曲面
+wireframe_3d|3d|wireframe,proj|线框+投影等高
+scatter_3d|3d|scatter|三维散点
+bar_3d|3d|bar|三维柱状
+fft_spectrum|signal|fft,spectrum|FFT 单边幅值谱
+welch_psd|signal|welch,psd|Welch PSD
+spectrogram|signal|stft,tf|时频图
+step_response|signal|step,system|阶跃响应
+bode_diagram|electrical|bode,frequency|Bode 幅频+相频
+nyquist_diagram|electrical|nyquist,frequency|Nyquist 频率特性
+smith_chart|electrical|smith,impedance|Smith 圆图
+line_with_markers|basic|line,marker|带显著标记折线
+line_dashed_styles|basic|line,style|不同线型对照
+scatter_marginal_rug|relation|scatter,rug|散点+轴边 rug
+scatter_3way|relation|scatter,encoding|颜色+大小+形状三编码散点
+bar_error|categorical|bar,error|柱状+误差棒
+bar_percent_stack|categorical|bar,percent|100% 堆叠柱状
+bar_pareto|categorical|pareto,cumulative|帕累托图
+bar_combo|categorical|bar,line,combo|柱+折线组合
+violin_with_box|distribution|violin,box|小提琴+内嵌箱线
+ecdf|distribution|ecdf,cumulative|经验累积分布
+histogram_cumulative|distribution|histogram,cumulative|累积直方图
+histogram_log|distribution|histogram,log|对数分箱直方图
+residual_plot|statistical|residual,regression|回归残差图
+roc_curve|statistical|roc,auc,classify|ROC + AUC
+calibration_curve|statistical|calibration,classify|校准曲线
+lift_curve|statistical|lift,gain|增益/提升曲线
+dendrogram|matrix|dendrogram,cluster|层次聚类树
+heatmap_dendro|matrix|heatmap,dendro|热力图+侧边树
+matrix_correlogram|matrix|corr,bubble|气泡+颜色相关阵
+circular_heatmap|matrix|polar,heatmap|环形热力图
+contour_3d|field|contour,3d|三维等高线
+divergence_overlay|field|divergence,stream|散度场+流线
+potential_field|field|potential,equipot|等势线+梯度
+seasonal_subseries|time|seasonal|季节子序列图
+lag_plot|time|lag,scatter|滞后散点
+event_timeline|time|event,timeline|多类别事件时间轴
+candlestick|time|ohlc,candle|蜡烛图
+polar_scatter|polar|polar,scatter|极坐标散点
+polar_heatmap|polar|polar,heatmap|极坐标连续热力
+compass_plot|polar|compass,vector|罗盘图
+trisurf_3d|3d|trisurf,irregular|三角化曲面
+ribbon_3d|3d|ribbon|3D 条带
+contour_filled_3d|3d|contour,filled|3D 填充等高线
+impulse_response|signal|impulse|二阶冲激响应
+pole_zero|signal|pole,zero|极点零点图
+cross_correlation|signal|xcorr,lag|互相关函数
+three_phase_waveform|electrical|three-phase,phasor|三相波形+相量
+power_triangle|electrical|P,Q,S|有功-无功-视在三角形
+impedance_locus|electrical|impedance,RLC|RLC 阻抗轨迹
+wavelet_scalogram|electrical|wavelet,tf|小波时频图
+harmonic_spectrum|electrical|harmonic,FFT|谐波频谱条形
+thd_bars|electrical|THD,compare|多负载 THD 对比
+voltage_sag|electrical|sag,event|电压暂降事件
+inrush_current|electrical|inrush,transient|励磁涌流衰减
+dq_transform|electrical|dq,park|abc→dq0 旋转坐标
+clarke_transform|electrical|clarke,alphabeta|αβ 静止坐标轨迹
+pwm_modulation|electrical|PWM,modulation|正弦 PWM 波形
+svpwm_hexagon|electrical|SVPWM,hexagon|空间矢量六边形
+load_curve_daily|electrical|load,peak|24h 负荷曲线
+iv_curve|electrical|PV,IV|光伏 I-V P-V 特性
+pv_mppt|electrical|PV,MPPT|MPPT 追踪过程
+power_factor_locus|electrical|PF,locus|功率因数日变化
+frequency_drift|electrical|frequency,drift|电网频率漂移
+dc_ripple|electrical|ripple,filter|整流纹波滤波
+battery_discharge|electrical|battery,SOC|电池放电曲线族
+root_locus|control|root,locus|根轨迹
+phase_margin|control|margin,bode|增益相位裕度
+sensitivity_function|control|S,T|灵敏度函数族
+ramp_response|control|ramp,response|斜坡响应
+pid_tuning|control|PID,step|PID 参数对比
+observer_estimate|control|observer,state|状态观测器估计
+phase_portrait|control|phase,portrait|非线性相图
+limit_cycle|control|limit_cycle,vdp|Van der Pol 极限环
+lyapunov_surface|control|lyapunov,3d|Lyapunov 函数曲面
+nichols_chart|control|nichols|Nichols 图
+cepstrum|signal|cepstrum,harmonic|倒谱
+envelope_detect|signal|hilbert,envelope|Hilbert 包络
+group_delay|signal|group_delay|滤波器群延迟
+fir_design|signal|FIR,filter|FIR 设计
+iir_design|signal|IIR,filter|IIR 设计对比
+window_compare|signal|window,leakage|窗函数对比
+multitaper_psd|signal|multitaper,PSD|多窗 PSD
+periodogram|signal|periodogram|周期图对比
+hilbert_envelope|signal|hilbert,IF|瞬时频率
+coherence_plot|signal|coherence|相干函数
+antenna_pattern_polar|rf|antenna,polar|方向图极坐标
+antenna_pattern_3d|rf|antenna,3d|3D 方向图
+vswr_curve|rf|VSWR,return_loss|VSWR 曲线
+constellation|rf|QAM,constellation|星座图
+eye_diagram|rf|eye,digital|眼图
+ber_curve|rf|BER,modulation|误码率曲线
+capacity_curve|rf|shannon,capacity|信道容量
+spectrum_mask|rf|spectrum,mask|频谱模板
+learning_curve|ml|learning,size|学习曲线
+precision_recall|ml|PR,AP|PR 曲线
+silhouette_plot|ml|silhouette,cluster|轮廓系数图
+tsne_scatter|ml|embedding,scatter|降维散点
+multiclass_roc|ml|ROC,OvR|多类 ROC
+feature_importance|ml|importance,bar|特征重要性
+partial_dependence|ml|PDP|偏依赖曲线
+validation_curve|ml|validation,hyperparam|超参数验证曲线
+cluster_compare|ml|cluster,compare|多算法聚类对比
+shap_summary|ml|SHAP,explain|SHAP 摘要
+andrews_curves|multivar|andrews,fourier|Andrews 曲线
+star_plot|multivar|star,radar|多个雷达星图
+profile_plot|multivar|profile|剖面图
+pairs_plot|multivar|pairs,scatter|散点矩阵
+biplot_pca|multivar|PCA,biplot|PCA 双标图
+scree_plot|multivar|PCA,scree|碎石图
+dist_normal_family|distribution|normal,pdf|正态分布族
+dist_t_family|distribution|t,pdf|t 分布族
+dist_chi_family|distribution|chi2,pdf|卡方分布族
+dist_beta_family|distribution|beta,pdf|Beta 分布族
+dist_mixture|distribution|GMM,mixture|高斯混合
+swarm_plot|distribution|swarm|蜂群图
+raincloud|distribution|raincloud|雨云图
+funnel_chart|specialty|funnel,conversion|漏斗图
+likert_diverging|specialty|likert,survey|Likert 量表
+tree_diagram|specialty|tree,decision|决策树图
+mosaic_plot|specialty|mosaic,contingency|马赛克图
+choropleth_grid|specialty|choropleth,grid|格点 choropleth
+small_multiples|composite|trellis|小型多图阵列
+heatmap_categorical|matrix|heatmap,categorical|分类热力图
+forest_subgroup|statistical|forest,subgroup|分组森林图
+quiver_3d|3d|quiver|3D 矢量场
+slice_3d|3d|slice|体积切片
+isosurface|3d|isosurface|等值面
+orbital_3d|3d|spherical_harmonic|球谐函数
+tube_3d|3d|tube,helix|3D 螺旋管
+line_collection_3d|3d|stacked,curves|3D 曲线堆叠
+velocity_field_cfd|cfd|velocity,quiver|CFD 速度场+矢量箭头
+pressure_contour|cfd|pressure,contour|压力等高线（圆柱绕流）
+vorticity_map|cfd|vorticity|涡量场
+streamlines_colored|cfd|streamlines|按速度模值着色流线
+residual_history|cfd|residual,iteration|CFD 迭代残差曲线
+convergence_curve|optimization|loss,convergence|多算法收敛对比
+pareto_front|optimization|pareto,multiobj|Pareto 前沿
+fitness_landscape|optimization|landscape,population|适应度地形
+ga_evolution|optimization|GA,fitness|GA 适应度演化
+gradient_descent_path|optimization|gradient,path|梯度下降路径
+training_curves|nn|loss,accuracy|训练曲线（loss+acc）
+network_architecture|nn|architecture|全连接网络结构图
+decision_boundary|nn|boundary,classify|决策边界
+activation_heatmap|nn|activation|隐层激活热力图
+weight_distribution|nn|weight,init|权重分布对比
+confusion_per_class|nn|metric,classify|每类精度/召回/F1
+swing_curve|power|stability,transient|多机功角摇摆曲线
+pv_nose_curve|power|voltage,stability|P-V 鼻形曲线
+equal_area_criterion|power|stability,criterion|等面积法则
+relay_tcc|power|protection,relay|反时限保护特性
+fault_oscillography|power|fault,oscillography|三相短路录波
+economic_dispatch|power|dispatch,economics|经济调度等微增率
+feeder_voltage_profile|power|distribution,voltage|馈线电压分布
+grid_frequency_response|power|frequency,inertia|电网频率响应
+generator_capability|power|generator,PQ|发电机运行极限圆图
+line_loading_heatmap|power|loading,heatmap|线路负载率热力图
+wind_power_curve|energy|wind,power_curve|风机功率曲线
+wind_rose|energy|wind,rose,polar|风玫瑰图
+solar_irradiance_day|energy|solar,irradiance|典型日辐照度
+battery_soc_schedule|energy|storage,SOC|储能充放电调度
+duck_curve|energy|netload,solar|鸭子曲线
+energy_mix_area|energy|mix,stacked|能源结构演化
+ev_charging_load|energy|EV,load|电动车充电负荷
+ragone_plot|energy|storage,ragone|Ragone 储能对比图
+hosting_capacity|energy|PV,hosting|光伏承载力箱线
+motor_torque_speed|electrical|motor,torque|电机转矩-转速特性族
+transformer_efficiency|electrical|transformer,efficiency|变压器效率曲线
+pv_iv_temperature|energy|PV,IV,temperature|光伏 I-V 温度特性
+converter_efficiency_map|electrical|converter,efficiency|变流器效率 MAP

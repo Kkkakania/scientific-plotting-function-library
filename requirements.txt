@@ -1,0 +1,10 @@
+# 核心依赖
+numpy>=1.20
+scipy>=1.7
+matplotlib>=3.5
+
+# 数据载入助手用
+openpyxl>=3.0       # Excel 读写
+
+# 可选：Origin 集成（仅 templates/origin/ 用）
+# originpro>=1.1    # 需要 Origin 2021+
