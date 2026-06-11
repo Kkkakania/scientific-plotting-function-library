@@ -2,6 +2,26 @@
 
 本库版本演化记录。
 
+## v1.8 — akun 资料库全集精读 + 22 个吸收/纵深模板（252 → 274）
+
+- **五路精读完成**（docs/learning/ 六份文档）：
+  绘图书系（Py 11 章 + MATLAB 13 章）、信号处理/3D/AI 三书、
+  akun 模板资产（16+78+139 期全对照）、数学建模 43 算法（A12/B21/C8 评级 +
+  国赛速查）、Origin/Fluent/Project/期刊版式参考
+- **吸收移植 10 个**（书系与 akun 资产中库内缺失的图型，按思路重写）：
+  pie_donut / treemap_basic / ternary_scatter / bar_progress_bead /
+  cube_heatmap / bar_hatched / bar_overlay_mckinsey /
+  pulse_compression / lms_adaptive / waterfall_3d
+- **v1.8 电气纵深补齐 9 个**：
+  switching_loss_breakdown / thermal_transient / emi_spectrum（电力电子三件套）·
+  wake_heatmap / pv_mismatch_iv / battery_degradation（新能源三件套）·
+  network_loss_map / motor_circle_diagram / differential_protection（电力系统三件套）
+- 信号类彩蛋 3 个（断线智能体遗留成果收编）：kalman_tracking /
+  spectral_estimation_compare / lfm_chirp
+- origin_map 补 14_waterfall → waterfall_3d 徽章映射（Origin 徽章 15 个）
+- 画廊 274 卡片，明暗双版全量；pytest 282 项全过、verify_all 5/5 全绿
+- 许可结论：商业 .p 工具不可审计不入库；Rggsci（GPL）只记用法不抄色值
+
 ## v1.7 — 全绿验证 + Plotly 交互端 + 暗色画廊 + COMTRADE
 
 - **里程碑：verify_all 首次 5/5 全绿，252/252 模板渲染零失败**

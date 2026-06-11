@@ -13,5 +13,6 @@
   "11_multi_panel": "small_multiples",
   "15_double_y_column": "bar_combo",
   "16_wind_power_curve": "wind_power_curve",
-  "17_harmonic_spectrum": "harmonic_spectrum"
+  "17_harmonic_spectrum": "harmonic_spectrum",
+  "14_waterfall": "waterfall_3d"
 }

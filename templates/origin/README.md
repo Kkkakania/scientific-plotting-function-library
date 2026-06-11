@@ -70,7 +70,7 @@ python render_all_origin.py 16 17    # 只跑指定编号
 
 - Origin **只有 Windows 版**，没有 macOS / Linux 版本，也没有独立命令行渲染器
 - `originpro` 包只是个桥：它必须连到本机正在运行/已安装的 Origin 实例
-- 因此在 macOS（你的电脑）和 Linux（Claude 的沙箱）上都**无法**配置出 Origin CLI
+- 因此在 macOS 和 Linux CI 环境上都**无法**配置出 Origin CLI
 - 可行路径：① 在任何 Windows 机器/虚拟机上跑上面的批量脚本；
   ② 用 `origin_map.json` 里映射的同名 Python/MATLAB 模板预览效果（视觉等价）
 

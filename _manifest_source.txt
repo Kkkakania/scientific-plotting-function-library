@@ -250,3 +250,25 @@ phasor_diagram|power|phasor,three_phase|三相电压电流相量图
 pq_injection_heatmap|power|injection,heatmap|节点 PQ 注入热力图
 dq_current_locus|electrical|dq,locus,motor|dq 轴电流轨迹
 protection_coordination|power|protection,coordination|阶段式保护配合图
+pie_donut|categorical|pie,donut,proportion|环形占比图
+treemap_basic|specialty|treemap,hierarchy|矩形树图
+ternary_scatter|specialty|ternary,composition|三元相图散点
+bar_progress_bead|categorical|progress,bead|滑珠进度柱状图
+cube_heatmap|matrix|cube,3d,heatmap|魔方热图
+bar_hatched|categorical|bar,hatch,texture|带填充纹理柱状图
+bar_overlay_mckinsey|categorical|bar,overlay,business|麦肯锡叠加柱状图
+switching_loss_breakdown|electrical|loss,switching,stacked|功率器件损耗分解
+thermal_transient|electrical|thermal,junction,foster|结温暂态曲线
+emi_spectrum|electrical|EMI,CISPR,spectrum|传导 EMI 频谱
+wake_heatmap|energy|wind,wake,jensen|风电场尾流热力图
+pv_mismatch_iv|energy|PV,mismatch,shading|光伏失配多峰 I-V
+battery_degradation|energy|battery,aging,DOD|储能寿命衰减
+network_loss_map|power|loss,network,flow|电网网损分布图
+motor_circle_diagram|electrical|motor,heyland,circle|感应电机圆图
+differential_protection|power|protection,differential|差动保护动作特性
+pulse_compression|signal|chirp,matched_filter|脉冲压缩匹配滤波
+lms_adaptive|signal|LMS,adaptive|LMS 自适应滤波
+waterfall_3d|3d|waterfall,spectra|3D 瀑布谱
+kalman_tracking|signal|kalman,estimation|卡尔曼滤波状态估计
+spectral_estimation_compare|signal|psd,burg,periodogram|谱估计方法对比
+lfm_chirp|signal|chirp,stft,timefreq|LFM 信号时频分析

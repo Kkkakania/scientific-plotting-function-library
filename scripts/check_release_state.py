@@ -12,7 +12,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-EXPECTED_VERSION = "1.7"
+EXPECTED_VERSION = "1.8"
 
 
 def fail(problems: list[str], message: str) -> None:

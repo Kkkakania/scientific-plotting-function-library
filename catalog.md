@@ -1,6 +1,6 @@
-# 模板目录（252 个）
+# 模板目录（274 个）
 
-共 252 个模板，覆盖 26 大类。
+共 274 个模板，覆盖 26 大类。
 
 每个在 `templates/python/<name>.py` 和 `templates/matlab/<name>.m` 各有一份对照实现。
 
@@ -39,6 +39,10 @@
 | `bar_pareto` | pareto / cumulative | 帕累托图 |
 | `bar_combo` | bar / line / combo | 柱+折线组合 |
 | `population_pyramid` | pyramid / bidirectional | 人口金字塔 |
+| `pie_donut` | pie / donut / proportion | 环形占比图 |
+| `bar_progress_bead` | progress / bead | 滑珠进度柱状图 |
+| `bar_hatched` | bar / hatch / texture | 带填充纹理柱状图 |
+| `bar_overlay_mckinsey` | bar / overlay / business | 麦肯锡叠加柱状图 |
 
 ## 分布 (distribution)
 
@@ -110,6 +114,7 @@
 | `matrix_correlogram` | corr / bubble | 气泡+颜色相关阵 |
 | `circular_heatmap` | polar / heatmap | 环形热力图 |
 | `heatmap_categorical` | heatmap / categorical | 分类热力图 |
+| `cube_heatmap` | cube / 3d / heatmap | 魔方热图 |
 
 ## 场/等高线 (field)
 
@@ -192,6 +197,7 @@
 | `orbital_3d` | spherical_harmonic | 球谐函数 |
 | `tube_3d` | tube / helix | 3D 螺旋管 |
 | `line_collection_3d` | stacked / curves | 3D 曲线堆叠 |
+| `waterfall_3d` | waterfall / spectra | 3D 瀑布谱 |
 
 ## 信号处理 (signal)
 
@@ -214,6 +220,11 @@
 | `periodogram` | periodogram | 周期图对比 |
 | `hilbert_envelope` | hilbert / IF | 瞬时频率 |
 | `coherence_plot` | coherence | 相干函数 |
+| `pulse_compression` | chirp / matched_filter | 脉冲压缩匹配滤波 |
+| `lms_adaptive` | LMS / adaptive | LMS 自适应滤波 |
+| `kalman_tracking` | kalman / estimation | 卡尔曼滤波状态估计 |
+| `spectral_estimation_compare` | psd / burg / periodogram | 谱估计方法对比 |
+| `lfm_chirp` | chirp / stft / timefreq | LFM 信号时频分析 |
 
 ## 电气专题 (electrical)
 
@@ -245,6 +256,10 @@
 | `transformer_efficiency` | transformer / efficiency | 变压器效率曲线 |
 | `converter_efficiency_map` | converter / efficiency | 变流器效率 MAP |
 | `dq_current_locus` | dq / locus / motor | dq 轴电流轨迹 |
+| `switching_loss_breakdown` | loss / switching / stacked | 功率器件损耗分解 |
+| `thermal_transient` | thermal / junction / foster | 结温暂态曲线 |
+| `emi_spectrum` | EMI / CISPR / spectrum | 传导 EMI 频谱 |
+| `motor_circle_diagram` | motor / heyland / circle | 感应电机圆图 |
 
 ## 控制理论 (control)
 
@@ -310,6 +325,8 @@
 | `tree_diagram` | tree / decision | 决策树图 |
 | `mosaic_plot` | mosaic / contingency | 马赛克图 |
 | `choropleth_grid` | choropleth / grid | 格点 choropleth |
+| `treemap_basic` | treemap / hierarchy | 矩形树图 |
+| `ternary_scatter` | ternary / composition | 三元相图散点 |
 
 ## CFD/流体 (cfd)
 
@@ -359,6 +376,8 @@
 | `phasor_diagram` | phasor / three_phase | 三相电压电流相量图 |
 | `pq_injection_heatmap` | injection / heatmap | 节点 PQ 注入热力图 |
 | `protection_coordination` | protection / coordination | 阶段式保护配合图 |
+| `network_loss_map` | loss / network / flow | 电网网损分布图 |
+| `differential_protection` | protection / differential | 差动保护动作特性 |
 
 ## 新能源/储能 (energy)
 
@@ -374,6 +393,9 @@
 | `ragone_plot` | storage / ragone | Ragone 储能对比图 |
 | `hosting_capacity` | PV / hosting | 光伏承载力箱线 |
 | `pv_iv_temperature` | PV / IV / temperature | 光伏 I-V 温度特性 |
+| `wake_heatmap` | wind / wake / jensen | 风电场尾流热力图 |
+| `pv_mismatch_iv` | PV / mismatch / shading | 光伏失配多峰 I-V |
+| `battery_degradation` | battery / aging / DOD | 储能寿命衰减 |
 
 ## 流程图/框图 (diagram)
 

@@ -13,12 +13,13 @@
 | v1.4 | 色彩科学工具链（color_lab / generator / validator / 40 套色板） | ✅ 完成 |
 | **v1.5** | **配色革新（60 套+暗色模式）· power/energy 两大新类 · Go 语言端 · MATLAB 色板自动同步** | ✅ 完成 |
 | **v1.6** | **diagram 流程图/框图大类 · 画廊语言检索 · palette_picker 选择器 · 配色 68 套 · Origin 批量出图** | ✅ 完成 |
-| **v1.7** | **verify_all 全绿（252/252）· Plotly 交互端 · 暗色画廊 · COMTRADE 读取器 · v1.8 电气首发 4 模板** | ✅ 本次完成 |
+| **v1.7** | **verify_all 全绿（252/252）· Plotly 交互端 · 暗色画廊 · COMTRADE 读取器 · v1.8 电气首发 4 模板** | ✅ 完成 |
+| **v1.8** | **akun 资料全集精读（6 份笔记）· 吸收移植 10 模板 · 电气纵深补齐 9 模板 + 信号 3 彩蛋（274 个）** | ✅ 本次完成 |
 
 ## v1.6 — 巩固与验证（短期，1~2 周强度）
 
 - [ ] 在本机（有 Go 工具链）编译验证 `templates/go/`，结果记入 verification_report
-- [ ] 在本机 MATLAB 实跑 23 个新 .m 模板（沙箱只做了静态语法检查）
+- [~] 本机 MATLAB 实跑：基建已就绪 → 在终端跑 `bash scripts/verify_matlab.sh`（自动找 MATLAB，全库 274 个实渲染 + 自动出报告 docs/matlab_verify_report.md）
 - [ ] 在本机 Origin 实跑 14~18 号新脚本
 - [x] 把 `render_all.py --dark` 加入：一键渲染全库暗色版画廊
 - [x] gallery/index.html 加"暗色预览"切换按钮
@@ -35,11 +36,11 @@
 
 结合大三专业课（电机学、电力电子、电力系统分析、继电保护）逐步补齐：
 
-- [x] 潮流可视化首发：相量图 + PQ 注入热力图（网损分布待补）
-- [~] 电机：dq 轴电流轨迹 ✓（圆图法、效率云图实测版待补）
-- [ ] 电力电子：开关损耗分解瀑布图、热仿真温升曲线、EMI 频谱模板
-- [~] 继电保护：阶段式保护配合图 ✓（差动保护动作特性待补）
-- [ ] 新能源：风电场尾流热力图、光伏阵列失配 I-V、储能寿命衰减曲线
+- [x] 潮流可视化：相量图 + PQ 注入热力图 + network_loss_map 网损分布
+- [x] 电机：dq 轴电流轨迹 ✓ + motor_circle_diagram 圆图 ✓（效率云图实测版已有 converter_efficiency_map）
+- [x] 电力电子：switching_loss_breakdown / thermal_transient / emi_spectrum
+- [x] 继电保护：protection_coordination ✓ + differential_protection ✓
+- [x] 新能源：wake_heatmap / pv_mismatch_iv / battery_degradation
 
 ## v2.0 — 生态化（长期，毕业设计前）
 

@@ -1,6 +1,6 @@
 {
-  "version": "1.7",
-  "count": 252,
+  "version": "1.8",
+  "count": 274,
   "templates": [
     {
       "name": "line_basic",
@@ -2247,6 +2247,218 @@
         "coordination"
       ],
       "description": "阶段式保护配合图"
+    },
+    {
+      "name": "pie_donut",
+      "category": "categorical",
+      "tags": [
+        "pie",
+        "donut",
+        "proportion"
+      ],
+      "description": "环形占比图"
+    },
+    {
+      "name": "treemap_basic",
+      "category": "specialty",
+      "tags": [
+        "treemap",
+        "hierarchy"
+      ],
+      "description": "矩形树图"
+    },
+    {
+      "name": "ternary_scatter",
+      "category": "specialty",
+      "tags": [
+        "ternary",
+        "composition"
+      ],
+      "description": "三元相图散点"
+    },
+    {
+      "name": "bar_progress_bead",
+      "category": "categorical",
+      "tags": [
+        "progress",
+        "bead"
+      ],
+      "description": "滑珠进度柱状图"
+    },
+    {
+      "name": "cube_heatmap",
+      "category": "matrix",
+      "tags": [
+        "cube",
+        "3d",
+        "heatmap"
+      ],
+      "description": "魔方热图"
+    },
+    {
+      "name": "bar_hatched",
+      "category": "categorical",
+      "tags": [
+        "bar",
+        "hatch",
+        "texture"
+      ],
+      "description": "带填充纹理柱状图"
+    },
+    {
+      "name": "bar_overlay_mckinsey",
+      "category": "categorical",
+      "tags": [
+        "bar",
+        "overlay",
+        "business"
+      ],
+      "description": "麦肯锡叠加柱状图"
+    },
+    {
+      "name": "switching_loss_breakdown",
+      "category": "electrical",
+      "tags": [
+        "loss",
+        "switching",
+        "stacked"
+      ],
+      "description": "功率器件损耗分解"
+    },
+    {
+      "name": "thermal_transient",
+      "category": "electrical",
+      "tags": [
+        "thermal",
+        "junction",
+        "foster"
+      ],
+      "description": "结温暂态曲线"
+    },
+    {
+      "name": "emi_spectrum",
+      "category": "electrical",
+      "tags": [
+        "EMI",
+        "CISPR",
+        "spectrum"
+      ],
+      "description": "传导 EMI 频谱"
+    },
+    {
+      "name": "wake_heatmap",
+      "category": "energy",
+      "tags": [
+        "wind",
+        "wake",
+        "jensen"
+      ],
+      "description": "风电场尾流热力图"
+    },
+    {
+      "name": "pv_mismatch_iv",
+      "category": "energy",
+      "tags": [
+        "PV",
+        "mismatch",
+        "shading"
+      ],
+      "description": "光伏失配多峰 I-V"
+    },
+    {
+      "name": "battery_degradation",
+      "category": "energy",
+      "tags": [
+        "battery",
+        "aging",
+        "DOD"
+      ],
+      "description": "储能寿命衰减"
+    },
+    {
+      "name": "network_loss_map",
+      "category": "power",
+      "tags": [
+        "loss",
+        "network",
+        "flow"
+      ],
+      "description": "电网网损分布图"
+    },
+    {
+      "name": "motor_circle_diagram",
+      "category": "electrical",
+      "tags": [
+        "motor",
+        "heyland",
+        "circle"
+      ],
+      "description": "感应电机圆图"
+    },
+    {
+      "name": "differential_protection",
+      "category": "power",
+      "tags": [
+        "protection",
+        "differential"
+      ],
+      "description": "差动保护动作特性"
+    },
+    {
+      "name": "pulse_compression",
+      "category": "signal",
+      "tags": [
+        "chirp",
+        "matched_filter"
+      ],
+      "description": "脉冲压缩匹配滤波"
+    },
+    {
+      "name": "lms_adaptive",
+      "category": "signal",
+      "tags": [
+        "LMS",
+        "adaptive"
+      ],
+      "description": "LMS 自适应滤波"
+    },
+    {
+      "name": "waterfall_3d",
+      "category": "3d",
+      "tags": [
+        "waterfall",
+        "spectra"
+      ],
+      "description": "3D 瀑布谱"
+    },
+    {
+      "name": "kalman_tracking",
+      "category": "signal",
+      "tags": [
+        "kalman",
+        "estimation"
+      ],
+      "description": "卡尔曼滤波状态估计"
+    },
+    {
+      "name": "spectral_estimation_compare",
+      "category": "signal",
+      "tags": [
+        "psd",
+        "burg",
+        "periodogram"
+      ],
+      "description": "谱估计方法对比"
+    },
+    {
+      "name": "lfm_chirp",
+      "category": "signal",
+      "tags": [
+        "chirp",
+        "stft",
+        "timefreq"
+      ],
+      "description": "LFM 信号时频分析"
     }
   ]
 }

@@ -47,7 +47,7 @@ cmap := sciplot.Sequential(pal, 256)   // 锚点插值成连续色
 
 ## ⚠ 验证状态
 
-- 本目录代码在**无 Go 工具链的沙箱**中编写，尚未在本机编译运行。
+- 本目录代码是在**暂缺 Go 工具链的环境**中编写，尚未在本机编译运行。
   API 全部取自 gonum/plot v0.14 的稳定子集（`plot.New` / `plotter.NewLine` /
   `NewScatter` / `NewBarChart` / `NewHist` / `LogScale`），风险低。
 - 第一次使用请先 `go mod tidy && go vet ./...`，如有编译错误多半是
