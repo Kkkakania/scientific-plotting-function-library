@@ -128,8 +128,8 @@ render_all('--tag', 'heatmap')   % 按 tag
 
 ```json
 {
-  "version": "1.8",
-  "count": 274,
+  "version": "2.0",
+  "count": 1000,
   "templates": [
     {"name": "line_basic", "category": "basic",
      "tags": ["line", "trend"], "description": "单条折线"},
@@ -139,3 +139,7 @@ render_all('--tag', 'heatmap')   % 按 tag
 ```
 
 可以拿来做自动化任务（如批量按 tag 重渲染、CI 检查、生成画廊）。
+
+v2.0 以后，扩展模板先写入 `_batch_manifests/batch_*.txt`，再由
+`scripts/merge_batch_manifests.py` 合并到 `_manifest_source.txt`。这样可以
+把大规模模板扩产和最终注册分开审查，避免多人或多 agent 同时直接改主清单。

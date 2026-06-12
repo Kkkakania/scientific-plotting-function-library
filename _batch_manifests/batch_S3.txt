@@ -1,0 +1,18 @@
+power_curve_analysis|statistical|power,ttest,contour|双样本t检验统计功效等高线
+pp_plot|statistical|pp,normality,cdf|P-P 概率图对比经验与理论累积概率
+pq_radar|power|radar,quality,thd|电能质量五维雷达多场景对比
+qam_constellation_grid|rf|QAM,constellation,EVM|4/16/64/256-QAM 星座四宫格含 EVM 标注
+qq_compare_grid|statistical|qq,normality,grid|多分布 QQ 四宫格对比正态理论分位
+range_band_timeseries|time|band,range,seasonal|历史同期最大最小范围带叠加今年曲线
+returns_heatmap|time|heatmap,returns,calendar|年月矩阵月度收益率热力日历
+roc_multi_compare|statistical|roc,auc,compare|多模型 ROC 曲线与 AUC 图例对比
+sankey_multistage|flow|sankey,stage,band|三级桑基源中间汇曲线流带
+seasonal_subseries_v2|time|seasonal,subseries,facet|十二月分面季节子序列加月均值线
+spiral_timeseries|time|spiral,polar,seasonal|极坐标时间螺旋按年盘旋颜色编码数值
+step_after_compare|time|step,intervention,ci|干预前后水平段均值与置信带阶梯对比
+stream_graph|flow|stream,themeriver,stacked|摆动基线堆叠面积河流图
+survival_km|statistical|survival,kaplan-meier,censor|Kaplan-Meier 生存曲线含删失标记与风险人数表
+unbalance_phasor|power|phasor,sequence,unbalance|三相不平衡正负零序相量分解
+volatility_cone|statistical|volatility,quantile,finance|多窗口滚动波动率分位锥加当前值
+voltage_flicker|power|flicker,pst,quality|电压闪变调幅波形与 Pst 条形双面板
+waterfall_timeseries|time|waterfall,bridge,monthly|期初到期末月度增减时序瀑布桥

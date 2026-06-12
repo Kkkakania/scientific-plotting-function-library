@@ -2,9 +2,9 @@
 
 English repository name: `scientific-plotting-function-library`.
 
-当前库版本：`v1.8`。
+当前库版本：`v2.0`。
 
-274 个原创科研绘图模板，**Python + MATLAB 双语对照**（另有 Go 语言端 8 个、Origin 19 个脚本、Plotly 12 个交互模板），覆盖 26 大类。
+1000 个原创科研绘图模板，**Python + MATLAB 双语对照**（另有 Go 语言端 8 个、Origin 19 个脚本、Plotly 12 个交互模板），覆盖 26 大类。
 配 68 套色板（含暗色模式与国风系列）、色彩科学工具链、可筛选 HTML 画廊和完整文档。
 
 适用对象：电气工程及其自动化、信号处理、控制工程方向的本科 / 研究生 / 论文作者。
@@ -28,15 +28,15 @@ English repository name: `scientific-plotting-function-library`.
 │   ├── python/             theme · palette · export · demo_data · data_loader
 │   └── matlab/             apply_theme · palette · save_figure · demo_data · load_data
 ├── templates/
-│   ├── python/             274 个 <name>.py，每个含 make_figure()
-│   ├── matlab/             274 个 <name>.m，每个是同名函数
+│   ├── python/             1000 个 <name>.py，每个含 make_figure()
+│   ├── matlab/             1000 个 <name>.m，每个是同名函数
 │   ├── plotly/             12 个交互模板（写出独立 HTML）
 │   ├── go/                 sciplot 包 + 8 个 gonum/plot 模板
 │   └── origin/             19 个 originpro Python 脚本 + 2 个 LabTalk
 ├── palettes/               68 套调色板 + palette_picker.html 选择器 + 色彩科学工具链 + 实战预览
 │   ├── python/sci_palettes.py
 │   └── matlab/sci_palettes.m
-├── gallery/                274 张模板 PNG + index.html（搜索+分类+语言筛选）
+├── gallery/                1000 张模板 PNG + index.html（搜索+分类+语言筛选）
 ├── docs/                   完整文档集（docs/learning/ 资料精读笔记 ×6）
 │   ├── quick_start.md       5 分钟上手
 │   ├── chart_selection.md   图型决策指南
@@ -44,6 +44,7 @@ English repository name: `scientific-plotting-function-library`.
 │   ├── style_guide.md       模板风格规范
 │   └── provenance_policy.md clean-room 发布边界
 ├── scripts/                辅助脚本
+│   ├── merge_batch_manifests.py 批次账本合并为 manifest 源
 │   ├── build_manifest.py    重生成 manifest.json + catalog.md
 │   └── build_gallery_index.py  重生成画廊 HTML
 ├── tests/                  pytest 自动化测试
@@ -111,7 +112,7 @@ cmap   = get_palette('blue_white_red')        # 发散色谱
 ## 一键全库
 
 ```bash
-python render_all.py                  # 全部 274 个
+python render_all.py                  # 全部 1000 个
 python render_all.py line_basic       # 指定一个
 python render_all.py --tag heatmap    # 按 tag 过滤
 ```
@@ -137,6 +138,7 @@ render_all('--tag', 'heatmap')        % 按 tag
 难以确认来源的二进制素材。发布前先跑：
 
 ```bash
+python scripts/merge_batch_manifests.py
 python scripts/build_manifest.py
 python scripts/build_gallery_index.py
 python scripts/build_palette_picker.py

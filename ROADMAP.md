@@ -14,12 +14,13 @@
 | **v1.5** | **配色革新（60 套+暗色模式）· power/energy 两大新类 · Go 语言端 · MATLAB 色板自动同步** | ✅ 完成 |
 | **v1.6** | **diagram 流程图/框图大类 · 画廊语言检索 · palette_picker 选择器 · 配色 68 套 · Origin 批量出图** | ✅ 完成 |
 | **v1.7** | **verify_all 全绿（252/252）· Plotly 交互端 · 暗色画廊 · COMTRADE 读取器 · v1.8 电气首发 4 模板** | ✅ 完成 |
-| **v1.8** | **akun 资料全集精读（6 份笔记）· 吸收移植 10 模板 · 电气纵深补齐 9 模板 + 信号 3 彩蛋（274 个）** | ✅ 本次完成 |
+| **v1.8** | **akun 资料全集精读（6 份笔记）· 吸收移植 10 模板 · 电气纵深补齐 9 模板 + 信号 3 彩蛋（274 个）** | ✅ 完成 |
+| **v2.0** | **千图计划：274 → 1000；批次账本、合并脚本、Python/MATLAB 共享生成内核、全量 manifest/catalog/gallery 发布面** | ✅ 本次完成 |
 
 ## v1.6 — 巩固与验证（短期，1~2 周强度）
 
 - [ ] 在本机（有 Go 工具链）编译验证 `templates/go/`，结果记入 verification_report
-- [~] 本机 MATLAB 实跑：基建已就绪 → 在终端跑 `bash scripts/verify_matlab.sh`（自动找 MATLAB，全库 274 个实渲染 + 自动出报告 docs/matlab_verify_report.md）
+- [~] 本机 MATLAB 实跑：基建已就绪 → 在终端跑 `bash scripts/verify_matlab.sh`（自动找 MATLAB，全库 1000 个实渲染 + 自动出报告 docs/matlab_verify_report.md）
 - [ ] 在本机 Origin 实跑 14~18 号新脚本
 - [x] 把 `render_all.py --dark` 加入：一键渲染全库暗色版画廊
 - [x] gallery/index.html 加"暗色预览"切换按钮
@@ -42,7 +43,15 @@
 - [x] 继电保护：protection_coordination ✓ + differential_protection ✓
 - [x] 新能源：wake_heatmap / pv_mismatch_iv / battery_degradation
 
-## v2.0 — 生态化（长期，毕业设计前）
+## v2.0 — 千图计划（一次性扩产交付）
+
+- [x] 将主清单从 274 个模板扩展到 1000 个模板，全部保持 Python + MATLAB 双语入口
+- [x] 新增 `_batch_manifests/` 批次账本，扩产条目先审查再合并，避免直接手改主清单
+- [x] 新增 `scripts/merge_batch_manifests.py`，检查批次格式、重复项和 Python/MATLAB 文件存在性
+- [x] 新增 Python/MATLAB 共享生成内核，保证大规模模板在视觉结构、随机种子、命名和领域语义上可维护
+- [x] 更新 `manifest.json`、`catalog.md`、README、API 文档和发布检查，统一到 v2.0 / 1000
+
+## v2.1 — 生态化（长期，毕业设计前）
 
 - [ ] 打包发布：PyPI（`pip install sciplot-ee`）+ MATLAB File Exchange
 - [ ] 文档站：mkdocs-material，画廊在线托管
@@ -60,6 +69,6 @@
 ## 维护守则（给未来的自己和 agent）
 
 1. **配色只改 Python 端**，然后跑 `python scripts/sync_matlab_palettes.py` 同步 MATLAB——不要手改 .m 色板
-2. 新模板必须：注册 `_manifest_source.txt` → `build_manifest.py` → `render_all.py <name>` → `build_gallery_index.py` → pytest 全过
+2. 新模板必须：登记 `_batch_manifests/batch_*.txt` → `merge_batch_manifests.py` → `build_manifest.py` → `render_all.py <name>` → `build_gallery_index.py` → pytest 全过
 3. 每次发版跑 `scripts/verify_all.py`，报告进 `docs/verification_report.md`
 4. 原始教程资料目录（书籍/视频/插图集）保持只读，所有原创工作只发生在本目录

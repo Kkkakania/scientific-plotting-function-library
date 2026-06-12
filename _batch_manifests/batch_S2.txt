@@ -1,0 +1,18 @@
+effect_size_panel|statistical|effect-size,cohen-d,overlap|两正态分布重叠区+Cohen's d 标尺的效应量面板
+event_raster|time|raster,event,spike|多通道事件栅格图（神经放电/告警日志通用）
+ewma_chart|time|spc,ewma,control-chart|EWMA 控制图（时变控制限+越限点标红）
+eye_diagram_v2|rf|eye,raised-cosine,isi|升余弦脉冲眼图（噪声+ISI 多迹叠加）
+fan_chart|time|forecast,fan,quantile|扇形预测图（历史序列+分位数渐变带逐步加宽）
+gantt_chart|diagram|gantt,schedule,project|甘特图（依赖箭头+今日线+完成度填充）
+harmonic_heatmap|power|harmonic,heatmap,time-varying|谐波时变热力图（谐波次数×时间幅值着色）
+hazard_function|statistical|hazard,weibull,survival|Weibull 风险函数对比（递减/恒定/递增形状参数）
+hive_plot|relation|hive,network,bezier|蜂巢图（3 轴按节点类别放置+轴间贝塞尔连线）
+horizon_chart|time|horizon,band,small-multiple|地平线图（分层折叠填色 4 序列小多图）
+interharmonic_spectrum|power|interharmonic,harmonic,spectrum|间谐波频谱（整数次谐波与间谐波分色柱状）
+itic_tolerance_curve|power|itic,cbema,voltage-sag|ITIC/CBEMA 电压耐受曲线（半对数包络+事件分区着色）
+lag_plot_v2|time|lag,autocorrelation,scatter|滞后散点图阵（lag=1..4 四宫格识别自相关衰减）
+mcmc_trace_panel|statistical|mcmc,trace,posterior|MCMC 迹图面板（4 链 trace+后验密度两列布局）
+meta_funnel|statistical|meta-analysis,funnel,publication-bias|Meta 分析漏斗图（效应量 vs 标准误+伪置信漏斗）
+milestone_timeline|diagram|milestone,timeline,roadmap|里程碑时间轴（水平主轴标注上下交替防重叠）
+pacf_plot|time|pacf,ar,correlogram|偏自相关图（Durbin-Levinson 求 PACF+置信带）
+permutation_null|statistical|permutation,p-value,resampling|置换检验零分布（null 直方图+观测统计量+双侧 p 值）

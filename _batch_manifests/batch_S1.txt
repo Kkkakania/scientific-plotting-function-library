@@ -1,0 +1,18 @@
+anomaly_timeline|time|anomaly,event,timeline|异常事件时间轴（多阈值告警区间+事件标注）
+antenna_pattern_3d_v2|rf|antenna,3d,array-factor|三维天线方向图（阵列方向因子曲面）
+arc_diagram|relation|arc,network,ordered|弧线网络图（节点按序排列+上弧连边）
+array_factor_polar|rf|array,beam,polar|均匀线阵方向因子极坐标图
+bayesian_posterior_update|statistical|bayesian,posterior,prior|贝叶斯后验更新图（先验/似然/后验三曲线）
+beam_steering|rf|beamforming,steering,array|波束扫描方向图（多角度主瓣偏转对比）
+ber_waterfall_3d|rf|ber,waterfall,snr|BER 瀑布曲面（调制阶数×SNR×误码率）
+bland_altman_v2|statistical|agreement,bias,method-comparison|Bland-Altman 一致性图（偏倚+一致性限+密度着色）
+bootstrap_ci|statistical|bootstrap,confidence-interval,resampling|Bootstrap 置信区间图（重采样分布+百分位区间）
+bump_chart|ranking|bump,rank,time|排名变化 bump chart（多对象随时间名次迁移）
+calibration_curve_v2|statistical|calibration,reliability,probability|概率校准曲线（分箱可靠性+完美校准参考线）
+candlestick_ohlc|time|finance,ohlc,candlestick|OHLC K 线图（随机游走价格+成交量副图）
+chord_diagram|flow|chord,flow,matrix|和弦图（流量矩阵外环节点+带宽编码连接）
+control_chart_xbar|time|spc,xbar,control-chart|X-bar 控制图（均值线+3σ 控制限+越限标注）
+credible_forest|statistical|bayesian,credible-interval,forest|可信区间森林图（后验中位数+95%区间）
+cusum_chart|time|spc,cusum,drift|CUSUM 控制图（正负累积偏移检测）
+decomposition_stl|time|decomposition,trend,seasonal|时间序列分解面板（观测/趋势/季节/残差）
+drawdown_curve|time|finance,drawdown,risk|回撤曲线（净值曲线+最大回撤阴影）

@@ -2,6 +2,23 @@
 
 本库版本演化记录。
 
+## v2.0 — 千图计划：274 → 1000
+
+- **模板规模扩展到 1000 个**：主清单、catalog、Python 模板、MATLAB 模板统一到
+  v2.0 / 1000，保持双语入口和 `make_figure()` / 同名 MATLAB 函数约定
+- **新增 `_batch_manifests/` 批次账本**：扩产条目先进入批次文件，再由
+  `scripts/merge_batch_manifests.py` 检查格式、重复项和 Python/MATLAB 文件存在性后合并
+- **新增共享生成内核**：
+  `_utils/python/generated_patterns.py` 与 `_utils/matlab/generated_template_figure.m`
+  覆盖监测、控制限、热力矩阵、等高线、聚类散点、雷达、瀑布、极坐标、相图、
+  分布、气泡矩阵、森林区间、堆叠面积、阶梯、3D 曲面等 21 类表达方式
+- **新增 clean-room 扩产脚本**：`scripts/generate_thousand_templates.py` 用领域包 +
+  表达方式组合生成可维护模板，不复制 akun 原始源码、截图、二进制素材或第三方色值
+- **收编 S1-S3 高价值手写模板**：高级时序、金融/SPC、关系网络、统计推断、
+  电能质量、通信/雷达等 54 对 Python/MATLAB 模板进入主清单
+- **发布面同步**：README、API 文档、ROADMAP、release state check、manifest 和 catalog
+  统一到 v2.0 / 1000，防止审核者看到版本与数量漂移
+
 ## v1.8 — akun 资料库全集精读 + 22 个吸收/纵深模板（252 → 274）
 
 - **五路精读完成**（docs/learning/ 六份文档）：

@@ -1,6 +1,6 @@
 {
-  "version": "1.8",
-  "count": 274,
+  "version": "2.0",
+  "count": 1000,
   "templates": [
     {
       "name": "line_basic",
@@ -2459,6 +2459,7266 @@
         "timefreq"
       ],
       "description": "LFM 信号时频分析"
+    },
+    {
+      "name": "anomaly_timeline",
+      "category": "time",
+      "tags": [
+        "anomaly",
+        "event",
+        "timeline"
+      ],
+      "description": "异常事件时间轴（多阈值告警区间+事件标注）"
+    },
+    {
+      "name": "antenna_pattern_3d_v2",
+      "category": "rf",
+      "tags": [
+        "antenna",
+        "3d",
+        "array-factor"
+      ],
+      "description": "三维天线方向图（阵列方向因子曲面）"
+    },
+    {
+      "name": "arc_diagram",
+      "category": "relation",
+      "tags": [
+        "arc",
+        "network",
+        "ordered"
+      ],
+      "description": "弧线网络图（节点按序排列+上弧连边）"
+    },
+    {
+      "name": "array_factor_polar",
+      "category": "rf",
+      "tags": [
+        "array",
+        "beam",
+        "polar"
+      ],
+      "description": "均匀线阵方向因子极坐标图"
+    },
+    {
+      "name": "bayesian_posterior_update",
+      "category": "statistical",
+      "tags": [
+        "bayesian",
+        "posterior",
+        "prior"
+      ],
+      "description": "贝叶斯后验更新图（先验/似然/后验三曲线）"
+    },
+    {
+      "name": "beam_steering",
+      "category": "rf",
+      "tags": [
+        "beamforming",
+        "steering",
+        "array"
+      ],
+      "description": "波束扫描方向图（多角度主瓣偏转对比）"
+    },
+    {
+      "name": "ber_waterfall_3d",
+      "category": "rf",
+      "tags": [
+        "ber",
+        "waterfall",
+        "snr"
+      ],
+      "description": "BER 瀑布曲面（调制阶数×SNR×误码率）"
+    },
+    {
+      "name": "bland_altman_v2",
+      "category": "statistical",
+      "tags": [
+        "agreement",
+        "bias",
+        "method-comparison"
+      ],
+      "description": "Bland-Altman 一致性图（偏倚+一致性限+密度着色）"
+    },
+    {
+      "name": "bootstrap_ci",
+      "category": "statistical",
+      "tags": [
+        "bootstrap",
+        "confidence-interval",
+        "resampling"
+      ],
+      "description": "Bootstrap 置信区间图（重采样分布+百分位区间）"
+    },
+    {
+      "name": "bump_chart",
+      "category": "ranking",
+      "tags": [
+        "bump",
+        "rank",
+        "time"
+      ],
+      "description": "排名变化 bump chart（多对象随时间名次迁移）"
+    },
+    {
+      "name": "calibration_curve_v2",
+      "category": "statistical",
+      "tags": [
+        "calibration",
+        "reliability",
+        "probability"
+      ],
+      "description": "概率校准曲线（分箱可靠性+完美校准参考线）"
+    },
+    {
+      "name": "candlestick_ohlc",
+      "category": "time",
+      "tags": [
+        "finance",
+        "ohlc",
+        "candlestick"
+      ],
+      "description": "OHLC K 线图（随机游走价格+成交量副图）"
+    },
+    {
+      "name": "chord_diagram",
+      "category": "flow",
+      "tags": [
+        "chord",
+        "flow",
+        "matrix"
+      ],
+      "description": "和弦图（流量矩阵外环节点+带宽编码连接）"
+    },
+    {
+      "name": "control_chart_xbar",
+      "category": "time",
+      "tags": [
+        "spc",
+        "xbar",
+        "control-chart"
+      ],
+      "description": "X-bar 控制图（均值线+3σ 控制限+越限标注）"
+    },
+    {
+      "name": "credible_forest",
+      "category": "statistical",
+      "tags": [
+        "bayesian",
+        "credible-interval",
+        "forest"
+      ],
+      "description": "可信区间森林图（后验中位数+95%区间）"
+    },
+    {
+      "name": "cusum_chart",
+      "category": "time",
+      "tags": [
+        "spc",
+        "cusum",
+        "drift"
+      ],
+      "description": "CUSUM 控制图（正负累积偏移检测）"
+    },
+    {
+      "name": "decomposition_stl",
+      "category": "time",
+      "tags": [
+        "decomposition",
+        "trend",
+        "seasonal"
+      ],
+      "description": "时间序列分解面板（观测/趋势/季节/残差）"
+    },
+    {
+      "name": "drawdown_curve",
+      "category": "time",
+      "tags": [
+        "finance",
+        "drawdown",
+        "risk"
+      ],
+      "description": "回撤曲线（净值曲线+最大回撤阴影）"
+    },
+    {
+      "name": "effect_size_panel",
+      "category": "statistical",
+      "tags": [
+        "effect-size",
+        "cohen-d",
+        "overlap"
+      ],
+      "description": "两正态分布重叠区+Cohen's d 标尺的效应量面板"
+    },
+    {
+      "name": "event_raster",
+      "category": "time",
+      "tags": [
+        "raster",
+        "event",
+        "spike"
+      ],
+      "description": "多通道事件栅格图（神经放电/告警日志通用）"
+    },
+    {
+      "name": "ewma_chart",
+      "category": "time",
+      "tags": [
+        "spc",
+        "ewma",
+        "control-chart"
+      ],
+      "description": "EWMA 控制图（时变控制限+越限点标红）"
+    },
+    {
+      "name": "eye_diagram_v2",
+      "category": "rf",
+      "tags": [
+        "eye",
+        "raised-cosine",
+        "isi"
+      ],
+      "description": "升余弦脉冲眼图（噪声+ISI 多迹叠加）"
+    },
+    {
+      "name": "fan_chart",
+      "category": "time",
+      "tags": [
+        "forecast",
+        "fan",
+        "quantile"
+      ],
+      "description": "扇形预测图（历史序列+分位数渐变带逐步加宽）"
+    },
+    {
+      "name": "gantt_chart",
+      "category": "diagram",
+      "tags": [
+        "gantt",
+        "schedule",
+        "project"
+      ],
+      "description": "甘特图（依赖箭头+今日线+完成度填充）"
+    },
+    {
+      "name": "harmonic_heatmap",
+      "category": "power",
+      "tags": [
+        "harmonic",
+        "heatmap",
+        "time-varying"
+      ],
+      "description": "谐波时变热力图（谐波次数×时间幅值着色）"
+    },
+    {
+      "name": "hazard_function",
+      "category": "statistical",
+      "tags": [
+        "hazard",
+        "weibull",
+        "survival"
+      ],
+      "description": "Weibull 风险函数对比（递减/恒定/递增形状参数）"
+    },
+    {
+      "name": "hive_plot",
+      "category": "relation",
+      "tags": [
+        "hive",
+        "network",
+        "bezier"
+      ],
+      "description": "蜂巢图（3 轴按节点类别放置+轴间贝塞尔连线）"
+    },
+    {
+      "name": "horizon_chart",
+      "category": "time",
+      "tags": [
+        "horizon",
+        "band",
+        "small-multiple"
+      ],
+      "description": "地平线图（分层折叠填色 4 序列小多图）"
+    },
+    {
+      "name": "interharmonic_spectrum",
+      "category": "power",
+      "tags": [
+        "interharmonic",
+        "harmonic",
+        "spectrum"
+      ],
+      "description": "间谐波频谱（整数次谐波与间谐波分色柱状）"
+    },
+    {
+      "name": "itic_tolerance_curve",
+      "category": "power",
+      "tags": [
+        "itic",
+        "cbema",
+        "voltage-sag"
+      ],
+      "description": "ITIC/CBEMA 电压耐受曲线（半对数包络+事件分区着色）"
+    },
+    {
+      "name": "lag_plot_v2",
+      "category": "time",
+      "tags": [
+        "lag",
+        "autocorrelation",
+        "scatter"
+      ],
+      "description": "滞后散点图阵（lag=1..4 四宫格识别自相关衰减）"
+    },
+    {
+      "name": "mcmc_trace_panel",
+      "category": "statistical",
+      "tags": [
+        "mcmc",
+        "trace",
+        "posterior"
+      ],
+      "description": "MCMC 迹图面板（4 链 trace+后验密度两列布局）"
+    },
+    {
+      "name": "meta_funnel",
+      "category": "statistical",
+      "tags": [
+        "meta-analysis",
+        "funnel",
+        "publication-bias"
+      ],
+      "description": "Meta 分析漏斗图（效应量 vs 标准误+伪置信漏斗）"
+    },
+    {
+      "name": "milestone_timeline",
+      "category": "diagram",
+      "tags": [
+        "milestone",
+        "timeline",
+        "roadmap"
+      ],
+      "description": "里程碑时间轴（水平主轴标注上下交替防重叠）"
+    },
+    {
+      "name": "pacf_plot",
+      "category": "time",
+      "tags": [
+        "pacf",
+        "ar",
+        "correlogram"
+      ],
+      "description": "偏自相关图（Durbin-Levinson 求 PACF+置信带）"
+    },
+    {
+      "name": "permutation_null",
+      "category": "statistical",
+      "tags": [
+        "permutation",
+        "p-value",
+        "resampling"
+      ],
+      "description": "置换检验零分布（null 直方图+观测统计量+双侧 p 值）"
+    },
+    {
+      "name": "power_curve_analysis",
+      "category": "statistical",
+      "tags": [
+        "power",
+        "ttest",
+        "contour"
+      ],
+      "description": "双样本t检验统计功效等高线"
+    },
+    {
+      "name": "pp_plot",
+      "category": "statistical",
+      "tags": [
+        "pp",
+        "normality",
+        "cdf"
+      ],
+      "description": "P-P 概率图对比经验与理论累积概率"
+    },
+    {
+      "name": "pq_radar",
+      "category": "power",
+      "tags": [
+        "radar",
+        "quality",
+        "thd"
+      ],
+      "description": "电能质量五维雷达多场景对比"
+    },
+    {
+      "name": "qam_constellation_grid",
+      "category": "rf",
+      "tags": [
+        "QAM",
+        "constellation",
+        "EVM"
+      ],
+      "description": "4/16/64/256-QAM 星座四宫格含 EVM 标注"
+    },
+    {
+      "name": "qq_compare_grid",
+      "category": "statistical",
+      "tags": [
+        "qq",
+        "normality",
+        "grid"
+      ],
+      "description": "多分布 QQ 四宫格对比正态理论分位"
+    },
+    {
+      "name": "range_band_timeseries",
+      "category": "time",
+      "tags": [
+        "band",
+        "range",
+        "seasonal"
+      ],
+      "description": "历史同期最大最小范围带叠加今年曲线"
+    },
+    {
+      "name": "returns_heatmap",
+      "category": "time",
+      "tags": [
+        "heatmap",
+        "returns",
+        "calendar"
+      ],
+      "description": "年月矩阵月度收益率热力日历"
+    },
+    {
+      "name": "roc_multi_compare",
+      "category": "statistical",
+      "tags": [
+        "roc",
+        "auc",
+        "compare"
+      ],
+      "description": "多模型 ROC 曲线与 AUC 图例对比"
+    },
+    {
+      "name": "sankey_multistage",
+      "category": "flow",
+      "tags": [
+        "sankey",
+        "stage",
+        "band"
+      ],
+      "description": "三级桑基源中间汇曲线流带"
+    },
+    {
+      "name": "seasonal_subseries_v2",
+      "category": "time",
+      "tags": [
+        "seasonal",
+        "subseries",
+        "facet"
+      ],
+      "description": "十二月分面季节子序列加月均值线"
+    },
+    {
+      "name": "spiral_timeseries",
+      "category": "time",
+      "tags": [
+        "spiral",
+        "polar",
+        "seasonal"
+      ],
+      "description": "极坐标时间螺旋按年盘旋颜色编码数值"
+    },
+    {
+      "name": "step_after_compare",
+      "category": "time",
+      "tags": [
+        "step",
+        "intervention",
+        "ci"
+      ],
+      "description": "干预前后水平段均值与置信带阶梯对比"
+    },
+    {
+      "name": "stream_graph",
+      "category": "flow",
+      "tags": [
+        "stream",
+        "themeriver",
+        "stacked"
+      ],
+      "description": "摆动基线堆叠面积河流图"
+    },
+    {
+      "name": "survival_km",
+      "category": "statistical",
+      "tags": [
+        "survival",
+        "kaplan-meier",
+        "censor"
+      ],
+      "description": "Kaplan-Meier 生存曲线含删失标记与风险人数表"
+    },
+    {
+      "name": "unbalance_phasor",
+      "category": "power",
+      "tags": [
+        "phasor",
+        "sequence",
+        "unbalance"
+      ],
+      "description": "三相不平衡正负零序相量分解"
+    },
+    {
+      "name": "volatility_cone",
+      "category": "statistical",
+      "tags": [
+        "volatility",
+        "quantile",
+        "finance"
+      ],
+      "description": "多窗口滚动波动率分位锥加当前值"
+    },
+    {
+      "name": "voltage_flicker",
+      "category": "power",
+      "tags": [
+        "flicker",
+        "pst",
+        "quality"
+      ],
+      "description": "电压闪变调幅波形与 Pst 条形双面板"
+    },
+    {
+      "name": "waterfall_timeseries",
+      "category": "time",
+      "tags": [
+        "waterfall",
+        "bridge",
+        "monthly"
+      ],
+      "description": "期初到期末月度增减时序瀑布桥"
+    },
+    {
+      "name": "ml_explain_monitoring",
+      "category": "ml",
+      "tags": [
+        "xai",
+        "monitoring",
+        "time-band"
+      ],
+      "description": "机器学习可解释性监测带状时序（time-band 模式，合成数据）"
+    },
+    {
+      "name": "ml_explain_limit_watch",
+      "category": "ml",
+      "tags": [
+        "xai",
+        "limit_watch",
+        "control-limit"
+      ],
+      "description": "机器学习可解释性控制限监测（control-limit 模式，合成数据）"
+    },
+    {
+      "name": "ml_explain_state_map",
+      "category": "ml",
+      "tags": [
+        "xai",
+        "state_map",
+        "heatmap"
+      ],
+      "description": "机器学习可解释性状态热力图（heatmap 模式，合成数据）"
+    },
+    {
+      "name": "ml_explain_response_surface",
+      "category": "ml",
+      "tags": [
+        "xai",
+        "response_surface",
+        "contour"
+      ],
+      "description": "机器学习可解释性响应等值面（contour 模式，合成数据）"
+    },
+    {
+      "name": "ml_explain_cluster_view",
+      "category": "ml",
+      "tags": [
+        "xai",
+        "cluster_view",
+        "cluster"
+      ],
+      "description": "机器学习可解释性状态聚类散点（cluster 模式，合成数据）"
+    },
+    {
+      "name": "ml_explain_rank_profile",
+      "category": "ml",
+      "tags": [
+        "xai",
+        "rank_profile",
+        "ranking"
+      ],
+      "description": "机器学习可解释性指标排序条形（ranking 模式，合成数据）"
+    },
+    {
+      "name": "ml_explain_score_radar",
+      "category": "ml",
+      "tags": [
+        "xai",
+        "score_radar",
+        "radar"
+      ],
+      "description": "机器学习可解释性多维评分雷达（radar 模式，合成数据）"
+    },
+    {
+      "name": "ml_explain_contribution_bridge",
+      "category": "ml",
+      "tags": [
+        "xai",
+        "contribution_bridge",
+        "waterfall"
+      ],
+      "description": "机器学习可解释性贡献瀑布桥（waterfall 模式，合成数据）"
+    },
+    {
+      "name": "ml_explain_scenario_facets",
+      "category": "ml",
+      "tags": [
+        "xai",
+        "scenario_facets",
+        "small-multiples"
+      ],
+      "description": "机器学习可解释性场景分面（small-multiples 模式，合成数据）"
+    },
+    {
+      "name": "ml_explain_polar_signature",
+      "category": "ml",
+      "tags": [
+        "xai",
+        "polar_signature",
+        "polar"
+      ],
+      "description": "机器学习可解释性极坐标指纹（polar 模式，合成数据）"
+    },
+    {
+      "name": "ml_explain_phase_portrait",
+      "category": "ml",
+      "tags": [
+        "xai",
+        "phase_portrait",
+        "phase-plane"
+      ],
+      "description": "机器学习可解释性相平面画像（phase-plane 模式，合成数据）"
+    },
+    {
+      "name": "ml_explain_distribution_shift",
+      "category": "ml",
+      "tags": [
+        "xai",
+        "distribution_shift",
+        "distribution"
+      ],
+      "description": "机器学习可解释性分布漂移（distribution 模式，合成数据）"
+    },
+    {
+      "name": "ml_explain_interaction_matrix",
+      "category": "ml",
+      "tags": [
+        "xai",
+        "interaction_matrix",
+        "matrix"
+      ],
+      "description": "机器学习可解释性交互气泡矩阵（matrix 模式，合成数据）"
+    },
+    {
+      "name": "ml_explain_factor_lollipop",
+      "category": "ml",
+      "tags": [
+        "xai",
+        "factor_lollipop",
+        "lollipop"
+      ],
+      "description": "机器学习可解释性因子棒棒糖（lollipop 模式，合成数据）"
+    },
+    {
+      "name": "ml_explain_interval_forest",
+      "category": "ml",
+      "tags": [
+        "xai",
+        "interval_forest",
+        "interval"
+      ],
+      "description": "机器学习可解释性区间森林图（interval 模式，合成数据）"
+    },
+    {
+      "name": "ml_explain_composition_stream",
+      "category": "ml",
+      "tags": [
+        "xai",
+        "composition_stream",
+        "stacked-area"
+      ],
+      "description": "机器学习可解释性组成流面积（stacked-area 模式，合成数据）"
+    },
+    {
+      "name": "ml_explain_stage_step",
+      "category": "ml",
+      "tags": [
+        "xai",
+        "stage_step",
+        "step"
+      ],
+      "description": "机器学习可解释性阶段阶梯曲线（step 模式，合成数据）"
+    },
+    {
+      "name": "ml_explain_surface3d",
+      "category": "ml",
+      "tags": [
+        "xai",
+        "surface3d",
+        "3d-surface"
+      ],
+      "description": "机器学习可解释性三维响应曲面（3d-surface 模式，合成数据）"
+    },
+    {
+      "name": "ml_explain_calendar_grid",
+      "category": "ml",
+      "tags": [
+        "xai",
+        "calendar_grid",
+        "calendar-grid"
+      ],
+      "description": "机器学习可解释性日历网格（calendar-grid 模式，合成数据）"
+    },
+    {
+      "name": "ml_explain_before_after",
+      "category": "ml",
+      "tags": [
+        "xai",
+        "before_after",
+        "slope"
+      ],
+      "description": "机器学习可解释性前后斜率对比（slope 模式，合成数据）"
+    },
+    {
+      "name": "ml_explain_decision_boundary",
+      "category": "ml",
+      "tags": [
+        "xai",
+        "decision_boundary",
+        "decision-map"
+      ],
+      "description": "机器学习可解释性决策边界图（decision-map 模式，合成数据）"
+    },
+    {
+      "name": "model_diagnostics_monitoring",
+      "category": "ml",
+      "tags": [
+        "diagnostics",
+        "monitoring",
+        "time-band"
+      ],
+      "description": "模型诊断监测带状时序（time-band 模式，合成数据）"
+    },
+    {
+      "name": "model_diagnostics_limit_watch",
+      "category": "ml",
+      "tags": [
+        "diagnostics",
+        "limit_watch",
+        "control-limit"
+      ],
+      "description": "模型诊断控制限监测（control-limit 模式，合成数据）"
+    },
+    {
+      "name": "model_diagnostics_state_map",
+      "category": "ml",
+      "tags": [
+        "diagnostics",
+        "state_map",
+        "heatmap"
+      ],
+      "description": "模型诊断状态热力图（heatmap 模式，合成数据）"
+    },
+    {
+      "name": "model_diagnostics_response_surface",
+      "category": "ml",
+      "tags": [
+        "diagnostics",
+        "response_surface",
+        "contour"
+      ],
+      "description": "模型诊断响应等值面（contour 模式，合成数据）"
+    },
+    {
+      "name": "model_diagnostics_cluster_view",
+      "category": "ml",
+      "tags": [
+        "diagnostics",
+        "cluster_view",
+        "cluster"
+      ],
+      "description": "模型诊断状态聚类散点（cluster 模式，合成数据）"
+    },
+    {
+      "name": "model_diagnostics_rank_profile",
+      "category": "ml",
+      "tags": [
+        "diagnostics",
+        "rank_profile",
+        "ranking"
+      ],
+      "description": "模型诊断指标排序条形（ranking 模式，合成数据）"
+    },
+    {
+      "name": "model_diagnostics_score_radar",
+      "category": "ml",
+      "tags": [
+        "diagnostics",
+        "score_radar",
+        "radar"
+      ],
+      "description": "模型诊断多维评分雷达（radar 模式，合成数据）"
+    },
+    {
+      "name": "model_diagnostics_contribution_bridge",
+      "category": "ml",
+      "tags": [
+        "diagnostics",
+        "contribution_bridge",
+        "waterfall"
+      ],
+      "description": "模型诊断贡献瀑布桥（waterfall 模式，合成数据）"
+    },
+    {
+      "name": "model_diagnostics_scenario_facets",
+      "category": "ml",
+      "tags": [
+        "diagnostics",
+        "scenario_facets",
+        "small-multiples"
+      ],
+      "description": "模型诊断场景分面（small-multiples 模式，合成数据）"
+    },
+    {
+      "name": "model_diagnostics_polar_signature",
+      "category": "ml",
+      "tags": [
+        "diagnostics",
+        "polar_signature",
+        "polar"
+      ],
+      "description": "模型诊断极坐标指纹（polar 模式，合成数据）"
+    },
+    {
+      "name": "model_diagnostics_phase_portrait",
+      "category": "ml",
+      "tags": [
+        "diagnostics",
+        "phase_portrait",
+        "phase-plane"
+      ],
+      "description": "模型诊断相平面画像（phase-plane 模式，合成数据）"
+    },
+    {
+      "name": "model_diagnostics_distribution_shift",
+      "category": "ml",
+      "tags": [
+        "diagnostics",
+        "distribution_shift",
+        "distribution"
+      ],
+      "description": "模型诊断分布漂移（distribution 模式，合成数据）"
+    },
+    {
+      "name": "model_diagnostics_interaction_matrix",
+      "category": "ml",
+      "tags": [
+        "diagnostics",
+        "interaction_matrix",
+        "matrix"
+      ],
+      "description": "模型诊断交互气泡矩阵（matrix 模式，合成数据）"
+    },
+    {
+      "name": "model_diagnostics_factor_lollipop",
+      "category": "ml",
+      "tags": [
+        "diagnostics",
+        "factor_lollipop",
+        "lollipop"
+      ],
+      "description": "模型诊断因子棒棒糖（lollipop 模式，合成数据）"
+    },
+    {
+      "name": "model_diagnostics_interval_forest",
+      "category": "ml",
+      "tags": [
+        "diagnostics",
+        "interval_forest",
+        "interval"
+      ],
+      "description": "模型诊断区间森林图（interval 模式，合成数据）"
+    },
+    {
+      "name": "model_diagnostics_composition_stream",
+      "category": "ml",
+      "tags": [
+        "diagnostics",
+        "composition_stream",
+        "stacked-area"
+      ],
+      "description": "模型诊断组成流面积（stacked-area 模式，合成数据）"
+    },
+    {
+      "name": "model_diagnostics_stage_step",
+      "category": "ml",
+      "tags": [
+        "diagnostics",
+        "stage_step",
+        "step"
+      ],
+      "description": "模型诊断阶段阶梯曲线（step 模式，合成数据）"
+    },
+    {
+      "name": "model_diagnostics_surface3d",
+      "category": "ml",
+      "tags": [
+        "diagnostics",
+        "surface3d",
+        "3d-surface"
+      ],
+      "description": "模型诊断三维响应曲面（3d-surface 模式，合成数据）"
+    },
+    {
+      "name": "model_diagnostics_calendar_grid",
+      "category": "ml",
+      "tags": [
+        "diagnostics",
+        "calendar_grid",
+        "calendar-grid"
+      ],
+      "description": "模型诊断日历网格（calendar-grid 模式，合成数据）"
+    },
+    {
+      "name": "model_diagnostics_before_after",
+      "category": "ml",
+      "tags": [
+        "diagnostics",
+        "before_after",
+        "slope"
+      ],
+      "description": "模型诊断前后斜率对比（slope 模式，合成数据）"
+    },
+    {
+      "name": "model_diagnostics_decision_boundary",
+      "category": "ml",
+      "tags": [
+        "diagnostics",
+        "decision_boundary",
+        "decision-map"
+      ],
+      "description": "模型诊断决策边界图（decision-map 模式，合成数据）"
+    },
+    {
+      "name": "control_mpc_monitoring",
+      "category": "control",
+      "tags": [
+        "mpc",
+        "monitoring",
+        "time-band"
+      ],
+      "description": "MPC 控制进阶监测带状时序（time-band 模式，合成数据）"
+    },
+    {
+      "name": "control_mpc_limit_watch",
+      "category": "control",
+      "tags": [
+        "mpc",
+        "limit_watch",
+        "control-limit"
+      ],
+      "description": "MPC 控制进阶控制限监测（control-limit 模式，合成数据）"
+    },
+    {
+      "name": "control_mpc_state_map",
+      "category": "control",
+      "tags": [
+        "mpc",
+        "state_map",
+        "heatmap"
+      ],
+      "description": "MPC 控制进阶状态热力图（heatmap 模式，合成数据）"
+    },
+    {
+      "name": "control_mpc_response_surface",
+      "category": "control",
+      "tags": [
+        "mpc",
+        "response_surface",
+        "contour"
+      ],
+      "description": "MPC 控制进阶响应等值面（contour 模式，合成数据）"
+    },
+    {
+      "name": "control_mpc_cluster_view",
+      "category": "control",
+      "tags": [
+        "mpc",
+        "cluster_view",
+        "cluster"
+      ],
+      "description": "MPC 控制进阶状态聚类散点（cluster 模式，合成数据）"
+    },
+    {
+      "name": "control_mpc_rank_profile",
+      "category": "control",
+      "tags": [
+        "mpc",
+        "rank_profile",
+        "ranking"
+      ],
+      "description": "MPC 控制进阶指标排序条形（ranking 模式，合成数据）"
+    },
+    {
+      "name": "control_mpc_score_radar",
+      "category": "control",
+      "tags": [
+        "mpc",
+        "score_radar",
+        "radar"
+      ],
+      "description": "MPC 控制进阶多维评分雷达（radar 模式，合成数据）"
+    },
+    {
+      "name": "control_mpc_contribution_bridge",
+      "category": "control",
+      "tags": [
+        "mpc",
+        "contribution_bridge",
+        "waterfall"
+      ],
+      "description": "MPC 控制进阶贡献瀑布桥（waterfall 模式，合成数据）"
+    },
+    {
+      "name": "control_mpc_scenario_facets",
+      "category": "control",
+      "tags": [
+        "mpc",
+        "scenario_facets",
+        "small-multiples"
+      ],
+      "description": "MPC 控制进阶场景分面（small-multiples 模式，合成数据）"
+    },
+    {
+      "name": "control_mpc_polar_signature",
+      "category": "control",
+      "tags": [
+        "mpc",
+        "polar_signature",
+        "polar"
+      ],
+      "description": "MPC 控制进阶极坐标指纹（polar 模式，合成数据）"
+    },
+    {
+      "name": "control_mpc_phase_portrait",
+      "category": "control",
+      "tags": [
+        "mpc",
+        "phase_portrait",
+        "phase-plane"
+      ],
+      "description": "MPC 控制进阶相平面画像（phase-plane 模式，合成数据）"
+    },
+    {
+      "name": "control_mpc_distribution_shift",
+      "category": "control",
+      "tags": [
+        "mpc",
+        "distribution_shift",
+        "distribution"
+      ],
+      "description": "MPC 控制进阶分布漂移（distribution 模式，合成数据）"
+    },
+    {
+      "name": "control_mpc_interaction_matrix",
+      "category": "control",
+      "tags": [
+        "mpc",
+        "interaction_matrix",
+        "matrix"
+      ],
+      "description": "MPC 控制进阶交互气泡矩阵（matrix 模式，合成数据）"
+    },
+    {
+      "name": "control_mpc_factor_lollipop",
+      "category": "control",
+      "tags": [
+        "mpc",
+        "factor_lollipop",
+        "lollipop"
+      ],
+      "description": "MPC 控制进阶因子棒棒糖（lollipop 模式，合成数据）"
+    },
+    {
+      "name": "control_mpc_interval_forest",
+      "category": "control",
+      "tags": [
+        "mpc",
+        "interval_forest",
+        "interval"
+      ],
+      "description": "MPC 控制进阶区间森林图（interval 模式，合成数据）"
+    },
+    {
+      "name": "control_mpc_composition_stream",
+      "category": "control",
+      "tags": [
+        "mpc",
+        "composition_stream",
+        "stacked-area"
+      ],
+      "description": "MPC 控制进阶组成流面积（stacked-area 模式，合成数据）"
+    },
+    {
+      "name": "control_mpc_stage_step",
+      "category": "control",
+      "tags": [
+        "mpc",
+        "stage_step",
+        "step"
+      ],
+      "description": "MPC 控制进阶阶段阶梯曲线（step 模式，合成数据）"
+    },
+    {
+      "name": "control_mpc_surface3d",
+      "category": "control",
+      "tags": [
+        "mpc",
+        "surface3d",
+        "3d-surface"
+      ],
+      "description": "MPC 控制进阶三维响应曲面（3d-surface 模式，合成数据）"
+    },
+    {
+      "name": "control_mpc_calendar_grid",
+      "category": "control",
+      "tags": [
+        "mpc",
+        "calendar_grid",
+        "calendar-grid"
+      ],
+      "description": "MPC 控制进阶日历网格（calendar-grid 模式，合成数据）"
+    },
+    {
+      "name": "control_mpc_before_after",
+      "category": "control",
+      "tags": [
+        "mpc",
+        "before_after",
+        "slope"
+      ],
+      "description": "MPC 控制进阶前后斜率对比（slope 模式，合成数据）"
+    },
+    {
+      "name": "control_mpc_decision_boundary",
+      "category": "control",
+      "tags": [
+        "mpc",
+        "decision_boundary",
+        "decision-map"
+      ],
+      "description": "MPC 控制进阶决策边界图（decision-map 模式，合成数据）"
+    },
+    {
+      "name": "observer_estimation_monitoring",
+      "category": "control",
+      "tags": [
+        "observer",
+        "monitoring",
+        "time-band"
+      ],
+      "description": "观测器与状态估计监测带状时序（time-band 模式，合成数据）"
+    },
+    {
+      "name": "observer_estimation_limit_watch",
+      "category": "control",
+      "tags": [
+        "observer",
+        "limit_watch",
+        "control-limit"
+      ],
+      "description": "观测器与状态估计控制限监测（control-limit 模式，合成数据）"
+    },
+    {
+      "name": "observer_estimation_state_map",
+      "category": "control",
+      "tags": [
+        "observer",
+        "state_map",
+        "heatmap"
+      ],
+      "description": "观测器与状态估计状态热力图（heatmap 模式，合成数据）"
+    },
+    {
+      "name": "observer_estimation_response_surface",
+      "category": "control",
+      "tags": [
+        "observer",
+        "response_surface",
+        "contour"
+      ],
+      "description": "观测器与状态估计响应等值面（contour 模式，合成数据）"
+    },
+    {
+      "name": "observer_estimation_cluster_view",
+      "category": "control",
+      "tags": [
+        "observer",
+        "cluster_view",
+        "cluster"
+      ],
+      "description": "观测器与状态估计状态聚类散点（cluster 模式，合成数据）"
+    },
+    {
+      "name": "observer_estimation_rank_profile",
+      "category": "control",
+      "tags": [
+        "observer",
+        "rank_profile",
+        "ranking"
+      ],
+      "description": "观测器与状态估计指标排序条形（ranking 模式，合成数据）"
+    },
+    {
+      "name": "observer_estimation_score_radar",
+      "category": "control",
+      "tags": [
+        "observer",
+        "score_radar",
+        "radar"
+      ],
+      "description": "观测器与状态估计多维评分雷达（radar 模式，合成数据）"
+    },
+    {
+      "name": "observer_estimation_contribution_bridge",
+      "category": "control",
+      "tags": [
+        "observer",
+        "contribution_bridge",
+        "waterfall"
+      ],
+      "description": "观测器与状态估计贡献瀑布桥（waterfall 模式，合成数据）"
+    },
+    {
+      "name": "observer_estimation_scenario_facets",
+      "category": "control",
+      "tags": [
+        "observer",
+        "scenario_facets",
+        "small-multiples"
+      ],
+      "description": "观测器与状态估计场景分面（small-multiples 模式，合成数据）"
+    },
+    {
+      "name": "observer_estimation_polar_signature",
+      "category": "control",
+      "tags": [
+        "observer",
+        "polar_signature",
+        "polar"
+      ],
+      "description": "观测器与状态估计极坐标指纹（polar 模式，合成数据）"
+    },
+    {
+      "name": "observer_estimation_phase_portrait",
+      "category": "control",
+      "tags": [
+        "observer",
+        "phase_portrait",
+        "phase-plane"
+      ],
+      "description": "观测器与状态估计相平面画像（phase-plane 模式，合成数据）"
+    },
+    {
+      "name": "observer_estimation_distribution_shift",
+      "category": "control",
+      "tags": [
+        "observer",
+        "distribution_shift",
+        "distribution"
+      ],
+      "description": "观测器与状态估计分布漂移（distribution 模式，合成数据）"
+    },
+    {
+      "name": "observer_estimation_interaction_matrix",
+      "category": "control",
+      "tags": [
+        "observer",
+        "interaction_matrix",
+        "matrix"
+      ],
+      "description": "观测器与状态估计交互气泡矩阵（matrix 模式，合成数据）"
+    },
+    {
+      "name": "observer_estimation_factor_lollipop",
+      "category": "control",
+      "tags": [
+        "observer",
+        "factor_lollipop",
+        "lollipop"
+      ],
+      "description": "观测器与状态估计因子棒棒糖（lollipop 模式，合成数据）"
+    },
+    {
+      "name": "observer_estimation_interval_forest",
+      "category": "control",
+      "tags": [
+        "observer",
+        "interval_forest",
+        "interval"
+      ],
+      "description": "观测器与状态估计区间森林图（interval 模式，合成数据）"
+    },
+    {
+      "name": "observer_estimation_composition_stream",
+      "category": "control",
+      "tags": [
+        "observer",
+        "composition_stream",
+        "stacked-area"
+      ],
+      "description": "观测器与状态估计组成流面积（stacked-area 模式，合成数据）"
+    },
+    {
+      "name": "observer_estimation_stage_step",
+      "category": "control",
+      "tags": [
+        "observer",
+        "stage_step",
+        "step"
+      ],
+      "description": "观测器与状态估计阶段阶梯曲线（step 模式，合成数据）"
+    },
+    {
+      "name": "observer_estimation_surface3d",
+      "category": "control",
+      "tags": [
+        "observer",
+        "surface3d",
+        "3d-surface"
+      ],
+      "description": "观测器与状态估计三维响应曲面（3d-surface 模式，合成数据）"
+    },
+    {
+      "name": "observer_estimation_calendar_grid",
+      "category": "control",
+      "tags": [
+        "observer",
+        "calendar_grid",
+        "calendar-grid"
+      ],
+      "description": "观测器与状态估计日历网格（calendar-grid 模式，合成数据）"
+    },
+    {
+      "name": "observer_estimation_before_after",
+      "category": "control",
+      "tags": [
+        "observer",
+        "before_after",
+        "slope"
+      ],
+      "description": "观测器与状态估计前后斜率对比（slope 模式，合成数据）"
+    },
+    {
+      "name": "observer_estimation_decision_boundary",
+      "category": "control",
+      "tags": [
+        "observer",
+        "decision_boundary",
+        "decision-map"
+      ],
+      "description": "观测器与状态估计决策边界图（decision-map 模式，合成数据）"
+    },
+    {
+      "name": "materials_microstructure_monitoring",
+      "category": "specialty",
+      "tags": [
+        "materials",
+        "monitoring",
+        "time-band"
+      ],
+      "description": "材料微结构监测带状时序（time-band 模式，合成数据）"
+    },
+    {
+      "name": "materials_microstructure_limit_watch",
+      "category": "specialty",
+      "tags": [
+        "materials",
+        "limit_watch",
+        "control-limit"
+      ],
+      "description": "材料微结构控制限监测（control-limit 模式，合成数据）"
+    },
+    {
+      "name": "materials_microstructure_state_map",
+      "category": "specialty",
+      "tags": [
+        "materials",
+        "state_map",
+        "heatmap"
+      ],
+      "description": "材料微结构状态热力图（heatmap 模式，合成数据）"
+    },
+    {
+      "name": "materials_microstructure_response_surface",
+      "category": "specialty",
+      "tags": [
+        "materials",
+        "response_surface",
+        "contour"
+      ],
+      "description": "材料微结构响应等值面（contour 模式，合成数据）"
+    },
+    {
+      "name": "materials_microstructure_cluster_view",
+      "category": "specialty",
+      "tags": [
+        "materials",
+        "cluster_view",
+        "cluster"
+      ],
+      "description": "材料微结构状态聚类散点（cluster 模式，合成数据）"
+    },
+    {
+      "name": "materials_microstructure_rank_profile",
+      "category": "specialty",
+      "tags": [
+        "materials",
+        "rank_profile",
+        "ranking"
+      ],
+      "description": "材料微结构指标排序条形（ranking 模式，合成数据）"
+    },
+    {
+      "name": "materials_microstructure_score_radar",
+      "category": "specialty",
+      "tags": [
+        "materials",
+        "score_radar",
+        "radar"
+      ],
+      "description": "材料微结构多维评分雷达（radar 模式，合成数据）"
+    },
+    {
+      "name": "materials_microstructure_contribution_bridge",
+      "category": "specialty",
+      "tags": [
+        "materials",
+        "contribution_bridge",
+        "waterfall"
+      ],
+      "description": "材料微结构贡献瀑布桥（waterfall 模式，合成数据）"
+    },
+    {
+      "name": "materials_microstructure_scenario_facets",
+      "category": "specialty",
+      "tags": [
+        "materials",
+        "scenario_facets",
+        "small-multiples"
+      ],
+      "description": "材料微结构场景分面（small-multiples 模式，合成数据）"
+    },
+    {
+      "name": "materials_microstructure_polar_signature",
+      "category": "specialty",
+      "tags": [
+        "materials",
+        "polar_signature",
+        "polar"
+      ],
+      "description": "材料微结构极坐标指纹（polar 模式，合成数据）"
+    },
+    {
+      "name": "materials_microstructure_phase_portrait",
+      "category": "specialty",
+      "tags": [
+        "materials",
+        "phase_portrait",
+        "phase-plane"
+      ],
+      "description": "材料微结构相平面画像（phase-plane 模式，合成数据）"
+    },
+    {
+      "name": "materials_microstructure_distribution_shift",
+      "category": "specialty",
+      "tags": [
+        "materials",
+        "distribution_shift",
+        "distribution"
+      ],
+      "description": "材料微结构分布漂移（distribution 模式，合成数据）"
+    },
+    {
+      "name": "materials_microstructure_interaction_matrix",
+      "category": "specialty",
+      "tags": [
+        "materials",
+        "interaction_matrix",
+        "matrix"
+      ],
+      "description": "材料微结构交互气泡矩阵（matrix 模式，合成数据）"
+    },
+    {
+      "name": "materials_microstructure_factor_lollipop",
+      "category": "specialty",
+      "tags": [
+        "materials",
+        "factor_lollipop",
+        "lollipop"
+      ],
+      "description": "材料微结构因子棒棒糖（lollipop 模式，合成数据）"
+    },
+    {
+      "name": "materials_microstructure_interval_forest",
+      "category": "specialty",
+      "tags": [
+        "materials",
+        "interval_forest",
+        "interval"
+      ],
+      "description": "材料微结构区间森林图（interval 模式，合成数据）"
+    },
+    {
+      "name": "materials_microstructure_composition_stream",
+      "category": "specialty",
+      "tags": [
+        "materials",
+        "composition_stream",
+        "stacked-area"
+      ],
+      "description": "材料微结构组成流面积（stacked-area 模式，合成数据）"
+    },
+    {
+      "name": "materials_microstructure_stage_step",
+      "category": "specialty",
+      "tags": [
+        "materials",
+        "stage_step",
+        "step"
+      ],
+      "description": "材料微结构阶段阶梯曲线（step 模式，合成数据）"
+    },
+    {
+      "name": "materials_microstructure_surface3d",
+      "category": "specialty",
+      "tags": [
+        "materials",
+        "surface3d",
+        "3d-surface"
+      ],
+      "description": "材料微结构三维响应曲面（3d-surface 模式，合成数据）"
+    },
+    {
+      "name": "materials_microstructure_calendar_grid",
+      "category": "specialty",
+      "tags": [
+        "materials",
+        "calendar_grid",
+        "calendar-grid"
+      ],
+      "description": "材料微结构日历网格（calendar-grid 模式，合成数据）"
+    },
+    {
+      "name": "materials_microstructure_before_after",
+      "category": "specialty",
+      "tags": [
+        "materials",
+        "before_after",
+        "slope"
+      ],
+      "description": "材料微结构前后斜率对比（slope 模式，合成数据）"
+    },
+    {
+      "name": "materials_microstructure_decision_boundary",
+      "category": "specialty",
+      "tags": [
+        "materials",
+        "decision_boundary",
+        "decision-map"
+      ],
+      "description": "材料微结构决策边界图（decision-map 模式，合成数据）"
+    },
+    {
+      "name": "chemistry_spectra_monitoring",
+      "category": "specialty",
+      "tags": [
+        "chemistry",
+        "monitoring",
+        "time-band"
+      ],
+      "description": "化学谱图监测带状时序（time-band 模式，合成数据）"
+    },
+    {
+      "name": "chemistry_spectra_limit_watch",
+      "category": "specialty",
+      "tags": [
+        "chemistry",
+        "limit_watch",
+        "control-limit"
+      ],
+      "description": "化学谱图控制限监测（control-limit 模式，合成数据）"
+    },
+    {
+      "name": "chemistry_spectra_state_map",
+      "category": "specialty",
+      "tags": [
+        "chemistry",
+        "state_map",
+        "heatmap"
+      ],
+      "description": "化学谱图状态热力图（heatmap 模式，合成数据）"
+    },
+    {
+      "name": "chemistry_spectra_response_surface",
+      "category": "specialty",
+      "tags": [
+        "chemistry",
+        "response_surface",
+        "contour"
+      ],
+      "description": "化学谱图响应等值面（contour 模式，合成数据）"
+    },
+    {
+      "name": "chemistry_spectra_cluster_view",
+      "category": "specialty",
+      "tags": [
+        "chemistry",
+        "cluster_view",
+        "cluster"
+      ],
+      "description": "化学谱图状态聚类散点（cluster 模式，合成数据）"
+    },
+    {
+      "name": "chemistry_spectra_rank_profile",
+      "category": "specialty",
+      "tags": [
+        "chemistry",
+        "rank_profile",
+        "ranking"
+      ],
+      "description": "化学谱图指标排序条形（ranking 模式，合成数据）"
+    },
+    {
+      "name": "chemistry_spectra_score_radar",
+      "category": "specialty",
+      "tags": [
+        "chemistry",
+        "score_radar",
+        "radar"
+      ],
+      "description": "化学谱图多维评分雷达（radar 模式，合成数据）"
+    },
+    {
+      "name": "chemistry_spectra_contribution_bridge",
+      "category": "specialty",
+      "tags": [
+        "chemistry",
+        "contribution_bridge",
+        "waterfall"
+      ],
+      "description": "化学谱图贡献瀑布桥（waterfall 模式，合成数据）"
+    },
+    {
+      "name": "chemistry_spectra_scenario_facets",
+      "category": "specialty",
+      "tags": [
+        "chemistry",
+        "scenario_facets",
+        "small-multiples"
+      ],
+      "description": "化学谱图场景分面（small-multiples 模式，合成数据）"
+    },
+    {
+      "name": "chemistry_spectra_polar_signature",
+      "category": "specialty",
+      "tags": [
+        "chemistry",
+        "polar_signature",
+        "polar"
+      ],
+      "description": "化学谱图极坐标指纹（polar 模式，合成数据）"
+    },
+    {
+      "name": "chemistry_spectra_phase_portrait",
+      "category": "specialty",
+      "tags": [
+        "chemistry",
+        "phase_portrait",
+        "phase-plane"
+      ],
+      "description": "化学谱图相平面画像（phase-plane 模式，合成数据）"
+    },
+    {
+      "name": "chemistry_spectra_distribution_shift",
+      "category": "specialty",
+      "tags": [
+        "chemistry",
+        "distribution_shift",
+        "distribution"
+      ],
+      "description": "化学谱图分布漂移（distribution 模式，合成数据）"
+    },
+    {
+      "name": "chemistry_spectra_interaction_matrix",
+      "category": "specialty",
+      "tags": [
+        "chemistry",
+        "interaction_matrix",
+        "matrix"
+      ],
+      "description": "化学谱图交互气泡矩阵（matrix 模式，合成数据）"
+    },
+    {
+      "name": "chemistry_spectra_factor_lollipop",
+      "category": "specialty",
+      "tags": [
+        "chemistry",
+        "factor_lollipop",
+        "lollipop"
+      ],
+      "description": "化学谱图因子棒棒糖（lollipop 模式，合成数据）"
+    },
+    {
+      "name": "chemistry_spectra_interval_forest",
+      "category": "specialty",
+      "tags": [
+        "chemistry",
+        "interval_forest",
+        "interval"
+      ],
+      "description": "化学谱图区间森林图（interval 模式，合成数据）"
+    },
+    {
+      "name": "chemistry_spectra_composition_stream",
+      "category": "specialty",
+      "tags": [
+        "chemistry",
+        "composition_stream",
+        "stacked-area"
+      ],
+      "description": "化学谱图组成流面积（stacked-area 模式，合成数据）"
+    },
+    {
+      "name": "chemistry_spectra_stage_step",
+      "category": "specialty",
+      "tags": [
+        "chemistry",
+        "stage_step",
+        "step"
+      ],
+      "description": "化学谱图阶段阶梯曲线（step 模式，合成数据）"
+    },
+    {
+      "name": "chemistry_spectra_surface3d",
+      "category": "specialty",
+      "tags": [
+        "chemistry",
+        "surface3d",
+        "3d-surface"
+      ],
+      "description": "化学谱图三维响应曲面（3d-surface 模式，合成数据）"
+    },
+    {
+      "name": "chemistry_spectra_calendar_grid",
+      "category": "specialty",
+      "tags": [
+        "chemistry",
+        "calendar_grid",
+        "calendar-grid"
+      ],
+      "description": "化学谱图日历网格（calendar-grid 模式，合成数据）"
+    },
+    {
+      "name": "chemistry_spectra_before_after",
+      "category": "specialty",
+      "tags": [
+        "chemistry",
+        "before_after",
+        "slope"
+      ],
+      "description": "化学谱图前后斜率对比（slope 模式，合成数据）"
+    },
+    {
+      "name": "chemistry_spectra_decision_boundary",
+      "category": "specialty",
+      "tags": [
+        "chemistry",
+        "decision_boundary",
+        "decision-map"
+      ],
+      "description": "化学谱图决策边界图（decision-map 模式，合成数据）"
+    },
+    {
+      "name": "physics_field_monitoring",
+      "category": "field",
+      "tags": [
+        "physics",
+        "monitoring",
+        "time-band"
+      ],
+      "description": "物理场分析监测带状时序（time-band 模式，合成数据）"
+    },
+    {
+      "name": "physics_field_limit_watch",
+      "category": "field",
+      "tags": [
+        "physics",
+        "limit_watch",
+        "control-limit"
+      ],
+      "description": "物理场分析控制限监测（control-limit 模式，合成数据）"
+    },
+    {
+      "name": "physics_field_state_map",
+      "category": "field",
+      "tags": [
+        "physics",
+        "state_map",
+        "heatmap"
+      ],
+      "description": "物理场分析状态热力图（heatmap 模式，合成数据）"
+    },
+    {
+      "name": "physics_field_response_surface",
+      "category": "field",
+      "tags": [
+        "physics",
+        "response_surface",
+        "contour"
+      ],
+      "description": "物理场分析响应等值面（contour 模式，合成数据）"
+    },
+    {
+      "name": "physics_field_cluster_view",
+      "category": "field",
+      "tags": [
+        "physics",
+        "cluster_view",
+        "cluster"
+      ],
+      "description": "物理场分析状态聚类散点（cluster 模式，合成数据）"
+    },
+    {
+      "name": "physics_field_rank_profile",
+      "category": "field",
+      "tags": [
+        "physics",
+        "rank_profile",
+        "ranking"
+      ],
+      "description": "物理场分析指标排序条形（ranking 模式，合成数据）"
+    },
+    {
+      "name": "physics_field_score_radar",
+      "category": "field",
+      "tags": [
+        "physics",
+        "score_radar",
+        "radar"
+      ],
+      "description": "物理场分析多维评分雷达（radar 模式，合成数据）"
+    },
+    {
+      "name": "physics_field_contribution_bridge",
+      "category": "field",
+      "tags": [
+        "physics",
+        "contribution_bridge",
+        "waterfall"
+      ],
+      "description": "物理场分析贡献瀑布桥（waterfall 模式，合成数据）"
+    },
+    {
+      "name": "physics_field_scenario_facets",
+      "category": "field",
+      "tags": [
+        "physics",
+        "scenario_facets",
+        "small-multiples"
+      ],
+      "description": "物理场分析场景分面（small-multiples 模式，合成数据）"
+    },
+    {
+      "name": "physics_field_polar_signature",
+      "category": "field",
+      "tags": [
+        "physics",
+        "polar_signature",
+        "polar"
+      ],
+      "description": "物理场分析极坐标指纹（polar 模式，合成数据）"
+    },
+    {
+      "name": "physics_field_phase_portrait",
+      "category": "field",
+      "tags": [
+        "physics",
+        "phase_portrait",
+        "phase-plane"
+      ],
+      "description": "物理场分析相平面画像（phase-plane 模式，合成数据）"
+    },
+    {
+      "name": "physics_field_distribution_shift",
+      "category": "field",
+      "tags": [
+        "physics",
+        "distribution_shift",
+        "distribution"
+      ],
+      "description": "物理场分析分布漂移（distribution 模式，合成数据）"
+    },
+    {
+      "name": "physics_field_interaction_matrix",
+      "category": "field",
+      "tags": [
+        "physics",
+        "interaction_matrix",
+        "matrix"
+      ],
+      "description": "物理场分析交互气泡矩阵（matrix 模式，合成数据）"
+    },
+    {
+      "name": "physics_field_factor_lollipop",
+      "category": "field",
+      "tags": [
+        "physics",
+        "factor_lollipop",
+        "lollipop"
+      ],
+      "description": "物理场分析因子棒棒糖（lollipop 模式，合成数据）"
+    },
+    {
+      "name": "physics_field_interval_forest",
+      "category": "field",
+      "tags": [
+        "physics",
+        "interval_forest",
+        "interval"
+      ],
+      "description": "物理场分析区间森林图（interval 模式，合成数据）"
+    },
+    {
+      "name": "physics_field_composition_stream",
+      "category": "field",
+      "tags": [
+        "physics",
+        "composition_stream",
+        "stacked-area"
+      ],
+      "description": "物理场分析组成流面积（stacked-area 模式，合成数据）"
+    },
+    {
+      "name": "physics_field_stage_step",
+      "category": "field",
+      "tags": [
+        "physics",
+        "stage_step",
+        "step"
+      ],
+      "description": "物理场分析阶段阶梯曲线（step 模式，合成数据）"
+    },
+    {
+      "name": "physics_field_surface3d",
+      "category": "field",
+      "tags": [
+        "physics",
+        "surface3d",
+        "3d-surface"
+      ],
+      "description": "物理场分析三维响应曲面（3d-surface 模式，合成数据）"
+    },
+    {
+      "name": "physics_field_calendar_grid",
+      "category": "field",
+      "tags": [
+        "physics",
+        "calendar_grid",
+        "calendar-grid"
+      ],
+      "description": "物理场分析日历网格（calendar-grid 模式，合成数据）"
+    },
+    {
+      "name": "physics_field_before_after",
+      "category": "field",
+      "tags": [
+        "physics",
+        "before_after",
+        "slope"
+      ],
+      "description": "物理场分析前后斜率对比（slope 模式，合成数据）"
+    },
+    {
+      "name": "physics_field_decision_boundary",
+      "category": "field",
+      "tags": [
+        "physics",
+        "decision_boundary",
+        "decision-map"
+      ],
+      "description": "物理场分析决策边界图（decision-map 模式，合成数据）"
+    },
+    {
+      "name": "synthetic_geo_monitoring",
+      "category": "field",
+      "tags": [
+        "geo-grid",
+        "monitoring",
+        "time-band"
+      ],
+      "description": "合成地理栅格监测带状时序（time-band 模式，合成数据）"
+    },
+    {
+      "name": "synthetic_geo_limit_watch",
+      "category": "field",
+      "tags": [
+        "geo-grid",
+        "limit_watch",
+        "control-limit"
+      ],
+      "description": "合成地理栅格控制限监测（control-limit 模式，合成数据）"
+    },
+    {
+      "name": "synthetic_geo_state_map",
+      "category": "field",
+      "tags": [
+        "geo-grid",
+        "state_map",
+        "heatmap"
+      ],
+      "description": "合成地理栅格状态热力图（heatmap 模式，合成数据）"
+    },
+    {
+      "name": "synthetic_geo_response_surface",
+      "category": "field",
+      "tags": [
+        "geo-grid",
+        "response_surface",
+        "contour"
+      ],
+      "description": "合成地理栅格响应等值面（contour 模式，合成数据）"
+    },
+    {
+      "name": "synthetic_geo_cluster_view",
+      "category": "field",
+      "tags": [
+        "geo-grid",
+        "cluster_view",
+        "cluster"
+      ],
+      "description": "合成地理栅格状态聚类散点（cluster 模式，合成数据）"
+    },
+    {
+      "name": "synthetic_geo_rank_profile",
+      "category": "field",
+      "tags": [
+        "geo-grid",
+        "rank_profile",
+        "ranking"
+      ],
+      "description": "合成地理栅格指标排序条形（ranking 模式，合成数据）"
+    },
+    {
+      "name": "synthetic_geo_score_radar",
+      "category": "field",
+      "tags": [
+        "geo-grid",
+        "score_radar",
+        "radar"
+      ],
+      "description": "合成地理栅格多维评分雷达（radar 模式，合成数据）"
+    },
+    {
+      "name": "synthetic_geo_contribution_bridge",
+      "category": "field",
+      "tags": [
+        "geo-grid",
+        "contribution_bridge",
+        "waterfall"
+      ],
+      "description": "合成地理栅格贡献瀑布桥（waterfall 模式，合成数据）"
+    },
+    {
+      "name": "synthetic_geo_scenario_facets",
+      "category": "field",
+      "tags": [
+        "geo-grid",
+        "scenario_facets",
+        "small-multiples"
+      ],
+      "description": "合成地理栅格场景分面（small-multiples 模式，合成数据）"
+    },
+    {
+      "name": "synthetic_geo_polar_signature",
+      "category": "field",
+      "tags": [
+        "geo-grid",
+        "polar_signature",
+        "polar"
+      ],
+      "description": "合成地理栅格极坐标指纹（polar 模式，合成数据）"
+    },
+    {
+      "name": "synthetic_geo_phase_portrait",
+      "category": "field",
+      "tags": [
+        "geo-grid",
+        "phase_portrait",
+        "phase-plane"
+      ],
+      "description": "合成地理栅格相平面画像（phase-plane 模式，合成数据）"
+    },
+    {
+      "name": "synthetic_geo_distribution_shift",
+      "category": "field",
+      "tags": [
+        "geo-grid",
+        "distribution_shift",
+        "distribution"
+      ],
+      "description": "合成地理栅格分布漂移（distribution 模式，合成数据）"
+    },
+    {
+      "name": "synthetic_geo_interaction_matrix",
+      "category": "field",
+      "tags": [
+        "geo-grid",
+        "interaction_matrix",
+        "matrix"
+      ],
+      "description": "合成地理栅格交互气泡矩阵（matrix 模式，合成数据）"
+    },
+    {
+      "name": "synthetic_geo_factor_lollipop",
+      "category": "field",
+      "tags": [
+        "geo-grid",
+        "factor_lollipop",
+        "lollipop"
+      ],
+      "description": "合成地理栅格因子棒棒糖（lollipop 模式，合成数据）"
+    },
+    {
+      "name": "synthetic_geo_interval_forest",
+      "category": "field",
+      "tags": [
+        "geo-grid",
+        "interval_forest",
+        "interval"
+      ],
+      "description": "合成地理栅格区间森林图（interval 模式，合成数据）"
+    },
+    {
+      "name": "synthetic_geo_composition_stream",
+      "category": "field",
+      "tags": [
+        "geo-grid",
+        "composition_stream",
+        "stacked-area"
+      ],
+      "description": "合成地理栅格组成流面积（stacked-area 模式，合成数据）"
+    },
+    {
+      "name": "synthetic_geo_stage_step",
+      "category": "field",
+      "tags": [
+        "geo-grid",
+        "stage_step",
+        "step"
+      ],
+      "description": "合成地理栅格阶段阶梯曲线（step 模式，合成数据）"
+    },
+    {
+      "name": "synthetic_geo_surface3d",
+      "category": "field",
+      "tags": [
+        "geo-grid",
+        "surface3d",
+        "3d-surface"
+      ],
+      "description": "合成地理栅格三维响应曲面（3d-surface 模式，合成数据）"
+    },
+    {
+      "name": "synthetic_geo_calendar_grid",
+      "category": "field",
+      "tags": [
+        "geo-grid",
+        "calendar_grid",
+        "calendar-grid"
+      ],
+      "description": "合成地理栅格日历网格（calendar-grid 模式，合成数据）"
+    },
+    {
+      "name": "synthetic_geo_before_after",
+      "category": "field",
+      "tags": [
+        "geo-grid",
+        "before_after",
+        "slope"
+      ],
+      "description": "合成地理栅格前后斜率对比（slope 模式，合成数据）"
+    },
+    {
+      "name": "synthetic_geo_decision_boundary",
+      "category": "field",
+      "tags": [
+        "geo-grid",
+        "decision_boundary",
+        "decision-map"
+      ],
+      "description": "合成地理栅格决策边界图（decision-map 模式，合成数据）"
+    },
+    {
+      "name": "paper_multipanel_monitoring",
+      "category": "composite",
+      "tags": [
+        "multipanel",
+        "monitoring",
+        "time-band"
+      ],
+      "description": "论文多面板版式监测带状时序（time-band 模式，合成数据）"
+    },
+    {
+      "name": "paper_multipanel_limit_watch",
+      "category": "composite",
+      "tags": [
+        "multipanel",
+        "limit_watch",
+        "control-limit"
+      ],
+      "description": "论文多面板版式控制限监测（control-limit 模式，合成数据）"
+    },
+    {
+      "name": "paper_multipanel_state_map",
+      "category": "composite",
+      "tags": [
+        "multipanel",
+        "state_map",
+        "heatmap"
+      ],
+      "description": "论文多面板版式状态热力图（heatmap 模式，合成数据）"
+    },
+    {
+      "name": "paper_multipanel_response_surface",
+      "category": "composite",
+      "tags": [
+        "multipanel",
+        "response_surface",
+        "contour"
+      ],
+      "description": "论文多面板版式响应等值面（contour 模式，合成数据）"
+    },
+    {
+      "name": "paper_multipanel_cluster_view",
+      "category": "composite",
+      "tags": [
+        "multipanel",
+        "cluster_view",
+        "cluster"
+      ],
+      "description": "论文多面板版式状态聚类散点（cluster 模式，合成数据）"
+    },
+    {
+      "name": "paper_multipanel_rank_profile",
+      "category": "composite",
+      "tags": [
+        "multipanel",
+        "rank_profile",
+        "ranking"
+      ],
+      "description": "论文多面板版式指标排序条形（ranking 模式，合成数据）"
+    },
+    {
+      "name": "paper_multipanel_score_radar",
+      "category": "composite",
+      "tags": [
+        "multipanel",
+        "score_radar",
+        "radar"
+      ],
+      "description": "论文多面板版式多维评分雷达（radar 模式，合成数据）"
+    },
+    {
+      "name": "paper_multipanel_contribution_bridge",
+      "category": "composite",
+      "tags": [
+        "multipanel",
+        "contribution_bridge",
+        "waterfall"
+      ],
+      "description": "论文多面板版式贡献瀑布桥（waterfall 模式，合成数据）"
+    },
+    {
+      "name": "paper_multipanel_scenario_facets",
+      "category": "composite",
+      "tags": [
+        "multipanel",
+        "scenario_facets",
+        "small-multiples"
+      ],
+      "description": "论文多面板版式场景分面（small-multiples 模式，合成数据）"
+    },
+    {
+      "name": "paper_multipanel_polar_signature",
+      "category": "composite",
+      "tags": [
+        "multipanel",
+        "polar_signature",
+        "polar"
+      ],
+      "description": "论文多面板版式极坐标指纹（polar 模式，合成数据）"
+    },
+    {
+      "name": "paper_multipanel_phase_portrait",
+      "category": "composite",
+      "tags": [
+        "multipanel",
+        "phase_portrait",
+        "phase-plane"
+      ],
+      "description": "论文多面板版式相平面画像（phase-plane 模式，合成数据）"
+    },
+    {
+      "name": "paper_multipanel_distribution_shift",
+      "category": "composite",
+      "tags": [
+        "multipanel",
+        "distribution_shift",
+        "distribution"
+      ],
+      "description": "论文多面板版式分布漂移（distribution 模式，合成数据）"
+    },
+    {
+      "name": "paper_multipanel_interaction_matrix",
+      "category": "composite",
+      "tags": [
+        "multipanel",
+        "interaction_matrix",
+        "matrix"
+      ],
+      "description": "论文多面板版式交互气泡矩阵（matrix 模式，合成数据）"
+    },
+    {
+      "name": "paper_multipanel_factor_lollipop",
+      "category": "composite",
+      "tags": [
+        "multipanel",
+        "factor_lollipop",
+        "lollipop"
+      ],
+      "description": "论文多面板版式因子棒棒糖（lollipop 模式，合成数据）"
+    },
+    {
+      "name": "paper_multipanel_interval_forest",
+      "category": "composite",
+      "tags": [
+        "multipanel",
+        "interval_forest",
+        "interval"
+      ],
+      "description": "论文多面板版式区间森林图（interval 模式，合成数据）"
+    },
+    {
+      "name": "paper_multipanel_composition_stream",
+      "category": "composite",
+      "tags": [
+        "multipanel",
+        "composition_stream",
+        "stacked-area"
+      ],
+      "description": "论文多面板版式组成流面积（stacked-area 模式，合成数据）"
+    },
+    {
+      "name": "paper_multipanel_stage_step",
+      "category": "composite",
+      "tags": [
+        "multipanel",
+        "stage_step",
+        "step"
+      ],
+      "description": "论文多面板版式阶段阶梯曲线（step 模式，合成数据）"
+    },
+    {
+      "name": "paper_multipanel_surface3d",
+      "category": "composite",
+      "tags": [
+        "multipanel",
+        "surface3d",
+        "3d-surface"
+      ],
+      "description": "论文多面板版式三维响应曲面（3d-surface 模式，合成数据）"
+    },
+    {
+      "name": "paper_multipanel_calendar_grid",
+      "category": "composite",
+      "tags": [
+        "multipanel",
+        "calendar_grid",
+        "calendar-grid"
+      ],
+      "description": "论文多面板版式日历网格（calendar-grid 模式，合成数据）"
+    },
+    {
+      "name": "paper_multipanel_before_after",
+      "category": "composite",
+      "tags": [
+        "multipanel",
+        "before_after",
+        "slope"
+      ],
+      "description": "论文多面板版式前后斜率对比（slope 模式，合成数据）"
+    },
+    {
+      "name": "paper_multipanel_decision_boundary",
+      "category": "composite",
+      "tags": [
+        "multipanel",
+        "decision_boundary",
+        "decision-map"
+      ],
+      "description": "论文多面板版式决策边界图（decision-map 模式，合成数据）"
+    },
+    {
+      "name": "motor_deep_monitoring",
+      "category": "electrical",
+      "tags": [
+        "motor",
+        "monitoring",
+        "time-band"
+      ],
+      "description": "电机深化监测带状时序（time-band 模式，合成数据）"
+    },
+    {
+      "name": "motor_deep_limit_watch",
+      "category": "electrical",
+      "tags": [
+        "motor",
+        "limit_watch",
+        "control-limit"
+      ],
+      "description": "电机深化控制限监测（control-limit 模式，合成数据）"
+    },
+    {
+      "name": "motor_deep_state_map",
+      "category": "electrical",
+      "tags": [
+        "motor",
+        "state_map",
+        "heatmap"
+      ],
+      "description": "电机深化状态热力图（heatmap 模式，合成数据）"
+    },
+    {
+      "name": "motor_deep_response_surface",
+      "category": "electrical",
+      "tags": [
+        "motor",
+        "response_surface",
+        "contour"
+      ],
+      "description": "电机深化响应等值面（contour 模式，合成数据）"
+    },
+    {
+      "name": "motor_deep_cluster_view",
+      "category": "electrical",
+      "tags": [
+        "motor",
+        "cluster_view",
+        "cluster"
+      ],
+      "description": "电机深化状态聚类散点（cluster 模式，合成数据）"
+    },
+    {
+      "name": "motor_deep_rank_profile",
+      "category": "electrical",
+      "tags": [
+        "motor",
+        "rank_profile",
+        "ranking"
+      ],
+      "description": "电机深化指标排序条形（ranking 模式，合成数据）"
+    },
+    {
+      "name": "motor_deep_score_radar",
+      "category": "electrical",
+      "tags": [
+        "motor",
+        "score_radar",
+        "radar"
+      ],
+      "description": "电机深化多维评分雷达（radar 模式，合成数据）"
+    },
+    {
+      "name": "motor_deep_contribution_bridge",
+      "category": "electrical",
+      "tags": [
+        "motor",
+        "contribution_bridge",
+        "waterfall"
+      ],
+      "description": "电机深化贡献瀑布桥（waterfall 模式，合成数据）"
+    },
+    {
+      "name": "motor_deep_scenario_facets",
+      "category": "electrical",
+      "tags": [
+        "motor",
+        "scenario_facets",
+        "small-multiples"
+      ],
+      "description": "电机深化场景分面（small-multiples 模式，合成数据）"
+    },
+    {
+      "name": "motor_deep_polar_signature",
+      "category": "electrical",
+      "tags": [
+        "motor",
+        "polar_signature",
+        "polar"
+      ],
+      "description": "电机深化极坐标指纹（polar 模式，合成数据）"
+    },
+    {
+      "name": "motor_deep_phase_portrait",
+      "category": "electrical",
+      "tags": [
+        "motor",
+        "phase_portrait",
+        "phase-plane"
+      ],
+      "description": "电机深化相平面画像（phase-plane 模式，合成数据）"
+    },
+    {
+      "name": "motor_deep_distribution_shift",
+      "category": "electrical",
+      "tags": [
+        "motor",
+        "distribution_shift",
+        "distribution"
+      ],
+      "description": "电机深化分布漂移（distribution 模式，合成数据）"
+    },
+    {
+      "name": "motor_deep_interaction_matrix",
+      "category": "electrical",
+      "tags": [
+        "motor",
+        "interaction_matrix",
+        "matrix"
+      ],
+      "description": "电机深化交互气泡矩阵（matrix 模式，合成数据）"
+    },
+    {
+      "name": "motor_deep_factor_lollipop",
+      "category": "electrical",
+      "tags": [
+        "motor",
+        "factor_lollipop",
+        "lollipop"
+      ],
+      "description": "电机深化因子棒棒糖（lollipop 模式，合成数据）"
+    },
+    {
+      "name": "motor_deep_interval_forest",
+      "category": "electrical",
+      "tags": [
+        "motor",
+        "interval_forest",
+        "interval"
+      ],
+      "description": "电机深化区间森林图（interval 模式，合成数据）"
+    },
+    {
+      "name": "motor_deep_composition_stream",
+      "category": "electrical",
+      "tags": [
+        "motor",
+        "composition_stream",
+        "stacked-area"
+      ],
+      "description": "电机深化组成流面积（stacked-area 模式，合成数据）"
+    },
+    {
+      "name": "motor_deep_stage_step",
+      "category": "electrical",
+      "tags": [
+        "motor",
+        "stage_step",
+        "step"
+      ],
+      "description": "电机深化阶段阶梯曲线（step 模式，合成数据）"
+    },
+    {
+      "name": "motor_deep_surface3d",
+      "category": "electrical",
+      "tags": [
+        "motor",
+        "surface3d",
+        "3d-surface"
+      ],
+      "description": "电机深化三维响应曲面（3d-surface 模式，合成数据）"
+    },
+    {
+      "name": "motor_deep_calendar_grid",
+      "category": "electrical",
+      "tags": [
+        "motor",
+        "calendar_grid",
+        "calendar-grid"
+      ],
+      "description": "电机深化日历网格（calendar-grid 模式，合成数据）"
+    },
+    {
+      "name": "motor_deep_before_after",
+      "category": "electrical",
+      "tags": [
+        "motor",
+        "before_after",
+        "slope"
+      ],
+      "description": "电机深化前后斜率对比（slope 模式，合成数据）"
+    },
+    {
+      "name": "motor_deep_decision_boundary",
+      "category": "electrical",
+      "tags": [
+        "motor",
+        "decision_boundary",
+        "decision-map"
+      ],
+      "description": "电机深化决策边界图（decision-map 模式，合成数据）"
+    },
+    {
+      "name": "storage_battery_monitoring",
+      "category": "energy",
+      "tags": [
+        "storage",
+        "monitoring",
+        "time-band"
+      ],
+      "description": "储能与电池监测带状时序（time-band 模式，合成数据）"
+    },
+    {
+      "name": "storage_battery_limit_watch",
+      "category": "energy",
+      "tags": [
+        "storage",
+        "limit_watch",
+        "control-limit"
+      ],
+      "description": "储能与电池控制限监测（control-limit 模式，合成数据）"
+    },
+    {
+      "name": "storage_battery_state_map",
+      "category": "energy",
+      "tags": [
+        "storage",
+        "state_map",
+        "heatmap"
+      ],
+      "description": "储能与电池状态热力图（heatmap 模式，合成数据）"
+    },
+    {
+      "name": "storage_battery_response_surface",
+      "category": "energy",
+      "tags": [
+        "storage",
+        "response_surface",
+        "contour"
+      ],
+      "description": "储能与电池响应等值面（contour 模式，合成数据）"
+    },
+    {
+      "name": "storage_battery_cluster_view",
+      "category": "energy",
+      "tags": [
+        "storage",
+        "cluster_view",
+        "cluster"
+      ],
+      "description": "储能与电池状态聚类散点（cluster 模式，合成数据）"
+    },
+    {
+      "name": "storage_battery_rank_profile",
+      "category": "energy",
+      "tags": [
+        "storage",
+        "rank_profile",
+        "ranking"
+      ],
+      "description": "储能与电池指标排序条形（ranking 模式，合成数据）"
+    },
+    {
+      "name": "storage_battery_score_radar",
+      "category": "energy",
+      "tags": [
+        "storage",
+        "score_radar",
+        "radar"
+      ],
+      "description": "储能与电池多维评分雷达（radar 模式，合成数据）"
+    },
+    {
+      "name": "storage_battery_contribution_bridge",
+      "category": "energy",
+      "tags": [
+        "storage",
+        "contribution_bridge",
+        "waterfall"
+      ],
+      "description": "储能与电池贡献瀑布桥（waterfall 模式，合成数据）"
+    },
+    {
+      "name": "storage_battery_scenario_facets",
+      "category": "energy",
+      "tags": [
+        "storage",
+        "scenario_facets",
+        "small-multiples"
+      ],
+      "description": "储能与电池场景分面（small-multiples 模式，合成数据）"
+    },
+    {
+      "name": "storage_battery_polar_signature",
+      "category": "energy",
+      "tags": [
+        "storage",
+        "polar_signature",
+        "polar"
+      ],
+      "description": "储能与电池极坐标指纹（polar 模式，合成数据）"
+    },
+    {
+      "name": "storage_battery_phase_portrait",
+      "category": "energy",
+      "tags": [
+        "storage",
+        "phase_portrait",
+        "phase-plane"
+      ],
+      "description": "储能与电池相平面画像（phase-plane 模式，合成数据）"
+    },
+    {
+      "name": "storage_battery_distribution_shift",
+      "category": "energy",
+      "tags": [
+        "storage",
+        "distribution_shift",
+        "distribution"
+      ],
+      "description": "储能与电池分布漂移（distribution 模式，合成数据）"
+    },
+    {
+      "name": "storage_battery_interaction_matrix",
+      "category": "energy",
+      "tags": [
+        "storage",
+        "interaction_matrix",
+        "matrix"
+      ],
+      "description": "储能与电池交互气泡矩阵（matrix 模式，合成数据）"
+    },
+    {
+      "name": "storage_battery_factor_lollipop",
+      "category": "energy",
+      "tags": [
+        "storage",
+        "factor_lollipop",
+        "lollipop"
+      ],
+      "description": "储能与电池因子棒棒糖（lollipop 模式，合成数据）"
+    },
+    {
+      "name": "storage_battery_interval_forest",
+      "category": "energy",
+      "tags": [
+        "storage",
+        "interval_forest",
+        "interval"
+      ],
+      "description": "储能与电池区间森林图（interval 模式，合成数据）"
+    },
+    {
+      "name": "storage_battery_composition_stream",
+      "category": "energy",
+      "tags": [
+        "storage",
+        "composition_stream",
+        "stacked-area"
+      ],
+      "description": "储能与电池组成流面积（stacked-area 模式，合成数据）"
+    },
+    {
+      "name": "storage_battery_stage_step",
+      "category": "energy",
+      "tags": [
+        "storage",
+        "stage_step",
+        "step"
+      ],
+      "description": "储能与电池阶段阶梯曲线（step 模式，合成数据）"
+    },
+    {
+      "name": "storage_battery_surface3d",
+      "category": "energy",
+      "tags": [
+        "storage",
+        "surface3d",
+        "3d-surface"
+      ],
+      "description": "储能与电池三维响应曲面（3d-surface 模式，合成数据）"
+    },
+    {
+      "name": "storage_battery_calendar_grid",
+      "category": "energy",
+      "tags": [
+        "storage",
+        "calendar_grid",
+        "calendar-grid"
+      ],
+      "description": "储能与电池日历网格（calendar-grid 模式，合成数据）"
+    },
+    {
+      "name": "storage_battery_before_after",
+      "category": "energy",
+      "tags": [
+        "storage",
+        "before_after",
+        "slope"
+      ],
+      "description": "储能与电池前后斜率对比（slope 模式，合成数据）"
+    },
+    {
+      "name": "storage_battery_decision_boundary",
+      "category": "energy",
+      "tags": [
+        "storage",
+        "decision_boundary",
+        "decision-map"
+      ],
+      "description": "储能与电池决策边界图（decision-map 模式，合成数据）"
+    },
+    {
+      "name": "thermal_system_monitoring",
+      "category": "cfd",
+      "tags": [
+        "thermal",
+        "monitoring",
+        "time-band"
+      ],
+      "description": "热学系统监测带状时序（time-band 模式，合成数据）"
+    },
+    {
+      "name": "thermal_system_limit_watch",
+      "category": "cfd",
+      "tags": [
+        "thermal",
+        "limit_watch",
+        "control-limit"
+      ],
+      "description": "热学系统控制限监测（control-limit 模式，合成数据）"
+    },
+    {
+      "name": "thermal_system_state_map",
+      "category": "cfd",
+      "tags": [
+        "thermal",
+        "state_map",
+        "heatmap"
+      ],
+      "description": "热学系统状态热力图（heatmap 模式，合成数据）"
+    },
+    {
+      "name": "thermal_system_response_surface",
+      "category": "cfd",
+      "tags": [
+        "thermal",
+        "response_surface",
+        "contour"
+      ],
+      "description": "热学系统响应等值面（contour 模式，合成数据）"
+    },
+    {
+      "name": "thermal_system_cluster_view",
+      "category": "cfd",
+      "tags": [
+        "thermal",
+        "cluster_view",
+        "cluster"
+      ],
+      "description": "热学系统状态聚类散点（cluster 模式，合成数据）"
+    },
+    {
+      "name": "thermal_system_rank_profile",
+      "category": "cfd",
+      "tags": [
+        "thermal",
+        "rank_profile",
+        "ranking"
+      ],
+      "description": "热学系统指标排序条形（ranking 模式，合成数据）"
+    },
+    {
+      "name": "thermal_system_score_radar",
+      "category": "cfd",
+      "tags": [
+        "thermal",
+        "score_radar",
+        "radar"
+      ],
+      "description": "热学系统多维评分雷达（radar 模式，合成数据）"
+    },
+    {
+      "name": "thermal_system_contribution_bridge",
+      "category": "cfd",
+      "tags": [
+        "thermal",
+        "contribution_bridge",
+        "waterfall"
+      ],
+      "description": "热学系统贡献瀑布桥（waterfall 模式，合成数据）"
+    },
+    {
+      "name": "thermal_system_scenario_facets",
+      "category": "cfd",
+      "tags": [
+        "thermal",
+        "scenario_facets",
+        "small-multiples"
+      ],
+      "description": "热学系统场景分面（small-multiples 模式，合成数据）"
+    },
+    {
+      "name": "thermal_system_polar_signature",
+      "category": "cfd",
+      "tags": [
+        "thermal",
+        "polar_signature",
+        "polar"
+      ],
+      "description": "热学系统极坐标指纹（polar 模式，合成数据）"
+    },
+    {
+      "name": "thermal_system_phase_portrait",
+      "category": "cfd",
+      "tags": [
+        "thermal",
+        "phase_portrait",
+        "phase-plane"
+      ],
+      "description": "热学系统相平面画像（phase-plane 模式，合成数据）"
+    },
+    {
+      "name": "thermal_system_distribution_shift",
+      "category": "cfd",
+      "tags": [
+        "thermal",
+        "distribution_shift",
+        "distribution"
+      ],
+      "description": "热学系统分布漂移（distribution 模式，合成数据）"
+    },
+    {
+      "name": "thermal_system_interaction_matrix",
+      "category": "cfd",
+      "tags": [
+        "thermal",
+        "interaction_matrix",
+        "matrix"
+      ],
+      "description": "热学系统交互气泡矩阵（matrix 模式，合成数据）"
+    },
+    {
+      "name": "thermal_system_factor_lollipop",
+      "category": "cfd",
+      "tags": [
+        "thermal",
+        "factor_lollipop",
+        "lollipop"
+      ],
+      "description": "热学系统因子棒棒糖（lollipop 模式，合成数据）"
+    },
+    {
+      "name": "thermal_system_interval_forest",
+      "category": "cfd",
+      "tags": [
+        "thermal",
+        "interval_forest",
+        "interval"
+      ],
+      "description": "热学系统区间森林图（interval 模式，合成数据）"
+    },
+    {
+      "name": "thermal_system_composition_stream",
+      "category": "cfd",
+      "tags": [
+        "thermal",
+        "composition_stream",
+        "stacked-area"
+      ],
+      "description": "热学系统组成流面积（stacked-area 模式，合成数据）"
+    },
+    {
+      "name": "thermal_system_stage_step",
+      "category": "cfd",
+      "tags": [
+        "thermal",
+        "stage_step",
+        "step"
+      ],
+      "description": "热学系统阶段阶梯曲线（step 模式，合成数据）"
+    },
+    {
+      "name": "thermal_system_surface3d",
+      "category": "cfd",
+      "tags": [
+        "thermal",
+        "surface3d",
+        "3d-surface"
+      ],
+      "description": "热学系统三维响应曲面（3d-surface 模式，合成数据）"
+    },
+    {
+      "name": "thermal_system_calendar_grid",
+      "category": "cfd",
+      "tags": [
+        "thermal",
+        "calendar_grid",
+        "calendar-grid"
+      ],
+      "description": "热学系统日历网格（calendar-grid 模式，合成数据）"
+    },
+    {
+      "name": "thermal_system_before_after",
+      "category": "cfd",
+      "tags": [
+        "thermal",
+        "before_after",
+        "slope"
+      ],
+      "description": "热学系统前后斜率对比（slope 模式，合成数据）"
+    },
+    {
+      "name": "thermal_system_decision_boundary",
+      "category": "cfd",
+      "tags": [
+        "thermal",
+        "decision_boundary",
+        "decision-map"
+      ],
+      "description": "热学系统决策边界图（decision-map 模式，合成数据）"
+    },
+    {
+      "name": "fluid_cfd_monitoring",
+      "category": "cfd",
+      "tags": [
+        "fluid",
+        "monitoring",
+        "time-band"
+      ],
+      "description": "流体与 CFD监测带状时序（time-band 模式，合成数据）"
+    },
+    {
+      "name": "fluid_cfd_limit_watch",
+      "category": "cfd",
+      "tags": [
+        "fluid",
+        "limit_watch",
+        "control-limit"
+      ],
+      "description": "流体与 CFD控制限监测（control-limit 模式，合成数据）"
+    },
+    {
+      "name": "fluid_cfd_state_map",
+      "category": "cfd",
+      "tags": [
+        "fluid",
+        "state_map",
+        "heatmap"
+      ],
+      "description": "流体与 CFD状态热力图（heatmap 模式，合成数据）"
+    },
+    {
+      "name": "fluid_cfd_response_surface",
+      "category": "cfd",
+      "tags": [
+        "fluid",
+        "response_surface",
+        "contour"
+      ],
+      "description": "流体与 CFD响应等值面（contour 模式，合成数据）"
+    },
+    {
+      "name": "fluid_cfd_cluster_view",
+      "category": "cfd",
+      "tags": [
+        "fluid",
+        "cluster_view",
+        "cluster"
+      ],
+      "description": "流体与 CFD状态聚类散点（cluster 模式，合成数据）"
+    },
+    {
+      "name": "fluid_cfd_rank_profile",
+      "category": "cfd",
+      "tags": [
+        "fluid",
+        "rank_profile",
+        "ranking"
+      ],
+      "description": "流体与 CFD指标排序条形（ranking 模式，合成数据）"
+    },
+    {
+      "name": "fluid_cfd_score_radar",
+      "category": "cfd",
+      "tags": [
+        "fluid",
+        "score_radar",
+        "radar"
+      ],
+      "description": "流体与 CFD多维评分雷达（radar 模式，合成数据）"
+    },
+    {
+      "name": "fluid_cfd_contribution_bridge",
+      "category": "cfd",
+      "tags": [
+        "fluid",
+        "contribution_bridge",
+        "waterfall"
+      ],
+      "description": "流体与 CFD贡献瀑布桥（waterfall 模式，合成数据）"
+    },
+    {
+      "name": "fluid_cfd_scenario_facets",
+      "category": "cfd",
+      "tags": [
+        "fluid",
+        "scenario_facets",
+        "small-multiples"
+      ],
+      "description": "流体与 CFD场景分面（small-multiples 模式，合成数据）"
+    },
+    {
+      "name": "fluid_cfd_polar_signature",
+      "category": "cfd",
+      "tags": [
+        "fluid",
+        "polar_signature",
+        "polar"
+      ],
+      "description": "流体与 CFD极坐标指纹（polar 模式，合成数据）"
+    },
+    {
+      "name": "fluid_cfd_phase_portrait",
+      "category": "cfd",
+      "tags": [
+        "fluid",
+        "phase_portrait",
+        "phase-plane"
+      ],
+      "description": "流体与 CFD相平面画像（phase-plane 模式，合成数据）"
+    },
+    {
+      "name": "fluid_cfd_distribution_shift",
+      "category": "cfd",
+      "tags": [
+        "fluid",
+        "distribution_shift",
+        "distribution"
+      ],
+      "description": "流体与 CFD分布漂移（distribution 模式，合成数据）"
+    },
+    {
+      "name": "fluid_cfd_interaction_matrix",
+      "category": "cfd",
+      "tags": [
+        "fluid",
+        "interaction_matrix",
+        "matrix"
+      ],
+      "description": "流体与 CFD交互气泡矩阵（matrix 模式，合成数据）"
+    },
+    {
+      "name": "fluid_cfd_factor_lollipop",
+      "category": "cfd",
+      "tags": [
+        "fluid",
+        "factor_lollipop",
+        "lollipop"
+      ],
+      "description": "流体与 CFD因子棒棒糖（lollipop 模式，合成数据）"
+    },
+    {
+      "name": "fluid_cfd_interval_forest",
+      "category": "cfd",
+      "tags": [
+        "fluid",
+        "interval_forest",
+        "interval"
+      ],
+      "description": "流体与 CFD区间森林图（interval 模式，合成数据）"
+    },
+    {
+      "name": "fluid_cfd_composition_stream",
+      "category": "cfd",
+      "tags": [
+        "fluid",
+        "composition_stream",
+        "stacked-area"
+      ],
+      "description": "流体与 CFD组成流面积（stacked-area 模式，合成数据）"
+    },
+    {
+      "name": "fluid_cfd_stage_step",
+      "category": "cfd",
+      "tags": [
+        "fluid",
+        "stage_step",
+        "step"
+      ],
+      "description": "流体与 CFD阶段阶梯曲线（step 模式，合成数据）"
+    },
+    {
+      "name": "fluid_cfd_surface3d",
+      "category": "cfd",
+      "tags": [
+        "fluid",
+        "surface3d",
+        "3d-surface"
+      ],
+      "description": "流体与 CFD三维响应曲面（3d-surface 模式，合成数据）"
+    },
+    {
+      "name": "fluid_cfd_calendar_grid",
+      "category": "cfd",
+      "tags": [
+        "fluid",
+        "calendar_grid",
+        "calendar-grid"
+      ],
+      "description": "流体与 CFD日历网格（calendar-grid 模式，合成数据）"
+    },
+    {
+      "name": "fluid_cfd_before_after",
+      "category": "cfd",
+      "tags": [
+        "fluid",
+        "before_after",
+        "slope"
+      ],
+      "description": "流体与 CFD前后斜率对比（slope 模式，合成数据）"
+    },
+    {
+      "name": "fluid_cfd_decision_boundary",
+      "category": "cfd",
+      "tags": [
+        "fluid",
+        "decision_boundary",
+        "decision-map"
+      ],
+      "description": "流体与 CFD决策边界图（decision-map 模式，合成数据）"
+    },
+    {
+      "name": "bio_signal_monitoring",
+      "category": "signal",
+      "tags": [
+        "biosignal",
+        "monitoring",
+        "time-band"
+      ],
+      "description": "生物信号监测带状时序（time-band 模式，合成数据）"
+    },
+    {
+      "name": "bio_signal_limit_watch",
+      "category": "signal",
+      "tags": [
+        "biosignal",
+        "limit_watch",
+        "control-limit"
+      ],
+      "description": "生物信号控制限监测（control-limit 模式，合成数据）"
+    },
+    {
+      "name": "bio_signal_state_map",
+      "category": "signal",
+      "tags": [
+        "biosignal",
+        "state_map",
+        "heatmap"
+      ],
+      "description": "生物信号状态热力图（heatmap 模式，合成数据）"
+    },
+    {
+      "name": "bio_signal_response_surface",
+      "category": "signal",
+      "tags": [
+        "biosignal",
+        "response_surface",
+        "contour"
+      ],
+      "description": "生物信号响应等值面（contour 模式，合成数据）"
+    },
+    {
+      "name": "bio_signal_cluster_view",
+      "category": "signal",
+      "tags": [
+        "biosignal",
+        "cluster_view",
+        "cluster"
+      ],
+      "description": "生物信号状态聚类散点（cluster 模式，合成数据）"
+    },
+    {
+      "name": "bio_signal_rank_profile",
+      "category": "signal",
+      "tags": [
+        "biosignal",
+        "rank_profile",
+        "ranking"
+      ],
+      "description": "生物信号指标排序条形（ranking 模式，合成数据）"
+    },
+    {
+      "name": "bio_signal_score_radar",
+      "category": "signal",
+      "tags": [
+        "biosignal",
+        "score_radar",
+        "radar"
+      ],
+      "description": "生物信号多维评分雷达（radar 模式，合成数据）"
+    },
+    {
+      "name": "bio_signal_contribution_bridge",
+      "category": "signal",
+      "tags": [
+        "biosignal",
+        "contribution_bridge",
+        "waterfall"
+      ],
+      "description": "生物信号贡献瀑布桥（waterfall 模式，合成数据）"
+    },
+    {
+      "name": "bio_signal_scenario_facets",
+      "category": "signal",
+      "tags": [
+        "biosignal",
+        "scenario_facets",
+        "small-multiples"
+      ],
+      "description": "生物信号场景分面（small-multiples 模式，合成数据）"
+    },
+    {
+      "name": "bio_signal_polar_signature",
+      "category": "signal",
+      "tags": [
+        "biosignal",
+        "polar_signature",
+        "polar"
+      ],
+      "description": "生物信号极坐标指纹（polar 模式，合成数据）"
+    },
+    {
+      "name": "bio_signal_phase_portrait",
+      "category": "signal",
+      "tags": [
+        "biosignal",
+        "phase_portrait",
+        "phase-plane"
+      ],
+      "description": "生物信号相平面画像（phase-plane 模式，合成数据）"
+    },
+    {
+      "name": "bio_signal_distribution_shift",
+      "category": "signal",
+      "tags": [
+        "biosignal",
+        "distribution_shift",
+        "distribution"
+      ],
+      "description": "生物信号分布漂移（distribution 模式，合成数据）"
+    },
+    {
+      "name": "bio_signal_interaction_matrix",
+      "category": "signal",
+      "tags": [
+        "biosignal",
+        "interaction_matrix",
+        "matrix"
+      ],
+      "description": "生物信号交互气泡矩阵（matrix 模式，合成数据）"
+    },
+    {
+      "name": "bio_signal_factor_lollipop",
+      "category": "signal",
+      "tags": [
+        "biosignal",
+        "factor_lollipop",
+        "lollipop"
+      ],
+      "description": "生物信号因子棒棒糖（lollipop 模式，合成数据）"
+    },
+    {
+      "name": "bio_signal_interval_forest",
+      "category": "signal",
+      "tags": [
+        "biosignal",
+        "interval_forest",
+        "interval"
+      ],
+      "description": "生物信号区间森林图（interval 模式，合成数据）"
+    },
+    {
+      "name": "bio_signal_composition_stream",
+      "category": "signal",
+      "tags": [
+        "biosignal",
+        "composition_stream",
+        "stacked-area"
+      ],
+      "description": "生物信号组成流面积（stacked-area 模式，合成数据）"
+    },
+    {
+      "name": "bio_signal_stage_step",
+      "category": "signal",
+      "tags": [
+        "biosignal",
+        "stage_step",
+        "step"
+      ],
+      "description": "生物信号阶段阶梯曲线（step 模式，合成数据）"
+    },
+    {
+      "name": "bio_signal_surface3d",
+      "category": "signal",
+      "tags": [
+        "biosignal",
+        "surface3d",
+        "3d-surface"
+      ],
+      "description": "生物信号三维响应曲面（3d-surface 模式，合成数据）"
+    },
+    {
+      "name": "bio_signal_calendar_grid",
+      "category": "signal",
+      "tags": [
+        "biosignal",
+        "calendar_grid",
+        "calendar-grid"
+      ],
+      "description": "生物信号日历网格（calendar-grid 模式，合成数据）"
+    },
+    {
+      "name": "bio_signal_before_after",
+      "category": "signal",
+      "tags": [
+        "biosignal",
+        "before_after",
+        "slope"
+      ],
+      "description": "生物信号前后斜率对比（slope 模式，合成数据）"
+    },
+    {
+      "name": "bio_signal_decision_boundary",
+      "category": "signal",
+      "tags": [
+        "biosignal",
+        "decision_boundary",
+        "decision-map"
+      ],
+      "description": "生物信号决策边界图（decision-map 模式，合成数据）"
+    },
+    {
+      "name": "instrument_meter_monitoring",
+      "category": "electrical",
+      "tags": [
+        "instrumentation",
+        "monitoring",
+        "time-band"
+      ],
+      "description": "测量仪表监测带状时序（time-band 模式，合成数据）"
+    },
+    {
+      "name": "instrument_meter_limit_watch",
+      "category": "electrical",
+      "tags": [
+        "instrumentation",
+        "limit_watch",
+        "control-limit"
+      ],
+      "description": "测量仪表控制限监测（control-limit 模式，合成数据）"
+    },
+    {
+      "name": "instrument_meter_state_map",
+      "category": "electrical",
+      "tags": [
+        "instrumentation",
+        "state_map",
+        "heatmap"
+      ],
+      "description": "测量仪表状态热力图（heatmap 模式，合成数据）"
+    },
+    {
+      "name": "instrument_meter_response_surface",
+      "category": "electrical",
+      "tags": [
+        "instrumentation",
+        "response_surface",
+        "contour"
+      ],
+      "description": "测量仪表响应等值面（contour 模式，合成数据）"
+    },
+    {
+      "name": "instrument_meter_cluster_view",
+      "category": "electrical",
+      "tags": [
+        "instrumentation",
+        "cluster_view",
+        "cluster"
+      ],
+      "description": "测量仪表状态聚类散点（cluster 模式，合成数据）"
+    },
+    {
+      "name": "instrument_meter_rank_profile",
+      "category": "electrical",
+      "tags": [
+        "instrumentation",
+        "rank_profile",
+        "ranking"
+      ],
+      "description": "测量仪表指标排序条形（ranking 模式，合成数据）"
+    },
+    {
+      "name": "instrument_meter_score_radar",
+      "category": "electrical",
+      "tags": [
+        "instrumentation",
+        "score_radar",
+        "radar"
+      ],
+      "description": "测量仪表多维评分雷达（radar 模式，合成数据）"
+    },
+    {
+      "name": "instrument_meter_contribution_bridge",
+      "category": "electrical",
+      "tags": [
+        "instrumentation",
+        "contribution_bridge",
+        "waterfall"
+      ],
+      "description": "测量仪表贡献瀑布桥（waterfall 模式，合成数据）"
+    },
+    {
+      "name": "instrument_meter_scenario_facets",
+      "category": "electrical",
+      "tags": [
+        "instrumentation",
+        "scenario_facets",
+        "small-multiples"
+      ],
+      "description": "测量仪表场景分面（small-multiples 模式，合成数据）"
+    },
+    {
+      "name": "instrument_meter_polar_signature",
+      "category": "electrical",
+      "tags": [
+        "instrumentation",
+        "polar_signature",
+        "polar"
+      ],
+      "description": "测量仪表极坐标指纹（polar 模式，合成数据）"
+    },
+    {
+      "name": "instrument_meter_phase_portrait",
+      "category": "electrical",
+      "tags": [
+        "instrumentation",
+        "phase_portrait",
+        "phase-plane"
+      ],
+      "description": "测量仪表相平面画像（phase-plane 模式，合成数据）"
+    },
+    {
+      "name": "instrument_meter_distribution_shift",
+      "category": "electrical",
+      "tags": [
+        "instrumentation",
+        "distribution_shift",
+        "distribution"
+      ],
+      "description": "测量仪表分布漂移（distribution 模式，合成数据）"
+    },
+    {
+      "name": "instrument_meter_interaction_matrix",
+      "category": "electrical",
+      "tags": [
+        "instrumentation",
+        "interaction_matrix",
+        "matrix"
+      ],
+      "description": "测量仪表交互气泡矩阵（matrix 模式，合成数据）"
+    },
+    {
+      "name": "instrument_meter_factor_lollipop",
+      "category": "electrical",
+      "tags": [
+        "instrumentation",
+        "factor_lollipop",
+        "lollipop"
+      ],
+      "description": "测量仪表因子棒棒糖（lollipop 模式，合成数据）"
+    },
+    {
+      "name": "instrument_meter_interval_forest",
+      "category": "electrical",
+      "tags": [
+        "instrumentation",
+        "interval_forest",
+        "interval"
+      ],
+      "description": "测量仪表区间森林图（interval 模式，合成数据）"
+    },
+    {
+      "name": "instrument_meter_composition_stream",
+      "category": "electrical",
+      "tags": [
+        "instrumentation",
+        "composition_stream",
+        "stacked-area"
+      ],
+      "description": "测量仪表组成流面积（stacked-area 模式，合成数据）"
+    },
+    {
+      "name": "instrument_meter_stage_step",
+      "category": "electrical",
+      "tags": [
+        "instrumentation",
+        "stage_step",
+        "step"
+      ],
+      "description": "测量仪表阶段阶梯曲线（step 模式，合成数据）"
+    },
+    {
+      "name": "instrument_meter_surface3d",
+      "category": "electrical",
+      "tags": [
+        "instrumentation",
+        "surface3d",
+        "3d-surface"
+      ],
+      "description": "测量仪表三维响应曲面（3d-surface 模式，合成数据）"
+    },
+    {
+      "name": "instrument_meter_calendar_grid",
+      "category": "electrical",
+      "tags": [
+        "instrumentation",
+        "calendar_grid",
+        "calendar-grid"
+      ],
+      "description": "测量仪表日历网格（calendar-grid 模式，合成数据）"
+    },
+    {
+      "name": "instrument_meter_before_after",
+      "category": "electrical",
+      "tags": [
+        "instrumentation",
+        "before_after",
+        "slope"
+      ],
+      "description": "测量仪表前后斜率对比（slope 模式，合成数据）"
+    },
+    {
+      "name": "instrument_meter_decision_boundary",
+      "category": "electrical",
+      "tags": [
+        "instrumentation",
+        "decision_boundary",
+        "decision-map"
+      ],
+      "description": "测量仪表决策边界图（decision-map 模式，合成数据）"
+    },
+    {
+      "name": "optimization_viz_monitoring",
+      "category": "optimization",
+      "tags": [
+        "optimization",
+        "monitoring",
+        "time-band"
+      ],
+      "description": "优化算法可视化监测带状时序（time-band 模式，合成数据）"
+    },
+    {
+      "name": "optimization_viz_limit_watch",
+      "category": "optimization",
+      "tags": [
+        "optimization",
+        "limit_watch",
+        "control-limit"
+      ],
+      "description": "优化算法可视化控制限监测（control-limit 模式，合成数据）"
+    },
+    {
+      "name": "optimization_viz_state_map",
+      "category": "optimization",
+      "tags": [
+        "optimization",
+        "state_map",
+        "heatmap"
+      ],
+      "description": "优化算法可视化状态热力图（heatmap 模式，合成数据）"
+    },
+    {
+      "name": "optimization_viz_response_surface",
+      "category": "optimization",
+      "tags": [
+        "optimization",
+        "response_surface",
+        "contour"
+      ],
+      "description": "优化算法可视化响应等值面（contour 模式，合成数据）"
+    },
+    {
+      "name": "optimization_viz_cluster_view",
+      "category": "optimization",
+      "tags": [
+        "optimization",
+        "cluster_view",
+        "cluster"
+      ],
+      "description": "优化算法可视化状态聚类散点（cluster 模式，合成数据）"
+    },
+    {
+      "name": "optimization_viz_rank_profile",
+      "category": "optimization",
+      "tags": [
+        "optimization",
+        "rank_profile",
+        "ranking"
+      ],
+      "description": "优化算法可视化指标排序条形（ranking 模式，合成数据）"
+    },
+    {
+      "name": "optimization_viz_score_radar",
+      "category": "optimization",
+      "tags": [
+        "optimization",
+        "score_radar",
+        "radar"
+      ],
+      "description": "优化算法可视化多维评分雷达（radar 模式，合成数据）"
+    },
+    {
+      "name": "optimization_viz_contribution_bridge",
+      "category": "optimization",
+      "tags": [
+        "optimization",
+        "contribution_bridge",
+        "waterfall"
+      ],
+      "description": "优化算法可视化贡献瀑布桥（waterfall 模式，合成数据）"
+    },
+    {
+      "name": "optimization_viz_scenario_facets",
+      "category": "optimization",
+      "tags": [
+        "optimization",
+        "scenario_facets",
+        "small-multiples"
+      ],
+      "description": "优化算法可视化场景分面（small-multiples 模式，合成数据）"
+    },
+    {
+      "name": "optimization_viz_polar_signature",
+      "category": "optimization",
+      "tags": [
+        "optimization",
+        "polar_signature",
+        "polar"
+      ],
+      "description": "优化算法可视化极坐标指纹（polar 模式，合成数据）"
+    },
+    {
+      "name": "optimization_viz_phase_portrait",
+      "category": "optimization",
+      "tags": [
+        "optimization",
+        "phase_portrait",
+        "phase-plane"
+      ],
+      "description": "优化算法可视化相平面画像（phase-plane 模式，合成数据）"
+    },
+    {
+      "name": "optimization_viz_distribution_shift",
+      "category": "optimization",
+      "tags": [
+        "optimization",
+        "distribution_shift",
+        "distribution"
+      ],
+      "description": "优化算法可视化分布漂移（distribution 模式，合成数据）"
+    },
+    {
+      "name": "optimization_viz_interaction_matrix",
+      "category": "optimization",
+      "tags": [
+        "optimization",
+        "interaction_matrix",
+        "matrix"
+      ],
+      "description": "优化算法可视化交互气泡矩阵（matrix 模式，合成数据）"
+    },
+    {
+      "name": "optimization_viz_factor_lollipop",
+      "category": "optimization",
+      "tags": [
+        "optimization",
+        "factor_lollipop",
+        "lollipop"
+      ],
+      "description": "优化算法可视化因子棒棒糖（lollipop 模式，合成数据）"
+    },
+    {
+      "name": "optimization_viz_interval_forest",
+      "category": "optimization",
+      "tags": [
+        "optimization",
+        "interval_forest",
+        "interval"
+      ],
+      "description": "优化算法可视化区间森林图（interval 模式，合成数据）"
+    },
+    {
+      "name": "optimization_viz_composition_stream",
+      "category": "optimization",
+      "tags": [
+        "optimization",
+        "composition_stream",
+        "stacked-area"
+      ],
+      "description": "优化算法可视化组成流面积（stacked-area 模式，合成数据）"
+    },
+    {
+      "name": "optimization_viz_stage_step",
+      "category": "optimization",
+      "tags": [
+        "optimization",
+        "stage_step",
+        "step"
+      ],
+      "description": "优化算法可视化阶段阶梯曲线（step 模式，合成数据）"
+    },
+    {
+      "name": "optimization_viz_surface3d",
+      "category": "optimization",
+      "tags": [
+        "optimization",
+        "surface3d",
+        "3d-surface"
+      ],
+      "description": "优化算法可视化三维响应曲面（3d-surface 模式，合成数据）"
+    },
+    {
+      "name": "optimization_viz_calendar_grid",
+      "category": "optimization",
+      "tags": [
+        "optimization",
+        "calendar_grid",
+        "calendar-grid"
+      ],
+      "description": "优化算法可视化日历网格（calendar-grid 模式，合成数据）"
+    },
+    {
+      "name": "optimization_viz_before_after",
+      "category": "optimization",
+      "tags": [
+        "optimization",
+        "before_after",
+        "slope"
+      ],
+      "description": "优化算法可视化前后斜率对比（slope 模式，合成数据）"
+    },
+    {
+      "name": "optimization_viz_decision_boundary",
+      "category": "optimization",
+      "tags": [
+        "optimization",
+        "decision_boundary",
+        "decision-map"
+      ],
+      "description": "优化算法可视化决策边界图（decision-map 模式，合成数据）"
+    },
+    {
+      "name": "quantum_semiconductor_monitoring",
+      "category": "specialty",
+      "tags": [
+        "semiconductor",
+        "monitoring",
+        "time-band"
+      ],
+      "description": "量子与半导体监测带状时序（time-band 模式，合成数据）"
+    },
+    {
+      "name": "quantum_semiconductor_limit_watch",
+      "category": "specialty",
+      "tags": [
+        "semiconductor",
+        "limit_watch",
+        "control-limit"
+      ],
+      "description": "量子与半导体控制限监测（control-limit 模式，合成数据）"
+    },
+    {
+      "name": "quantum_semiconductor_state_map",
+      "category": "specialty",
+      "tags": [
+        "semiconductor",
+        "state_map",
+        "heatmap"
+      ],
+      "description": "量子与半导体状态热力图（heatmap 模式，合成数据）"
+    },
+    {
+      "name": "quantum_semiconductor_response_surface",
+      "category": "specialty",
+      "tags": [
+        "semiconductor",
+        "response_surface",
+        "contour"
+      ],
+      "description": "量子与半导体响应等值面（contour 模式，合成数据）"
+    },
+    {
+      "name": "quantum_semiconductor_cluster_view",
+      "category": "specialty",
+      "tags": [
+        "semiconductor",
+        "cluster_view",
+        "cluster"
+      ],
+      "description": "量子与半导体状态聚类散点（cluster 模式，合成数据）"
+    },
+    {
+      "name": "quantum_semiconductor_rank_profile",
+      "category": "specialty",
+      "tags": [
+        "semiconductor",
+        "rank_profile",
+        "ranking"
+      ],
+      "description": "量子与半导体指标排序条形（ranking 模式，合成数据）"
+    },
+    {
+      "name": "quantum_semiconductor_score_radar",
+      "category": "specialty",
+      "tags": [
+        "semiconductor",
+        "score_radar",
+        "radar"
+      ],
+      "description": "量子与半导体多维评分雷达（radar 模式，合成数据）"
+    },
+    {
+      "name": "quantum_semiconductor_contribution_bridge",
+      "category": "specialty",
+      "tags": [
+        "semiconductor",
+        "contribution_bridge",
+        "waterfall"
+      ],
+      "description": "量子与半导体贡献瀑布桥（waterfall 模式，合成数据）"
+    },
+    {
+      "name": "quantum_semiconductor_scenario_facets",
+      "category": "specialty",
+      "tags": [
+        "semiconductor",
+        "scenario_facets",
+        "small-multiples"
+      ],
+      "description": "量子与半导体场景分面（small-multiples 模式，合成数据）"
+    },
+    {
+      "name": "quantum_semiconductor_polar_signature",
+      "category": "specialty",
+      "tags": [
+        "semiconductor",
+        "polar_signature",
+        "polar"
+      ],
+      "description": "量子与半导体极坐标指纹（polar 模式，合成数据）"
+    },
+    {
+      "name": "quantum_semiconductor_phase_portrait",
+      "category": "specialty",
+      "tags": [
+        "semiconductor",
+        "phase_portrait",
+        "phase-plane"
+      ],
+      "description": "量子与半导体相平面画像（phase-plane 模式，合成数据）"
+    },
+    {
+      "name": "quantum_semiconductor_distribution_shift",
+      "category": "specialty",
+      "tags": [
+        "semiconductor",
+        "distribution_shift",
+        "distribution"
+      ],
+      "description": "量子与半导体分布漂移（distribution 模式，合成数据）"
+    },
+    {
+      "name": "quantum_semiconductor_interaction_matrix",
+      "category": "specialty",
+      "tags": [
+        "semiconductor",
+        "interaction_matrix",
+        "matrix"
+      ],
+      "description": "量子与半导体交互气泡矩阵（matrix 模式，合成数据）"
+    },
+    {
+      "name": "quantum_semiconductor_factor_lollipop",
+      "category": "specialty",
+      "tags": [
+        "semiconductor",
+        "factor_lollipop",
+        "lollipop"
+      ],
+      "description": "量子与半导体因子棒棒糖（lollipop 模式，合成数据）"
+    },
+    {
+      "name": "quantum_semiconductor_interval_forest",
+      "category": "specialty",
+      "tags": [
+        "semiconductor",
+        "interval_forest",
+        "interval"
+      ],
+      "description": "量子与半导体区间森林图（interval 模式，合成数据）"
+    },
+    {
+      "name": "quantum_semiconductor_composition_stream",
+      "category": "specialty",
+      "tags": [
+        "semiconductor",
+        "composition_stream",
+        "stacked-area"
+      ],
+      "description": "量子与半导体组成流面积（stacked-area 模式，合成数据）"
+    },
+    {
+      "name": "quantum_semiconductor_stage_step",
+      "category": "specialty",
+      "tags": [
+        "semiconductor",
+        "stage_step",
+        "step"
+      ],
+      "description": "量子与半导体阶段阶梯曲线（step 模式，合成数据）"
+    },
+    {
+      "name": "quantum_semiconductor_surface3d",
+      "category": "specialty",
+      "tags": [
+        "semiconductor",
+        "surface3d",
+        "3d-surface"
+      ],
+      "description": "量子与半导体三维响应曲面（3d-surface 模式，合成数据）"
+    },
+    {
+      "name": "quantum_semiconductor_calendar_grid",
+      "category": "specialty",
+      "tags": [
+        "semiconductor",
+        "calendar_grid",
+        "calendar-grid"
+      ],
+      "description": "量子与半导体日历网格（calendar-grid 模式，合成数据）"
+    },
+    {
+      "name": "quantum_semiconductor_before_after",
+      "category": "specialty",
+      "tags": [
+        "semiconductor",
+        "before_after",
+        "slope"
+      ],
+      "description": "量子与半导体前后斜率对比（slope 模式，合成数据）"
+    },
+    {
+      "name": "quantum_semiconductor_decision_boundary",
+      "category": "specialty",
+      "tags": [
+        "semiconductor",
+        "decision_boundary",
+        "decision-map"
+      ],
+      "description": "量子与半导体决策边界图（decision-map 模式，合成数据）"
+    },
+    {
+      "name": "acoustic_voice_monitoring",
+      "category": "signal",
+      "tags": [
+        "acoustics",
+        "monitoring",
+        "time-band"
+      ],
+      "description": "声学与声纹监测带状时序（time-band 模式，合成数据）"
+    },
+    {
+      "name": "acoustic_voice_limit_watch",
+      "category": "signal",
+      "tags": [
+        "acoustics",
+        "limit_watch",
+        "control-limit"
+      ],
+      "description": "声学与声纹控制限监测（control-limit 模式，合成数据）"
+    },
+    {
+      "name": "acoustic_voice_state_map",
+      "category": "signal",
+      "tags": [
+        "acoustics",
+        "state_map",
+        "heatmap"
+      ],
+      "description": "声学与声纹状态热力图（heatmap 模式，合成数据）"
+    },
+    {
+      "name": "acoustic_voice_response_surface",
+      "category": "signal",
+      "tags": [
+        "acoustics",
+        "response_surface",
+        "contour"
+      ],
+      "description": "声学与声纹响应等值面（contour 模式，合成数据）"
+    },
+    {
+      "name": "acoustic_voice_cluster_view",
+      "category": "signal",
+      "tags": [
+        "acoustics",
+        "cluster_view",
+        "cluster"
+      ],
+      "description": "声学与声纹状态聚类散点（cluster 模式，合成数据）"
+    },
+    {
+      "name": "acoustic_voice_rank_profile",
+      "category": "signal",
+      "tags": [
+        "acoustics",
+        "rank_profile",
+        "ranking"
+      ],
+      "description": "声学与声纹指标排序条形（ranking 模式，合成数据）"
+    },
+    {
+      "name": "acoustic_voice_score_radar",
+      "category": "signal",
+      "tags": [
+        "acoustics",
+        "score_radar",
+        "radar"
+      ],
+      "description": "声学与声纹多维评分雷达（radar 模式，合成数据）"
+    },
+    {
+      "name": "acoustic_voice_contribution_bridge",
+      "category": "signal",
+      "tags": [
+        "acoustics",
+        "contribution_bridge",
+        "waterfall"
+      ],
+      "description": "声学与声纹贡献瀑布桥（waterfall 模式，合成数据）"
+    },
+    {
+      "name": "acoustic_voice_scenario_facets",
+      "category": "signal",
+      "tags": [
+        "acoustics",
+        "scenario_facets",
+        "small-multiples"
+      ],
+      "description": "声学与声纹场景分面（small-multiples 模式，合成数据）"
+    },
+    {
+      "name": "acoustic_voice_polar_signature",
+      "category": "signal",
+      "tags": [
+        "acoustics",
+        "polar_signature",
+        "polar"
+      ],
+      "description": "声学与声纹极坐标指纹（polar 模式，合成数据）"
+    },
+    {
+      "name": "acoustic_voice_phase_portrait",
+      "category": "signal",
+      "tags": [
+        "acoustics",
+        "phase_portrait",
+        "phase-plane"
+      ],
+      "description": "声学与声纹相平面画像（phase-plane 模式，合成数据）"
+    },
+    {
+      "name": "acoustic_voice_distribution_shift",
+      "category": "signal",
+      "tags": [
+        "acoustics",
+        "distribution_shift",
+        "distribution"
+      ],
+      "description": "声学与声纹分布漂移（distribution 模式，合成数据）"
+    },
+    {
+      "name": "acoustic_voice_interaction_matrix",
+      "category": "signal",
+      "tags": [
+        "acoustics",
+        "interaction_matrix",
+        "matrix"
+      ],
+      "description": "声学与声纹交互气泡矩阵（matrix 模式，合成数据）"
+    },
+    {
+      "name": "acoustic_voice_factor_lollipop",
+      "category": "signal",
+      "tags": [
+        "acoustics",
+        "factor_lollipop",
+        "lollipop"
+      ],
+      "description": "声学与声纹因子棒棒糖（lollipop 模式，合成数据）"
+    },
+    {
+      "name": "acoustic_voice_interval_forest",
+      "category": "signal",
+      "tags": [
+        "acoustics",
+        "interval_forest",
+        "interval"
+      ],
+      "description": "声学与声纹区间森林图（interval 模式，合成数据）"
+    },
+    {
+      "name": "acoustic_voice_composition_stream",
+      "category": "signal",
+      "tags": [
+        "acoustics",
+        "composition_stream",
+        "stacked-area"
+      ],
+      "description": "声学与声纹组成流面积（stacked-area 模式，合成数据）"
+    },
+    {
+      "name": "acoustic_voice_stage_step",
+      "category": "signal",
+      "tags": [
+        "acoustics",
+        "stage_step",
+        "step"
+      ],
+      "description": "声学与声纹阶段阶梯曲线（step 模式，合成数据）"
+    },
+    {
+      "name": "acoustic_voice_surface3d",
+      "category": "signal",
+      "tags": [
+        "acoustics",
+        "surface3d",
+        "3d-surface"
+      ],
+      "description": "声学与声纹三维响应曲面（3d-surface 模式，合成数据）"
+    },
+    {
+      "name": "acoustic_voice_calendar_grid",
+      "category": "signal",
+      "tags": [
+        "acoustics",
+        "calendar_grid",
+        "calendar-grid"
+      ],
+      "description": "声学与声纹日历网格（calendar-grid 模式，合成数据）"
+    },
+    {
+      "name": "acoustic_voice_before_after",
+      "category": "signal",
+      "tags": [
+        "acoustics",
+        "before_after",
+        "slope"
+      ],
+      "description": "声学与声纹前后斜率对比（slope 模式，合成数据）"
+    },
+    {
+      "name": "acoustic_voice_decision_boundary",
+      "category": "signal",
+      "tags": [
+        "acoustics",
+        "decision_boundary",
+        "decision-map"
+      ],
+      "description": "声学与声纹决策边界图（decision-map 模式，合成数据）"
+    },
+    {
+      "name": "education_diagram_monitoring",
+      "category": "diagram",
+      "tags": [
+        "education",
+        "monitoring",
+        "time-band"
+      ],
+      "description": "教学图解监测带状时序（time-band 模式，合成数据）"
+    },
+    {
+      "name": "education_diagram_limit_watch",
+      "category": "diagram",
+      "tags": [
+        "education",
+        "limit_watch",
+        "control-limit"
+      ],
+      "description": "教学图解控制限监测（control-limit 模式，合成数据）"
+    },
+    {
+      "name": "education_diagram_state_map",
+      "category": "diagram",
+      "tags": [
+        "education",
+        "state_map",
+        "heatmap"
+      ],
+      "description": "教学图解状态热力图（heatmap 模式，合成数据）"
+    },
+    {
+      "name": "education_diagram_response_surface",
+      "category": "diagram",
+      "tags": [
+        "education",
+        "response_surface",
+        "contour"
+      ],
+      "description": "教学图解响应等值面（contour 模式，合成数据）"
+    },
+    {
+      "name": "education_diagram_cluster_view",
+      "category": "diagram",
+      "tags": [
+        "education",
+        "cluster_view",
+        "cluster"
+      ],
+      "description": "教学图解状态聚类散点（cluster 模式，合成数据）"
+    },
+    {
+      "name": "education_diagram_rank_profile",
+      "category": "diagram",
+      "tags": [
+        "education",
+        "rank_profile",
+        "ranking"
+      ],
+      "description": "教学图解指标排序条形（ranking 模式，合成数据）"
+    },
+    {
+      "name": "education_diagram_score_radar",
+      "category": "diagram",
+      "tags": [
+        "education",
+        "score_radar",
+        "radar"
+      ],
+      "description": "教学图解多维评分雷达（radar 模式，合成数据）"
+    },
+    {
+      "name": "education_diagram_contribution_bridge",
+      "category": "diagram",
+      "tags": [
+        "education",
+        "contribution_bridge",
+        "waterfall"
+      ],
+      "description": "教学图解贡献瀑布桥（waterfall 模式，合成数据）"
+    },
+    {
+      "name": "education_diagram_scenario_facets",
+      "category": "diagram",
+      "tags": [
+        "education",
+        "scenario_facets",
+        "small-multiples"
+      ],
+      "description": "教学图解场景分面（small-multiples 模式，合成数据）"
+    },
+    {
+      "name": "education_diagram_polar_signature",
+      "category": "diagram",
+      "tags": [
+        "education",
+        "polar_signature",
+        "polar"
+      ],
+      "description": "教学图解极坐标指纹（polar 模式，合成数据）"
+    },
+    {
+      "name": "education_diagram_phase_portrait",
+      "category": "diagram",
+      "tags": [
+        "education",
+        "phase_portrait",
+        "phase-plane"
+      ],
+      "description": "教学图解相平面画像（phase-plane 模式，合成数据）"
+    },
+    {
+      "name": "education_diagram_distribution_shift",
+      "category": "diagram",
+      "tags": [
+        "education",
+        "distribution_shift",
+        "distribution"
+      ],
+      "description": "教学图解分布漂移（distribution 模式，合成数据）"
+    },
+    {
+      "name": "education_diagram_interaction_matrix",
+      "category": "diagram",
+      "tags": [
+        "education",
+        "interaction_matrix",
+        "matrix"
+      ],
+      "description": "教学图解交互气泡矩阵（matrix 模式，合成数据）"
+    },
+    {
+      "name": "education_diagram_factor_lollipop",
+      "category": "diagram",
+      "tags": [
+        "education",
+        "factor_lollipop",
+        "lollipop"
+      ],
+      "description": "教学图解因子棒棒糖（lollipop 模式，合成数据）"
+    },
+    {
+      "name": "education_diagram_interval_forest",
+      "category": "diagram",
+      "tags": [
+        "education",
+        "interval_forest",
+        "interval"
+      ],
+      "description": "教学图解区间森林图（interval 模式，合成数据）"
+    },
+    {
+      "name": "education_diagram_composition_stream",
+      "category": "diagram",
+      "tags": [
+        "education",
+        "composition_stream",
+        "stacked-area"
+      ],
+      "description": "教学图解组成流面积（stacked-area 模式，合成数据）"
+    },
+    {
+      "name": "education_diagram_stage_step",
+      "category": "diagram",
+      "tags": [
+        "education",
+        "stage_step",
+        "step"
+      ],
+      "description": "教学图解阶段阶梯曲线（step 模式，合成数据）"
+    },
+    {
+      "name": "education_diagram_surface3d",
+      "category": "diagram",
+      "tags": [
+        "education",
+        "surface3d",
+        "3d-surface"
+      ],
+      "description": "教学图解三维响应曲面（3d-surface 模式，合成数据）"
+    },
+    {
+      "name": "education_diagram_calendar_grid",
+      "category": "diagram",
+      "tags": [
+        "education",
+        "calendar_grid",
+        "calendar-grid"
+      ],
+      "description": "教学图解日历网格（calendar-grid 模式，合成数据）"
+    },
+    {
+      "name": "education_diagram_before_after",
+      "category": "diagram",
+      "tags": [
+        "education",
+        "before_after",
+        "slope"
+      ],
+      "description": "教学图解前后斜率对比（slope 模式，合成数据）"
+    },
+    {
+      "name": "education_diagram_decision_boundary",
+      "category": "diagram",
+      "tags": [
+        "education",
+        "decision_boundary",
+        "decision-map"
+      ],
+      "description": "教学图解决策边界图（decision-map 模式，合成数据）"
+    },
+    {
+      "name": "reliability_maintenance_monitoring",
+      "category": "statistical",
+      "tags": [
+        "reliability",
+        "monitoring",
+        "time-band"
+      ],
+      "description": "可靠性与维修监测带状时序（time-band 模式，合成数据）"
+    },
+    {
+      "name": "reliability_maintenance_limit_watch",
+      "category": "statistical",
+      "tags": [
+        "reliability",
+        "limit_watch",
+        "control-limit"
+      ],
+      "description": "可靠性与维修控制限监测（control-limit 模式，合成数据）"
+    },
+    {
+      "name": "reliability_maintenance_state_map",
+      "category": "statistical",
+      "tags": [
+        "reliability",
+        "state_map",
+        "heatmap"
+      ],
+      "description": "可靠性与维修状态热力图（heatmap 模式，合成数据）"
+    },
+    {
+      "name": "reliability_maintenance_response_surface",
+      "category": "statistical",
+      "tags": [
+        "reliability",
+        "response_surface",
+        "contour"
+      ],
+      "description": "可靠性与维修响应等值面（contour 模式，合成数据）"
+    },
+    {
+      "name": "reliability_maintenance_cluster_view",
+      "category": "statistical",
+      "tags": [
+        "reliability",
+        "cluster_view",
+        "cluster"
+      ],
+      "description": "可靠性与维修状态聚类散点（cluster 模式，合成数据）"
+    },
+    {
+      "name": "reliability_maintenance_rank_profile",
+      "category": "statistical",
+      "tags": [
+        "reliability",
+        "rank_profile",
+        "ranking"
+      ],
+      "description": "可靠性与维修指标排序条形（ranking 模式，合成数据）"
+    },
+    {
+      "name": "reliability_maintenance_score_radar",
+      "category": "statistical",
+      "tags": [
+        "reliability",
+        "score_radar",
+        "radar"
+      ],
+      "description": "可靠性与维修多维评分雷达（radar 模式，合成数据）"
+    },
+    {
+      "name": "reliability_maintenance_contribution_bridge",
+      "category": "statistical",
+      "tags": [
+        "reliability",
+        "contribution_bridge",
+        "waterfall"
+      ],
+      "description": "可靠性与维修贡献瀑布桥（waterfall 模式，合成数据）"
+    },
+    {
+      "name": "reliability_maintenance_scenario_facets",
+      "category": "statistical",
+      "tags": [
+        "reliability",
+        "scenario_facets",
+        "small-multiples"
+      ],
+      "description": "可靠性与维修场景分面（small-multiples 模式，合成数据）"
+    },
+    {
+      "name": "reliability_maintenance_polar_signature",
+      "category": "statistical",
+      "tags": [
+        "reliability",
+        "polar_signature",
+        "polar"
+      ],
+      "description": "可靠性与维修极坐标指纹（polar 模式，合成数据）"
+    },
+    {
+      "name": "reliability_maintenance_phase_portrait",
+      "category": "statistical",
+      "tags": [
+        "reliability",
+        "phase_portrait",
+        "phase-plane"
+      ],
+      "description": "可靠性与维修相平面画像（phase-plane 模式，合成数据）"
+    },
+    {
+      "name": "reliability_maintenance_distribution_shift",
+      "category": "statistical",
+      "tags": [
+        "reliability",
+        "distribution_shift",
+        "distribution"
+      ],
+      "description": "可靠性与维修分布漂移（distribution 模式，合成数据）"
+    },
+    {
+      "name": "reliability_maintenance_interaction_matrix",
+      "category": "statistical",
+      "tags": [
+        "reliability",
+        "interaction_matrix",
+        "matrix"
+      ],
+      "description": "可靠性与维修交互气泡矩阵（matrix 模式，合成数据）"
+    },
+    {
+      "name": "reliability_maintenance_factor_lollipop",
+      "category": "statistical",
+      "tags": [
+        "reliability",
+        "factor_lollipop",
+        "lollipop"
+      ],
+      "description": "可靠性与维修因子棒棒糖（lollipop 模式，合成数据）"
+    },
+    {
+      "name": "reliability_maintenance_interval_forest",
+      "category": "statistical",
+      "tags": [
+        "reliability",
+        "interval_forest",
+        "interval"
+      ],
+      "description": "可靠性与维修区间森林图（interval 模式，合成数据）"
+    },
+    {
+      "name": "reliability_maintenance_composition_stream",
+      "category": "statistical",
+      "tags": [
+        "reliability",
+        "composition_stream",
+        "stacked-area"
+      ],
+      "description": "可靠性与维修组成流面积（stacked-area 模式，合成数据）"
+    },
+    {
+      "name": "reliability_maintenance_stage_step",
+      "category": "statistical",
+      "tags": [
+        "reliability",
+        "stage_step",
+        "step"
+      ],
+      "description": "可靠性与维修阶段阶梯曲线（step 模式，合成数据）"
+    },
+    {
+      "name": "reliability_maintenance_surface3d",
+      "category": "statistical",
+      "tags": [
+        "reliability",
+        "surface3d",
+        "3d-surface"
+      ],
+      "description": "可靠性与维修三维响应曲面（3d-surface 模式，合成数据）"
+    },
+    {
+      "name": "reliability_maintenance_calendar_grid",
+      "category": "statistical",
+      "tags": [
+        "reliability",
+        "calendar_grid",
+        "calendar-grid"
+      ],
+      "description": "可靠性与维修日历网格（calendar-grid 模式，合成数据）"
+    },
+    {
+      "name": "reliability_maintenance_before_after",
+      "category": "statistical",
+      "tags": [
+        "reliability",
+        "before_after",
+        "slope"
+      ],
+      "description": "可靠性与维修前后斜率对比（slope 模式，合成数据）"
+    },
+    {
+      "name": "reliability_maintenance_decision_boundary",
+      "category": "statistical",
+      "tags": [
+        "reliability",
+        "decision_boundary",
+        "decision-map"
+      ],
+      "description": "可靠性与维修决策边界图（decision-map 模式，合成数据）"
+    },
+    {
+      "name": "logistics_network_monitoring",
+      "category": "relation",
+      "tags": [
+        "logistics",
+        "monitoring",
+        "time-band"
+      ],
+      "description": "物流与网络监测带状时序（time-band 模式，合成数据）"
+    },
+    {
+      "name": "logistics_network_limit_watch",
+      "category": "relation",
+      "tags": [
+        "logistics",
+        "limit_watch",
+        "control-limit"
+      ],
+      "description": "物流与网络控制限监测（control-limit 模式，合成数据）"
+    },
+    {
+      "name": "logistics_network_state_map",
+      "category": "relation",
+      "tags": [
+        "logistics",
+        "state_map",
+        "heatmap"
+      ],
+      "description": "物流与网络状态热力图（heatmap 模式，合成数据）"
+    },
+    {
+      "name": "logistics_network_response_surface",
+      "category": "relation",
+      "tags": [
+        "logistics",
+        "response_surface",
+        "contour"
+      ],
+      "description": "物流与网络响应等值面（contour 模式，合成数据）"
+    },
+    {
+      "name": "logistics_network_cluster_view",
+      "category": "relation",
+      "tags": [
+        "logistics",
+        "cluster_view",
+        "cluster"
+      ],
+      "description": "物流与网络状态聚类散点（cluster 模式，合成数据）"
+    },
+    {
+      "name": "logistics_network_rank_profile",
+      "category": "relation",
+      "tags": [
+        "logistics",
+        "rank_profile",
+        "ranking"
+      ],
+      "description": "物流与网络指标排序条形（ranking 模式，合成数据）"
+    },
+    {
+      "name": "logistics_network_score_radar",
+      "category": "relation",
+      "tags": [
+        "logistics",
+        "score_radar",
+        "radar"
+      ],
+      "description": "物流与网络多维评分雷达（radar 模式，合成数据）"
+    },
+    {
+      "name": "logistics_network_contribution_bridge",
+      "category": "relation",
+      "tags": [
+        "logistics",
+        "contribution_bridge",
+        "waterfall"
+      ],
+      "description": "物流与网络贡献瀑布桥（waterfall 模式，合成数据）"
+    },
+    {
+      "name": "logistics_network_scenario_facets",
+      "category": "relation",
+      "tags": [
+        "logistics",
+        "scenario_facets",
+        "small-multiples"
+      ],
+      "description": "物流与网络场景分面（small-multiples 模式，合成数据）"
+    },
+    {
+      "name": "logistics_network_polar_signature",
+      "category": "relation",
+      "tags": [
+        "logistics",
+        "polar_signature",
+        "polar"
+      ],
+      "description": "物流与网络极坐标指纹（polar 模式，合成数据）"
+    },
+    {
+      "name": "logistics_network_phase_portrait",
+      "category": "relation",
+      "tags": [
+        "logistics",
+        "phase_portrait",
+        "phase-plane"
+      ],
+      "description": "物流与网络相平面画像（phase-plane 模式，合成数据）"
+    },
+    {
+      "name": "logistics_network_distribution_shift",
+      "category": "relation",
+      "tags": [
+        "logistics",
+        "distribution_shift",
+        "distribution"
+      ],
+      "description": "物流与网络分布漂移（distribution 模式，合成数据）"
+    },
+    {
+      "name": "logistics_network_interaction_matrix",
+      "category": "relation",
+      "tags": [
+        "logistics",
+        "interaction_matrix",
+        "matrix"
+      ],
+      "description": "物流与网络交互气泡矩阵（matrix 模式，合成数据）"
+    },
+    {
+      "name": "logistics_network_factor_lollipop",
+      "category": "relation",
+      "tags": [
+        "logistics",
+        "factor_lollipop",
+        "lollipop"
+      ],
+      "description": "物流与网络因子棒棒糖（lollipop 模式，合成数据）"
+    },
+    {
+      "name": "logistics_network_interval_forest",
+      "category": "relation",
+      "tags": [
+        "logistics",
+        "interval_forest",
+        "interval"
+      ],
+      "description": "物流与网络区间森林图（interval 模式，合成数据）"
+    },
+    {
+      "name": "logistics_network_composition_stream",
+      "category": "relation",
+      "tags": [
+        "logistics",
+        "composition_stream",
+        "stacked-area"
+      ],
+      "description": "物流与网络组成流面积（stacked-area 模式，合成数据）"
+    },
+    {
+      "name": "logistics_network_stage_step",
+      "category": "relation",
+      "tags": [
+        "logistics",
+        "stage_step",
+        "step"
+      ],
+      "description": "物流与网络阶段阶梯曲线（step 模式，合成数据）"
+    },
+    {
+      "name": "logistics_network_surface3d",
+      "category": "relation",
+      "tags": [
+        "logistics",
+        "surface3d",
+        "3d-surface"
+      ],
+      "description": "物流与网络三维响应曲面（3d-surface 模式，合成数据）"
+    },
+    {
+      "name": "logistics_network_calendar_grid",
+      "category": "relation",
+      "tags": [
+        "logistics",
+        "calendar_grid",
+        "calendar-grid"
+      ],
+      "description": "物流与网络日历网格（calendar-grid 模式，合成数据）"
+    },
+    {
+      "name": "logistics_network_before_after",
+      "category": "relation",
+      "tags": [
+        "logistics",
+        "before_after",
+        "slope"
+      ],
+      "description": "物流与网络前后斜率对比（slope 模式，合成数据）"
+    },
+    {
+      "name": "logistics_network_decision_boundary",
+      "category": "relation",
+      "tags": [
+        "logistics",
+        "decision_boundary",
+        "decision-map"
+      ],
+      "description": "物流与网络决策边界图（decision-map 模式，合成数据）"
+    },
+    {
+      "name": "epidemic_model_monitoring",
+      "category": "statistical",
+      "tags": [
+        "epidemic",
+        "monitoring",
+        "time-band"
+      ],
+      "description": "传播动力学监测带状时序（time-band 模式，合成数据）"
+    },
+    {
+      "name": "epidemic_model_limit_watch",
+      "category": "statistical",
+      "tags": [
+        "epidemic",
+        "limit_watch",
+        "control-limit"
+      ],
+      "description": "传播动力学控制限监测（control-limit 模式，合成数据）"
+    },
+    {
+      "name": "epidemic_model_state_map",
+      "category": "statistical",
+      "tags": [
+        "epidemic",
+        "state_map",
+        "heatmap"
+      ],
+      "description": "传播动力学状态热力图（heatmap 模式，合成数据）"
+    },
+    {
+      "name": "epidemic_model_response_surface",
+      "category": "statistical",
+      "tags": [
+        "epidemic",
+        "response_surface",
+        "contour"
+      ],
+      "description": "传播动力学响应等值面（contour 模式，合成数据）"
+    },
+    {
+      "name": "epidemic_model_cluster_view",
+      "category": "statistical",
+      "tags": [
+        "epidemic",
+        "cluster_view",
+        "cluster"
+      ],
+      "description": "传播动力学状态聚类散点（cluster 模式，合成数据）"
+    },
+    {
+      "name": "epidemic_model_rank_profile",
+      "category": "statistical",
+      "tags": [
+        "epidemic",
+        "rank_profile",
+        "ranking"
+      ],
+      "description": "传播动力学指标排序条形（ranking 模式，合成数据）"
+    },
+    {
+      "name": "epidemic_model_score_radar",
+      "category": "statistical",
+      "tags": [
+        "epidemic",
+        "score_radar",
+        "radar"
+      ],
+      "description": "传播动力学多维评分雷达（radar 模式，合成数据）"
+    },
+    {
+      "name": "epidemic_model_contribution_bridge",
+      "category": "statistical",
+      "tags": [
+        "epidemic",
+        "contribution_bridge",
+        "waterfall"
+      ],
+      "description": "传播动力学贡献瀑布桥（waterfall 模式，合成数据）"
+    },
+    {
+      "name": "epidemic_model_scenario_facets",
+      "category": "statistical",
+      "tags": [
+        "epidemic",
+        "scenario_facets",
+        "small-multiples"
+      ],
+      "description": "传播动力学场景分面（small-multiples 模式，合成数据）"
+    },
+    {
+      "name": "epidemic_model_polar_signature",
+      "category": "statistical",
+      "tags": [
+        "epidemic",
+        "polar_signature",
+        "polar"
+      ],
+      "description": "传播动力学极坐标指纹（polar 模式，合成数据）"
+    },
+    {
+      "name": "epidemic_model_phase_portrait",
+      "category": "statistical",
+      "tags": [
+        "epidemic",
+        "phase_portrait",
+        "phase-plane"
+      ],
+      "description": "传播动力学相平面画像（phase-plane 模式，合成数据）"
+    },
+    {
+      "name": "epidemic_model_distribution_shift",
+      "category": "statistical",
+      "tags": [
+        "epidemic",
+        "distribution_shift",
+        "distribution"
+      ],
+      "description": "传播动力学分布漂移（distribution 模式，合成数据）"
+    },
+    {
+      "name": "epidemic_model_interaction_matrix",
+      "category": "statistical",
+      "tags": [
+        "epidemic",
+        "interaction_matrix",
+        "matrix"
+      ],
+      "description": "传播动力学交互气泡矩阵（matrix 模式，合成数据）"
+    },
+    {
+      "name": "epidemic_model_factor_lollipop",
+      "category": "statistical",
+      "tags": [
+        "epidemic",
+        "factor_lollipop",
+        "lollipop"
+      ],
+      "description": "传播动力学因子棒棒糖（lollipop 模式，合成数据）"
+    },
+    {
+      "name": "epidemic_model_interval_forest",
+      "category": "statistical",
+      "tags": [
+        "epidemic",
+        "interval_forest",
+        "interval"
+      ],
+      "description": "传播动力学区间森林图（interval 模式，合成数据）"
+    },
+    {
+      "name": "epidemic_model_composition_stream",
+      "category": "statistical",
+      "tags": [
+        "epidemic",
+        "composition_stream",
+        "stacked-area"
+      ],
+      "description": "传播动力学组成流面积（stacked-area 模式，合成数据）"
+    },
+    {
+      "name": "epidemic_model_stage_step",
+      "category": "statistical",
+      "tags": [
+        "epidemic",
+        "stage_step",
+        "step"
+      ],
+      "description": "传播动力学阶段阶梯曲线（step 模式，合成数据）"
+    },
+    {
+      "name": "epidemic_model_surface3d",
+      "category": "statistical",
+      "tags": [
+        "epidemic",
+        "surface3d",
+        "3d-surface"
+      ],
+      "description": "传播动力学三维响应曲面（3d-surface 模式，合成数据）"
+    },
+    {
+      "name": "epidemic_model_calendar_grid",
+      "category": "statistical",
+      "tags": [
+        "epidemic",
+        "calendar_grid",
+        "calendar-grid"
+      ],
+      "description": "传播动力学日历网格（calendar-grid 模式，合成数据）"
+    },
+    {
+      "name": "epidemic_model_before_after",
+      "category": "statistical",
+      "tags": [
+        "epidemic",
+        "before_after",
+        "slope"
+      ],
+      "description": "传播动力学前后斜率对比（slope 模式，合成数据）"
+    },
+    {
+      "name": "epidemic_model_decision_boundary",
+      "category": "statistical",
+      "tags": [
+        "epidemic",
+        "decision_boundary",
+        "decision-map"
+      ],
+      "description": "传播动力学决策边界图（decision-map 模式，合成数据）"
+    },
+    {
+      "name": "power_system_deep_monitoring",
+      "category": "power",
+      "tags": [
+        "grid",
+        "monitoring",
+        "time-band"
+      ],
+      "description": "电力系统深化监测带状时序（time-band 模式，合成数据）"
+    },
+    {
+      "name": "power_system_deep_limit_watch",
+      "category": "power",
+      "tags": [
+        "grid",
+        "limit_watch",
+        "control-limit"
+      ],
+      "description": "电力系统深化控制限监测（control-limit 模式，合成数据）"
+    },
+    {
+      "name": "power_system_deep_state_map",
+      "category": "power",
+      "tags": [
+        "grid",
+        "state_map",
+        "heatmap"
+      ],
+      "description": "电力系统深化状态热力图（heatmap 模式，合成数据）"
+    },
+    {
+      "name": "power_system_deep_response_surface",
+      "category": "power",
+      "tags": [
+        "grid",
+        "response_surface",
+        "contour"
+      ],
+      "description": "电力系统深化响应等值面（contour 模式，合成数据）"
+    },
+    {
+      "name": "power_system_deep_cluster_view",
+      "category": "power",
+      "tags": [
+        "grid",
+        "cluster_view",
+        "cluster"
+      ],
+      "description": "电力系统深化状态聚类散点（cluster 模式，合成数据）"
+    },
+    {
+      "name": "power_system_deep_rank_profile",
+      "category": "power",
+      "tags": [
+        "grid",
+        "rank_profile",
+        "ranking"
+      ],
+      "description": "电力系统深化指标排序条形（ranking 模式，合成数据）"
+    },
+    {
+      "name": "power_system_deep_score_radar",
+      "category": "power",
+      "tags": [
+        "grid",
+        "score_radar",
+        "radar"
+      ],
+      "description": "电力系统深化多维评分雷达（radar 模式，合成数据）"
+    },
+    {
+      "name": "power_system_deep_contribution_bridge",
+      "category": "power",
+      "tags": [
+        "grid",
+        "contribution_bridge",
+        "waterfall"
+      ],
+      "description": "电力系统深化贡献瀑布桥（waterfall 模式，合成数据）"
+    },
+    {
+      "name": "power_system_deep_scenario_facets",
+      "category": "power",
+      "tags": [
+        "grid",
+        "scenario_facets",
+        "small-multiples"
+      ],
+      "description": "电力系统深化场景分面（small-multiples 模式，合成数据）"
+    },
+    {
+      "name": "power_system_deep_polar_signature",
+      "category": "power",
+      "tags": [
+        "grid",
+        "polar_signature",
+        "polar"
+      ],
+      "description": "电力系统深化极坐标指纹（polar 模式，合成数据）"
+    },
+    {
+      "name": "power_system_deep_phase_portrait",
+      "category": "power",
+      "tags": [
+        "grid",
+        "phase_portrait",
+        "phase-plane"
+      ],
+      "description": "电力系统深化相平面画像（phase-plane 模式，合成数据）"
+    },
+    {
+      "name": "power_system_deep_distribution_shift",
+      "category": "power",
+      "tags": [
+        "grid",
+        "distribution_shift",
+        "distribution"
+      ],
+      "description": "电力系统深化分布漂移（distribution 模式，合成数据）"
+    },
+    {
+      "name": "power_system_deep_interaction_matrix",
+      "category": "power",
+      "tags": [
+        "grid",
+        "interaction_matrix",
+        "matrix"
+      ],
+      "description": "电力系统深化交互气泡矩阵（matrix 模式，合成数据）"
+    },
+    {
+      "name": "power_system_deep_factor_lollipop",
+      "category": "power",
+      "tags": [
+        "grid",
+        "factor_lollipop",
+        "lollipop"
+      ],
+      "description": "电力系统深化因子棒棒糖（lollipop 模式，合成数据）"
+    },
+    {
+      "name": "power_system_deep_interval_forest",
+      "category": "power",
+      "tags": [
+        "grid",
+        "interval_forest",
+        "interval"
+      ],
+      "description": "电力系统深化区间森林图（interval 模式，合成数据）"
+    },
+    {
+      "name": "power_system_deep_composition_stream",
+      "category": "power",
+      "tags": [
+        "grid",
+        "composition_stream",
+        "stacked-area"
+      ],
+      "description": "电力系统深化组成流面积（stacked-area 模式，合成数据）"
+    },
+    {
+      "name": "power_system_deep_stage_step",
+      "category": "power",
+      "tags": [
+        "grid",
+        "stage_step",
+        "step"
+      ],
+      "description": "电力系统深化阶段阶梯曲线（step 模式，合成数据）"
+    },
+    {
+      "name": "power_system_deep_surface3d",
+      "category": "power",
+      "tags": [
+        "grid",
+        "surface3d",
+        "3d-surface"
+      ],
+      "description": "电力系统深化三维响应曲面（3d-surface 模式，合成数据）"
+    },
+    {
+      "name": "power_system_deep_calendar_grid",
+      "category": "power",
+      "tags": [
+        "grid",
+        "calendar_grid",
+        "calendar-grid"
+      ],
+      "description": "电力系统深化日历网格（calendar-grid 模式，合成数据）"
+    },
+    {
+      "name": "power_system_deep_before_after",
+      "category": "power",
+      "tags": [
+        "grid",
+        "before_after",
+        "slope"
+      ],
+      "description": "电力系统深化前后斜率对比（slope 模式，合成数据）"
+    },
+    {
+      "name": "power_system_deep_decision_boundary",
+      "category": "power",
+      "tags": [
+        "grid",
+        "decision_boundary",
+        "decision-map"
+      ],
+      "description": "电力系统深化决策边界图（decision-map 模式，合成数据）"
+    },
+    {
+      "name": "hvdc_facts_monitoring",
+      "category": "power",
+      "tags": [
+        "hvdc",
+        "monitoring",
+        "time-band"
+      ],
+      "description": "HVDC 与 FACTS监测带状时序（time-band 模式，合成数据）"
+    },
+    {
+      "name": "hvdc_facts_limit_watch",
+      "category": "power",
+      "tags": [
+        "hvdc",
+        "limit_watch",
+        "control-limit"
+      ],
+      "description": "HVDC 与 FACTS控制限监测（control-limit 模式，合成数据）"
+    },
+    {
+      "name": "hvdc_facts_state_map",
+      "category": "power",
+      "tags": [
+        "hvdc",
+        "state_map",
+        "heatmap"
+      ],
+      "description": "HVDC 与 FACTS状态热力图（heatmap 模式，合成数据）"
+    },
+    {
+      "name": "hvdc_facts_response_surface",
+      "category": "power",
+      "tags": [
+        "hvdc",
+        "response_surface",
+        "contour"
+      ],
+      "description": "HVDC 与 FACTS响应等值面（contour 模式，合成数据）"
+    },
+    {
+      "name": "hvdc_facts_cluster_view",
+      "category": "power",
+      "tags": [
+        "hvdc",
+        "cluster_view",
+        "cluster"
+      ],
+      "description": "HVDC 与 FACTS状态聚类散点（cluster 模式，合成数据）"
+    },
+    {
+      "name": "hvdc_facts_rank_profile",
+      "category": "power",
+      "tags": [
+        "hvdc",
+        "rank_profile",
+        "ranking"
+      ],
+      "description": "HVDC 与 FACTS指标排序条形（ranking 模式，合成数据）"
+    },
+    {
+      "name": "hvdc_facts_score_radar",
+      "category": "power",
+      "tags": [
+        "hvdc",
+        "score_radar",
+        "radar"
+      ],
+      "description": "HVDC 与 FACTS多维评分雷达（radar 模式，合成数据）"
+    },
+    {
+      "name": "hvdc_facts_contribution_bridge",
+      "category": "power",
+      "tags": [
+        "hvdc",
+        "contribution_bridge",
+        "waterfall"
+      ],
+      "description": "HVDC 与 FACTS贡献瀑布桥（waterfall 模式，合成数据）"
+    },
+    {
+      "name": "hvdc_facts_scenario_facets",
+      "category": "power",
+      "tags": [
+        "hvdc",
+        "scenario_facets",
+        "small-multiples"
+      ],
+      "description": "HVDC 与 FACTS场景分面（small-multiples 模式，合成数据）"
+    },
+    {
+      "name": "hvdc_facts_polar_signature",
+      "category": "power",
+      "tags": [
+        "hvdc",
+        "polar_signature",
+        "polar"
+      ],
+      "description": "HVDC 与 FACTS极坐标指纹（polar 模式，合成数据）"
+    },
+    {
+      "name": "hvdc_facts_phase_portrait",
+      "category": "power",
+      "tags": [
+        "hvdc",
+        "phase_portrait",
+        "phase-plane"
+      ],
+      "description": "HVDC 与 FACTS相平面画像（phase-plane 模式，合成数据）"
+    },
+    {
+      "name": "hvdc_facts_distribution_shift",
+      "category": "power",
+      "tags": [
+        "hvdc",
+        "distribution_shift",
+        "distribution"
+      ],
+      "description": "HVDC 与 FACTS分布漂移（distribution 模式，合成数据）"
+    },
+    {
+      "name": "hvdc_facts_interaction_matrix",
+      "category": "power",
+      "tags": [
+        "hvdc",
+        "interaction_matrix",
+        "matrix"
+      ],
+      "description": "HVDC 与 FACTS交互气泡矩阵（matrix 模式，合成数据）"
+    },
+    {
+      "name": "hvdc_facts_factor_lollipop",
+      "category": "power",
+      "tags": [
+        "hvdc",
+        "factor_lollipop",
+        "lollipop"
+      ],
+      "description": "HVDC 与 FACTS因子棒棒糖（lollipop 模式，合成数据）"
+    },
+    {
+      "name": "hvdc_facts_interval_forest",
+      "category": "power",
+      "tags": [
+        "hvdc",
+        "interval_forest",
+        "interval"
+      ],
+      "description": "HVDC 与 FACTS区间森林图（interval 模式，合成数据）"
+    },
+    {
+      "name": "hvdc_facts_composition_stream",
+      "category": "power",
+      "tags": [
+        "hvdc",
+        "composition_stream",
+        "stacked-area"
+      ],
+      "description": "HVDC 与 FACTS组成流面积（stacked-area 模式，合成数据）"
+    },
+    {
+      "name": "hvdc_facts_stage_step",
+      "category": "power",
+      "tags": [
+        "hvdc",
+        "stage_step",
+        "step"
+      ],
+      "description": "HVDC 与 FACTS阶段阶梯曲线（step 模式，合成数据）"
+    },
+    {
+      "name": "hvdc_facts_surface3d",
+      "category": "power",
+      "tags": [
+        "hvdc",
+        "surface3d",
+        "3d-surface"
+      ],
+      "description": "HVDC 与 FACTS三维响应曲面（3d-surface 模式，合成数据）"
+    },
+    {
+      "name": "hvdc_facts_calendar_grid",
+      "category": "power",
+      "tags": [
+        "hvdc",
+        "calendar_grid",
+        "calendar-grid"
+      ],
+      "description": "HVDC 与 FACTS日历网格（calendar-grid 模式，合成数据）"
+    },
+    {
+      "name": "hvdc_facts_before_after",
+      "category": "power",
+      "tags": [
+        "hvdc",
+        "before_after",
+        "slope"
+      ],
+      "description": "HVDC 与 FACTS前后斜率对比（slope 模式，合成数据）"
+    },
+    {
+      "name": "hvdc_facts_decision_boundary",
+      "category": "power",
+      "tags": [
+        "hvdc",
+        "decision_boundary",
+        "decision-map"
+      ],
+      "description": "HVDC 与 FACTS决策边界图（decision-map 模式，合成数据）"
+    },
+    {
+      "name": "microgrid_market_monitoring",
+      "category": "energy",
+      "tags": [
+        "microgrid",
+        "monitoring",
+        "time-band"
+      ],
+      "description": "微电网与市场监测带状时序（time-band 模式，合成数据）"
+    },
+    {
+      "name": "microgrid_market_limit_watch",
+      "category": "energy",
+      "tags": [
+        "microgrid",
+        "limit_watch",
+        "control-limit"
+      ],
+      "description": "微电网与市场控制限监测（control-limit 模式，合成数据）"
+    },
+    {
+      "name": "microgrid_market_state_map",
+      "category": "energy",
+      "tags": [
+        "microgrid",
+        "state_map",
+        "heatmap"
+      ],
+      "description": "微电网与市场状态热力图（heatmap 模式，合成数据）"
+    },
+    {
+      "name": "microgrid_market_response_surface",
+      "category": "energy",
+      "tags": [
+        "microgrid",
+        "response_surface",
+        "contour"
+      ],
+      "description": "微电网与市场响应等值面（contour 模式，合成数据）"
+    },
+    {
+      "name": "microgrid_market_cluster_view",
+      "category": "energy",
+      "tags": [
+        "microgrid",
+        "cluster_view",
+        "cluster"
+      ],
+      "description": "微电网与市场状态聚类散点（cluster 模式，合成数据）"
+    },
+    {
+      "name": "microgrid_market_rank_profile",
+      "category": "energy",
+      "tags": [
+        "microgrid",
+        "rank_profile",
+        "ranking"
+      ],
+      "description": "微电网与市场指标排序条形（ranking 模式，合成数据）"
+    },
+    {
+      "name": "microgrid_market_score_radar",
+      "category": "energy",
+      "tags": [
+        "microgrid",
+        "score_radar",
+        "radar"
+      ],
+      "description": "微电网与市场多维评分雷达（radar 模式，合成数据）"
+    },
+    {
+      "name": "microgrid_market_contribution_bridge",
+      "category": "energy",
+      "tags": [
+        "microgrid",
+        "contribution_bridge",
+        "waterfall"
+      ],
+      "description": "微电网与市场贡献瀑布桥（waterfall 模式，合成数据）"
+    },
+    {
+      "name": "microgrid_market_scenario_facets",
+      "category": "energy",
+      "tags": [
+        "microgrid",
+        "scenario_facets",
+        "small-multiples"
+      ],
+      "description": "微电网与市场场景分面（small-multiples 模式，合成数据）"
+    },
+    {
+      "name": "microgrid_market_polar_signature",
+      "category": "energy",
+      "tags": [
+        "microgrid",
+        "polar_signature",
+        "polar"
+      ],
+      "description": "微电网与市场极坐标指纹（polar 模式，合成数据）"
+    },
+    {
+      "name": "microgrid_market_phase_portrait",
+      "category": "energy",
+      "tags": [
+        "microgrid",
+        "phase_portrait",
+        "phase-plane"
+      ],
+      "description": "微电网与市场相平面画像（phase-plane 模式，合成数据）"
+    },
+    {
+      "name": "microgrid_market_distribution_shift",
+      "category": "energy",
+      "tags": [
+        "microgrid",
+        "distribution_shift",
+        "distribution"
+      ],
+      "description": "微电网与市场分布漂移（distribution 模式，合成数据）"
+    },
+    {
+      "name": "microgrid_market_interaction_matrix",
+      "category": "energy",
+      "tags": [
+        "microgrid",
+        "interaction_matrix",
+        "matrix"
+      ],
+      "description": "微电网与市场交互气泡矩阵（matrix 模式，合成数据）"
+    },
+    {
+      "name": "microgrid_market_factor_lollipop",
+      "category": "energy",
+      "tags": [
+        "microgrid",
+        "factor_lollipop",
+        "lollipop"
+      ],
+      "description": "微电网与市场因子棒棒糖（lollipop 模式，合成数据）"
+    },
+    {
+      "name": "microgrid_market_interval_forest",
+      "category": "energy",
+      "tags": [
+        "microgrid",
+        "interval_forest",
+        "interval"
+      ],
+      "description": "微电网与市场区间森林图（interval 模式，合成数据）"
+    },
+    {
+      "name": "microgrid_market_composition_stream",
+      "category": "energy",
+      "tags": [
+        "microgrid",
+        "composition_stream",
+        "stacked-area"
+      ],
+      "description": "微电网与市场组成流面积（stacked-area 模式，合成数据）"
+    },
+    {
+      "name": "microgrid_market_stage_step",
+      "category": "energy",
+      "tags": [
+        "microgrid",
+        "stage_step",
+        "step"
+      ],
+      "description": "微电网与市场阶段阶梯曲线（step 模式，合成数据）"
+    },
+    {
+      "name": "microgrid_market_surface3d",
+      "category": "energy",
+      "tags": [
+        "microgrid",
+        "surface3d",
+        "3d-surface"
+      ],
+      "description": "微电网与市场三维响应曲面（3d-surface 模式，合成数据）"
+    },
+    {
+      "name": "microgrid_market_calendar_grid",
+      "category": "energy",
+      "tags": [
+        "microgrid",
+        "calendar_grid",
+        "calendar-grid"
+      ],
+      "description": "微电网与市场日历网格（calendar-grid 模式，合成数据）"
+    },
+    {
+      "name": "microgrid_market_before_after",
+      "category": "energy",
+      "tags": [
+        "microgrid",
+        "before_after",
+        "slope"
+      ],
+      "description": "微电网与市场前后斜率对比（slope 模式，合成数据）"
+    },
+    {
+      "name": "microgrid_market_decision_boundary",
+      "category": "energy",
+      "tags": [
+        "microgrid",
+        "decision_boundary",
+        "decision-map"
+      ],
+      "description": "微电网与市场决策边界图（decision-map 模式，合成数据）"
+    },
+    {
+      "name": "insulation_diagnostics_monitoring",
+      "category": "electrical",
+      "tags": [
+        "insulation",
+        "monitoring",
+        "time-band"
+      ],
+      "description": "绝缘诊断监测带状时序（time-band 模式，合成数据）"
+    },
+    {
+      "name": "insulation_diagnostics_limit_watch",
+      "category": "electrical",
+      "tags": [
+        "insulation",
+        "limit_watch",
+        "control-limit"
+      ],
+      "description": "绝缘诊断控制限监测（control-limit 模式，合成数据）"
+    },
+    {
+      "name": "insulation_diagnostics_state_map",
+      "category": "electrical",
+      "tags": [
+        "insulation",
+        "state_map",
+        "heatmap"
+      ],
+      "description": "绝缘诊断状态热力图（heatmap 模式，合成数据）"
+    },
+    {
+      "name": "insulation_diagnostics_response_surface",
+      "category": "electrical",
+      "tags": [
+        "insulation",
+        "response_surface",
+        "contour"
+      ],
+      "description": "绝缘诊断响应等值面（contour 模式，合成数据）"
+    },
+    {
+      "name": "insulation_diagnostics_cluster_view",
+      "category": "electrical",
+      "tags": [
+        "insulation",
+        "cluster_view",
+        "cluster"
+      ],
+      "description": "绝缘诊断状态聚类散点（cluster 模式，合成数据）"
+    },
+    {
+      "name": "insulation_diagnostics_rank_profile",
+      "category": "electrical",
+      "tags": [
+        "insulation",
+        "rank_profile",
+        "ranking"
+      ],
+      "description": "绝缘诊断指标排序条形（ranking 模式，合成数据）"
+    },
+    {
+      "name": "insulation_diagnostics_score_radar",
+      "category": "electrical",
+      "tags": [
+        "insulation",
+        "score_radar",
+        "radar"
+      ],
+      "description": "绝缘诊断多维评分雷达（radar 模式，合成数据）"
+    },
+    {
+      "name": "insulation_diagnostics_contribution_bridge",
+      "category": "electrical",
+      "tags": [
+        "insulation",
+        "contribution_bridge",
+        "waterfall"
+      ],
+      "description": "绝缘诊断贡献瀑布桥（waterfall 模式，合成数据）"
+    },
+    {
+      "name": "insulation_diagnostics_scenario_facets",
+      "category": "electrical",
+      "tags": [
+        "insulation",
+        "scenario_facets",
+        "small-multiples"
+      ],
+      "description": "绝缘诊断场景分面（small-multiples 模式，合成数据）"
+    },
+    {
+      "name": "insulation_diagnostics_polar_signature",
+      "category": "electrical",
+      "tags": [
+        "insulation",
+        "polar_signature",
+        "polar"
+      ],
+      "description": "绝缘诊断极坐标指纹（polar 模式，合成数据）"
+    },
+    {
+      "name": "insulation_diagnostics_phase_portrait",
+      "category": "electrical",
+      "tags": [
+        "insulation",
+        "phase_portrait",
+        "phase-plane"
+      ],
+      "description": "绝缘诊断相平面画像（phase-plane 模式，合成数据）"
+    },
+    {
+      "name": "insulation_diagnostics_distribution_shift",
+      "category": "electrical",
+      "tags": [
+        "insulation",
+        "distribution_shift",
+        "distribution"
+      ],
+      "description": "绝缘诊断分布漂移（distribution 模式，合成数据）"
+    },
+    {
+      "name": "insulation_diagnostics_interaction_matrix",
+      "category": "electrical",
+      "tags": [
+        "insulation",
+        "interaction_matrix",
+        "matrix"
+      ],
+      "description": "绝缘诊断交互气泡矩阵（matrix 模式，合成数据）"
+    },
+    {
+      "name": "insulation_diagnostics_factor_lollipop",
+      "category": "electrical",
+      "tags": [
+        "insulation",
+        "factor_lollipop",
+        "lollipop"
+      ],
+      "description": "绝缘诊断因子棒棒糖（lollipop 模式，合成数据）"
+    },
+    {
+      "name": "insulation_diagnostics_interval_forest",
+      "category": "electrical",
+      "tags": [
+        "insulation",
+        "interval_forest",
+        "interval"
+      ],
+      "description": "绝缘诊断区间森林图（interval 模式，合成数据）"
+    },
+    {
+      "name": "insulation_diagnostics_composition_stream",
+      "category": "electrical",
+      "tags": [
+        "insulation",
+        "composition_stream",
+        "stacked-area"
+      ],
+      "description": "绝缘诊断组成流面积（stacked-area 模式，合成数据）"
+    },
+    {
+      "name": "insulation_diagnostics_stage_step",
+      "category": "electrical",
+      "tags": [
+        "insulation",
+        "stage_step",
+        "step"
+      ],
+      "description": "绝缘诊断阶段阶梯曲线（step 模式，合成数据）"
+    },
+    {
+      "name": "insulation_diagnostics_surface3d",
+      "category": "electrical",
+      "tags": [
+        "insulation",
+        "surface3d",
+        "3d-surface"
+      ],
+      "description": "绝缘诊断三维响应曲面（3d-surface 模式，合成数据）"
+    },
+    {
+      "name": "insulation_diagnostics_calendar_grid",
+      "category": "electrical",
+      "tags": [
+        "insulation",
+        "calendar_grid",
+        "calendar-grid"
+      ],
+      "description": "绝缘诊断日历网格（calendar-grid 模式，合成数据）"
+    },
+    {
+      "name": "insulation_diagnostics_before_after",
+      "category": "electrical",
+      "tags": [
+        "insulation",
+        "before_after",
+        "slope"
+      ],
+      "description": "绝缘诊断前后斜率对比（slope 模式，合成数据）"
+    },
+    {
+      "name": "insulation_diagnostics_decision_boundary",
+      "category": "electrical",
+      "tags": [
+        "insulation",
+        "decision_boundary",
+        "decision-map"
+      ],
+      "description": "绝缘诊断决策边界图（decision-map 模式，合成数据）"
+    },
+    {
+      "name": "protection_fault_monitoring",
+      "category": "power",
+      "tags": [
+        "protection",
+        "monitoring",
+        "time-band"
+      ],
+      "description": "保护与故障分析监测带状时序（time-band 模式，合成数据）"
+    },
+    {
+      "name": "protection_fault_limit_watch",
+      "category": "power",
+      "tags": [
+        "protection",
+        "limit_watch",
+        "control-limit"
+      ],
+      "description": "保护与故障分析控制限监测（control-limit 模式，合成数据）"
+    },
+    {
+      "name": "protection_fault_state_map",
+      "category": "power",
+      "tags": [
+        "protection",
+        "state_map",
+        "heatmap"
+      ],
+      "description": "保护与故障分析状态热力图（heatmap 模式，合成数据）"
+    },
+    {
+      "name": "protection_fault_response_surface",
+      "category": "power",
+      "tags": [
+        "protection",
+        "response_surface",
+        "contour"
+      ],
+      "description": "保护与故障分析响应等值面（contour 模式，合成数据）"
+    },
+    {
+      "name": "protection_fault_cluster_view",
+      "category": "power",
+      "tags": [
+        "protection",
+        "cluster_view",
+        "cluster"
+      ],
+      "description": "保护与故障分析状态聚类散点（cluster 模式，合成数据）"
+    },
+    {
+      "name": "protection_fault_rank_profile",
+      "category": "power",
+      "tags": [
+        "protection",
+        "rank_profile",
+        "ranking"
+      ],
+      "description": "保护与故障分析指标排序条形（ranking 模式，合成数据）"
+    },
+    {
+      "name": "protection_fault_score_radar",
+      "category": "power",
+      "tags": [
+        "protection",
+        "score_radar",
+        "radar"
+      ],
+      "description": "保护与故障分析多维评分雷达（radar 模式，合成数据）"
+    },
+    {
+      "name": "protection_fault_contribution_bridge",
+      "category": "power",
+      "tags": [
+        "protection",
+        "contribution_bridge",
+        "waterfall"
+      ],
+      "description": "保护与故障分析贡献瀑布桥（waterfall 模式，合成数据）"
+    },
+    {
+      "name": "protection_fault_scenario_facets",
+      "category": "power",
+      "tags": [
+        "protection",
+        "scenario_facets",
+        "small-multiples"
+      ],
+      "description": "保护与故障分析场景分面（small-multiples 模式，合成数据）"
+    },
+    {
+      "name": "protection_fault_polar_signature",
+      "category": "power",
+      "tags": [
+        "protection",
+        "polar_signature",
+        "polar"
+      ],
+      "description": "保护与故障分析极坐标指纹（polar 模式，合成数据）"
+    },
+    {
+      "name": "protection_fault_phase_portrait",
+      "category": "power",
+      "tags": [
+        "protection",
+        "phase_portrait",
+        "phase-plane"
+      ],
+      "description": "保护与故障分析相平面画像（phase-plane 模式，合成数据）"
+    },
+    {
+      "name": "protection_fault_distribution_shift",
+      "category": "power",
+      "tags": [
+        "protection",
+        "distribution_shift",
+        "distribution"
+      ],
+      "description": "保护与故障分析分布漂移（distribution 模式，合成数据）"
+    },
+    {
+      "name": "protection_fault_interaction_matrix",
+      "category": "power",
+      "tags": [
+        "protection",
+        "interaction_matrix",
+        "matrix"
+      ],
+      "description": "保护与故障分析交互气泡矩阵（matrix 模式，合成数据）"
+    },
+    {
+      "name": "protection_fault_factor_lollipop",
+      "category": "power",
+      "tags": [
+        "protection",
+        "factor_lollipop",
+        "lollipop"
+      ],
+      "description": "保护与故障分析因子棒棒糖（lollipop 模式，合成数据）"
+    },
+    {
+      "name": "protection_fault_interval_forest",
+      "category": "power",
+      "tags": [
+        "protection",
+        "interval_forest",
+        "interval"
+      ],
+      "description": "保护与故障分析区间森林图（interval 模式，合成数据）"
+    },
+    {
+      "name": "protection_fault_composition_stream",
+      "category": "power",
+      "tags": [
+        "protection",
+        "composition_stream",
+        "stacked-area"
+      ],
+      "description": "保护与故障分析组成流面积（stacked-area 模式，合成数据）"
+    },
+    {
+      "name": "protection_fault_stage_step",
+      "category": "power",
+      "tags": [
+        "protection",
+        "stage_step",
+        "step"
+      ],
+      "description": "保护与故障分析阶段阶梯曲线（step 模式，合成数据）"
+    },
+    {
+      "name": "protection_fault_surface3d",
+      "category": "power",
+      "tags": [
+        "protection",
+        "surface3d",
+        "3d-surface"
+      ],
+      "description": "保护与故障分析三维响应曲面（3d-surface 模式，合成数据）"
+    },
+    {
+      "name": "protection_fault_calendar_grid",
+      "category": "power",
+      "tags": [
+        "protection",
+        "calendar_grid",
+        "calendar-grid"
+      ],
+      "description": "保护与故障分析日历网格（calendar-grid 模式，合成数据）"
+    },
+    {
+      "name": "protection_fault_before_after",
+      "category": "power",
+      "tags": [
+        "protection",
+        "before_after",
+        "slope"
+      ],
+      "description": "保护与故障分析前后斜率对比（slope 模式，合成数据）"
+    },
+    {
+      "name": "protection_fault_decision_boundary",
+      "category": "power",
+      "tags": [
+        "protection",
+        "decision_boundary",
+        "decision-map"
+      ],
+      "description": "保护与故障分析决策边界图（decision-map 模式，合成数据）"
+    },
+    {
+      "name": "radar_advanced_monitoring",
+      "category": "rf",
+      "tags": [
+        "radar",
+        "monitoring",
+        "time-band"
+      ],
+      "description": "雷达进阶监测带状时序（time-band 模式，合成数据）"
+    },
+    {
+      "name": "radar_advanced_limit_watch",
+      "category": "rf",
+      "tags": [
+        "radar",
+        "limit_watch",
+        "control-limit"
+      ],
+      "description": "雷达进阶控制限监测（control-limit 模式，合成数据）"
+    },
+    {
+      "name": "radar_advanced_state_map",
+      "category": "rf",
+      "tags": [
+        "radar",
+        "state_map",
+        "heatmap"
+      ],
+      "description": "雷达进阶状态热力图（heatmap 模式，合成数据）"
+    },
+    {
+      "name": "radar_advanced_response_surface",
+      "category": "rf",
+      "tags": [
+        "radar",
+        "response_surface",
+        "contour"
+      ],
+      "description": "雷达进阶响应等值面（contour 模式，合成数据）"
+    },
+    {
+      "name": "radar_advanced_cluster_view",
+      "category": "rf",
+      "tags": [
+        "radar",
+        "cluster_view",
+        "cluster"
+      ],
+      "description": "雷达进阶状态聚类散点（cluster 模式，合成数据）"
+    },
+    {
+      "name": "radar_advanced_rank_profile",
+      "category": "rf",
+      "tags": [
+        "radar",
+        "rank_profile",
+        "ranking"
+      ],
+      "description": "雷达进阶指标排序条形（ranking 模式，合成数据）"
+    },
+    {
+      "name": "radar_advanced_score_radar",
+      "category": "rf",
+      "tags": [
+        "radar",
+        "score_radar",
+        "radar"
+      ],
+      "description": "雷达进阶多维评分雷达（radar 模式，合成数据）"
+    },
+    {
+      "name": "radar_advanced_contribution_bridge",
+      "category": "rf",
+      "tags": [
+        "radar",
+        "contribution_bridge",
+        "waterfall"
+      ],
+      "description": "雷达进阶贡献瀑布桥（waterfall 模式，合成数据）"
+    },
+    {
+      "name": "radar_advanced_scenario_facets",
+      "category": "rf",
+      "tags": [
+        "radar",
+        "scenario_facets",
+        "small-multiples"
+      ],
+      "description": "雷达进阶场景分面（small-multiples 模式，合成数据）"
+    },
+    {
+      "name": "radar_advanced_polar_signature",
+      "category": "rf",
+      "tags": [
+        "radar",
+        "polar_signature",
+        "polar"
+      ],
+      "description": "雷达进阶极坐标指纹（polar 模式，合成数据）"
+    },
+    {
+      "name": "radar_advanced_phase_portrait",
+      "category": "rf",
+      "tags": [
+        "radar",
+        "phase_portrait",
+        "phase-plane"
+      ],
+      "description": "雷达进阶相平面画像（phase-plane 模式，合成数据）"
+    },
+    {
+      "name": "radar_advanced_distribution_shift",
+      "category": "rf",
+      "tags": [
+        "radar",
+        "distribution_shift",
+        "distribution"
+      ],
+      "description": "雷达进阶分布漂移（distribution 模式，合成数据）"
+    },
+    {
+      "name": "radar_advanced_interaction_matrix",
+      "category": "rf",
+      "tags": [
+        "radar",
+        "interaction_matrix",
+        "matrix"
+      ],
+      "description": "雷达进阶交互气泡矩阵（matrix 模式，合成数据）"
+    },
+    {
+      "name": "radar_advanced_factor_lollipop",
+      "category": "rf",
+      "tags": [
+        "radar",
+        "factor_lollipop",
+        "lollipop"
+      ],
+      "description": "雷达进阶因子棒棒糖（lollipop 模式，合成数据）"
+    },
+    {
+      "name": "radar_advanced_interval_forest",
+      "category": "rf",
+      "tags": [
+        "radar",
+        "interval_forest",
+        "interval"
+      ],
+      "description": "雷达进阶区间森林图（interval 模式，合成数据）"
+    },
+    {
+      "name": "radar_advanced_composition_stream",
+      "category": "rf",
+      "tags": [
+        "radar",
+        "composition_stream",
+        "stacked-area"
+      ],
+      "description": "雷达进阶组成流面积（stacked-area 模式，合成数据）"
+    },
+    {
+      "name": "radar_advanced_stage_step",
+      "category": "rf",
+      "tags": [
+        "radar",
+        "stage_step",
+        "step"
+      ],
+      "description": "雷达进阶阶段阶梯曲线（step 模式，合成数据）"
+    },
+    {
+      "name": "radar_advanced_surface3d",
+      "category": "rf",
+      "tags": [
+        "radar",
+        "surface3d",
+        "3d-surface"
+      ],
+      "description": "雷达进阶三维响应曲面（3d-surface 模式，合成数据）"
+    },
+    {
+      "name": "radar_advanced_calendar_grid",
+      "category": "rf",
+      "tags": [
+        "radar",
+        "calendar_grid",
+        "calendar-grid"
+      ],
+      "description": "雷达进阶日历网格（calendar-grid 模式，合成数据）"
+    },
+    {
+      "name": "radar_advanced_before_after",
+      "category": "rf",
+      "tags": [
+        "radar",
+        "before_after",
+        "slope"
+      ],
+      "description": "雷达进阶前后斜率对比（slope 模式，合成数据）"
+    },
+    {
+      "name": "radar_advanced_decision_boundary",
+      "category": "rf",
+      "tags": [
+        "radar",
+        "decision_boundary",
+        "decision-map"
+      ],
+      "description": "雷达进阶决策边界图（decision-map 模式，合成数据）"
+    },
+    {
+      "name": "antenna_array_monitoring",
+      "category": "rf",
+      "tags": [
+        "antenna",
+        "monitoring",
+        "time-band"
+      ],
+      "description": "天线阵列监测带状时序（time-band 模式，合成数据）"
+    },
+    {
+      "name": "antenna_array_limit_watch",
+      "category": "rf",
+      "tags": [
+        "antenna",
+        "limit_watch",
+        "control-limit"
+      ],
+      "description": "天线阵列控制限监测（control-limit 模式，合成数据）"
+    },
+    {
+      "name": "antenna_array_state_map",
+      "category": "rf",
+      "tags": [
+        "antenna",
+        "state_map",
+        "heatmap"
+      ],
+      "description": "天线阵列状态热力图（heatmap 模式，合成数据）"
+    },
+    {
+      "name": "antenna_array_response_surface",
+      "category": "rf",
+      "tags": [
+        "antenna",
+        "response_surface",
+        "contour"
+      ],
+      "description": "天线阵列响应等值面（contour 模式，合成数据）"
+    },
+    {
+      "name": "antenna_array_cluster_view",
+      "category": "rf",
+      "tags": [
+        "antenna",
+        "cluster_view",
+        "cluster"
+      ],
+      "description": "天线阵列状态聚类散点（cluster 模式，合成数据）"
+    },
+    {
+      "name": "antenna_array_rank_profile",
+      "category": "rf",
+      "tags": [
+        "antenna",
+        "rank_profile",
+        "ranking"
+      ],
+      "description": "天线阵列指标排序条形（ranking 模式，合成数据）"
+    },
+    {
+      "name": "antenna_array_score_radar",
+      "category": "rf",
+      "tags": [
+        "antenna",
+        "score_radar",
+        "radar"
+      ],
+      "description": "天线阵列多维评分雷达（radar 模式，合成数据）"
+    },
+    {
+      "name": "antenna_array_contribution_bridge",
+      "category": "rf",
+      "tags": [
+        "antenna",
+        "contribution_bridge",
+        "waterfall"
+      ],
+      "description": "天线阵列贡献瀑布桥（waterfall 模式，合成数据）"
+    },
+    {
+      "name": "antenna_array_scenario_facets",
+      "category": "rf",
+      "tags": [
+        "antenna",
+        "scenario_facets",
+        "small-multiples"
+      ],
+      "description": "天线阵列场景分面（small-multiples 模式，合成数据）"
+    },
+    {
+      "name": "antenna_array_polar_signature",
+      "category": "rf",
+      "tags": [
+        "antenna",
+        "polar_signature",
+        "polar"
+      ],
+      "description": "天线阵列极坐标指纹（polar 模式，合成数据）"
+    },
+    {
+      "name": "antenna_array_phase_portrait",
+      "category": "rf",
+      "tags": [
+        "antenna",
+        "phase_portrait",
+        "phase-plane"
+      ],
+      "description": "天线阵列相平面画像（phase-plane 模式，合成数据）"
+    },
+    {
+      "name": "antenna_array_distribution_shift",
+      "category": "rf",
+      "tags": [
+        "antenna",
+        "distribution_shift",
+        "distribution"
+      ],
+      "description": "天线阵列分布漂移（distribution 模式，合成数据）"
+    },
+    {
+      "name": "antenna_array_interaction_matrix",
+      "category": "rf",
+      "tags": [
+        "antenna",
+        "interaction_matrix",
+        "matrix"
+      ],
+      "description": "天线阵列交互气泡矩阵（matrix 模式，合成数据）"
+    },
+    {
+      "name": "antenna_array_factor_lollipop",
+      "category": "rf",
+      "tags": [
+        "antenna",
+        "factor_lollipop",
+        "lollipop"
+      ],
+      "description": "天线阵列因子棒棒糖（lollipop 模式，合成数据）"
+    },
+    {
+      "name": "antenna_array_interval_forest",
+      "category": "rf",
+      "tags": [
+        "antenna",
+        "interval_forest",
+        "interval"
+      ],
+      "description": "天线阵列区间森林图（interval 模式，合成数据）"
+    },
+    {
+      "name": "antenna_array_composition_stream",
+      "category": "rf",
+      "tags": [
+        "antenna",
+        "composition_stream",
+        "stacked-area"
+      ],
+      "description": "天线阵列组成流面积（stacked-area 模式，合成数据）"
+    },
+    {
+      "name": "antenna_array_stage_step",
+      "category": "rf",
+      "tags": [
+        "antenna",
+        "stage_step",
+        "step"
+      ],
+      "description": "天线阵列阶段阶梯曲线（step 模式，合成数据）"
+    },
+    {
+      "name": "antenna_array_surface3d",
+      "category": "rf",
+      "tags": [
+        "antenna",
+        "surface3d",
+        "3d-surface"
+      ],
+      "description": "天线阵列三维响应曲面（3d-surface 模式，合成数据）"
+    },
+    {
+      "name": "antenna_array_calendar_grid",
+      "category": "rf",
+      "tags": [
+        "antenna",
+        "calendar_grid",
+        "calendar-grid"
+      ],
+      "description": "天线阵列日历网格（calendar-grid 模式，合成数据）"
+    },
+    {
+      "name": "antenna_array_before_after",
+      "category": "rf",
+      "tags": [
+        "antenna",
+        "before_after",
+        "slope"
+      ],
+      "description": "天线阵列前后斜率对比（slope 模式，合成数据）"
+    },
+    {
+      "name": "antenna_array_decision_boundary",
+      "category": "rf",
+      "tags": [
+        "antenna",
+        "decision_boundary",
+        "decision-map"
+      ],
+      "description": "天线阵列决策边界图（decision-map 模式，合成数据）"
+    },
+    {
+      "name": "bayes_uq_monitoring",
+      "category": "statistical",
+      "tags": [
+        "bayesian",
+        "monitoring",
+        "time-band"
+      ],
+      "description": "贝叶斯与不确定性量化监测带状时序（time-band 模式，合成数据）"
+    },
+    {
+      "name": "bayes_uq_limit_watch",
+      "category": "statistical",
+      "tags": [
+        "bayesian",
+        "limit_watch",
+        "control-limit"
+      ],
+      "description": "贝叶斯与不确定性量化控制限监测（control-limit 模式，合成数据）"
+    },
+    {
+      "name": "bayes_uq_state_map",
+      "category": "statistical",
+      "tags": [
+        "bayesian",
+        "state_map",
+        "heatmap"
+      ],
+      "description": "贝叶斯与不确定性量化状态热力图（heatmap 模式，合成数据）"
+    },
+    {
+      "name": "bayes_uq_response_surface",
+      "category": "statistical",
+      "tags": [
+        "bayesian",
+        "response_surface",
+        "contour"
+      ],
+      "description": "贝叶斯与不确定性量化响应等值面（contour 模式，合成数据）"
+    },
+    {
+      "name": "bayes_uq_cluster_view",
+      "category": "statistical",
+      "tags": [
+        "bayesian",
+        "cluster_view",
+        "cluster"
+      ],
+      "description": "贝叶斯与不确定性量化状态聚类散点（cluster 模式，合成数据）"
+    },
+    {
+      "name": "bayes_uq_rank_profile",
+      "category": "statistical",
+      "tags": [
+        "bayesian",
+        "rank_profile",
+        "ranking"
+      ],
+      "description": "贝叶斯与不确定性量化指标排序条形（ranking 模式，合成数据）"
+    },
+    {
+      "name": "bayes_uq_score_radar",
+      "category": "statistical",
+      "tags": [
+        "bayesian",
+        "score_radar",
+        "radar"
+      ],
+      "description": "贝叶斯与不确定性量化多维评分雷达（radar 模式，合成数据）"
+    },
+    {
+      "name": "bayes_uq_contribution_bridge",
+      "category": "statistical",
+      "tags": [
+        "bayesian",
+        "contribution_bridge",
+        "waterfall"
+      ],
+      "description": "贝叶斯与不确定性量化贡献瀑布桥（waterfall 模式，合成数据）"
+    },
+    {
+      "name": "bayes_uq_scenario_facets",
+      "category": "statistical",
+      "tags": [
+        "bayesian",
+        "scenario_facets",
+        "small-multiples"
+      ],
+      "description": "贝叶斯与不确定性量化场景分面（small-multiples 模式，合成数据）"
+    },
+    {
+      "name": "bayes_uq_polar_signature",
+      "category": "statistical",
+      "tags": [
+        "bayesian",
+        "polar_signature",
+        "polar"
+      ],
+      "description": "贝叶斯与不确定性量化极坐标指纹（polar 模式，合成数据）"
+    },
+    {
+      "name": "bayes_uq_phase_portrait",
+      "category": "statistical",
+      "tags": [
+        "bayesian",
+        "phase_portrait",
+        "phase-plane"
+      ],
+      "description": "贝叶斯与不确定性量化相平面画像（phase-plane 模式，合成数据）"
+    },
+    {
+      "name": "bayes_uq_distribution_shift",
+      "category": "statistical",
+      "tags": [
+        "bayesian",
+        "distribution_shift",
+        "distribution"
+      ],
+      "description": "贝叶斯与不确定性量化分布漂移（distribution 模式，合成数据）"
+    },
+    {
+      "name": "bayes_uq_interaction_matrix",
+      "category": "statistical",
+      "tags": [
+        "bayesian",
+        "interaction_matrix",
+        "matrix"
+      ],
+      "description": "贝叶斯与不确定性量化交互气泡矩阵（matrix 模式，合成数据）"
+    },
+    {
+      "name": "bayes_uq_factor_lollipop",
+      "category": "statistical",
+      "tags": [
+        "bayesian",
+        "factor_lollipop",
+        "lollipop"
+      ],
+      "description": "贝叶斯与不确定性量化因子棒棒糖（lollipop 模式，合成数据）"
+    },
+    {
+      "name": "bayes_uq_interval_forest",
+      "category": "statistical",
+      "tags": [
+        "bayesian",
+        "interval_forest",
+        "interval"
+      ],
+      "description": "贝叶斯与不确定性量化区间森林图（interval 模式，合成数据）"
+    },
+    {
+      "name": "bayes_uq_composition_stream",
+      "category": "statistical",
+      "tags": [
+        "bayesian",
+        "composition_stream",
+        "stacked-area"
+      ],
+      "description": "贝叶斯与不确定性量化组成流面积（stacked-area 模式，合成数据）"
+    },
+    {
+      "name": "bayes_uq_stage_step",
+      "category": "statistical",
+      "tags": [
+        "bayesian",
+        "stage_step",
+        "step"
+      ],
+      "description": "贝叶斯与不确定性量化阶段阶梯曲线（step 模式，合成数据）"
+    },
+    {
+      "name": "bayes_uq_surface3d",
+      "category": "statistical",
+      "tags": [
+        "bayesian",
+        "surface3d",
+        "3d-surface"
+      ],
+      "description": "贝叶斯与不确定性量化三维响应曲面（3d-surface 模式，合成数据）"
+    },
+    {
+      "name": "bayes_uq_calendar_grid",
+      "category": "statistical",
+      "tags": [
+        "bayesian",
+        "calendar_grid",
+        "calendar-grid"
+      ],
+      "description": "贝叶斯与不确定性量化日历网格（calendar-grid 模式，合成数据）"
+    },
+    {
+      "name": "bayes_uq_before_after",
+      "category": "statistical",
+      "tags": [
+        "bayesian",
+        "before_after",
+        "slope"
+      ],
+      "description": "贝叶斯与不确定性量化前后斜率对比（slope 模式，合成数据）"
+    },
+    {
+      "name": "bayes_uq_decision_boundary",
+      "category": "statistical",
+      "tags": [
+        "bayesian",
+        "decision_boundary",
+        "decision-map"
+      ],
+      "description": "贝叶斯与不确定性量化决策边界图（decision-map 模式，合成数据）"
+    },
+    {
+      "name": "matrix_tensor_monitoring",
+      "category": "matrix",
+      "tags": [
+        "tensor",
+        "monitoring",
+        "time-band"
+      ],
+      "description": "矩阵与张量可视化监测带状时序（time-band 模式，合成数据）"
+    },
+    {
+      "name": "matrix_tensor_limit_watch",
+      "category": "matrix",
+      "tags": [
+        "tensor",
+        "limit_watch",
+        "control-limit"
+      ],
+      "description": "矩阵与张量可视化控制限监测（control-limit 模式，合成数据）"
+    },
+    {
+      "name": "matrix_tensor_state_map",
+      "category": "matrix",
+      "tags": [
+        "tensor",
+        "state_map",
+        "heatmap"
+      ],
+      "description": "矩阵与张量可视化状态热力图（heatmap 模式，合成数据）"
+    },
+    {
+      "name": "matrix_tensor_response_surface",
+      "category": "matrix",
+      "tags": [
+        "tensor",
+        "response_surface",
+        "contour"
+      ],
+      "description": "矩阵与张量可视化响应等值面（contour 模式，合成数据）"
+    },
+    {
+      "name": "matrix_tensor_cluster_view",
+      "category": "matrix",
+      "tags": [
+        "tensor",
+        "cluster_view",
+        "cluster"
+      ],
+      "description": "矩阵与张量可视化状态聚类散点（cluster 模式，合成数据）"
+    },
+    {
+      "name": "matrix_tensor_rank_profile",
+      "category": "matrix",
+      "tags": [
+        "tensor",
+        "rank_profile",
+        "ranking"
+      ],
+      "description": "矩阵与张量可视化指标排序条形（ranking 模式，合成数据）"
+    },
+    {
+      "name": "matrix_tensor_score_radar",
+      "category": "matrix",
+      "tags": [
+        "tensor",
+        "score_radar",
+        "radar"
+      ],
+      "description": "矩阵与张量可视化多维评分雷达（radar 模式，合成数据）"
+    },
+    {
+      "name": "matrix_tensor_contribution_bridge",
+      "category": "matrix",
+      "tags": [
+        "tensor",
+        "contribution_bridge",
+        "waterfall"
+      ],
+      "description": "矩阵与张量可视化贡献瀑布桥（waterfall 模式，合成数据）"
+    },
+    {
+      "name": "matrix_tensor_scenario_facets",
+      "category": "matrix",
+      "tags": [
+        "tensor",
+        "scenario_facets",
+        "small-multiples"
+      ],
+      "description": "矩阵与张量可视化场景分面（small-multiples 模式，合成数据）"
+    },
+    {
+      "name": "matrix_tensor_polar_signature",
+      "category": "matrix",
+      "tags": [
+        "tensor",
+        "polar_signature",
+        "polar"
+      ],
+      "description": "矩阵与张量可视化极坐标指纹（polar 模式，合成数据）"
+    },
+    {
+      "name": "matrix_tensor_phase_portrait",
+      "category": "matrix",
+      "tags": [
+        "tensor",
+        "phase_portrait",
+        "phase-plane"
+      ],
+      "description": "矩阵与张量可视化相平面画像（phase-plane 模式，合成数据）"
+    },
+    {
+      "name": "matrix_tensor_distribution_shift",
+      "category": "matrix",
+      "tags": [
+        "tensor",
+        "distribution_shift",
+        "distribution"
+      ],
+      "description": "矩阵与张量可视化分布漂移（distribution 模式，合成数据）"
+    },
+    {
+      "name": "matrix_tensor_interaction_matrix",
+      "category": "matrix",
+      "tags": [
+        "tensor",
+        "interaction_matrix",
+        "matrix"
+      ],
+      "description": "矩阵与张量可视化交互气泡矩阵（matrix 模式，合成数据）"
+    },
+    {
+      "name": "matrix_tensor_factor_lollipop",
+      "category": "matrix",
+      "tags": [
+        "tensor",
+        "factor_lollipop",
+        "lollipop"
+      ],
+      "description": "矩阵与张量可视化因子棒棒糖（lollipop 模式，合成数据）"
+    },
+    {
+      "name": "matrix_tensor_interval_forest",
+      "category": "matrix",
+      "tags": [
+        "tensor",
+        "interval_forest",
+        "interval"
+      ],
+      "description": "矩阵与张量可视化区间森林图（interval 模式，合成数据）"
+    },
+    {
+      "name": "matrix_tensor_composition_stream",
+      "category": "matrix",
+      "tags": [
+        "tensor",
+        "composition_stream",
+        "stacked-area"
+      ],
+      "description": "矩阵与张量可视化组成流面积（stacked-area 模式，合成数据）"
+    },
+    {
+      "name": "matrix_tensor_stage_step",
+      "category": "matrix",
+      "tags": [
+        "tensor",
+        "stage_step",
+        "step"
+      ],
+      "description": "矩阵与张量可视化阶段阶梯曲线（step 模式，合成数据）"
+    },
+    {
+      "name": "matrix_tensor_surface3d",
+      "category": "matrix",
+      "tags": [
+        "tensor",
+        "surface3d",
+        "3d-surface"
+      ],
+      "description": "矩阵与张量可视化三维响应曲面（3d-surface 模式，合成数据）"
+    },
+    {
+      "name": "matrix_tensor_calendar_grid",
+      "category": "matrix",
+      "tags": [
+        "tensor",
+        "calendar_grid",
+        "calendar-grid"
+      ],
+      "description": "矩阵与张量可视化日历网格（calendar-grid 模式，合成数据）"
+    },
+    {
+      "name": "matrix_tensor_before_after",
+      "category": "matrix",
+      "tags": [
+        "tensor",
+        "before_after",
+        "slope"
+      ],
+      "description": "矩阵与张量可视化前后斜率对比（slope 模式，合成数据）"
+    },
+    {
+      "name": "matrix_tensor_decision_boundary",
+      "category": "matrix",
+      "tags": [
+        "tensor",
+        "decision_boundary",
+        "decision-map"
+      ],
+      "description": "矩阵与张量可视化决策边界图（decision-map 模式，合成数据）"
+    },
+    {
+      "name": "geoscience_grid_monitoring",
+      "category": "field",
+      "tags": [
+        "geoscience",
+        "monitoring",
+        "time-band"
+      ],
+      "description": "地学栅格场监测带状时序（time-band 模式，合成数据）"
+    },
+    {
+      "name": "geoscience_grid_limit_watch",
+      "category": "field",
+      "tags": [
+        "geoscience",
+        "limit_watch",
+        "control-limit"
+      ],
+      "description": "地学栅格场控制限监测（control-limit 模式，合成数据）"
+    },
+    {
+      "name": "geoscience_grid_state_map",
+      "category": "field",
+      "tags": [
+        "geoscience",
+        "state_map",
+        "heatmap"
+      ],
+      "description": "地学栅格场状态热力图（heatmap 模式，合成数据）"
+    },
+    {
+      "name": "geoscience_grid_response_surface",
+      "category": "field",
+      "tags": [
+        "geoscience",
+        "response_surface",
+        "contour"
+      ],
+      "description": "地学栅格场响应等值面（contour 模式，合成数据）"
+    },
+    {
+      "name": "geoscience_grid_cluster_view",
+      "category": "field",
+      "tags": [
+        "geoscience",
+        "cluster_view",
+        "cluster"
+      ],
+      "description": "地学栅格场状态聚类散点（cluster 模式，合成数据）"
+    },
+    {
+      "name": "geoscience_grid_rank_profile",
+      "category": "field",
+      "tags": [
+        "geoscience",
+        "rank_profile",
+        "ranking"
+      ],
+      "description": "地学栅格场指标排序条形（ranking 模式，合成数据）"
+    },
+    {
+      "name": "geoscience_grid_score_radar",
+      "category": "field",
+      "tags": [
+        "geoscience",
+        "score_radar",
+        "radar"
+      ],
+      "description": "地学栅格场多维评分雷达（radar 模式，合成数据）"
+    },
+    {
+      "name": "geoscience_grid_contribution_bridge",
+      "category": "field",
+      "tags": [
+        "geoscience",
+        "contribution_bridge",
+        "waterfall"
+      ],
+      "description": "地学栅格场贡献瀑布桥（waterfall 模式，合成数据）"
+    },
+    {
+      "name": "geoscience_grid_scenario_facets",
+      "category": "field",
+      "tags": [
+        "geoscience",
+        "scenario_facets",
+        "small-multiples"
+      ],
+      "description": "地学栅格场场景分面（small-multiples 模式，合成数据）"
+    },
+    {
+      "name": "geoscience_grid_polar_signature",
+      "category": "field",
+      "tags": [
+        "geoscience",
+        "polar_signature",
+        "polar"
+      ],
+      "description": "地学栅格场极坐标指纹（polar 模式，合成数据）"
+    },
+    {
+      "name": "geoscience_grid_phase_portrait",
+      "category": "field",
+      "tags": [
+        "geoscience",
+        "phase_portrait",
+        "phase-plane"
+      ],
+      "description": "地学栅格场相平面画像（phase-plane 模式，合成数据）"
+    },
+    {
+      "name": "geoscience_grid_distribution_shift",
+      "category": "field",
+      "tags": [
+        "geoscience",
+        "distribution_shift",
+        "distribution"
+      ],
+      "description": "地学栅格场分布漂移（distribution 模式，合成数据）"
+    },
+    {
+      "name": "geoscience_grid_interaction_matrix",
+      "category": "field",
+      "tags": [
+        "geoscience",
+        "interaction_matrix",
+        "matrix"
+      ],
+      "description": "地学栅格场交互气泡矩阵（matrix 模式，合成数据）"
+    },
+    {
+      "name": "geoscience_grid_factor_lollipop",
+      "category": "field",
+      "tags": [
+        "geoscience",
+        "factor_lollipop",
+        "lollipop"
+      ],
+      "description": "地学栅格场因子棒棒糖（lollipop 模式，合成数据）"
+    },
+    {
+      "name": "geoscience_grid_interval_forest",
+      "category": "field",
+      "tags": [
+        "geoscience",
+        "interval_forest",
+        "interval"
+      ],
+      "description": "地学栅格场区间森林图（interval 模式，合成数据）"
+    },
+    {
+      "name": "geoscience_grid_composition_stream",
+      "category": "field",
+      "tags": [
+        "geoscience",
+        "composition_stream",
+        "stacked-area"
+      ],
+      "description": "地学栅格场组成流面积（stacked-area 模式，合成数据）"
+    },
+    {
+      "name": "geoscience_grid_stage_step",
+      "category": "field",
+      "tags": [
+        "geoscience",
+        "stage_step",
+        "step"
+      ],
+      "description": "地学栅格场阶段阶梯曲线（step 模式，合成数据）"
+    },
+    {
+      "name": "geoscience_grid_surface3d",
+      "category": "field",
+      "tags": [
+        "geoscience",
+        "surface3d",
+        "3d-surface"
+      ],
+      "description": "地学栅格场三维响应曲面（3d-surface 模式，合成数据）"
+    },
+    {
+      "name": "geoscience_grid_calendar_grid",
+      "category": "field",
+      "tags": [
+        "geoscience",
+        "calendar_grid",
+        "calendar-grid"
+      ],
+      "description": "地学栅格场日历网格（calendar-grid 模式，合成数据）"
+    },
+    {
+      "name": "geoscience_grid_before_after",
+      "category": "field",
+      "tags": [
+        "geoscience",
+        "before_after",
+        "slope"
+      ],
+      "description": "地学栅格场前后斜率对比（slope 模式，合成数据）"
+    },
+    {
+      "name": "geoscience_grid_decision_boundary",
+      "category": "field",
+      "tags": [
+        "geoscience",
+        "decision_boundary",
+        "decision-map"
+      ],
+      "description": "地学栅格场决策边界图（decision-map 模式，合成数据）"
     }
   ]
 }

@@ -1,0 +1,4 @@
+function fig = protection_fault_contribution_bridge()
+    addpath(fullfile(fileparts(mfilename('fullpath')),'..','..','_utils','matlab'));
+    fig = generated_template_figure('waterfall', 4008, 'protection and fault analysis: contribution waterfall', 'protection and fault analysis', 'contribution waterfall');
+end

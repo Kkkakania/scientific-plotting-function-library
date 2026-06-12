@@ -1,6 +1,6 @@
 #!/bin/bash
 # 一键 MATLAB 全库实跑验证（macOS / Linux）
-# 用法： bash scripts/verify_matlab.sh            # 全部 274 个
+# 用法： bash scripts/verify_matlab.sh            # 全部 1000 个
 #        bash scripts/verify_matlab.sh bode_diagram swing_curve   # 指定模板
 set -e
 cd "$(dirname "$0")/.."

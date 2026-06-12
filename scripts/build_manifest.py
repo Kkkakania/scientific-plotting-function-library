@@ -48,7 +48,7 @@ def main():
 
     # manifest.json
     JSON.write_text(json.dumps({
-        'version': '1.8', 'count': len(entries), 'templates': entries
+        'version': '2.0', 'count': len(entries), 'templates': entries
     }, ensure_ascii=False, indent=2), encoding='utf-8')
 
     # catalog.md
