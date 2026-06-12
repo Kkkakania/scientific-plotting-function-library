@@ -2,6 +2,21 @@
 
 本库版本演化记录。
 
+## v2.1 — 配色扩展 + 质量门加固
+
+- **配色 68 → 79 套**：新增 11 套 clean-room 工程科研调色板，覆盖审稿级分类色、
+  电气/系统类大类别、工程连续场、残差发散图和相位周期图
+- **Python/MATLAB 色板同步**：继续以 `palettes/python/sci_palettes.py` 为唯一数据源，
+  通过 `scripts/sync_matlab_palettes.py` 生成 MATLAB 镜像，避免双语漂移
+- **palette audit 动态化**：`palettes/python/audit_all.py` 不再硬编码 68 套或固定分类数，
+  后续新增色板时报告标题、分组数量和汇总自动同步
+- **质量门加固**：CI 生成文件检查新增 `scripts/merge_batch_manifests.py`，
+  防止批次账本与主清单、manifest、catalog 漂移
+- **暗色画廊强制纳入 release gate**：`scripts/check_release_state.py` 现在要求
+  `gallery/dark/` 存在且覆盖全部模板，不再把暗色画廊当成可选产物
+- **全库验证扩展到 7 个维度**：`scripts/verify_all.py` 新增 gallery 完整性和
+  `_batch_manifests/` 一致性检查，并将结果写入 `docs/verification_report.md`
+
 ## v2.0 — 千图计划：274 → 1000
 
 - **模板规模扩展到 1000 个**：主清单、catalog、Python 模板、MATLAB 模板统一到

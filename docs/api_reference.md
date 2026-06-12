@@ -128,7 +128,7 @@ render_all('--tag', 'heatmap')   % 按 tag
 
 ```json
 {
-  "version": "2.0",
+  "version": "2.1",
   "count": 1000,
   "templates": [
     {"name": "line_basic", "category": "basic",

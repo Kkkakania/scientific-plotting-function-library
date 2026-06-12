@@ -2,10 +2,10 @@
 
 English repository name: `scientific-plotting-function-library`.
 
-当前库版本：`v2.0`。
+当前库版本：`v2.1`。
 
 1000 个原创科研绘图模板，**Python + MATLAB 双语对照**（另有 Go 语言端 8 个、Origin 19 个脚本、Plotly 12 个交互模板），覆盖 26 大类。
-配 68 套色板（含暗色模式与国风系列）、色彩科学工具链、可筛选 HTML 画廊和完整文档。
+配 79 套色板（含暗色模式、国风系列与 v2.1 工程科研扩展）、色彩科学工具链、可筛选 HTML 画廊和完整文档。
 
 适用对象：电气工程及其自动化、信号处理、控制工程方向的本科 / 研究生 / 论文作者。
 
@@ -33,7 +33,7 @@ English repository name: `scientific-plotting-function-library`.
 │   ├── plotly/             12 个交互模板（写出独立 HTML）
 │   ├── go/                 sciplot 包 + 8 个 gonum/plot 模板
 │   └── origin/             19 个 originpro Python 脚本 + 2 个 LabTalk
-├── palettes/               68 套调色板 + palette_picker.html 选择器 + 色彩科学工具链 + 实战预览
+├── palettes/               79 套调色板 + palette_picker.html 选择器 + 色彩科学工具链 + 实战预览
 │   ├── python/sci_palettes.py
 │   └── matlab/sci_palettes.m
 ├── gallery/                1000 张模板 PNG + index.html（搜索+分类+语言筛选）
@@ -107,7 +107,7 @@ colors = get_palette('safe10')                # v1.5：10 大类别仍 ΔE>20
 cmap   = get_palette('blue_white_red')        # 发散色谱
 ```
 
-68 套配色全清单（交互选择器 palettes/palette_picker.html） + 选择建议见 [`palettes/README.md`](palettes/README.md)。
+79 套配色全清单（交互选择器 palettes/palette_picker.html） + 选择建议见 [`palettes/README.md`](palettes/README.md)。
 
 ## 一键全库
 

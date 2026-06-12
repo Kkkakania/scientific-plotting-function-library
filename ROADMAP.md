@@ -15,7 +15,8 @@
 | **v1.6** | **diagram 流程图/框图大类 · 画廊语言检索 · palette_picker 选择器 · 配色 68 套 · Origin 批量出图** | ✅ 完成 |
 | **v1.7** | **verify_all 全绿（252/252）· Plotly 交互端 · 暗色画廊 · COMTRADE 读取器 · v1.8 电气首发 4 模板** | ✅ 完成 |
 | **v1.8** | **akun 资料全集精读（6 份笔记）· 吸收移植 10 模板 · 电气纵深补齐 9 模板 + 信号 3 彩蛋（274 个）** | ✅ 完成 |
-| **v2.0** | **千图计划：274 → 1000；批次账本、合并脚本、Python/MATLAB 共享生成内核、全量 manifest/catalog/gallery 发布面** | ✅ 本次完成 |
+| **v2.0** | **千图计划：274 → 1000；批次账本、合并脚本、Python/MATLAB 共享生成内核、全量 manifest/catalog/gallery 发布面** | ✅ 完成 |
+| **v2.1** | **配色 68 → 79；palette audit 动态化；CI/generated 文件检查、暗色画廊和批次账本 release gate 加固** | ✅ 本次完成 |
 
 ## v1.6 — 巩固与验证（短期，1~2 周强度）
 
@@ -30,7 +31,7 @@
 
 - [x] Plotly 端：首批 12 个高频模板（templates/plotly/，可继续扩到 30）
 - [x] 画廊升级：搜索框 + 按语言筛选（py/m/go/origin）~~+ 复制代码按钮~~（复制按钮移到 picker）
-- [x] `palette_picker.html`：68 套色板的交互选择器（已含 Origin 代码复制）
+- [x] `palette_picker.html`：当前 79 套色板的交互选择器（已含 Origin 代码复制）
 - [x] data_loader 支持 .tdms（可选 npTDMS）与 COMTRADE（纯 numpy，ASCII+BINARY）
 
 ## v1.8 — 电气专业纵深（中期，结合课程进度）
@@ -51,7 +52,15 @@
 - [x] 新增 Python/MATLAB 共享生成内核，保证大规模模板在视觉结构、随机种子、命名和领域语义上可维护
 - [x] 更新 `manifest.json`、`catalog.md`、README、API 文档和发布检查，统一到 v2.0 / 1000
 
-## v2.1 — 生态化（长期，毕业设计前）
+## v2.1 — 配色扩展 + 质量门加固
+
+- [x] 新增 11 套工程科研调色板，覆盖审稿分类、电气系统、大类别、残差和相位图场景
+- [x] 将 palette audit 报告改为动态统计，避免新增色板后标题和分组数量漂移
+- [x] CI generated-files 检查纳入 `_manifest_source.txt`，先合并批次账本再检查 manifest/catalog/gallery
+- [x] release state 强制检查 light/dark 双画廊覆盖全部 1000 模板
+- [x] `verify_all.py` 扩展到 7 个维度：模板、数据、清单、gallery、批次账本、配色、共享工具
+
+## v2.2 — 生态化（长期，毕业设计前）
 
 - [ ] 打包发布：PyPI（`pip install sciplot-ee`）+ MATLAB File Exchange
 - [ ] 文档站：mkdocs-material，画廊在线托管

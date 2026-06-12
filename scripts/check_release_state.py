@@ -12,7 +12,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-EXPECTED_VERSION = "2.0"
+EXPECTED_VERSION = "2.1"
 
 
 def fail(problems: list[str], message: str) -> None:
@@ -52,7 +52,9 @@ def main() -> int:
     if missing_gallery:
         fail(problems, f"missing gallery PNGs: {missing_gallery[:12]}")
     dark_dir = gallery / "dark"
-    if dark_dir.exists():
+    if not dark_dir.exists():
+        fail(problems, "gallery/dark is missing")
+    else:
         missing_dark = [name for name in names if not (dark_dir / f"{name}.png").exists()]
         if missing_dark:
             fail(problems, f"missing dark gallery PNGs: {missing_dark[:12]}")

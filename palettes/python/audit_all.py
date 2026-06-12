@@ -1,4 +1,4 @@
-"""audit_all: 对全部 68 套预设调色板做体检，输出 Markdown 报告.
+"""audit_all: 对全部预设调色板做体检，输出 Markdown 报告.
 
 体检维度（与 palette_validator 一致）：
 - 正常视觉两两最小 CIEDE2000
@@ -59,7 +59,8 @@ def build_report():
     div_results = [audit_continuous(n, 'div') for n in PALETTES_DIV]
     cyc_results = [audit_continuous(n, 'cyc') for n in PALETTES_CYC]
 
-    lines = ['# 68 套预设调色板体检报告', '',
+    n_total = len(PALETTES_CAT) + len(PALETTES_SEQ) + len(PALETTES_DIV) + len(PALETTES_CYC)
+    lines = [f'# {n_total} 套预设调色板体检报告', '',
              '自动生成。所有数据基于 CIEDE2000 色差和 CIE Lab 灰度计算。', '',
              '阈值说明：',
              '- 分类色：正常 ΔE > 15，绿色盲 ΔE > 8，灰度 ΔL > 15 视为通过',
@@ -90,10 +91,10 @@ def build_report():
                          f"**{r['overall']}** |")
         lines.append('')
 
-    cat_section('分类调色板（17 套）', cat_results)
-    cont_section('顺序调色板（14 套）', seq_results)
-    cont_section('发散调色板（7 套）', div_results)
-    cont_section('周期调色板（2 套）', cyc_results)
+    cat_section(f'分类调色板（{len(cat_results)} 套）', cat_results)
+    cont_section(f'顺序调色板（{len(seq_results)} 套）', seq_results)
+    cont_section(f'发散调色板（{len(div_results)} 套）', div_results)
+    cont_section(f'周期调色板（{len(cyc_results)} 套）', cyc_results)
 
     # 汇总
     all_results = cat_results + seq_results + div_results + cyc_results

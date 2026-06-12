@@ -24,11 +24,13 @@ jobs:
         run: python scripts/check_release_state.py
       - name: Generated files are current
         run: |
+          python scripts/merge_batch_manifests.py
           python scripts/build_manifest.py
           python scripts/build_gallery_index.py
           python scripts/build_palette_picker.py
           python scripts/sync_matlab_palettes.py
           git diff --exit-code \
+            _manifest_source.txt \
             manifest.json \
             catalog.md \
             gallery/index.html \
