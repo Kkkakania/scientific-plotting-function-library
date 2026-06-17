@@ -16,6 +16,14 @@ slprj/
 
 # 生成的画廊（按需保留；想 commit 就去掉这两行）
 # gallery/*.png
+gallery/matlab/
+gallery/matlab_native/
+gallery/dark/
+gallery/dendrogram_plot.png
+gallery/isosurface_plot.png
+gallery/periodogram_plot.png
+gallery/quiver_field.png
+gallery/spectrogram_demo.png
 
 # OS
 .DS_Store
@@ -30,3 +38,8 @@ Thumbs.db
 *.log
 *.tmp
 *.bak
+pytest-cache-files-*/
+
+# 本地打包/销售产物：保留在本机，不进入公开仓库
+销售包/
+sell/

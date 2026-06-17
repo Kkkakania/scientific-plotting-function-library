@@ -16,6 +16,18 @@ or hard-to-audit binary project files.
 - Gallery images regenerated from the public templates.
 - Small machine-readable metadata files such as `manifest.json`.
 
+## Curated Gallery Boundary
+
+The project can generate many figures locally, but the public repository should
+publish only a curated preview set. Bulk rerender folders, MATLAB rerender
+outputs, dark-mode QA folders, and local delivery bundles should stay on the
+maintainer's machine until individual images are selected for release.
+
+See [`curated_gallery_policy.md`](curated_gallery_policy.md) for the selection
+rule. A gallery image is publishable only when it is generated from public
+source, has no private paths or watermarks, and represents a useful chart family
+rather than a near-duplicate bulk render.
+
 ## What Must Stay Out
 
 - `.p`, `.fig`, `.mat`, `.opj`, `.opju`, Office files, PDFs, archives, or other
