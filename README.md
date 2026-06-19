@@ -91,6 +91,9 @@ fig = make_figure(x=x, y=y, title='V-t 实测')
 fig.savefig('out.pdf')
 ```
 
+从 CSV 到投稿前图件自查的完整示例见
+[`examples/csv-workflow`](examples/csv-workflow/)。
+
 ## 暗色模式（v1.5）
 
 ```python
