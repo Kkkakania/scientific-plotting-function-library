@@ -48,6 +48,9 @@ x, y = load_xy('measurement.csv', x_col='time', y_col='voltage')
 fig = make_figure(x=x, y=y, title='V-t 实测')
 ```
 
+从合成 CSV 数据生成 PNG/PDF 并填写投稿前图件检查报告的完整流程见
+[`examples/csv-workflow`](../examples/csv-workflow/)。
+
 **情况 C：MATLAB 端用 Excel**
 
 ```matlab
