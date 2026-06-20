@@ -9,6 +9,19 @@ English repository name: `scientific-plotting-function-library`.
 
 适用对象：电气工程及其自动化、信号处理、控制工程方向的本科 / 研究生 / 论文作者。
 
+## 30 秒新手路径
+
+如果你第一次打开这个仓库，先不要从 1000 个模板里硬找。按下面三条路径走：
+
+| 你现在想做什么 | 入口 | 结果 |
+|---|---|---|
+| 先跑通几张最常用的论文图 | [`examples/sample-pack/`](examples/sample-pack/) | 用 3 个免费样例理解目录、合成数据和导出方式 |
+| 已经有 CSV，想走完整导出自查流程 | [`examples/csv-workflow/`](examples/csv-workflow/) | Python/MATLAB 双语从 CSV 导出 PNG/PDF，并填写投稿前检查报告 |
+| 从常见科研场景选图 | [`docs/beginner_20_plots.md`](docs/beginner_20_plots.md) | 20 个入门模板，覆盖折线、散点、误差、热力图、控制、电气等场景 |
+| 已经知道图型名称 | [`catalog.md`](catalog.md) 或 `gallery/index.html` | 按名称、类别、tag 找到 Python/MATLAB 对照实现 |
+
+所有公开样例都使用合成数据和可审计代码生成，不包含论文截图、课程资料、私有数据或商业模板。
+
 ## 项目关系
 
 这个仓库是“大型绘图函数库 / gallery 层”，负责沉淀大量可复用模板、配色和跨语言参考实现。
@@ -39,10 +52,14 @@ English repository name: `scientific-plotting-function-library`.
 ├── gallery/                1000 张模板 PNG + index.html（搜索+分类+语言筛选）
 ├── docs/                   完整文档集（docs/learning/ 资料精读笔记 ×6）
 │   ├── quick_start.md       5 分钟上手
+│   ├── beginner_20_plots.md 新手 20 图路径
 │   ├── chart_selection.md   图型决策指南
 │   ├── api_reference.md     API 参考
 │   ├── style_guide.md       模板风格规范
 │   └── provenance_policy.md clean-room 发布边界
+├── examples/
+│   ├── sample-pack/         免费 sample pack：3 个样例入口 + 合成 CSV
+│   └── csv-workflow/        CSV 到投稿前图件自查工作流
 ├── scripts/                辅助脚本
 │   ├── merge_batch_manifests.py 批次账本合并为 manifest 源
 │   ├── build_manifest.py    重生成 manifest.json + catalog.md
