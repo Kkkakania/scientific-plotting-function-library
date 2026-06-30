@@ -169,6 +169,8 @@ python -m pytest tests/
 ```
 
 详细规则见 [`docs/provenance_policy.md`](docs/provenance_policy.md)。
+本地资料只可作为需求来源，不能直接搬运；见
+[`docs/local_resource_intake.md`](docs/local_resource_intake.md)。
 
 ## 设计致敬
 

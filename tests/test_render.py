@@ -69,3 +69,13 @@ def test_manifest_required_fields():
             assert k in e, f"{e.get('name')} 缺字段 {k}"
         assert isinstance(e['tags'], list)
         assert e['name'] == e['name'].lower(), f'{e["name"]} 应该全小写'
+
+
+def test_local_resource_intake_policy_is_linked():
+    doc = ROOT / 'docs' / 'local_resource_intake.md'
+    assert doc.exists()
+    text = doc.read_text(encoding='utf-8')
+    assert 'Do not commit or quote from' in text
+    assert 'Users need a clean synthetic example' in text
+    assert 'docs/local_resource_intake.md' in (ROOT / 'README.md').read_text(encoding='utf-8')
+    assert 'local_resource_intake.md' in (ROOT / 'docs' / 'provenance_policy.md').read_text(encoding='utf-8')

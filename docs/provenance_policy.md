@@ -59,3 +59,5 @@ style and APIs of this repository.
 
 When in doubt, write a new minimal template with synthetic data and document the
 intended use case instead of importing an existing file.
+For a concrete local-folder triage checklist, see
+[`local_resource_intake.md`](local_resource_intake.md).
